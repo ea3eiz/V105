@@ -1,8 +1,8 @@
 ﻿#!/bin/bash
 
-cp /home/pi/V105/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
-sleep 2
-xfdesktop --reload
+#cp /home/pi/V105/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
+#sleep 2
+#xfdesktop --reload
 
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
