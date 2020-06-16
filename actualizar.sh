@@ -1,8 +1,8 @@
 ﻿#!/bin/bash
 
-#cp /home/pi/V105/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
-#sleep 2
-#xfdesktop --reload
+cp /home/pi/V105/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
+sleep 2
+xfdesktop --reload
 
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
@@ -72,9 +72,9 @@ sudo cp $usuario/Desktop/Activar_NextionDriver.desktop $usuario/.local #deja el 
 #sudo cp $usuario/Desktop/Abrir_D-STARRepeater.desktop $usuario #deja con el terminal en el estado que se reinició
 
 
-#cd $usuario/$SCRIPTS_version/Desktop
-#cp * $usuario/Desktop
-#sudo chmod 777 -R $usuario/Desktop
+cd $usuario/$SCRIPTS_version/Desktop
+cp * $usuario/Desktop
+sudo chmod 777 -R $usuario/Desktop
 
 
 sudo cp $usuario/.local/Activar_dvswitch.desktop $usuario/Desktop #deja el icono en el estado que se reinició
