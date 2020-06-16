@@ -22,7 +22,7 @@ exec("sudo sed -i '56c rxPort = $port' /opt/Analog_Bridge/ysf.ini");
 
 // guardamos el valor para luego recuperarlo llamando al script cambia_puerto_usrp.sh
 exec("sudo sed -i '40c $port' /home/pi/.local/datos_dvswitch");
-exec("cd /home/pi/V104; sudo sh cambia_puerto_usrp.sh");
+exec("cd /home/pi/V105; sudo sh cambia_puerto_usrp.sh");
 
 
 header("Location: panel_configuracion.php");	
