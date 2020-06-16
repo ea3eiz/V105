@@ -13,6 +13,10 @@ col=15
 row=4
 col=5
 
+[/home/pi/Desktop/Abrir_dmrgateway.desktop]
+row=4
+col=10
+
 [/home/pi/Desktop/Reinciar_Imagen.desktop]
 row=1
 col=6
@@ -30,7 +34,7 @@ row=5
 col=9
 
 [/home/pi/Desktop/Editar_DExtra_Bluedv.desktop]
-row=7
+row=5
 col=8
 
 [/home/pi/Desktop/Borrar_Logs.desktop]
@@ -93,17 +97,21 @@ col=11
 row=6
 col=4
 
+[/home/pi/Desktop/Editar_dmrgateway.desktop]
+row=5
+col=10
+
 [/home/pi/Desktop/Editar_MMDVMBM.desktop]
 row=5
 col=0
 
-[/home/pi/Desktop/Abrir_dstarrepeater.desktop]
-row=4
-col=10
-
 [/home/pi/Desktop/Abrir_BlueDV.desktop]
 row=4
 col=8
+
+[/home/pi/Desktop/RXF_ESPECIAL.desktop]
+row=6
+col=3
 
 [/home/pi/Desktop/Actualizar_IDS.desktop]
 row=1
@@ -113,21 +121,17 @@ col=10
 row=5
 col=4
 
-[/home/pi/Desktop/Editar_BLUEDV.desktop]
-row=5
-col=8
-
 [/home/pi/Desktop/Abrir_MMDVMPLUS.desktop]
 row=4
 col=1
 
-[/home/pi/Desktop/editar_ambe_server.desktop]
-row=5
-col=16
-
 [/home/pi/Desktop/Editar_Radio.desktop]
 row=5
 col=2
+
+[/home/pi/Desktop/editar_ambe_server.desktop]
+row=5
+col=16
 
 [/home/pi/Desktop/Editar_MMDVMDMR2NXDN.desktop]
 row=5
@@ -157,6 +161,10 @@ col=15
 row=4
 col=12
 
+[/home/pi/Desktop/Organiza_Iconos.desktop]
+row=1
+col=16
+
 [/home/pi/Desktop/Menu_extra.desktop]
 row=1
 col=8
@@ -173,13 +181,9 @@ col=13
 row=1
 col=14
 
-[/home/pi/Desktop/RXF_ESPECIAL.desktop]
-row=6
-col=3
-
 [/home/pi/Desktop/Editar_deextra.desktop]
-row=7
-col=9
+row=6
+col=10
 
 [/home/pi/Desktop/RXF_RADIO.desktop]
 row=6
@@ -189,21 +193,13 @@ col=2
 row=4
 col=7
 
-[/home/pi/Desktop/Editar_D-STAR_Repeater.desktop]
-row=5
-col=10
-
-[/home/pi/Desktop/Organiza_Iconos.desktop]
-row=2
-col=17
+[/home/pi/Desktop/RXF_DMRPLUS.desktop]
+row=6
+col=1
 
 [/home/pi/Desktop/Abrir_Radio.desktop]
 row=4
 col=2
-
-[/home/pi/Desktop/RXF_DMRPLUS.desktop]
-row=6
-col=1
 
 [/home/pi/Desktop/Actualizar_DV4mini.desktop]
 row=6
@@ -213,13 +209,13 @@ col=7
 row=4
 col=14
 
-[/home/pi/Desktop/Actualizar_salas_YSF.desktop]
-row=6
-col=6
-
 [/home/pi/Desktop/Actualizar_BlueDV.DESKTOP]
 row=6
 col=8
+
+[/home/pi/Desktop/Actualizar_salas_YSF.desktop]
+row=6
+col=6
 
 [/home/pi/Desktop/Abrir_ESPECIAL.desktop]
 row=4
@@ -270,8 +266,8 @@ row=4
 col=6
 
 [/home/pi/Desktop/Editar_General.desktop]
-row=2
-col=3
+row=1
+col=4
 
 [Papelera]
 row=1
