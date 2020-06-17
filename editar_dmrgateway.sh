@@ -34,9 +34,9 @@ echo -n "${CIAN}   4)${GRIS} Modificar URL                   - ${AMARILLO}"
 contenido_url=$(awk "NR==35" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_url"
 
-echo "${CIAN}   5)${GRIS} Modificar ID XLX & DMR+         - ${AMARILLO}"
-#idd1=$(awk "NR==49" /home/pi/DMRGateway/DMRGateway.ini)
-#echo "$idd1"
+echo -n "${CIAN}   5)${GRIS} Modificar Indicativo            - ${AMARILLO}"
+indicativo=$(awk "NR==2" /home/pi/MMDVMHost/DMRGateway.ini)
+echo "$indicativo"
 
 echo -n "${CIAN}   6)${GRIS} Modificar XLX Startup           - ${AMARILLO}"
 Startup=$(awk "NR==47" /home/pi/DMRGateway/DMRGateway.ini)
@@ -138,16 +138,16 @@ do
 			                    break;;
 esac
 done;;
-5bloqueado) echo ""
+5) echo ""
 while true
 do
-                          echo "Valor  actual  del Id: ${AMARILLO}${idd#*=}\33[1;37m"
-                          read -p 'Introduce un ID válido ' miid
+                          echo "Valor  actual  del Indicativo: ${AMARILLO}${idd#*=}\33[1;37m"
+                          read -p 'Introduce el Indicativo ' indicativo
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "49c Id=$miid" /home/pi/DMRGateway/DMRGateway.ini
-                          sed -i "80c Id=$miid" /home/pi/DMRGateway/DMRGateway.ini
+                          indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
+                          sed -i "2c Id=$indicativo" /home/pi/DMRGateway/DMRGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -177,7 +177,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          modu=`echo "$modu" | tr [:lower:] [:upper:]`
+                          
                           sed -i "53c Module=$modu" /home/pi/DMRGateway/DMRGateway.ini
                           break;;
                           [nN]* ) echo ""
