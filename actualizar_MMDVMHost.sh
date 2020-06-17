@@ -38,7 +38,7 @@ MARRON="\33[38;5;138m"
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI="ADER104"\"
+                    PI="ADER105"\"
                     HOY1=$HOY$PI
                     PUNTO=";"   
                     
@@ -68,16 +68,7 @@ MARRON="\33[38;5;138m"
                     cp MMDVMHost DMR2YSF
                     cp MMDVMHost MMDVMNXDN
                     cp MMDVMHost MMDVMESPECIAL
-                    #=================================================
-
-                    # Rutina solo para el LIBRE ======================
-                    #cd /home/pi/$SCRIPTS_version
-                    #cp MMDVMHostLIBRE /home/pi/MMDVMHost
-                    #cp MMDVMLIBRE.ini /home/pi/MMDVMHost
-                    #cd /home/pi/MMDVMHost
-                    #sudo chmod +x MMDVMHostLIBRE
-                    #=================================================
-
+                    cp MMDVMHost MMDVMDMRGATEWAY                 
                     
                     # Crea el fichero para que arranque NextionDriver ==================
                     cp MMDVM.ini MMDVM.ini_NextionDriver
@@ -120,6 +111,8 @@ MARRON="\33[38;5;138m"
                     cp MMDVM.ini MMDVMDMR2NXDN.ini
 
                     cp MMDVM.ini MMDVMNXDN.ini
+
+                    cp MMDVM.ini DMRGateway.ini
 
                     #=================================================
 
