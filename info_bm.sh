@@ -12,9 +12,13 @@ mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/$DIRECTORIO)
 puerto=`expr substr $mode 11 9`
 puerto="  "$puerto
 
-frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/$DIRECTORIO)
-frecuencia=`expr substr $frecuencia 13 17`
-frecuencia=$frecuencia
+rxfrecuencia=$(awk "NR==13" /home/pi/MMDVMHost/$DIRECTORIO)
+rxfrecuencia=`expr substr $rxfrecuencia 13 17`
+rxfrecuencia=$rxfrecuencia
+
+txfrecuencia=$(awk "NR==14" /home/pi/MMDVMHost/$DIRECTORIO)
+txfrecuencia=`expr substr $txfrecuencia 13 17`
+txfrecuencia=$txfrecuencia
 
 id=$(awk "NR==3" /home/pi/MMDVMHost/$DIRECTORIO)
 id=`expr substr $id 4 9`
@@ -49,12 +53,13 @@ echo "  INFORMACIÓN (BM)"
 echo "${VERDE}"
 echo "  ******************************************"
 echo ""
-echo "${CIAN}  Indicativo: ${AMARILLO}$indicativo   "
-echo "${CIAN}  Id:         ${AMARILLO}$id   "
-echo "${CIAN}  Frecuencia: ${AMARILLO}$frecuencia   "
-echo "${CIAN}  Puerto:   ${AMARILLO}$puerto   "
-echo "${CIAN}  Servidor: ${AMARILLO}$address   "
-echo "${CIAN}  Memoria:    ${AMARILLO}$memoria   "
+echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
+echo "${CIAN}  Id:           ${AMARILLO}$id   "
+echo "${CIAN}  RXFrecuencia: ${AMARILLO}$rxfrecuencia   "
+echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
+echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
+echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
+echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
 echo "${VERDE}"
 echo "  ******************************************"
 echo "${ROJO}"
