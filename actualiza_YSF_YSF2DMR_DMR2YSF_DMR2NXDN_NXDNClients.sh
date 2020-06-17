@@ -14,24 +14,24 @@ MARRON="\33[38;5;138m"
                        
                         cp /home/pi/V105/YSFGateway.ini /home/pi/YSFClients/YSFGateway/
                         sudo sed -i "21c YSFGateway_OK" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini
-                        echo "${VERDE}"
-                        echo "************************************************************"
-                        echo "                                                            "
-                        echo "            ACABAS DE ACTUALIZAR TU YSFGATEWAY              "
-                        echo " CONFIGURA DE NUEVO TUS DATOS DESDE EL BOTÓN EDITAR YSF/FCS "
-                        echo "                                                            "
-                        echo "************************************************************"
-                        echo ""
-                        echo "${ROJO}"
-                        echo "************************************************************"
-                        echo "                                                            "
-                        echo "      ADVERTENCIA!! NO RESTAURES TU COPIA DE SEGURIDAD      "
-                        echo "         YA QUE CONTIENE UN INI ANTIGUO E INVALIDO          "
-                        echo "                                                            "
-                        echo "************************************************************"
-                        echo "${CIAN}"
-                        echo "Pulsa enter para salir"
-                        read a     
+                        #echo "${VERDE}"
+                        #echo "************************************************************"
+                        #echo "                                                            "
+                        #echo "            ACABAS DE ACTUALIZAR TU YSFGATEWAY              "
+                        #echo " CONFIGURA DE NUEVO TUS DATOS DESDE EL BOTÓN EDITAR YSF/FCS "
+                        #echo "                                                            "
+                        #echo "************************************************************"
+                        #echo ""
+                        #echo "${ROJO}"
+                        #echo "************************************************************"
+                        #echo "                                                            "
+                        #echo "      ADVERTENCIA!! NO RESTAURES TU COPIA DE SEGURIDAD      "
+                        #echo "         YA QUE CONTIENE UN INI ANTIGUO E INVALIDO          "
+                        #echo "                                                            "
+                        #echo "************************************************************"
+                        #echo "${CIAN}"
+                        #echo "Pulsa enter para salir"
+                        #read a     
 
 
 echo "${VERDE}"
@@ -49,7 +49,7 @@ echo "**********************************************************"
 echo "* El fichero YSFHost.txt se ha actualizado correctamente *"
 echo "**********************************************************"
 sleep 3
-                        fi
+
 
 
 
