@@ -61,7 +61,7 @@ echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
 echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
 echo -n "${VERDE}"
 echo "  ******************************************"
-echo -n "${ROJO}"
+echo -n "${MARRON}"
 echo -n "  Se cerrará en 5."
 sleep 1
 echo -n "4."
@@ -74,4 +74,3 @@ echo -n "1."
 sleep 1
 echo -n "0"
 sleep 1
-read a
