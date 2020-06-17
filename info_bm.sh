@@ -26,7 +26,7 @@ id=$(awk "NR==3" /home/pi/MMDVMHost/$DIRECTORIO)
 id=`expr substr $id 4 9`
 id=$id
 
-indicativo=$(awk "NR==3" /home/pi/MMDVMHost/$DIRECTORIO)
+indicativo=$(awk "NR==2" /home/pi/MMDVMHost/$DIRECTORIO)
 indicativo=`expr substr $indicativo 10 8`
 indicativo=$indicativo
 
@@ -56,7 +56,7 @@ echo "${VERDE}"
 echo "  ******************************************"
 echo ""
 echo "${CIAN}  Indicativo: ${AMARILLO}$indicativo   "
-echo "${CIAN}  Id: ${AMARILLO}$id   "
+echo "${CIAN}  Id: \t${AMARILLO}$id   "
 echo "${CIAN}  $Frecuencia ${AMARILLO}$frecuencia   "
 echo "${CIAN}  $Puerto   ${AMARILLO}$puerto   "
 echo "${CIAN}  $Servidor ${AMARILLO}$address   "
