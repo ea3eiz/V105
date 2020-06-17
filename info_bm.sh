@@ -50,7 +50,7 @@ MARRON="\33[38;5;138m"
 
 echo "${BLANCO}"
 echo "  INFORMACIÓN (BM)"
-echo "${VERDE}"
+echo -n "${VERDE}"
 echo "  ******************************************"
 echo ""
 echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
@@ -62,8 +62,7 @@ echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
 echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
 echo "${VERDE}"
 echo "  ******************************************"
-echo "${ROJO}"
-
+echo -n "${ROJO}"
 echo -n "  Se cerrará en 5."
 sleep 1
 echo -n "4."
