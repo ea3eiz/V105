@@ -22,6 +22,14 @@ frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/$DIRECTORIO)
 frecuencia=`expr substr $frecuencia 13 17`
 frecuencia=$frecuencia
 
+id=$(awk "NR==3" /home/pi/MMDVMHost/$DIRECTORIO)
+id=`expr substr $id 4 9`
+id=$id
+
+indicativo=$(awk "NR==3" /home/pi/MMDVMHost/$DIRECTORIO)
+indicativo=`expr substr $indicativo 10 8`
+indicativo=$indicativo
+
 address=`grep -n -m 1 "^Address=" /home/pi/MMDVMHost/$DIRECTORIO`
 buscar=":"
 caracteres=`expr index $address $buscar`
@@ -47,6 +55,8 @@ echo "  $informacion (BM)"
 echo "${VERDE}"
 echo "  ******************************************"
 echo ""
+echo "${CIAN}  Indicativo: ${AMARILLO}$indicativo   "
+echo "${CIAN}  Id: ${AMARILLO}$id   "
 echo "${CIAN}  $Frecuencia ${AMARILLO}$frecuencia   "
 echo "${CIAN}  $Puerto   ${AMARILLO}$puerto   "
 echo "${CIAN}  $Servidor ${AMARILLO}$address   "
