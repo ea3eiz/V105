@@ -34,7 +34,7 @@ echo -n "${CIAN}   4)${GRIS} Modificar URL                   - ${AMARILLO}"
 contenido_url=$(awk "NR==35" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_url"
 
-echo -n "${CIAN}   5)${GRIS} Modificar ID XLX & DMR+         - ${AMARILLO}"
+echo "${CIAN}   5)${GRIS} Modificar ID XLX & DMR+         - ${AMARILLO}"
 #idd1=$(awk "NR==49" /home/pi/DMRGateway/DMRGateway.ini)
 #echo "$idd1"
 
