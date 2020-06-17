@@ -141,13 +141,13 @@ done;;
 5) echo ""
 while true
 do
-                          echo "Valor  actual  del Indicativo: ${AMARILLO}${idd#*=}\33[1;37m"
+                          echo "Valor  actual  del Indicativo: ${AMARILLO}${indicativo#*=}\33[1;37m"
                           read -p 'Introduce el Indicativo ' indicativo
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
                           indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
-                          sed -i "2c Callsign=$indicativo" /home/pi/DMRGateway/DMRGateway.ini
+                          sed -i "2c Callsign=$indicativo" /home/pi/MMDVMHost/DMRGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
