@@ -20,37 +20,15 @@ echo "   *                     ACTUALIZANDO POSIBLES CAMBIOS                    
 echo "   *                         EN LA IMAGEN ADER ${AMARILLO}$SCRIPTS_version${VERDE}                        *"
 echo "   *************************************************************************"
 echo "${CIAN}"
-
 sleep 2
-
-			# 01-04-2020 arregla no escribe port en FCS.ini
-			sudo cp $usuario/V105/cambia_configuracion_port.php /var/www/html/
-
-                        # 03-04-2012020 añade el options manual para DMR+
-                        sudo cp $usuario/V105/sistema_plus.php /var/www/html/
-                        sudo cp $usuario/V105/cambia_reflector_dmrplus.php /var/www/html/
-                        sudo cp $usuario/V105/cambia_options_dmrplus.php /var/www/html/
-                        sudo cp $usuario/V105/panel_configuracion.php /var/www/html/
-
-                        # 11-04-2020 Desloguea de DMR cuando cambiamos de sistema
-                        sudo cp $usuario/V105/brandmeister.php /var/www/html/
-                        sudo cp $usuario/V105/dmrplus.php /var/www/html/
-                        sudo cp $usuario/V105/dstar.php /var/www/html/
-                        sudo cp $usuario/V105/especial.php /var/www/html/
-                        sudo cp $usuario/V105/nxdn.php /var/www/html/
-                        sudo cp $usuario/V105/ysf.php /var/www/html/
-                        
-
-#Actualiza IMAGEN
+#Actualiza IMAGEN 
                         cd $usuario/$SCRIPTS_version
                         git pull
                         sleep 1
-
 #Actualiza AUTORRANQUEV105
                         cd $usuario/AUTOARRANQUEV105
                         git pull
                         sleep 1
-
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
 cd $usuario/Desktop/

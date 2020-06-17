@@ -19,12 +19,12 @@ echo ""
 fi
 
 #comprueba si el fichero existe
-if [ -f /home/pi/.local/sala.txt ];
-then
-echo "El fichero ya existe"
-else
-cp sala.txt /home/pi/.local
-fi
+#if [ -f /home/pi/.local/sala.txt ];
+#then
+#echo "El fichero ya existe"
+#else
+#cp sala.txt /home/pi/.local
+#fi
 
 # path usuario
 usuario="/home/pi"
@@ -52,6 +52,8 @@ sed -i "14c YSF2DMR=OFF" $usuario/status.ini
 sed -i "15c DMR2YSF=OFF" $usuario/status.ini
 sed -i "16c DMR2NXDN=OFF" $usuario/status.ini
 sed -i "17c NXDN=OFF" $usuario/status.ini
+#sed -i "18c DVSWITCH=OFF" $usuario/status.ini
+sed -i "19c DMRGateway=OFF" $usuario/status.ini
 
 
 #Actualiza Imagen
