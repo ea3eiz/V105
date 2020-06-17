@@ -1220,7 +1220,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
-                        sed -i "$primer $memoria1" $usuario/.local/info_memorias
+                        sed -i "1c $memoria1" $usuario/.local/info_memorias
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
