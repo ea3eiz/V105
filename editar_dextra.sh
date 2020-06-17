@@ -30,9 +30,7 @@ echo  "${CIAN}   2)${AMARILLO} Editar fichero DExtra_Host.txt"
 echo ""
 echo  "${CIAN}   3)${BLANCO} Editar parámetros principales Ircddbgateway"
 echo ""
-echo  "${CIAN}   4)${VERDE} Actualizar Ircddbgateway"
-echo ""
-echo  "${CIAN}   5)${MARRON} Recuperar configuración inicial Ircddbgateway"
+echo  "${CIAN}   4)${MARRON} Recuperar configuración inicial Ircddbgateway"
 echo "\v\v"
 echo "   ${ROJO}0) Salir"
 echo "\v\v"
@@ -59,15 +57,6 @@ do
                         
 
                         #Actualiza reflectores 
-                      
-                        #ircddbgateway -gui 2016
-                        cd /usr/local/share/opendv/
-                        #cambiado el 13-05-2020
-                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
-                        #sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
-                        sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
-                        sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
-
                         #ircddbgateway -gui 2019
                         cd /usr/share/opendv/
                         #cambiado el 13-05-2020
@@ -77,8 +66,8 @@ do
                         sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
                         
                         #ircddbgatewayd 2019
-                        cd /usr/share/ircddbgateway
-                        #cambiado el 13-05-2020
+                        #cambiado el 13-05-2020 
+                        cd /usr/share/ircddbgateway                       
                         sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
                         #sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
                         sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
@@ -150,33 +139,6 @@ do
 esac
 done;;
 4) echo ""
-while true
-do
-
-                      
-                        actualizar=S 
-                        case $actualizar in
-                        [sS]* ) echo ""
-                        if [ "$version" = "2019" ]
-                        then 
-                        clear       
-                        echo "${VERDE}"
-                        echo "            *******************************************************"
-                        echo "${AMARILLO}"
-                        echo "                     YA TIENES LA ÚLTIMA VERSIÓN:${CIAN} 20190402  "
-                        echo "${VERDE}"
-                        echo "            *******************************************************"
-                        sleep 3
-                        else
-                        cd /home/pi/V105
-                        sh actualizar_ircddb_2019.sh
-                        fi
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-5) echo ""
 while true
 do
 
