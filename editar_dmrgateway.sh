@@ -39,58 +39,58 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 echo "${VERDE}"
 echo "   **************************************************************************"
-echo "                  Script $MODIFICAR $DIRECTORIO             \33[1;31m by EA3EIZ\33[1;32m   "
+echo "                  Script Modificar $DIRECTORIO             \33[1;31m by EA3EIZ\33[1;32m   "
 echo "   **************************************************************************"
 
-echo -n "${CIAN}   1)${GRIS} $MODIFICAR RXFrequency           - ${AMARILLO}"
+echo -n "${CIAN}   1)${GRIS} Modificar RXFrequency           - ${AMARILLO}"
 contenido_rxf=$(awk "NR==13" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$contenido_rxf"
 
-echo -n "${CIAN}   2)${GRIS} $MODIFICAR TXFrequency           - ${AMARILLO}"
+echo -n "${CIAN}   2)${GRIS} Modificar TXFrequency           - ${AMARILLO}"
 contenido_txf=$(awk "NR==14" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$contenido_txf"
 
-echo -n "${CIAN}   3)${GRIS} $MODIFICAR Location              - ${AMARILLO}"
+echo -n "${CIAN}   3)${GRIS} Modificar Location              - ${AMARILLO}"
 contenido_location=$(awk "NR==33" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_location"
 
-echo -n "${CIAN}   4)${GRIS} $MODIFICAR URL                   - ${AMARILLO}"
+echo -n "${CIAN}   4)${GRIS} Modificar URL                   - ${AMARILLO}"
 contenido_url=$(awk "NR==35" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_url"
 
-echo -n "${CIAN}   5)${GRIS} $MODIFICAR ID XLX & DMR+         - ${AMARILLO}"
+echo -n "${CIAN}   5)${GRIS} Modificar ID XLX & DMR+         - ${AMARILLO}"
 idd1=$(awk "NR==49" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$idd1"
 
-echo -n "${CIAN}   6)${GRIS} $MODIFICAR XLX Startup           - ${AMARILLO}"
+echo -n "${CIAN}   6)${GRIS} Modificar XLX Startup           - ${AMARILLO}"
 Startup=$(awk "NR==46" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$Startup"
 
-echo -n "${CIAN}   7)${GRIS} $MODIFICAR XLX Module            - ${AMARILLO}"
+echo -n "${CIAN}   7)${GRIS} Modificar XLX Module            - ${AMARILLO}"
 Module=$(awk "NR==51" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$Module"
 
-echo -n "${CIAN}   8)${GRIS} $MODIFICAR Address Brandmeister  - ${AMARILLO}"
+echo -n "${CIAN}   8)${GRIS} Modificar Address Brandmeister  - ${AMARILLO}"
 address_BM=$(awk "NR==56" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_BM"
 
-echo -n "${CIAN}   9)${GRIS} $MODIFICAR Password Brandmeister - ${AMARILLO}"
+echo -n "${CIAN}   9)${GRIS} Modificar Password Brandmeister - ${AMARILLO}"
 pas_BM=$(awk "NR==66" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$pas_BM"
 
-echo -n "${CIAN}  10)${GRIS} $MODIFICAR Address DMR+          - ${AMARILLO}"
+echo -n "${CIAN}  10)${GRIS} Modificar Address DMR+          - ${AMARILLO}"
 address_PLUS=$(awk "NR==73" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_PLUS"
 
-echo -n "${CIAN}  11)${GRIS} $MODIFICAR Address HBLink        - ${AMARILLO}"
+echo -n "${CIAN}  11)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
 address_HBLink=$(awk "NR==87" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_HBLink"
 
-echo -n "${CIAN}  12)${GRIS} $MODIFICAR Password HBLink       - ${AMARILLO}"
+echo -n "${CIAN}  12)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
 password_HBLink=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_HBLink"
 
-echo -n "${CIAN}  13)${GRIS} $MODIFICAR Port modem            - ${AMARILLO}"
+echo -n "${CIAN}  13)${GRIS} Modificar Port modem            - ${AMARILLO}"
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/DMRGateway.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -100,9 +100,9 @@ mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$mode"
 
 echo ""
-echo "${CIAN}   0)\33[1;31m $SALIR"
+echo "${CIAN}   0)\33[1;31m Salir"
 echo ""
-echo -n "${CIAN}   $OPTION:" 
+echo -n "${CIAN}   Elije una opción:" 
 read escoger_menu
 case $escoger_menu in
 1) echo ""
