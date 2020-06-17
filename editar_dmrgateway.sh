@@ -147,7 +147,7 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
-                          sed -i "2c Id=$indicativo" /home/pi/DMRGateway/DMRGateway.ini
+                          sed -i "2c Callsign=$indicativo" /home/pi/DMRGateway/DMRGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
