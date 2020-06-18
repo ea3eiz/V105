@@ -307,6 +307,7 @@ done;;
 d) echo ""
 while true
 do
+                          read a
                           buscar=":"
                           largo=`expr index $timeo $buscar`
                           echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
@@ -332,6 +333,7 @@ done;;
 e) echo ""
 while true
 do
+                          read a
                           buscar=":"
                           largo=`expr index $dup $buscar`
                           echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
