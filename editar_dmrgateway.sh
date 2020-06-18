@@ -17,6 +17,16 @@ echo "${VERDE}"
 echo "   **************************************************************************"
 echo "                  Script Modificar $DIRECTORIO             \33[1;31m by EA3EIZ\33[1;32m   "
 echo "   **************************************************************************"
+echo "Modificar Fichero MMDVMHost/DMRGateway.ini"
+echo "=========================================="
+
+echo -n "${CIAN}   a)${GRIS} Modificar Indicativo            - ${AMARILLO}"
+indicativo=$(awk "NR==2" /home/pi/MMDVMHost/DMRGateway.ini)
+echo "$indicativo"
+
+echo -n "${CIAN}   b)${GRIS} Modificar Id                    - ${AMARILLO}"
+id=$(awk "NR==3" /home/pi/MMDVMHost/DMRGateway.ini)
+echo "$id"
 
 echo -n "${CIAN}   1)${GRIS} Modificar RXFrequency           - ${AMARILLO}"
 contenido_rxf=$(awk "NR==13" /home/pi/MMDVMHost/DMRGateway.ini)
@@ -33,10 +43,6 @@ echo "$contenido_location"
 echo -n "${CIAN}   4)${GRIS} Modificar URL                   - ${AMARILLO}"
 contenido_url=$(awk "NR==35" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_url"
-
-echo -n "${CIAN}   5)${GRIS} Modificar Indicativo            - ${AMARILLO}"
-indicativo=$(awk "NR==2" /home/pi/MMDVMHost/DMRGateway.ini)
-echo "$indicativo"
 
 echo -n "${CIAN}   6)${GRIS} Modificar XLX Startup           - ${AMARILLO}"
 Startup=$(awk "NR==47" /home/pi/DMRGateway/DMRGateway.ini)
@@ -138,7 +144,7 @@ do
 			                    break;;
 esac
 done;;
-5) echo ""
+a) echo ""
 while true
 do
                           echo "Valor  actual  del Indicativo: ${AMARILLO}${indicativo#*=}\33[1;37m"
