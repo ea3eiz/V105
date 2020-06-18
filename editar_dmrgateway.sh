@@ -38,7 +38,7 @@ echo -n "${CIAN}   2)${GRIS} Modificar TXFrequency           - ${AMARILLO}"
 contenido_txf=$(awk "NR==14" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$contenido_txf"
 
-echo -n "${CIAN}  c)${GRIS} Modificar Port modem            - ${AMARILLO}"
+echo -n "${CIAN}   c)${GRIS} Modificar Port modem            - ${AMARILLO}"
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/DMRGateway.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -46,6 +46,17 @@ caracteres_linea=`expr $caracteres - 1`
 numero_linea_port=`expr substr $mode 1 $caracteres_linea`
 mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$mode"
+
+echo -n "\33[1;36m   d)\33[0m Timeout                        - \33[1;33m"
+timeo=`grep -n -m 1 '\<Timeout\>' /home/pi/MMDVMHost/DMRGateway.ini`
+timeo1=`expr substr $timeo 3 30`
+echo "$timeo1"
+
+echo -n "\33[1;36m  e)\33[0m Modificar Duplex                - \33[1;33m"
+dup=`grep -n -m 1 '\<Duplex\>' //home/pi/MMDVMHost/DMRGateway.ini`
+dup1=`expr substr $dup 3 30`
+echo "$dup1"
+
 
 echo "${MARRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
