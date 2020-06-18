@@ -304,14 +304,14 @@ do
 			            break;;
 esac
 done;;
-9) echo ""
+d) echo ""
 while true
 do
-timeo=`grep -n -m 1 -c '\<Timeout\>' /home/pi/MMDVMHost/TODOS_LOS_INIS.ini`
+timeo=`grep -n -m 1 -c '\<Timeout\>' /home/pi/MMDVMHost/DMRGateway.ini`
 if [ $timeo = 0 ]; then
 echo "no existe este comando"
 else
-timeo=`grep -n -m 1 '\<Timeout\>' /home/pi/MMDVMHost/TODOS_LOS_INIS.ini`
+timeo=`grep -n -m 1 '\<Timeout\>' /home/pi/MMDVMHost/DMRGateway.ini`
 timeo1=`expr substr $timeo 5 30`
 fi
 buscar=":"
@@ -330,41 +330,8 @@ echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Timeout=$timeou" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini 
-            #DMR+
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMPLUS.ini
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia3
-            #BM
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMBM.ini
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMBM.ini_copia3
-            #RADIO
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVM.ini
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVM.ini_copia
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVM.ini_copia2
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #ESPECIAL
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMESPECIAL.ini
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
+                          sed -i "$linea Timeout=$timeou" /home/pi/MMDVMHost/DMRGateway.ini 
 
-            #MMDVMDMR2YSF
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
-
-            #MMDVMDMR2NXDN.ini
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
-
-            #MMDVMNXDN.ini
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMNXDN.ini
-
-            #SOLODSTAR
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMDSTAR.ini
-            #SOLOFUSION
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMFUSION.ini
 
         break;;
         [nN]* ) echo ""
