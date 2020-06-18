@@ -38,7 +38,7 @@ contenido_txf=$(awk "NR==14" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$contenido_txf"
 
 
-echo -n "${BLANCO}"
+echo "${BLANCO}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
 echo "  =========================================="
 echo -n "${CIAN}   3)${GRIS} Modificar Location              - ${AMARILLO}"
