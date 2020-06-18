@@ -304,6 +304,54 @@ do
 			            break;;
 esac
 done;;
+d) echo ""
+while true
+do
+                          buscar=":"
+                          largo=`expr index $timeo $buscar`
+                          echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
+                          read -p 'Introcuce el valor para Timeout (valor optimo de 0 a 180): ' timeou
+                          letra=c
+                          if [ $largo = 2 ]
+                          then
+                          linea=`expr substr $timeo 1 1`
+                          else
+                          linea=`expr substr $timeo 1 2`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in                                            
+                          [sS]* ) echo ""
+                          V=`echo "$V" | tr -d '[[:space:]]'`       
+                          sed -i "$linea Timeout=$timeou" /home/pi/MMDVMHost/DMRGateway.ini 
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+e) echo ""
+while true
+do
+                          buscar=":"
+                          largo=`expr index $dup $buscar`
+                          echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
+           	              read -p 'Para un repetidor Duplex=1 Para un Hotspot simple Duplex=0: ' duplex
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $dup 1 1`
+                          else
+                          linea=`expr substr $dup 1 1`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			              [sS]* ) echo ""
+                          sed -i "$linea Duplex=$duplex" /home/pi/MMDVMHost/DMRGateway.ini
+			              [nN]* ) echo ""
+			              break;;
+esac
+done;;
 0) echo ""
 clear
 exit;;	
