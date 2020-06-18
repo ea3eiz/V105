@@ -17,8 +17,9 @@ echo "${VERDE}"
 echo "   **************************************************************************"
 echo "                  Script Modificar $DIRECTORIO             \33[1;31m by EA3EIZ\33[1;32m   "
 echo "   **************************************************************************"
-echo "Modificar Fichero MMDVMHost/DMRGateway.ini"
-echo "=========================================="
+echo -n "${BLANCO}"
+echo "  Modificar Fichero MMDVMHost/DMRGateway.ini"
+echo "  =========================================="
 
 echo -n "${CIAN}   a)${GRIS} Modificar Indicativo            - ${AMARILLO}"
 indicativo=$(awk "NR==2" /home/pi/MMDVMHost/DMRGateway.ini)
@@ -36,6 +37,10 @@ echo -n "${CIAN}   2)${GRIS} Modificar TXFrequency           - ${AMARILLO}"
 contenido_txf=$(awk "NR==14" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$contenido_txf"
 
+
+echo -n "${BLANCO}"
+echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
+echo "  =========================================="
 echo -n "${CIAN}   3)${GRIS} Modificar Location              - ${AMARILLO}"
 contenido_location=$(awk "NR==33" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_location"
