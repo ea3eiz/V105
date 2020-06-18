@@ -371,7 +371,7 @@ echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
         break;;
 esac
 done;;
-10) echo ""
+e) echo ""
 while true
 do
 buscar=":"
@@ -389,41 +389,8 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Duplex=$duplex" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
-            #DMR+
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMPLUS.ini
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia3
-            #BM
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMBM.ini
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMBM.ini_copia3
-            #RADIO
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVM.ini
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVM.ini_copia
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVM.ini_copia2
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVM.ini_copia3           
-            #ESPECIAL
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMESPECIAL.ini
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
-            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
-
-            #MMDVMDMR2YSF
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
-
-            #MMDVMDMR2NXDN.ini
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
-
-            #MMDVMNXDN.ini
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMNXDN.ini
-
-            #SOLODSTAR
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMDSTAR.ini
-            #SOLOFUSION 
-            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMFUSION.ini            
+                          sed -i "$linea Duplex=$duplex" /home/pi/MMDVMHost/DMRGateway.ini
+                    
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
