@@ -38,8 +38,16 @@ echo -n "${CIAN}   2)${GRIS} Modificar TXFrequency           - ${AMARILLO}"
 contenido_txf=$(awk "NR==14" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$contenido_txf"
 
+echo -n "${CIAN}  c)${GRIS} Modificar Port modem            - ${AMARILLO}"
+mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/DMRGateway.ini`
+buscar=":"
+caracteres=`expr index $mode $buscar`
+caracteres_linea=`expr $caracteres - 1`
+numero_linea_port=`expr substr $mode 1 $caracteres_linea`
+mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/DMRGateway.ini)
+echo "$mode"
 
-echo "${MRRON}"
+echo "${MARRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
 echo "  ==========================================="
 echo -n "${CIAN}   3)${GRIS} Modificar Location              - ${AMARILLO}"
@@ -77,15 +85,6 @@ echo "$address_HBLink"
 echo -n "${CIAN}  12)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
 password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_HBLink"
-
-echo -n "${CIAN}  13)${GRIS} Modificar Port modem            - ${AMARILLO}"
-mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/DMRGateway.ini`
-buscar=":"
-caracteres=`expr index $mode $buscar`
-caracteres_linea=`expr $caracteres - 1`
-numero_linea_port=`expr substr $mode 1 $caracteres_linea`
-mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/DMRGateway.ini)
-echo "$mode"
 
 echo ""
 echo "${CIAN}   0)\33[1;31m Salir"
@@ -275,7 +274,7 @@ do
 			                    break;;
 esac
 done;;
-13) echo ""
+c) echo ""
 while true
 do
                         port_modem=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/DMRGateway.ini)
