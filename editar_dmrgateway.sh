@@ -307,7 +307,7 @@ done;;
 d) echo ""
 while true
 do
-                          read a
+                          
                           buscar=":"
                           largo=`expr index $timeo $buscar`
                           echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
