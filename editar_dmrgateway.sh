@@ -13,11 +13,12 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+MARRON="\33[38;5;138m"
 echo "${VERDE}"
-echo "   **************************************************************************"
+echo "  ***************************************************************************"
 echo "                  Script Modificar $DIRECTORIO             \33[1;31m by EA3EIZ\33[1;32m   "
-echo "   **************************************************************************"
-echo -n "${BLANCO}"
+echo "  ***************************************************************************"
+echo "${MARRON}"
 echo "  Modificar Fichero MMDVMHost/DMRGateway.ini"
 echo "  =========================================="
 
@@ -38,9 +39,9 @@ contenido_txf=$(awk "NR==14" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$contenido_txf"
 
 
-echo "${BLANCO}"
+echo "${MRRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
-echo "  =========================================="
+echo "  ==========================================="
 echo -n "${CIAN}   3)${GRIS} Modificar Location              - ${AMARILLO}"
 contenido_location=$(awk "NR==33" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_location"
