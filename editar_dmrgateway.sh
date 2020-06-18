@@ -47,12 +47,12 @@ numero_linea_port=`expr substr $mode 1 $caracteres_linea`
 mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/DMRGateway.ini)
 echo "$mode"
 
-echo -n "\33[1;36m   d)\33[0m Timeout                        - \33[1;33m"
+echo -n "\33[1;36m   d)\33[0m Timeout                         - \33[1;33m"
 timeo=`grep -n -m 1 '\<Timeout\>' /home/pi/MMDVMHost/DMRGateway.ini`
 timeo1=`expr substr $timeo 3 30`
 echo "$timeo1"
 
-echo -n "\33[1;36m  e)\33[0m Modificar Duplex                - \33[1;33m"
+echo -n "\33[1;36m   e)\33[0m Modificar Duplex                - \33[1;33m"
 dup=`grep -n -m 1 '\<Duplex\>' //home/pi/MMDVMHost/DMRGateway.ini`
 dup1=`expr substr $dup 3 30`
 echo "$dup1"
