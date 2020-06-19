@@ -82,6 +82,9 @@ echo "***************************************************"
 
             cp info_panel_control.ini /home/pi/
 
+            cp -f MMDVMDMRGateway.ini /home/pi/MMDVMHost/
+            cp -f DMRGateway.ini /home/pi/DMRGateway/
+
 
 indicativo=$(awk "NR==1" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)          
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge.ini

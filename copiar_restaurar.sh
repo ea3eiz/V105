@@ -127,6 +127,9 @@ sleep 3
             cd /home/pi
             cp info_panel_control.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
+            cp -f /home/pi/MMDVMHost/MMDVMDMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f /home/pi/DMRGateway/DMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+
 indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
 
@@ -282,6 +285,9 @@ sleep 3
             cp dstarrepeater /etc/
 
             cp info_panel_control.ini /home/pi/
+
+            cp -f MMDVMDMRGateway.ini /home/pi/MMDVMHost/
+            cp -f DMRGateway.ini /home/pi/DMRGateway/
 
 # Restaura todos los datos de Dvswitch
 indicativo=$(awk "NR==1" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)          
