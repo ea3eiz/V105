@@ -57,6 +57,7 @@ dup=`grep -n -m 1 '\<Duplex\>' //home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 dup1=`expr substr $dup 3 30`
 echo "$dup1"
 
+echo -n "${CIAN}   f)${VERDE} Abrir para hacer modificaciones - \33[1;33m"
 
 echo "${MARRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
@@ -361,6 +362,20 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
+esac
+done;;
+f) echo ""
+while true
+do
+                          
+                        actualizar=S 
+                        case $actualizar in
+			      [sS]* ) echo ""
+                        cd /home/pi/MMDVMHost
+                        geany MMDVMDMRGateway.ini
+			      break;;
+			      [nN]* ) echo ""
+			      break;;
 esac
 done;;
 0) echo ""
