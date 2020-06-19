@@ -33,10 +33,6 @@ var1= sed -n '3p'  $usuario/.local/ambe_server.ini
 echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
-
-echo -n "${AMARILLO}"
-echo "   ${CIAN}Nota: ${AMARILLO}Debes actualizar Ambe Server si es la primera vez que lo utilizas"
-echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 
