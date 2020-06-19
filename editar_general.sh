@@ -137,13 +137,15 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			                   [sS]* ) echo ""
-
                           #Convierte indicativo si se introduce en minúsculas a Mayúsculas
                           tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
-
-			                  tu_indicativo=`echo "$tu_indicativo" | tr -d '[[:space:]]'` # Anula los espacios
-                          sed -i "$linea Callsign=$tu_indicativo" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
+			            tu_indicativo=`echo "$tu_indicativo" | tr -d '[[:space:]]'` # Anula los espacios
+                        sed -i "$linea Callsign=$tu_indicativo" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
                         sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
+
+                        #iNDICATIVO DMRGATEWAY
+                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMDMRGATEWAY.ini
+
                         #iNDICATIVO PLUS
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMPLUS.ini
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
