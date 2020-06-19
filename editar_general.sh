@@ -144,7 +144,7 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                         sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
 
                         #iNDICATIVO DMRGATEWAY
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMDMRGATEWAY.ini
+                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
 
                         #iNDICATIVO PLUS
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMPLUS.ini

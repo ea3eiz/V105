@@ -23,37 +23,37 @@ echo "  Modificar Fichero MMDVMHost/DMRGateway.ini"
 echo "  =========================================="
 
 echo -n "${CIAN}   a)${GRIS} Modificar Indicativo            - ${AMARILLO}"
-indicativo=$(awk "NR==2" /home/pi/MMDVMHost/DMRGateway.ini)
+indicativo=$(awk "NR==2" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$indicativo"
 
 echo -n "${CIAN}   b)${GRIS} Modificar Id                    - ${AMARILLO}"
-id=$(awk "NR==3" /home/pi/MMDVMHost/DMRGateway.ini)
+id=$(awk "NR==3" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$id"
 
 echo -n "${CIAN}   1)${GRIS} Modificar RXFrequency           - ${AMARILLO}"
-contenido_rxf=$(awk "NR==13" /home/pi/MMDVMHost/DMRGateway.ini)
+contenido_rxf=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$contenido_rxf"
 
 echo -n "${CIAN}   2)${GRIS} Modificar TXFrequency           - ${AMARILLO}"
-contenido_txf=$(awk "NR==14" /home/pi/MMDVMHost/DMRGateway.ini)
+contenido_txf=$(awk "NR==14" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$contenido_txf"
 
 echo -n "${CIAN}   c)${GRIS} Modificar Port modem            - ${AMARILLO}"
-mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/DMRGateway.ini`
+mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
 caracteres_linea=`expr $caracteres - 1`
 numero_linea_port=`expr substr $mode 1 $caracteres_linea`
-mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/DMRGateway.ini)
+mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$mode"
 
 echo -n "\33[1;36m   d)\33[0m Timeout                         - \33[1;33m"
-timeo=`grep -n -m 1 '\<Timeout\>' /home/pi/MMDVMHost/DMRGateway.ini`
+timeo=`grep -n -m 1 '\<Timeout\>' /home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 timeo1=`expr substr $timeo 3 30`
 echo "$timeo1"
 
 echo -n "\33[1;36m   e)\33[0m Modificar Duplex                - \33[1;33m"
-dup=`grep -n -m 1 '\<Duplex\>' //home/pi/MMDVMHost/DMRGateway.ini`
+dup=`grep -n -m 1 '\<Duplex\>' //home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 dup1=`expr substr $dup 3 30`
 echo "$dup1"
 
@@ -111,7 +111,7 @@ do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-                          sed -i "13c RXFrequency=$rxfre" /home/pi/MMDVMHost/DMRGateway.ini
+                          sed -i "13c RXFrequency=$rxfre" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
@@ -125,7 +125,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "14c TXFrequency=$txfre" /home/pi/MMDVMHost/DMRGateway.ini
+                          sed -i "14c TXFrequency=$txfre" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -169,7 +169,7 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
-                          sed -i "2c Callsign=$indicativo" /home/pi/MMDVMHost/DMRGateway.ini
+                          sed -i "2c Callsign=$indicativo" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -288,7 +288,7 @@ done;;
 c) echo ""
 while true
 do
-                        port_modem=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/DMRGateway.ini)
+                        port_modem=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
                         echo "   Valor del Port: ${AMARILLO}$port_modem"
                         echo "${GRIS}   Ejp. modem,/dev/ttyAMA1,/dev/ttyACM1,/dev/ttyUSB1/,dev/ttyS0,/dev/rfcomm0"
                         echo -n "${CIAN}   Introduce Port: ${AMARILLO}"
@@ -298,7 +298,7 @@ do
 			            [sS]* ) echo ""
                         letra=c
                         numero_linea_port=$numero_linea_port$letra
-                        sed -i "$numero_linea_port Port=$port" /home/pi/MMDVMHost/DMRGateway.ini
+                        sed -i "$numero_linea_port Port=$port" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
 			            break;;
 			            [nN]* ) echo ""
 			            break;;
@@ -307,11 +307,11 @@ done;;
 d) echo ""
 while true
 do
-timeo=`grep -n -m 1 -c '\<Timeout\>' /home/pi/MMDVMHost/DMRGateway.ini`
+timeo=`grep -n -m 1 -c '\<Timeout\>' /home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 if [ $timeo = 0 ]; then
 echo "no existe este comando"
 else
-timeo=`grep -n -m 1 '\<Timeout\>' /home/pi/MMDVMHost/DMRGateway.ini`
+timeo=`grep -n -m 1 '\<Timeout\>' /home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 timeo1=`expr substr $timeo 5 30`
 fi
 buscar=":"
@@ -330,7 +330,7 @@ echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Timeout=$timeou" /home/pi/MMDVMHost/DMRGateway.ini 
+                          sed -i "$linea Timeout=$timeou" /home/pi/MMDVMHost/MMDVMDMRGateway.ini 
 
 
         break;;
@@ -356,7 +356,7 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Duplex=$duplex" /home/pi/MMDVMHost/DMRGateway.ini
+                          sed -i "$linea Duplex=$duplex" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
                     
 			  break;;
 			  [nN]* ) echo ""

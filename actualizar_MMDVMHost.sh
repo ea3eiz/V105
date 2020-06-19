@@ -112,7 +112,7 @@ MARRON="\33[38;5;138m"
 
                     cp MMDVM.ini MMDVMNXDN.ini
 
-                    cp MMDVM.ini DMRGateway.ini
+                    cp MMDVM.ini MMDVMDMRGateway.ini
 
                     #=================================================
 
