@@ -1220,6 +1220,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
+                        sed -i "1c $memoria1" $usuario/.local/info_memorias
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
@@ -1253,6 +1254,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M2 >>>>>"
                         sleep 3
                         sed -i "$segun $memoria2" $usuario/info_panel_control.ini
+                        sed -i "1c $memoria2" $usuario/.local/info_memorias
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia2
 			                  break;;
 			                  [nN]* ) echo ""
@@ -1286,6 +1288,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
                         sleep 3
                         sed -i "$tercer $memoria3" $usuario/info_panel_control.ini
+                        sed -i "1c $memoria3" $usuario/.local/info_memorias
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia3
 			                  break;;
 			                  [nN]* ) echo ""
