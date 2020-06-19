@@ -19,14 +19,14 @@ sudo cp /home/pi/RXF_RADIO.desktop /home/pi/Desktop
 
 sudo rm /home/pi/RXF_RADIO.desktop
 
-#Escribe en el fichero INFO_RXF para poner los datos en el icono INFO TXF                        
+#Escribe en el fichero INFO_RXF para poner los datos en el icono INFO TXF                         
 sed -i "4c $frecuencia" /home/pi/INFO_RXF
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_Radio.desktop /home/pi
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_radio.sh'" /home/pi/Abrir_Radio.desktop
-sed -i "5c Icon=/home/pi/$SCRIPTS_version/MMDVM_ON.png" /home/pi/Abrir_Radio.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_RADIO_ON.png" /home/pi/Abrir_Radio.desktop
 sed -i "10c Name[es_ES]=Cerrar Radio" /home/pi/Abrir_Radio.desktop
 sed -i "5c MMDVM=ON" /home/pi/status.ini
 cd /home/pi
@@ -46,7 +46,7 @@ sudo ./MMDVMHost MMDVM.ini
 cd /home/pi/Desktop
 sudo cp Abrir_Radio.desktop /home/pi
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=80x15 -e sudo sh ejecutar_radio.sh'" /home/pi/Abrir_Radio.desktop
-sed -i "5c Icon=/home/pi/$SCRIPTS_version/MMDVM.png" /home/pi/Abrir_Radio.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_RADIO_OFF.png" /home/pi/Abrir_Radio.desktop
 sed -i "10c Name[es_ES]=Abrir Radio" /home/pi/Abrir_Radio.desktop
 sed -i "5c MMDVM=OFF" /home/pi/status.ini
 cd /home/pi
