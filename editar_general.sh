@@ -454,6 +454,10 @@ do
             case $actualizar in
 			      [sS]* ) echo ""
             sed -i "$numero_linea_letrac Location=$tu_ciudad" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
+                     
+            #LOCATION  DMRGATEWAY
+            sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
+            
             #DMR+
             sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMPLUS.ini
             sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
@@ -539,6 +543,10 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
 			        [sS]* ) echo ""
 			        tu_url=`echo "$tu_url" | tr -d '[[:space:]]'` #anula los espacios
             sed -i "$linea URL=$tu_url" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
+            
+            #LURL  DMRGATEWAY
+            sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
+            
             #DMR+
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVMPLUS.ini
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
@@ -611,6 +619,10 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
                           case $actualizar in
 			                    [sS]* ) echo ""
                           sed -i "$linea Id=$tu_id" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
+
+            #ID DMRGATEWAY
+            sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
+
             #DMR+
             sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMPLUS.ini
             sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
@@ -879,7 +891,11 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Duplex=$duplex" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
+            sed -i "$linea Duplex=$duplex" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
+            
+            #DUPLEX DMRGATEWAY
+            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
+            
             #DMR+
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMPLUS.ini
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
