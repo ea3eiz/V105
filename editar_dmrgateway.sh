@@ -22,23 +22,23 @@ echo "${MARRON}"
 echo "  Modificar Fichero MMDVMHost/DMRGateway.ini"
 echo "  =========================================="
 
-echo -n "${CIAN}   a)${GRIS} Modificar Indicativo            - ${AMARILLO}"
+echo -n "${CIAN}   1)${GRIS} Modificar Indicativo            - ${AMARILLO}"
 indicativo=$(awk "NR==2" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$indicativo"
 
-echo -n "${CIAN}   b)${GRIS} Modificar Id                    - ${AMARILLO}"
+echo -n "${CIAN}   2)${GRIS} Modificar Id                    - ${AMARILLO}"
 id=$(awk "NR==3" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$id"
 
-echo -n "${CIAN}   1)${GRIS} Modificar RXFrequency           - ${AMARILLO}"
+echo -n "${CIAN}   3)${GRIS} Modificar RXFrequency           - ${AMARILLO}"
 contenido_rxf=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$contenido_rxf"
 
-echo -n "${CIAN}   2)${GRIS} Modificar TXFrequency           - ${AMARILLO}"
+echo -n "${CIAN}   4)${GRIS} Modificar TXFrequency           - ${AMARILLO}"
 contenido_txf=$(awk "NR==14" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$contenido_txf"
 
-echo -n "${CIAN}   c)${GRIS} Modificar Port modem            - ${AMARILLO}"
+echo -n "${CIAN}   5)${GRIS} Modificar Port modem            - ${AMARILLO}"
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -47,58 +47,58 @@ numero_linea_port=`expr substr $mode 1 $caracteres_linea`
 mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
 echo "$mode"
 
-echo -n "\33[1;36m   d)\33[0m Timeout                         - \33[1;33m"
+echo -n "\33[1;36m   6)\33[0m Timeout                         - \33[1;33m"
 timeo=`grep -n -m 1 '\<Timeout\>' /home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 timeo1=`expr substr $timeo 3 30`
 echo "$timeo1"
 
-echo -n "\33[1;36m   e)\33[0m Modificar Duplex                - \33[1;33m"
+echo -n "\33[1;36m   7)\33[0m Modificar Duplex                - \33[1;33m"
 dup=`grep -n -m 1 '\<Duplex\>' //home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 dup1=`expr substr $dup 3 30`
 echo "$dup1"
 
-echo "${CIAN}   f)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modificaciones\33[1;33m"
+echo "${CIAN}   8)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modificaciones\33[1;33m"
 
 echo "${MARRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
 echo "  ==========================================="
-echo -n "${CIAN}   3)${GRIS} Modificar Location              - ${AMARILLO}"
+echo -n "${CIAN}   9)${GRIS} Modificar Location              - ${AMARILLO}"
 contenido_location=$(awk "NR==33" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_location"
 
-echo -n "${CIAN}   4)${GRIS} Modificar URL                   - ${AMARILLO}"
+echo -n "${CIAN}  10)${GRIS} Modificar URL                   - ${AMARILLO}"
 contenido_url=$(awk "NR==35" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_url"
 
-echo -n "${CIAN}   6)${GRIS} Modificar XLX Startup           - ${AMARILLO}"
+echo -n "${CIAN}  11)${GRIS} Modificar XLX Startup           - ${AMARILLO}"
 Startup=$(awk "NR==47" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$Startup"
 
-echo -n "${CIAN}   7)${GRIS} Modificar XLX Module            - ${AMARILLO}"
+echo -n "${CIAN}  12)${GRIS} Modificar XLX Module            - ${AMARILLO}"
 Module=$(awk "NR==53" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$Module"
 
-echo -n "${CIAN}   8)${GRIS} Modificar Address Brandmeister  - ${AMARILLO}"
+echo -n "${CIAN}  13)${GRIS} Modificar Address Brandmeister  - ${AMARILLO}"
 address_BM=$(awk "NR==59" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_BM"
 
-echo -n "${CIAN}   9)${GRIS} Modificar Password Brandmeister - ${AMARILLO}"
+echo -n "${CIAN}  14)${GRIS} Modificar Password Brandmeister - ${AMARILLO}"
 pas_BM=$(awk "NR==78" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$pas_BM"
 
-echo -n "${CIAN}  10)${GRIS} Modificar Address DMR+          - ${AMARILLO}"
+echo -n "${CIAN}  15)${GRIS} Modificar Address DMR+          - ${AMARILLO}"
 address_PLUS=$(awk "NR==86" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_PLUS"
 
-echo -n "${CIAN}  11)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
+echo -n "${CIAN}  16)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
 address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_HBLink"
 
-echo -n "${CIAN}  12)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
+echo -n "${CIAN}  17)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
 password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_HBLink"
 
-echo "${CIAN}   g)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
+echo "${CIAN}  18)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
 
 echo ""
 echo "${CIAN}   0)\33[1;31m Salir"
@@ -106,7 +106,7 @@ echo ""
 echo -n "${CIAN}   Elije una opción:" 
 read escoger_menu
 case $escoger_menu in
-1) echo ""
+3) echo ""
 while true
 do
                           echo "Valor actual del RXFrequency: ${AMARILLO}${contenido_rxf#*=}\33[1;37m"
@@ -120,7 +120,7 @@ do
 			                    break;;
 esac
 done;;
-2) echo ""
+4) echo ""
 while true
 do
                           echo "Valor actual del TXFrequency: ${AMARILLO}${contenido_txf#*=}\33[1;37m"
@@ -134,7 +134,7 @@ do
                           break;;
 esac
 done;;
-3) echo ""
+9) echo ""
 while true
 do
                           echo "Valor de la Ciudad: ${AMARILLO}${contenido_location#*=}\33[1;37m"
@@ -148,7 +148,7 @@ do
 			                    break;;
 esac
 done;;
-4) echo ""
+10) echo ""
 while true
 do
                           echo "Valor de  la  URL   Web: ${AMARILLO}${contenido_url#*=}\33[1;37m"
@@ -163,7 +163,7 @@ do
 			                    break;;
 esac
 done;;
-a) echo ""
+1) echo ""
 while true
 do
                           echo "Valor  actual  del Indicativo: ${AMARILLO}${indicativo#*=}\33[1;37m"
@@ -178,7 +178,7 @@ do
                           break;;
 esac
 done;;
-b) echo ""
+2) echo ""
 while true
 do
                           echo "Valor  actual  de la Id: ${AMARILLO}${id#*=}\33[1;37m"
@@ -192,7 +192,7 @@ do
                           break;;
 esac
 done;;
-6) echo ""
+11) echo ""
 while true
 do
                           
@@ -208,7 +208,7 @@ do
                           break;;
 esac                          
 done;;
-7) echo ""
+12) echo ""
 while true
 do
                           echo "Valor actual del Module XLX: ${AMARILLO}${Module#*=}\33[1;37m"
@@ -223,7 +223,7 @@ do
                           break;;
 esac
 done;;
-8) echo ""
+13) echo ""
 while true
 do
                       echo "Valor actual del Master: ${AMARILLO}${address_BM#*=}\33[1;37m"
@@ -239,7 +239,7 @@ do
                       break;;
 esac
 done;;
-9) echo ""
+14) echo ""
 while true
 do
                       echo "Valor actual del Master: ${AMARILLO}${pas_BM#*=}\33[1;37m"
@@ -253,7 +253,7 @@ do
                       break;;
 esac
 done;;
-10) echo ""
+15) echo ""
 while true
 do
                      
@@ -271,7 +271,7 @@ do
 esac
 done;;
 
-11) echo ""
+16) echo ""
 while true
 do
                       echo "Valor actual del Master: ${AMARILLO}${address_HBLink#*=}\33[1;37m"
@@ -287,7 +287,7 @@ do
                       break;;
 esac
 done;;
-12) echo ""
+17) echo ""
 while true
 do
                           echo "Valor actual del Password HBLink: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
@@ -302,7 +302,7 @@ do
 			                    break;;
 esac
 done;;
-c) echo ""
+5) echo ""
 while true
 do
                         port_modem=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
@@ -321,7 +321,7 @@ do
 			            break;;
 esac
 done;;
-d) echo ""
+6) echo ""
 while true
 do
 timeo=`grep -n -m 1 -c '\<Timeout\>' /home/pi/MMDVMHost/MMDVMDMRGateway.ini`
@@ -355,7 +355,7 @@ echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
         break;;
 esac
 done;;
-e) echo ""
+7) echo ""
 while true
 do
 buscar=":"
@@ -380,7 +380,7 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
 			  break;;
 esac
 done;;
-f) echo ""
+8) echo ""
 while true
 do
                           
