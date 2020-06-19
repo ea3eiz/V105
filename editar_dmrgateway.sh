@@ -178,6 +178,20 @@ do
                           break;;
 esac
 done;;
+b) echo ""
+while true
+do
+                          echo "Valor  actual  de la Id: ${AMARILLO}${id#*=}\33[1;37m"
+                          read -p 'Introduce la Id ' id
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "3c Id=$id" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
 6) echo ""
 while true
 do
