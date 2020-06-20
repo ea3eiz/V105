@@ -166,17 +166,6 @@ fi
 #=================================================================================
 
 #==================================================================================
-ysfdmr=$(awk "NR==14" /home/pi/.local/autoarranque.ini)
-ysfdmr=`expr substr $ysfdmr 7 3`
-if [ $ysfdmr = "ON" ]
-then
-echo "   ${CIAN}14) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}YSF2DMR"
-else
-echo "   ${CIAN}14) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF2DMR"
-fi
-#=================================================================================
-
-#==================================================================================
 ambeserver=$(awk "NR==13" /home/pi/.local/autoarranque.ini)
 ambeserver=`expr substr $ambeserver 13 3`
 if [ $ambeserver = "ON" ]
@@ -184,6 +173,17 @@ then
 echo "   ${CIAN}13) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}AMBE SERVER"
 else
 echo "   ${CIAN}13) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}AMBE SERVER"
+fi
+#=================================================================================
+
+#==================================================================================
+ysfdmr=$(awk "NR==14" /home/pi/.local/autoarranque.ini)
+ysfdmr=`expr substr $ysfdmr 9 3`
+if [ $ysfdmr = "ON" ]
+then
+echo "   ${CIAN}14) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}YSF2DMR"
+else
+echo "   ${CIAN}14) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF2DMR"
 fi
 #=================================================================================
 
