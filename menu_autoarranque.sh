@@ -648,7 +648,7 @@ clear
                         echo " *****************************************************"
                         echo " ** $reset *"
                         echo " *****************************************************"
-                        echo -n "${BLANCO}  Quieres seguir? S/N ${AMARILLO} /  ${CIAN}You want to continue? Y/N "
+                        echo -n "${BLANCO}  Quieres seguir? S/N "
                         read -p ' ' ejecutar1
                         case $ejecutar1 in
                         [sSyY]* ) echo ""
