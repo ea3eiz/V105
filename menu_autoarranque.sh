@@ -36,9 +36,9 @@ dstar=`grep "D-STAR" /home/pi/.local/autoarranque.ini`
 dstar=`expr substr $dstar 8 3`
 if [ $dstar = "ON" ]
 then
-echo "   1)$desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ircDDB"
+echo "   ${CIAN}1)$desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ircDDB"
 else
-echo "   1)$conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}ircDDB"
+echo "   ${CIAN}1)${ROJO}$conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}ircDDB"
 fi
 #==================================================================================
 
@@ -48,9 +48,9 @@ bluedv=`grep "BlueDV" /home/pi/.local/autoarranque.ini`
 bluedv=`expr substr $bluedv 8 3`
 if [ $bluedv = "ON" ]
 then
-echo "   2)$desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}BlueDV"
+echo "   ${CIAN}2)$desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}BlueDV"
 else
-echo "   2)$conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}BlueDV"
+echo "   ${CIAN}2)$conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}BlueDV"
 fi
 #==================================================================================
 
