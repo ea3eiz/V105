@@ -10,6 +10,7 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
 #Editor MMDVMBM.ini
+linea_info_memoria="275c" #Linea del MMDVM donde guardamos el nombre de la memoria
 DIRECTORIO="MMDVMBM.ini"
 DIRECTORIO_copia="MMDVMBM.ini_copia"
 DIRECTORIO_copia2="MMDVMBM.ini_copia2"
@@ -1220,7 +1221,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
-                        sed -i "275c $memoria1" $usuario/MMDVMHost/$DIRECTORIO
+                        sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
@@ -1254,7 +1255,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M2 >>>>>"
                         sleep 3
                         sed -i "$segun $memoria2" $usuario/info_panel_control.ini
-                        sed -i "275c $memoria2" $usuario/MMDVMHost/$DIRECTORIO
+                        sed -i "$linea_info_memoria $memoria2" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia2
 			                  break;;
 			                  [nN]* ) echo ""
@@ -1288,7 +1289,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
                         sleep 3
                         sed -i "$tercer $memoria3" $usuario/info_panel_control.ini
-                        sed -i "275c $memoria3" $usuario/MMDVMHost/$DIRECTORIO
+                        sed -i "$linea_info_memoria $memoria3" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia3
 			                  break;;
 			                  [nN]* ) echo ""
