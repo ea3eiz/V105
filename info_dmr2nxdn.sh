@@ -1,20 +1,9 @@
 #!/bin/bash
-idioma=$(awk "NR==1" /home/pi/.local/idioma)
-if [ $idioma = English ]; then
-Frecuencia="Frequency:"
-Puerto="Port: " 
-Servidor="Server: "
-Memoria="Memory:"    
-informacion="INFORMATION"
-
-else
 Frecuencia="Frecuencia:"
 Puerto="Puerto:" 
 Servidor="Servidor:"
 Memoria="Memoria:"
 informacion="INFORMACIÓN"
-
-fi
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini`
 buscar=":"
@@ -38,8 +27,6 @@ mode=$(awk "NR==$numero_linea_address" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini)
 address=`expr substr $address 13 35`
 address="  "$address
 
-memoria=$(awk "NR==294" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini)
-
 #Colores
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
@@ -57,7 +44,6 @@ echo ""
 echo "${CIAN}  $Frecuencia ${AMARILLO}$frecuencia   "
 echo "${CIAN}  $Puerto   ${AMARILLO}$puerto   "
 echo "${CIAN}  $Servidor ${AMARILLO}$address   "
-echo "${CIAN}  $Memoria    ${AMARILLO}$memoria   "
 echo "${VERDE}"
 echo "  ******************************************"
 echo "${ROJO}"
