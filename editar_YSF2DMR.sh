@@ -157,8 +157,13 @@ echo ""
 echo "\33[1;36m  16)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
 echo -n "\33[1;36m  17)\33[1;32m Utilizar fichero de Configuración de M1: \33[1;36m"
 reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
-reflector=`expr substr $reflector 12 40`
-echo "$reflector"
+buscar=":"
+largo=`expr index $reflector $buscar`
+largo=`expr $largo + 9`
+copia1=`expr substr $reflector $largo 40`
+echo -n "$copia1"
+memoria1=$(awk "NR==51" $usuario/info_panel_control.ini)
+echo " - $memoria1"
 
 echo ""
 echo "\33[1;36m  18)\33[1;37m Guardar  fichero de Configuración en M2 \33[1;36m"
