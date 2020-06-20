@@ -32,7 +32,7 @@ echo "                          $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ************************************************************"
 #==================================================================================
-dstar=`grep "D-STAR" /home/pi/.local/autoarranque.ini`
+dstar=$(awk "NR==1" /home/pi/.local/autoarranque.ini)
 dstar=`expr substr $dstar 8 3`
 if [ $dstar = "ON" ]
 then
@@ -44,7 +44,7 @@ fi
 
 #================================================================================== 
 
-bluedv=`grep "BlueDV" /home/pi/.local/autoarranque.ini`
+bluedv=$(awk "NR==2" /home/pi/.local/autoarranque.ini)
 bluedv=`expr substr $bluedv 8 3`
 if [ $bluedv = "ON" ]
 then
@@ -55,7 +55,7 @@ fi
 #==================================================================================
 
 #==================================================================================
-C4F=`grep "C4F" /home/pi/.local/autoarranque.ini`
+C4F=$(awk "NR==3" /home/pi/.local/autoarranque.ini)
 C4F=`expr substr $C4F 5 3`
 if [ $C4F = "ON" ]
 then
@@ -66,7 +66,7 @@ fi
 #==================================================================================
 
 #==================================================================================
-DV4mini=`grep "DV4mini" /home/pi/.local/autoarranque.ini`
+DV4mini=$(awk "NR==4" /home/pi/.local/autoarranque.ini)
 DV4mini=`expr substr $DV4mini 9 3`
 if [ $DV4mini = "ON" ]
 then
@@ -78,7 +78,7 @@ fi
 
 #==================================================================================
 
-MMDVMPLACA=`grep "MMDVMPLACA" /home/pi/.local/autoarranque.ini`
+MMDVMPLACA=$(awk "NR==5" /home/pi/.local/autoarranque.ini)
 MMDVMPLACA=`expr substr $MMDVMPLACA 12 3`
 if [ $MMDVMPLACA = "ON" ]
 then
@@ -89,7 +89,7 @@ fi
 #==================================================================================
 
 #==================================================================================
-MMDVMPLUS=`grep "MMDVMPLUS" /home/pi/.local/autoarranque.ini`
+MMDVMPLUS=$(awk "NR==6" /home/pi/.local/autoarranque.ini)
 MMDVMPLUS=`expr substr $MMDVMPLUS 11 3`
 if [ $MMDVMPLUS = "ON" ]
 then
@@ -100,7 +100,7 @@ fi
 #==================================================================================
 
 #==================================================================================
-MMDVMLIBRE=`grep "MMDVMLIBRE" /home/pi/.local/autoarranque.ini`
+MMDVMLIBRE=$(awk "NR==7" /home/pi/.local/autoarranque.ini)
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
 if [ $MMDVMLIBRE = "ON" ]
 then
@@ -111,7 +111,7 @@ fi
 #==================================================================================
 
 #==================================================================================
-MMDVMBM=`grep "MMDVMBM" /home/pi/.local/autoarranque.ini`
+MMDVMBM=$(awk "NR==8" /home/pi/.local/autoarranque.ini)
 MMDVMBM=`expr substr $MMDVMBM 9 3`
 if [ $MMDVMBM = "ON" ]
 then
@@ -122,7 +122,7 @@ fi
 #==================================================================================
 
 #==================================================================================
-SVXLINK=`grep "SVXLINK" /home/pi/.local/autoarranque.ini`
+SVXLINK=$(awk "NR==9" /home/pi/.local/autoarranque.ini)
 SVXLINK=`expr substr $SVXLINK 9 3`
 if [ $SVXLINK = "ON" ]
 then
@@ -133,7 +133,7 @@ fi
 #==================================================================================
 
 #==================================================================================
-solod=`grep "SOLO_DSTAR" /home/pi/.local/autoarranque.ini`
+solod=$(awk "NR==10" /home/pi/.local/autoarranque.ini)
 solod=`expr substr $solod 12 3`
 if [ $solod = "ON" ]
 then
@@ -144,7 +144,7 @@ fi
 #=================================================================================
 
 #==================================================================================
-solof=`grep "SOLO_FUSION" /home/pi/.local/autoarranque.ini`
+solof=$(awk "NR==11" /home/pi/.local/autoarranque.ini)
 solof=`expr substr $solof 13 3`
 if [ $solof = "ON" ]
 then
@@ -155,7 +155,7 @@ fi
 #=================================================================================
 
 #==================================================================================
-dvrptrq=`grep "DVRPTR" /home/pi/.local/autoarranque.ini`
+dvrptrq=$(awk "NR==12" /home/pi/.local/autoarranque.ini)
 dvrptrq=`expr substr $dvrptrq 8 3`
 if [ $dvrptrq = "ON" ]
 then
@@ -166,7 +166,7 @@ fi
 #=================================================================================
 
 #==================================================================================
-ysfdmr=`grep "F2DMR" /home/pi/.local/autoarranque.ini`
+ysfdmr=$(awk "NR==13" /home/pi/.local/autoarranque.ini)
 ysfdmr=`expr substr $ysfdmr 7 3`
 if [ $ysfdmr = "ON" ]
 then
@@ -177,7 +177,7 @@ fi
 #=================================================================================
 
 #==================================================================================
-ambeserver=`grep "AMBE_SERVER" /home/pi/.local/autoarranque.ini`
+ambeserver=$(awk "NR==14" /home/pi/.local/autoarranque.ini)
 ambeserver=`expr substr $ambeserver 13 3`
 if [ $ambeserver = "ON" ]
 then
