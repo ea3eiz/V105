@@ -141,10 +141,55 @@ $tg = " TG: " . substr($tg, 13, 10);
                          <img src="imagenes/BACKUP.png" width="95" ></img><br>
                          <a href="../upload/form.php" class="btn btn-success btn-sm">RESTAURAR COPIA SEGURIDAD</a>
                      </div>
-                                                     <div class="col-md-4 text-center thumbnail"><br>
+            
+
+
+
+
+
+<?php
+              $dvswitch = exec('awk "NR==18{print;exit}" /home/pi/status.ini');
+              if ($dvswitch=="DVSWITCH=ON"){ 
+        ?>
+              <head> 
+            <div class="col-md-4 text-center thumbnail"><br>
                 <img src="../img/DVSWITCH.png" width="127" ></img><br>
-                <a href="../panel_configuracion.php" class="btn btn-success btn-sm">IR AL PANEL DVSWITCH MOBILE</a>
+                <a href="../panel_configuracion.php" class="btn btn-success btn-sm">IR A DVSWITCH ACTIVADO </a>
             </div>
+              </head>
+        <?php
+        }
+        else {
+        ?>
+              <head> 
+            <div class="col-md-4 text-center thumbnail"><br>
+                <img src="../img/DVSWITCH.png" width="127" ></img><br>
+                <a href="../panel_configuracion.php" class="btn btn-danger btn-sm">DVSWITCH DESACTIVADO</a>
+            </div>
+              </head>
+        <?php
+        }    
+        ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  </div><!-- row -->                    
 <!-- ============================================================================================= -->
