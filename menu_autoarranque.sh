@@ -38,7 +38,7 @@ if [ $dstar = "ON" ]
 then
 echo "   ${CIAN}1)$desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ircDDB"
 else
-echo "   ${CIAN}1)${ROJO}$conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}ircDDB"
+echo "   ${CIAN}1)$conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}ircDDB"
 fi
 #==================================================================================
 
