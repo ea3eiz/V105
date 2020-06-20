@@ -15,8 +15,7 @@ DIRECTORIO_copia="MMDVMBM.ini_copia"
 DIRECTORIO_copia2="MMDVMBM.ini_copia2"
 DIRECTORIO_copia3="MMDVMBM.ini_copia3"
 
-linea_info_memoria="275c" #Linea del MMDVM donde guardamos el nombre de la memoria
-  #Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
+#Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
 primero="1c"
 segundo="2c"
 tercero="3c"
@@ -55,6 +54,8 @@ AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
+
+linea_info_memoria="275c" #Linea del MMDVM donde guardamos el nombre de la memoria
 
 echo "${VERDE}"
 echo "   *******************************************************************************"
