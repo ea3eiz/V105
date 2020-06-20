@@ -48,9 +48,9 @@ bluedv=`grep "BlueDV" /home/pi/.local/autoarranque.ini`
 bluedv=`expr substr $bluedv 8 3`
 if [ $bluedv = "ON" ]
 then
-echo "   ${VERDE}$estado  ON ${CIAN}   2)$desconectar \t${VERDE}BlueDV"
+echo "   2)$desconectar  ${VERDE}$estado  ON ${CIAN}    \t${VERDE}BlueDV"
 else
-echo "   ${ROJO}$estado OFF ${CIAN}   2)$conectar \t${ROJO}BlueDV"
+echo "   2)$conectar  ${ROJO}$estado OFF ${CIAN}    \t${ROJO}BlueDV"
 fi
 #==================================================================================
 
