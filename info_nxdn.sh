@@ -1,20 +1,9 @@
 #!/bin/bash
-idioma=$(awk "NR==1" /home/pi/.local/idioma)
-if [ $idioma = English ]; then
-Frecuencia="Frequency:"
-Puerto="Port: " 
-Servidor="Server: "
-Memoria="Memory:"    
-informacion="INFORMATION"
-
-else
 Frecuencia="Frecuencia:"
 Puerto="Puerto:" 
 Servidor="Servidor:"
 Memoria="Memoria:"
 informacion="INFORMACIÓN"
-
-fi
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMNXDN.ini`
 buscar=":"
