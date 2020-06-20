@@ -166,24 +166,24 @@ fi
 #=================================================================================
 
 #==================================================================================
-ysfdmr=$(awk "NR==13" /home/pi/.local/autoarranque.ini)
+ysfdmr=$(awk "NR==14" /home/pi/.local/autoarranque.ini)
 ysfdmr=`expr substr $ysfdmr 7 3`
 if [ $ysfdmr = "ON" ]
 then
-echo "   ${CIAN}13) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}YSF2DMR"
+echo "   ${CIAN}14) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}YSF2DMR"
 else
-echo "   ${CIAN}13) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF2DMR"
+echo "   ${CIAN}14) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF2DMR"
 fi
 #=================================================================================
 
 #==================================================================================
-ambeserver=$(awk "NR==14" /home/pi/.local/autoarranque.ini)
+ambeserver=$(awk "NR==13" /home/pi/.local/autoarranque.ini)
 ambeserver=`expr substr $ambeserver 13 3`
 if [ $ambeserver = "ON" ]
 then
-echo "   ${CIAN}14) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}AMBE SERVER"
+echo "   ${CIAN}13) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}AMBE SERVER"
 else
-echo "   ${CIAN}14) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}AMBE SERVER"
+echo "   ${CIAN}13) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}AMBE SERVER"
 fi
 #=================================================================================
 
@@ -507,7 +507,7 @@ clear
 			                break;;
 esac
 done;;
-13) echo ""
+14) echo ""
 while true
 do
 clear
@@ -519,18 +519,18 @@ clear
                             cd /home/pi/.config/autostart
                             sudo rm FUSIONSOLO.desktop
                             sudo rm YSF2DMR.desktop
-                            sed -i "13c YSF2DMR=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "14c YSF2DMR=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp YSF2DMR.desktop /home/pi/.config/autostart
-                            sed -i "13c YSF2DMR=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "14c YSF2DMR=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
 			                break;;
 esac
 done;;
-14) echo ""
+13) echo ""
 while true
 do
 clear
@@ -541,11 +541,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm AMBE_SERVER.desktop
-                            sed -i "14c AMBE_SERVER=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "13c AMBE_SERVER=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp AMBE_SERVER.desktop /home/pi/.config/autostart
-                            sed -i "14c AMBE_SERVER=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "13c AMBE_SERVER=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
