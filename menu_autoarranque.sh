@@ -667,32 +667,30 @@ clear
                         sudo rm FUSIONSOLO.desktop
                         sudo rm DVRPTR.desktop
                         sudo rm YSF2DMR.desktop
-                        sudo rm dstarrepeater.desktop
                         sudo rm AMBE_SERVER.desktop
                         sudo rm DMR2YSF.desktop
                         sudo rm DMR2NXDN.desktop
                         sudo rm NXDN.desktop
                         sudo rm DMRGateway.desktop
 
-sed -i "1c D-STAR=OFF" /home/pi/.local/autoarranque.ini
+sed -i "1c ircDDB=OFF" /home/pi/.local/autoarranque.ini
 sed -i "2c BlueDV=OFF" /home/pi/.local/autoarranque.ini
-sed -i "3c C4F=OFF" /home/pi/.local/autoarranque.ini
+sed -i "3c YSF=OFF" /home/pi/.local/autoarranque.ini
 sed -i "4c DV4mini=OFF" /home/pi/.local/autoarranque.ini
-sed -i "5c MMDVMPLACA=OFF" /home/pi/.local/autoarranque.ini
-sed -i "6c MMDVMPLUS=OFF" /home/pi/.local/autoarranque.ini
-sed -i "7c MMDVMBM=OFF" /home/pi/.local/autoarranque.ini
+sed -i "5c Radio=OFF" /home/pi/.local/autoarranque.ini
+sed -i "6c DMR+=OFF" /home/pi/.local/autoarranque.ini
+sed -i "7c BM=OFF" /home/pi/.local/autoarranque.ini
 sed -i "8c SVXLINK=OFF" /home/pi/.local/autoarranque.ini
-sed -i "9c dstarrepeater=OFF" /home/pi/.local/autoarranque.ini
-sed -i "10c MMDVMLIBRE=OFF" /home/pi/.local/autoarranque.ini
-sed -i "11c SOLO_DSTAR=OFF" /home/pi/.local/autoarranque.ini
-sed -i "12c SOLO_FUSION=OFF" /home/pi/.local/autoarranque.ini
-sed -i "13c DVRPTR=OFF" /home/pi/.local/autoarranque.ini
-sed -i "14c AMBE_SERVER=OFF" /home/pi/.local/autoarranque.ini
-sed -i "15c F2DMR=OFF" /home/pi/.local/autoarranque.ini
-sed -i "16c DMR2YSF=OFF" /home/pi/.local/autoarranque.ini
-sed -i "17c DMR2NXDN=OFF" /home/pi/.local/autoarranque.ini
-sed -i "18c NXDN=OFF" /home/pi/.local/autoarranque.ini
-sed -i "19c DMRGateway=OFF" /home/pi/.local/autoarranque.ini
+sed -i "9c MMDVMLIBRE=OFF" /home/pi/.local/autoarranque.ini
+sed -i "10c SOLO_DSTAR=OFF" /home/pi/.local/autoarranque.ini
+sed -i "11c SOLO_FUSION=OFF" /home/pi/.local/autoarranque.ini
+sed -i "12c DVRPTR=OFF" /home/pi/.local/autoarranque.ini
+sed -i "13c AMBE_SERVER=OFF" /home/pi/.local/autoarranque.ini
+sed -i "14c YSF2DMR=OFF" /home/pi/.local/autoarranque.ini
+sed -i "15c DMR2YSF=OFF" /home/pi/.local/autoarranque.ini
+sed -i "16c DMR2NXDN=OFF" /home/pi/.local/autoarranque.ini
+sed -i "17c NXDN=OFF" /home/pi/.local/autoarranque.ini
+sed -i "18c DMRGateway=OFF" /home/pi/.local/autoarranque.ini
 
                         exit;
                         break;;
