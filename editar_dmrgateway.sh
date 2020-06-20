@@ -103,7 +103,7 @@ echo "${CIAN}  18)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificacion
 echo ""
 echo "${CIAN}   0)\33[1;31m Salir"
 echo ""
-echo -n "${CIAN}   Elije una opción:" 
+echo -n "${CIAN}   Elije una opción: " 
 read escoger_menu
 case $escoger_menu in
 3) echo ""
