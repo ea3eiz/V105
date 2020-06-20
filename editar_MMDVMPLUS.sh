@@ -14,19 +14,21 @@ DIRECTORIO="MMDVMPLUS.ini"
 DIRECTORIO_copia="MMDVMPLUS.ini_copia"
 DIRECTORIO_copia2="MMDVMPLUS.ini_copia2"
 DIRECTORIO_copia3="MMDVMPLUS.ini_copia3"
+
+linea_info_memoria="275c" #Linea del MMDVM donde guardamos el nombre de la memoria
   #Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
-primero="11c"
-segundo="12c"
-tercero="13c"
-cuarto="14c"
+primero="1c"
+segundo="2c"
+tercero="3c"
+cuarto="4c"
   #Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
-primer="31c"
-segun="32c"
-tercer="33c"
-  #Lee los datos del fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3 
-primer1="31c"
-segun1="32c"
-tercer1="33c"
+primer="34c"
+segun="35c"
+tercer="36c"
+  #Lee los datos del fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
+primer1="34c"
+segun1="35c"
+tercer1="36c"
 # Recoge datos para leer desde el panel de control
 indi=$(awk "NR==2" $usuario/MMDVMHost/$DIRECTORIO)
 sed -i "$primero $indi" $usuario/info_panel_control.ini
@@ -57,7 +59,7 @@ MARRON="\33[38;5;138m"
 echo "${VERDE}"
 echo "   *******************************************************************************"
 echo -n "${CIAN}"
-echo "                       Script para Modificar $DIRECTORIO    "
+echo "                       xxxScript para Modificar $DIRECTORIO    "
 echo -n "${ROJO}"
 echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
@@ -302,7 +304,7 @@ ScreenLayout1=`expr substr $ScreenLayout 5 30`
 echo -n "$ScreenLayout1"
 fi
 
-# i) NXDN Enable= 
+# i) NXDN Enable=
 var=`grep -n -m 1 "\[NXDN\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
@@ -355,7 +357,7 @@ modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
 echo -n "$modu1"
 
-# k) Jitter= 
+# k) Jitter=
 Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $Jitter $buscar`
@@ -872,7 +874,7 @@ do
                           buscar=":"
                           largo=`expr index $ScreenLayout $buscar`
                           echo "Valor actual del ScreenLayout=: ${AMARILLO}${ScreenLayout1#*=}\33[1;37m"
-                          read -p 'Este parametro puede ser 3: ' V
+                          read -p 'Este parametro debe ser 3: ' V
                           letra=c
                           if [ $largo = 3 ]
                           then
@@ -1017,7 +1019,7 @@ do
                           buscar=":"
                           largo=`expr index $modehang $buscar`
                           echo "Valor actual del RFModeHang = : ${AMARILLO}${modehang1#*=}\33[1;37m"
-                          read -p 'Introcuce el valor para RFModeHang (optimo=3): ' V
+                          read -p 'Introcuce el valor para RFModeHang (optimo=5): ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -1176,10 +1178,10 @@ done;;
 27) echo ""
 while true
 do
-                          read -p 'Estas en DMR+ ? S/N ' actualizar             	                           
+                          read -p 'Estas en DMR+ ? S/N ' actualizar                                          
                           case $actualizar in
-			                    [sS]* ) echo ""
-			                    read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+                          [sS]* ) echo ""
+                          read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
                           letra1=c
                           linea4=$linea33port$letra1
                           if [ $opcion = 21465 ]
@@ -1187,13 +1189,13 @@ do
                           sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/MMDVMHost/$DIRECTORIO
                           else
                           sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
-			                    fi
+                          fi
                           break;;
-			                    [nN]* ) echo ""
-			                    letra1=c
+                          [nN]* ) echo ""
+                          letra1=c
                           linea4=$linea33port$letra1
-			                    sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
-			                    break;;
+                          sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
 esac
 done;;
 28) echo ""
@@ -1220,7 +1222,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
-                        sed -i "2c $memoria1" $usuario/.local/info_memorias
+                        sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
@@ -1254,7 +1256,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M2 >>>>>"
                         sleep 3
                         sed -i "$segun $memoria2" $usuario/info_panel_control.ini
-                        sed -i "2c $memoria2" $usuario/.local/info_memorias
+                        sed -i "$linea_info_memoria $memoria2" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia2
 			                  break;;
 			                  [nN]* ) echo ""
@@ -1288,7 +1290,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
                         sleep 3
                         sed -i "$tercer $memoria3" $usuario/info_panel_control.ini
-                        sed -i "2c $memoria3" $usuario/.local/info_memorias
+                        sed -i "$linea_info_memoria $memoria3" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia3
 			                  break;;
 			                  [nN]* ) echo ""

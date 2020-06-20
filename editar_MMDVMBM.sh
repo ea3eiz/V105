@@ -10,11 +10,12 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
 #Editor MMDVMBM.ini
-linea_info_memoria="275c" #Linea del MMDVM donde guardamos el nombre de la memoria
 DIRECTORIO="MMDVMBM.ini"
 DIRECTORIO_copia="MMDVMBM.ini_copia"
 DIRECTORIO_copia2="MMDVMBM.ini_copia2"
 DIRECTORIO_copia3="MMDVMBM.ini_copia3"
+
+linea_info_memoria="275c" #Linea del MMDVM donde guardamos el nombre de la memoria
   #Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
 primero="1c"
 segundo="2c"
