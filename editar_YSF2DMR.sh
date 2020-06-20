@@ -516,6 +516,7 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
+                        sed -i "51c $memoria1" $usuario/info_panel_control.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_01
 
                         break;;
@@ -556,6 +557,7 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad de la M2 >>>>>"
                         sleep 3
+                        sed -i "52c $memoria1" $usuario/info_panel_control.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_02
 
                         break;;
@@ -597,6 +599,7 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
                         sleep 3
+                        sed -i "53c $memoria1" $usuario/info_panel_control.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_03
 
                         break;;
@@ -636,6 +639,7 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad de la M4 >>>>>"
                         sleep 3
+                        sed -i "54c $memoria1" $usuario/info_panel_control.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_04
 
                         break;;
