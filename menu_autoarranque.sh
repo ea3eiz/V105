@@ -177,75 +177,64 @@ fi
 #=================================================================================
 
 #==================================================================================
-#dstarrepeater=`grep "dstarrepeater" /home/pi/.local/autoarranque.ini`
-#dstarrepeater=`expr substr $dstarrepeater 15 3`
-#if [ $dstarrepeater = "ON" ]
-#then
-#echo "   ${CIAN}14) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}D-STAR REPEATER"
-#else
-#echo "   ${CIAN}14) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}D-STAR REPEATER"
-#fi
-#=================================================================================
-
-#==================================================================================
 ambeserver=`grep "AMBE_SERVER" /home/pi/.local/autoarranque.ini`
 ambeserver=`expr substr $ambeserver 13 3`
 if [ $ambeserver = "ON" ]
 then
-echo "   ${CIAN}15) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}AMBE SERVER"
+echo "   ${CIAN}14) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}AMBE SERVER"
 else
-echo "   ${CIAN}15) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}AMBE SERVER"
+echo "   ${CIAN}14) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}AMBE SERVER"
 fi
 #=================================================================================
 
 #==================================================================================
-dmrysf=$(awk "NR==16" /home/pi/.local/autoarranque.ini)
+dmrysf=$(awk "NR==15" /home/pi/.local/autoarranque.ini)
 dmrysf=`expr substr $dmrysf 9 3`
 if [ $dmrysf = "ON" ]
 then
-echo "   ${CIAN}16) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2YSF"
+echo "   ${CIAN}15) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2YSF"
 else
-echo "   ${CIAN}16) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2YSF"
+echo "   ${CIAN}15) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2YSF"
 fi
 #=================================================================================
 
 #==================================================================================
-dmrnxdn=$(awk "NR==17" /home/pi/.local/autoarranque.ini)
+dmrnxdn=$(awk "NR==16" /home/pi/.local/autoarranque.ini)
 dmrnxdn=`grep "DMR2NXDN" /home/pi/.local/autoarranque.ini`
 dmrnxdn=`expr substr $dmrnxdn 10 3`
 if [ $dmrnxdn = "ON" ]
 then
-echo "   ${CIAN}17) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2NXDN"
+echo "   ${CIAN}16) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2NXDN"
 else
-echo "   ${CIAN}17) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2NXDN"
+echo "   ${CIAN}16) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2NXDN"
 fi
 #=================================================================================
 
 #==================================================================================
-nxdn=$(awk "NR==18" /home/pi/.local/autoarranque.ini)
+nxdn=$(awk "NR==17" /home/pi/.local/autoarranque.ini)
 nxdn=`expr substr $nxdn 6 3`
 if [ $nxdn = "ON" ]
 then
-echo "   ${CIAN}18) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}NXDN"
+echo "   ${CIAN}17) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}NXDN"
 else
-echo "   ${CIAN}18) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}NXDN"
+echo "   ${CIAN}17) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}NXDN"
 fi
 #=================================================================================
 
 #=========================================================================*========
-dmrgateway=$(awk "NR==19" /home/pi/.local/autoarranque.ini)
+dmrgateway=$(awk "NR==18" /home/pi/.local/autoarranque.ini)
 dmrgateway=`expr substr $dmrgateway 12 3`
 if [ $dmrgateway = "ON" ]
 then
-echo "   ${CIAN}19) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMRGateway"
+echo "   ${CIAN}18) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMRGateway"
 else
-echo "   ${CIAN}19) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMRGateway"
+echo "   ${CIAN}18) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMRGateway"
 fi
 #=========================================================================*========
 
 echo ""
 
-echo "\33[1;36m   27)\33[1;32m *** $restablece"
+echo "\33[1;36m   19)\33[1;32m *** $restablece"
 
 echo ""
 echo -n "\33[1;36m   $elige: " 
@@ -541,29 +530,7 @@ clear
 			                break;;
 esac
 done;;
-14bloqueado) echo ""
-while true
-do
-clear
-	                     	actualizar=S
-		                   	case $actualizar in
-			                [sS]* ) echo ""
-                            if [ $dstarrepeater = "ON" ]
-                            then
-                            cd /home/pi/.config/autostart
-                            sudo rm dstarrepeater.desktop
-                            sed -i "9c dstarrepeater=OFF" /home/pi/.local/autoarranque.ini
-                            else
-                            cd /home/pi/AUTOARRANQUEV105
-                            sudo cp dstarrepeater.desktop /home/pi/.config/autostart
-                            sed -i "9c dstarrepeater=ON" /home/pi/.local/autoarranque.ini
-                            fi
-			                break;;
-			                [nN]* ) echo ""
-			                break;;
-esac
-done;;
-15) echo ""
+14) echo ""
 while true
 do
 clear
@@ -585,7 +552,7 @@ clear
 			                break;;
 esac
 done;;
-16) echo ""
+15) echo ""
 while true
 do
 clear
@@ -607,7 +574,7 @@ clear
 			                break;;
 esac
 done;;
-17) echo ""
+16) echo ""
 while true
 do
 clear
@@ -629,7 +596,7 @@ clear
 			                break;;
 esac
 done;;
-18) echo ""
+17) echo ""
 while true
 do
 clear
@@ -651,7 +618,7 @@ clear
 			                break;;
 esac
 done;;
-19) echo ""
+18) echo ""
 while true
 do
 clear
@@ -673,7 +640,7 @@ clear
 			                break;;
 esac
 done;;
-27) echo ""
+19) echo ""
 while true
 do
 clear
