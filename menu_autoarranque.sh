@@ -50,7 +50,7 @@ if [ $bluedv = "ON" ]
 then
 echo "   2)$desconectar  ${VERDE}$estado  ON ${CIAN}    \t${VERDE}BlueDV"
 else
-echo "   2)$conectar  {ROJO}$estado OFF ${CIAN}    \t${ROJO}BlueDV"
+echo "   ${ROJO}$estado OFF ${CIAN}   2)$conectar \t${ROJO}BlueDV"
 fi
 #==================================================================================
 
