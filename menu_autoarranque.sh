@@ -79,7 +79,7 @@ fi
 #==================================================================================
 
 MMDVMPLACA=$(awk "NR==5" /home/pi/.local/autoarranque.ini)
-MMDVMPLACA=`expr substr $MMDVMPLACA 12 3`
+MMDVMPLACA=`expr substr $MMDVMPLACA 7 3`
 if [ $MMDVMPLACA = "ON" ]
 then
 echo "   ${CIAN}5) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}Radio"
@@ -90,7 +90,7 @@ fi
 
 #==================================================================================
 MMDVMPLUS=$(awk "NR==6" /home/pi/.local/autoarranque.ini)
-MMDVMPLUS=`expr substr $MMDVMPLUS 11 3`
+MMDVMPLUS=`expr substr $MMDVMPLUS 6 3`
 if [ $MMDVMPLUS = "ON" ]
 then
 echo "   ${CIAN}6) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR+"
@@ -112,7 +112,7 @@ fi
 
 #==================================================================================
 MMDVMBM=$(awk "NR==8" /home/pi/.local/autoarranque.ini)
-MMDVMBM=`expr substr $MMDVMBM 9 3`
+MMDVMBM=`expr substr $MMDVMBM 4 3`
 if [ $MMDVMBM = "ON" ]
 then
 echo "   ${CIAN}8) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}BM"
