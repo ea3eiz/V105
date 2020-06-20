@@ -515,7 +515,7 @@ $tg = " TG: " . substr($tg, 13, 10);
         ?>
 
         <?php
-              $ysf = exec('awk "NR==9{print;exit}" /home/pi/status.ini');
+              $ysf = exec('awk "NR==19{print;exit}" /home/pi/status.ini');
               if ($ysf=="DMRGateway=ON"){ 
         ?>
               <head> 
