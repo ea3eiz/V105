@@ -101,7 +101,7 @@ fi
 
 #==================================================================================
 MMDVMLIBRE=$(awk "NR==7" /home/pi/.local/autoarranque.ini)
-MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
+MMDVMLIBRE=`expr substr $MMDVMLIBRE 10 3`
 if [ $MMDVMLIBRE = "ON" ]
 then
 echo "   ${CIAN}7) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ESPECIAL"
@@ -679,9 +679,9 @@ sed -i "3c YSF=OFF" /home/pi/.local/autoarranque.ini
 sed -i "4c DV4mini=OFF" /home/pi/.local/autoarranque.ini
 sed -i "5c Radio=OFF" /home/pi/.local/autoarranque.ini
 sed -i "6c DMR+=OFF" /home/pi/.local/autoarranque.ini
-sed -i "7c BM=OFF" /home/pi/.local/autoarranque.ini
-sed -i "8c SVXLINK=OFF" /home/pi/.local/autoarranque.ini
-sed -i "9c ESPECIAL=OFF" /home/pi/.local/autoarranque.ini
+sed -i "7c ESPECIAL=OFF" /home/pi/.local/autoarranque.ini
+sed -i "8c BM=OFF" /home/pi/.local/autoarranque.ini
+sed -i "9c SVXLINK=OFF" /home/pi/.local/autoarranque.ini
 sed -i "10c SOLO_DSTAR=OFF" /home/pi/.local/autoarranque.ini
 sed -i "11c SOLO_FUSION=OFF" /home/pi/.local/autoarranque.ini
 sed -i "12c DVRPTR=OFF" /home/pi/.local/autoarranque.ini
