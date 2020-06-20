@@ -168,23 +168,38 @@ echo " - $memoria1"
 echo ""
 echo "\33[1;36m  18)\33[1;37m Guardar  fichero de Configuración en M2 \33[1;36m"
 echo -n "\33[1;36m  19)\33[1;32m Utilizar fichero de Configuración de M2: \33[1;36m"
-reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_02`
-reflector=`expr substr $reflector 12 40`
-echo "$reflector"
+reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
+buscar=":"
+largo=`expr index $reflector $buscar`
+largo=`expr $largo + 9`
+copia1=`expr substr $reflector $largo 40`
+echo -n "$copia1"
+memoria1=$(awk "NR==52" $usuario/info_panel_control.ini)
+echo " - $memoria2"
 
 echo ""
 echo "\33[1;36m  20)\33[1;37m Guardar  fichero de Configuración en M3 \33[1;36m"
 echo -n "\33[1;36m  21)\33[1;32m Utilizar fichero de Configuración de M3: \33[1;36m"
-reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_03`
-reflector=`expr substr $reflector 12 40`
-echo "$reflector"
+reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
+buscar=":"
+largo=`expr index $reflector $buscar`
+largo=`expr $largo + 9`
+copia1=`expr substr $reflector $largo 40`
+echo -n "$copia1"
+memoria1=$(awk "NR==53" $usuario/info_panel_control.ini)
+echo " - $memoria3"
 
 echo ""
 echo "\33[1;36m  22)\33[1;37m Guardar  fichero de Configuración en M4 \33[1;36m"
 echo -n "\33[1;36m  23)\33[1;32m Utilizar fichero de Configuración de M4: \33[1;36m"
-reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_04`
-reflector=`expr substr $reflector 12 40`
-echo "$reflector"
+reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
+buscar=":"
+largo=`expr index $reflector $buscar`
+largo=`expr $largo + 9`
+copia1=`expr substr $reflector $largo 40`
+echo -n "$copia1"
+memoria1=$(awk "NR==54" $usuario/info_panel_control.ini)
+echo " - $memoria4"
 
 echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero YSF2DMR.ini para hacer cualquier cambio\33[1;33m"
