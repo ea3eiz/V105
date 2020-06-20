@@ -394,7 +394,7 @@ do
 			      break;;
 esac
 done;;
-g) echo ""
+18) echo ""
 while true
 do
                           
