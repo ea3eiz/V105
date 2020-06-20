@@ -49,7 +49,7 @@ GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
 echo "${BLANCO}"
-echo "  INFORMACIÓN (BRANDMEISTER+)"
+echo "  INFORMACIÓN (BRANDMEISTER)"
 echo -n "${VERDE}"
 echo "  ******************************************"
 echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
