@@ -253,11 +253,11 @@ clear
                             then
                        		cd /home/pi/.config/autostart
                        		sudo rm IRCDDB.desktop
-			                sed -i "1c D-STAR=OFF" /home/pi/.local/autoarranque.ini
+			                sed -i "1c ircDDB=OFF" /home/pi/.local/autoarranque.ini
                             else
                        		cd /home/pi/AUTOARRANQUEV105
                   		    sudo cp IRCDDB.desktop /home/pi/.config/autostart
-			                sed -i "1c D-STAR=ON" /home/pi/.local/autoarranque.ini
+			                sed -i "1c ircDDB=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -298,11 +298,11 @@ clear
                             then
                        		cd /home/pi/.config/autostart
                        		sudo rm YSF.desktop
-			                sed -i "3c C4F=OFF" /home/pi/.local/autoarranque.ini
+			                sed -i "3c YSF=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp YSF.desktop /home/pi/.config/autostart
-                            sed -i "3c C4F=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "3c YSF=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -342,11 +342,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm RADIO.desktop
-                            sed -i "5c MMDVMPLACA=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "5c Radio=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp RADIO.desktop /home/pi/.config/autostart
-                            sed -i "5c MMDVMPLACA=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "5c Radio=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -364,11 +364,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm DMRPLUS.desktop
-                            sed -i "6c MMDVMPLUS=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "6c DMR+=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp DMRPLUS.desktop /home/pi/.config/autostart
-                            sed -i "6c MMDVMPLUS=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "6c DMR+=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -386,11 +386,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm LIBRE.desktop
-                            sed -i "10c MMDVMLIBRE=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "7c ESPECIAL=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp LIBRE.desktop /home/pi/.config/autostart
-                            sed -i "10c MMDVMLIBRE=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "7c ESPECIAL=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -408,11 +408,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm BM.desktop
-                            sed -i "7c MMDVMBM=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "8c BM=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp BM.desktop /home/pi/.config/autostart
-                            sed -i "7c MMDVMBM=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "8c BM=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -430,11 +430,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
       		                sudo rm SVXLINK.desktop
-			                sed -i "8c SVXLINK=OFF" /home/pi/.local/autoarranque.ini
+			                sed -i "9c SVXLINK=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp SVXLINK.desktop /home/pi/.config/autostart
-			                sed -i "8c SVXLINK=ON" /home/pi/.local/autoarranque.ini
+			                sed -i "9c SVXLINK=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -452,11 +452,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm DSTARSOLO_05.desktop
-                            sed -i "11c SOLO_DSTAR=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "10c SOLO_DSTAR=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp DSTARSOLO_05.desktop /home/pi/.config/autostart
-                            sed -i "11c SOLO_DSTAR=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "10c SOLO_DSTAR=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -474,11 +474,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm FUSIONSOLO.desktop
-                            sed -i "12c SOLO_FUSION=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "11c SOLO_FUSION=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp FUSIONSOLO.desktop /home/pi/.config/autostart
-                            sed -i "12c SOLO_FUSION=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "11c SOLO_FUSION=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -496,11 +496,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm DVRPTR.desktop
-                            sed -i "13c DVRPTR=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "12c DVRPTR=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp DVRPTR.desktop /home/pi/.config/autostart
-                            sed -i "13c DVRPTR=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "12c DVRPTR=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -519,11 +519,11 @@ clear
                             cd /home/pi/.config/autostart
                             sudo rm FUSIONSOLO.desktop
                             sudo rm YSF2DMR.desktop
-                            sed -i "15c F2DMR=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "13c YSF2DMR=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp YSF2DMR.desktop /home/pi/.config/autostart
-                            sed -i "15c F2DMR=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "13c YSF2DMR=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -563,11 +563,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm DMR2YSF.desktop
-                            sed -i "16c DMR2YSF=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "15c DMR2YSF=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp DMR2YSF.desktop /home/pi/.config/autostart
-                            sed -i "16c DMR2YSF=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "15c DMR2YSF=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -585,11 +585,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm DMR2NXDN.desktop
-                            sed -i "17c DMR2NXDN=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "16c DMR2NXDN=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp DMR2NXDN.desktop /home/pi/.config/autostart
-                            sed -i "17c DMR2NXDN=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "16c DMR2NXDN=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -607,11 +607,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm NXDN.desktop
-                            sed -i "18c NXDN=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "17c NXDN=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp NXDN.desktop /home/pi/.config/autostart
-                            sed -i "18c NXDN=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "17c NXDN=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
@@ -629,11 +629,11 @@ clear
                             then
                             cd /home/pi/.config/autostart
                             sudo rm DMRGateway.desktop
-                            sed -i "19c DMRGateway=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "18c DMRGateway=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp DMRGateway.desktop /home/pi/.config/autostart
-                            sed -i "19c DMRGateway=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "18c DMRGateway=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
