@@ -28,7 +28,6 @@ mode=$(awk "NR==$numero_linea_address" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini)
 address=`expr substr $address 13 35`
 address="  "$address
 
-memoria=$(awk "NR==294" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini)
 
 #Colores
 ROJO="\033[1;31m"
@@ -47,7 +46,6 @@ echo ""
 echo "${CIAN}  $Frecuencia ${AMARILLO}$frecuencia   "
 echo "${CIAN}  $Puerto   ${AMARILLO}$puerto   "
 echo "${CIAN}  $Servidor ${AMARILLO}$address   "
-echo "${CIAN}  $Memoria    ${AMARILLO}$memoria   "
 echo "${VERDE}"
 echo "  ******************************************"
 echo "${ROJO}"
