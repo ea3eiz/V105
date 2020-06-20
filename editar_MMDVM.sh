@@ -60,7 +60,7 @@ linea_info_memoria="275c" #Linea del MMDVM donde guardamos el nombre de la memor
 echo "${VERDE}"
 echo "   *******************************************************************************"
 echo -n "${CIAN}"
-echo "                       xxxScript para Modificar $DIRECTORIO    "
+echo "                       Script para Modificar $DIRECTORIO    "
 echo -n "${ROJO}"
 echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
