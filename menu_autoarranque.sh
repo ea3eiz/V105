@@ -59,9 +59,9 @@ C4F=`grep "C4F" /home/pi/.local/autoarranque.ini`
 C4F=`expr substr $C4F 5 3`
 if [ $C4F = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ircDDB"
+echo "   ${CIAN}3) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ircDDB"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF"
+echo "   ${CIAN}3) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF"
 fi
 #==================================================================================
 
@@ -70,9 +70,9 @@ DV4mini=`grep "DV4mini" /home/pi/.local/autoarranque.ini`
 DV4mini=`expr substr $DV4mini 9 3`
 if [ $DV4mini = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DV4mini"
+echo "   ${CIAN}4) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DV4mini"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DV4mini"
+echo "   ${CIAN}4) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DV4mini"
 fi
 #==================================================================================
 
@@ -82,9 +82,9 @@ MMDVMPLACA=`grep "MMDVMPLACA" /home/pi/.local/autoarranque.ini`
 MMDVMPLACA=`expr substr $MMDVMPLACA 12 3`
 if [ $MMDVMPLACA = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}Radio"
+echo "   ${CIAN}5) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}Radio"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}Radio"
+echo "   ${CIAN}5) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}Radio"
 fi
 #==================================================================================
 
@@ -93,9 +93,9 @@ MMDVMPLUS=`grep "MMDVMPLUS" /home/pi/.local/autoarranque.ini`
 MMDVMPLUS=`expr substr $MMDVMPLUS 11 3`
 if [ $MMDVMPLUS = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR+"
+echo "   ${CIAN}6) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR+"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR+"
+echo "   ${CIAN}6) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR+"
 fi
 #==================================================================================
 
@@ -104,9 +104,9 @@ MMDVMLIBRE=`grep "MMDVMLIBRE" /home/pi/.local/autoarranque.ini`
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
 if [ $MMDVMLIBRE = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ESPECIAL"
+echo "   ${CIAN}7) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ESPECIAL"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}ESPECIAL"
+echo "   ${CIAN}7) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}ESPECIAL"
 fi
 #==================================================================================
 
@@ -115,9 +115,9 @@ MMDVMBM=`grep "MMDVMBM" /home/pi/.local/autoarranque.ini`
 MMDVMBM=`expr substr $MMDVMBM 9 3`
 if [ $MMDVMBM = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}BM"
+echo "   ${CIAN}8) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}BM"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}BM"
+echo "   ${CIAN}8) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}BM"
 fi
 #==================================================================================
 
@@ -126,9 +126,9 @@ SVXLINK=`grep "SVXLINK" /home/pi/.local/autoarranque.ini`
 SVXLINK=`expr substr $SVXLINK 9 3`
 if [ $SVXLINK = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SVXLINK"
+echo "   ${CIAN}9) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SVXLINK"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}SVXLINK"
+echo "   ${CIAN}9) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}SVXLINK"
 fi
 #==================================================================================
 
@@ -137,9 +137,9 @@ solod=`grep "SOLO_DSTAR" /home/pi/.local/autoarranque.ini`
 solod=`expr substr $solod 12 3`
 if [ $solod = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SOLO_DSTAR"
+echo "   ${CIAN}10) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SOLO_DSTAR"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}SOLO_DSTAR"
+echo "   ${CIAN}10) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}SOLO_DSTAR"
 fi
 #=================================================================================
 
@@ -148,9 +148,9 @@ solof=`grep "SOLO_FUSION" /home/pi/.local/autoarranque.ini`
 solof=`expr substr $solof 13 3`
 if [ $solof = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SOLO_FUSION"
+echo "   ${CIAN}11) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SOLO_FUSION"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}SOLO_FUSION"
+echo "   ${CIAN}11) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}SOLO_FUSION"
 fi
 #=================================================================================
 
@@ -159,9 +159,9 @@ dvrptrq=`grep "DVRPTR" /home/pi/.local/autoarranque.ini`
 dvrptrq=`expr substr $dvrptrq 8 3`
 if [ $dvrptrq = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DVRPTR"
+echo "   ${CIAN}12) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DVRPTR"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DVRPTR"
+echo "   ${CIAN}12) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DVRPTR"
 fi
 #=================================================================================
 
@@ -170,21 +170,21 @@ ysfdmr=`grep "F2DMR" /home/pi/.local/autoarranque.ini`
 ysfdmr=`expr substr $ysfdmr 7 3`
 if [ $ysfdmr = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}YSF2DMR"
+echo "   ${CIAN}13) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}YSF2DMR"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF2DMR"
+echo "   ${CIAN}13) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF2DMR"
 fi
 #=================================================================================
 
 #==================================================================================
-dstarrepeater=`grep "dstarrepeater" /home/pi/.local/autoarranque.ini`
-dstarrepeater=`expr substr $dstarrepeater 15 3`
-if [ $dstarrepeater = "ON" ]
-then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}D-STAR REPEATER"
-else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}D-STAR REPEATER"
-fi
+#dstarrepeater=`grep "dstarrepeater" /home/pi/.local/autoarranque.ini`
+#dstarrepeater=`expr substr $dstarrepeater 15 3`
+#if [ $dstarrepeater = "ON" ]
+#then
+#echo "   ${CIAN}14) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}D-STAR REPEATER"
+#else
+#echo "   ${CIAN}14) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}D-STAR REPEATER"
+#fi
 #=================================================================================
 
 #==================================================================================
@@ -192,9 +192,9 @@ ambeserver=`grep "AMBE_SERVER" /home/pi/.local/autoarranque.ini`
 ambeserver=`expr substr $ambeserver 13 3`
 if [ $ambeserver = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}AMBE SERVER"
+echo "   ${CIAN}15) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}AMBE SERVER"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}AMBE SERVER"
+echo "   ${CIAN}15) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}AMBE SERVER"
 fi
 #=================================================================================
 
@@ -203,9 +203,9 @@ dmrysf=$(awk "NR==16" /home/pi/.local/autoarranque.ini)
 dmrysf=`expr substr $dmrysf 9 3`
 if [ $dmrysf = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2YSF"
+echo "   ${CIAN}16) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2YSF"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2YSF"
+echo "   ${CIAN}16) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2YSF"
 fi
 #=================================================================================
 
@@ -215,9 +215,9 @@ dmrnxdn=`grep "DMR2NXDN" /home/pi/.local/autoarranque.ini`
 dmrnxdn=`expr substr $dmrnxdn 10 3`
 if [ $dmrnxdn = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2NXDN"
+echo "   ${CIAN}17) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2NXDN"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2NXDN"
+echo "   ${CIAN}17) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2NXDN"
 fi
 #=================================================================================
 
@@ -226,9 +226,9 @@ nxdn=$(awk "NR==18" /home/pi/.local/autoarranque.ini)
 nxdn=`expr substr $nxdn 6 3`
 if [ $nxdn = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}NXDN"
+echo "   ${CIAN}18) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}NXDN"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}NXDN"
+echo "   ${CIAN}18) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}NXDN"
 fi
 #=================================================================================
 
@@ -237,9 +237,9 @@ dmrgateway=$(awk "NR==19" /home/pi/.local/autoarranque.ini)
 dmrgateway=`expr substr $dmrgateway 12 3`
 if [ $dmrgateway = "ON" ]
 then
-echo "   ${CIAN}1) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMRGateway"
+echo "   ${CIAN}19) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMRGateway"
 else
-echo "   ${CIAN}1) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMRGateway"
+echo "   ${CIAN}19) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMRGateway"
 fi
 #=========================================================================*========
 
@@ -541,7 +541,7 @@ clear
 			                break;;
 esac
 done;;
-14) echo ""
+14bloqueado) echo ""
 while true
 do
 clear
