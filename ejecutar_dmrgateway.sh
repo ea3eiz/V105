@@ -37,7 +37,7 @@ sudo ./DMRGateway DMRGateway.ini &
 sleep 2
 
 cd /home/pi/MMDVMHost
-sudo ./MMDVMDMRGATEWAY DMRGateway.ini 
+sudo ./MMDVMDMRGATEWAY MMDVMDMRGateway.ini 
 
 # Cierra el icono Abrir Solo Dstar si no hay conexión
 cd /home/pi/Desktop
