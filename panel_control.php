@@ -516,17 +516,17 @@ $tg = " TG: " . substr($tg, 13, 10);
 
         <?php
               $ysf = exec('awk "NR==9{print;exit}" /home/pi/status.ini');
-              if ($ysf=="dstarrepeater=ON"){ 
+              if ($ysf=="DMRGateway=ON"){ 
         ?>
               <head> 
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE - D-STAR Repeater</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE - DMRGateway</p>
               </head>
         <?php
         }
         else {
         ?>
               <head> 
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - D-STAR Repeater</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DMRGateway</p>
               </head>
         <?php
         }    
