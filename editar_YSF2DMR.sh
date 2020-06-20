@@ -514,11 +514,11 @@ do
                         case $actualizar in
                         [sS]* ) echo ""
                         clear
-                        echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
+                        echo "Introduce nombre memoria máximo 10 caracteres"
+                        read memoria1
                         sleep 3
                         sed -i "51c $memoria1" $usuario/info_panel_control.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_01
-
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -555,11 +555,11 @@ do
                         case $actualizar in
                         [sS]* ) echo ""
                         clear
-                        echo "<<<<<< Haciendo copia de seguridad de la M2 >>>>>"
+                        echo "Introduce nombre memoria máximo 10 caracteres"
+                        read memoria2
                         sleep 3
-                        sed -i "52c $memoria1" $usuario/info_panel_control.ini
+                        sed -i "52c $memoria2" $usuario/info_panel_control.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_02
-
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -597,11 +597,11 @@ do
                         case $actualizar in
                         [sS]* ) echo ""
                         clear
-                        echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
+                        echo "Introduce nombre memoria máximo 10 caracteres"
+                        read memoria3
                         sleep 3
-                        sed -i "53c $memoria1" $usuario/info_panel_control.ini
+                        sed -i "53c $memoria3" $usuario/info_panel_control.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_03
-
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -637,11 +637,11 @@ do
                         case $actualizar in
                         [sS]* ) echo ""
                         clear
-                        echo "<<<<<< Haciendo copia de seguridad de la M4 >>>>>"
+                        echo "Introduce nombre memoria máximo 10 caracteres"
+                        read memoria4
                         sleep 3
-                        sed -i "54c $memoria1" $usuario/info_panel_control.ini
+                        sed -i "54c $memoria4" $usuario/info_panel_control.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_04
-
                         break;;
                         [nN]* ) echo ""
                         break;;
