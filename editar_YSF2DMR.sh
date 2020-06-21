@@ -540,7 +540,7 @@ do
                         read memoria1
                         sleep 3
                         sed -i "51c $memoria1" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
+                        sed -i "$linea_info_memoria $memoria1" $usuario/YSF2DMR/YSF2DMR.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_01
                         break;;
                         [nN]* ) echo ""
@@ -582,7 +582,7 @@ do
                         read memoria2
                         sleep 3
                         sed -i "52c $memoria2" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria2" $usuario/MMDVMHost/$DIRECTORIO
+                        sed -i "$linea_info_memoria $memoria2" $usuario/YSF2DMR/YSF2DMR.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_02
                         break;;
                         [nN]* ) echo ""
@@ -625,7 +625,7 @@ do
                         read memoria3
                         sleep 3
                         sed -i "53c $memoria3" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria3" $usuario/MMDVMHost/$DIRECTORIO
+                        sed -i "$linea_info_memoria $memoria3" $usuario/YSF2DMR/YSF2DMR.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_03
                         break;;
                         [nN]* ) echo ""
@@ -666,7 +666,7 @@ do
                         read memoria4
                         sleep 3
                         sed -i "54c $memoria4" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria4" $usuario/MMDVMHost/$DIRECTORIO
+                        sed -i "$linea_info_memoria $memoria4" $usuario/YSF2DMR/YSF2DMR.ini
                         sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_04
                         break;;
                         [nN]* ) echo ""
