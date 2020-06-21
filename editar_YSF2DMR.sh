@@ -174,7 +174,7 @@ largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
 copia2=`expr substr $reflector $largo 40`
 echo -n "$copia2"
-memoria1=$(awk "NR==52" $usuario/info_panel_control.ini)
+memoria2=$(awk "NR==52" $usuario/info_panel_control.ini)
 echo " - $memoria2"
 
 echo ""
@@ -186,7 +186,7 @@ largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
 copia3=`expr substr $reflector $largo 40`
 echo -n "$copia3"
-memoria1=$(awk "NR==53" $usuario/info_panel_control.ini)
+memoria3=$(awk "NR==53" $usuario/info_panel_control.ini)
 echo " - $memoria3"
 
 echo ""
@@ -198,7 +198,7 @@ largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
 copia4=`expr substr $reflector $largo 40`
 echo -n "$copia4"
-memoria1=$(awk "NR==54" $usuario/info_panel_control.ini)
+memoria4=$(awk "NR==54" $usuario/info_panel_control.ini)
 echo " - $memoria4"
 
 echo ""
