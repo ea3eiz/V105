@@ -55,7 +55,7 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
-linea_info_memoria=313 #Linea del MMDVM donde guardamos el nombre de la memoria
+linea_info_memoria="313" #Linea del MMDVM donde guardamos el nombre de la memoria
 
 echo "${VERDE}"
 echo "   *******************************************************************************"
@@ -1223,7 +1223,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
+                        sudo sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
