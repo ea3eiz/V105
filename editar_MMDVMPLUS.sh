@@ -928,7 +928,6 @@ do
 			                    [sS]* ) echo ""
                           #Convierte indicativo si se introduce en minúsculas a Mayúsculas
                           modu1=`echo "$modu1" | tr [:lower:] [:upper:]`
-                          sed -i "313c B1" $usuario/MMDVMHost/$DIRECTORIO
                           sed -i "$linea Module=$modu1" $usuario/MMDVMHost/$DIRECTORIO
 			                    break;;
 			                    [nN]* ) echo ""
@@ -1224,7 +1223,7 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
+                        sed -i "313c $memoria1" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
