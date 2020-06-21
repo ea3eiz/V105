@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIRECTORIO="MMDVM.ini"
-linea_info_memoria="275c" #Linea del MMDVM donde guardamos el nombre de la memoria
+linea_info_memoria="313" #Linea del MMDVM donde guardamos el nombre de la memoria
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/$DIRECTORIO`
 buscar=":"
