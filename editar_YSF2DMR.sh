@@ -168,7 +168,7 @@ echo " - $memoria1"
 echo ""
 echo "\33[1;36m  18)\33[1;37m Guardar  fichero de Configuración en M2 \33[1;36m"
 echo -n "\33[1;36m  19)\33[1;32m Utilizar fichero de Configuración de M2: \33[1;36m"
-reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
+reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_02`
 buscar=":"
 largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
@@ -180,7 +180,7 @@ echo " - $memoria2"
 echo ""
 echo "\33[1;36m  20)\33[1;37m Guardar  fichero de Configuración en M3 \33[1;36m"
 echo -n "\33[1;36m  21)\33[1;32m Utilizar fichero de Configuración de M3: \33[1;36m"
-reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
+reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_03`
 buscar=":"
 largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
@@ -192,7 +192,7 @@ echo " - $memoria3"
 echo ""
 echo "\33[1;36m  22)\33[1;37m Guardar  fichero de Configuración en M4 \33[1;36m"
 echo -n "\33[1;36m  23)\33[1;32m Utilizar fichero de Configuración de M4: \33[1;36m"
-reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
+reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_04`
 buscar=":"
 largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
