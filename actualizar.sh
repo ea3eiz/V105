@@ -256,7 +256,6 @@ rm $usuario/RXF_NXDN.desktop
 
 # Dar permisos al Escritorio
 sudo chmod 777 -R $usuario/Desktop
-sudo chmod 777 -R $usuario/MMDVMHost
 sleep 2
 
 # Comprueba si DVSWITCH está activado
