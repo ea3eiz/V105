@@ -55,7 +55,7 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
-linea_info_memoria="313" #Linea del MMDVM donde guardamos el nombre de la memoria
+linea_info_memoria="315" #Linea del MMDVM donde guardamos el nombre de la memoria
 
 echo "${VERDE}"
 echo "   *******************************************************************************"
