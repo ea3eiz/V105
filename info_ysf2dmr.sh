@@ -27,7 +27,7 @@ mode=$(awk "NR==$numero_linea_address" /home/pi/YSF2DMR/YSF2DMR.ini)
 address=`expr substr $address 12 35`
 address="  "$address
 
-memoria=$(awk "NR==66" /home/pi/YSF2DMR/YSF2DMR.ini)
+memoria=$(awk "NR==55" /home/pi/YSF2DMR/YSF2DMR.ini)
 
 #Colores
 ROJO="\033[1;31m"
