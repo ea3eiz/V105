@@ -116,7 +116,7 @@ MARRON="\33[38;5;138m"
 
                     #=================================================
 
-                    sudo chmod +x -R /home/pi/MMDVMHost
+                    sudo chmod 777 -R /home/pi/MMDVMHost
                     
                     echo""
                     clear
