@@ -1222,7 +1222,7 @@ do
                         read memoria1
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
-                        echo "$usuario$DIRECTORIO"
+                        echo "$linea_info_memoria $usuario $DIRECTORIO "
                         read a
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
                         sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
