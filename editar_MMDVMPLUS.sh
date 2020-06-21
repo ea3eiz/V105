@@ -55,7 +55,7 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
-linea_info_memoria="313" #Linea del MMDVM donde guardamos el nombre de la memoria
+linea_info_memoria="313" #Linea del MMDVM donde guardamos el nombre de la memoria 
 
 echo "${VERDE}"
 echo "   *******************************************************************************"
@@ -928,6 +928,7 @@ do
 			                    [sS]* ) echo ""
                           #Convierte indicativo si se introduce en minúsculas a Mayúsculas
                           modu1=`echo "$modu1" | tr [:lower:] [:upper:]`
+                          sed -i "313c B1" $usuario/MMDVMHost/$DIRECTORIO
                           sed -i "$linea Module=$modu1" $usuario/MMDVMHost/$DIRECTORIO
 			                    break;;
 			                    [nN]* ) echo ""
