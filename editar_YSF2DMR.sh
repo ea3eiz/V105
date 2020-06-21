@@ -172,8 +172,8 @@ reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
 buscar=":"
 largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
-copia1=`expr substr $reflector $largo 40`
-echo -n "$copia1"
+copia2=`expr substr $reflector $largo 40`
+echo -n "$copia2"
 memoria1=$(awk "NR==52" $usuario/info_panel_control.ini)
 echo " - $memoria2"
 
@@ -184,8 +184,8 @@ reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
 buscar=":"
 largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
-copia1=`expr substr $reflector $largo 40`
-echo -n "$copia1"
+copia3=`expr substr $reflector $largo 40`
+echo -n "$copia3"
 memoria1=$(awk "NR==53" $usuario/info_panel_control.ini)
 echo " - $memoria3"
 
@@ -196,8 +196,8 @@ reflector=`grep -n -m 1 '\<Address\>' $usuario/YSF2DMR/YSF2DMR.ini_copia_01`
 buscar=":"
 largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
-copia1=`expr substr $reflector $largo 40`
-echo -n "$copia1"
+copia4=`expr substr $reflector $largo 40`
+echo -n "$copia4"
 memoria1=$(awk "NR==54" $usuario/info_panel_control.ini)
 echo " - $memoria4"
 

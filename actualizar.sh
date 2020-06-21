@@ -1,14 +1,15 @@
 ﻿#!/bin/bash
 
+# Coloca bien los iconos en e escritorio
 sudo cp /home/pi/V105/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
 sleep 2
 xfdesktop --reload
 
+# Comprueba si DVSWITCH está activado
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
 sudo systemctl stop dmr2ysf.service
-
 sudo systemctl stop analog_bridge.service
 sudo systemctl stop ircddbgateway.service
 sudo systemctl stop md380-emu.service
@@ -18,14 +19,6 @@ else
 echo ""
 fi
 
-#comprueba si el fichero existe
-#if [ -f /home/pi/.local/sala.txt ];
-#then
-#echo "El fichero ya existe"
-#else
-#cp sala.txt /home/pi/.local
-#fi
-
 # path usuario
 usuario="/home/pi"
 usuario="$usuario"
@@ -34,6 +27,7 @@ actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 SCRIPTS_version="V105"
 version="V105-"
 version=$version$actualizacion
+
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" $usuario/status.ini
 sed -i "2c BlueDV=OFF" $usuario/status.ini
@@ -55,37 +49,22 @@ sed -i "17c NXDN=OFF" $usuario/status.ini
 #sed -i "18c DVSWITCH=OFF" $usuario/status.ini
 sed -i "19c DMRGateway=OFF" $usuario/status.ini
 
-
 #Actualiza Imagen
 cd $usuario/$SCRIPTS_version
 git pull
 
 sleep 2
 
-
-#=================================================================================
-
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
-
-
 sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario/.local #deja el icono en el estado que se reinició
 sudo cp $usuario/Desktop/Activar_NextionDriver.desktop $usuario/.local #deja el icono en el estado que se reinició
-#sudo cp $usuario/Desktop/Abrir_ircDDBGateway.desktop $usuario #deja con el terminal en el estado que se reinició
-#sudo cp $usuario/Desktop/Abrir_D-STARRepeater.desktop $usuario #deja con el terminal en el estado que se reinició
-
 
 cd $usuario/$SCRIPTS_version/Desktop
 cp * $usuario/Desktop
 sudo chmod 777 -R $usuario/Desktop
 
-
 sudo cp $usuario/.local/Activar_dvswitch.desktop $usuario/Desktop #deja el icono en el estado que se reinició
 sudo cp $usuario/.local/Activar_NextionDriver.desktop $usuario/Desktop #deja el icono en el estado que se reinició
-#sudo cp $usuario/Abrir_ircDDBGateway.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
-#sudo cp $usuario/Abrir_D-STARRepeater.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
-
-#=================================================================================
-
 
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
 bm=`sed -n '2p'  $usuario/MMDVMHost/MMDVMBM.ini`
@@ -111,7 +90,6 @@ sed -i "1c $indi" $usuario/info_panel_control.ini
 sed -i "2c $ide" $usuario/info_panel_control.ini
 sed -i "3c $frec" $usuario/info_panel_control.ini
 sed -i "4c $masterbm" $usuario/info_panel_control.ini
-
 #PLUS
 indi=$(awk "NR==2" $usuario/MMDVMHost/MMDVMPLUS.ini)
 ide=$(awk "NR==3" $usuario/MMDVMHost/MMDVMPLUS.ini)
@@ -129,7 +107,6 @@ sed -i "11c $indi" $usuario/info_panel_control.ini
 sed -i "12c $ide" $usuario/info_panel_control.ini
 sed -i "13c $frec" $usuario/info_panel_control.ini
 sed -i "14c $masterplus" $usuario/info_panel_control.ini
-
 #Radio
 indi=$(awk "NR==2" $usuario/MMDVMHost/MMDVM.ini)
 ide=$(awk "NR==3" $usuario/MMDVMHost/MMDVM.ini)
@@ -147,14 +124,12 @@ sed -i "6c $indi" $usuario/info_panel_control.ini
 sed -i "7c $ide" $usuario/info_panel_control.ini
 sed -i "8c $frec" $usuario/info_panel_control.ini
 sed -i "9c $masterradio" $usuario/info_panel_control.ini
-
 #YSF
 master=$(awk "NR==39" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 sed -i "21c $master" $usuario/info_panel_control.ini
 #SVXLINK
 svxlink=$(awk "NR==16" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf)
 sed -i "27c $svxlink" $usuario/info_panel_control.ini
-
 #YSF2DMR
 frec=$(awk "NR==2" $usuario/YSF2DMR/YSF2DMR.ini)
 master=$(awk "NR==33" $usuario/YSF2DMR/YSF2DMR.ini)
@@ -162,7 +137,6 @@ tg=$(awk "NR==30" $usuario/YSF2DMR/YSF2DMR.ini)
 sed -i "24c $frec" $usuario/info_panel_control.ini
 sed -i "25c $master" $usuario/info_panel_control.ini
 sed -i "26c $tg" $usuario/info_panel_control.ini
-
 #DMR2YSF busca el Address DMR2YSF
 master=`grep -n -m 1 "^Address=" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
@@ -171,10 +145,8 @@ largo=`expr $largo + 1`
 largo1=`expr $largo - 2`
 largo=`expr substr $master 1 $largo1`
 masterDMR2YSF=$(awk "NR==$largo" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
-
 #YSFGateway.ini
 master=`grep -n -m 1 "^Startup=" $usuario/YSFClients/YSFGateway/YSFGateway.ini`
-#Quita los espacios
 master=`echo "$master" | tr -d '[[:space:]]'`
 buscar=":"
 largo=`expr index $master $buscar`
@@ -182,9 +154,7 @@ largo=`expr $largo + 1`
 largo1=`expr $largo - 2`
 linea_YSFGateway=`expr substr $master 1 $largo1`
 masterYSFGateway=$(awk "NR==$linea_YSFGateway" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
-#Quita los espacios
 masterYSFGateway=`echo "$masterYSFGateway" | tr -d '[[:space:]]'`
-#=================================================================================
 
 #ACTUALIZA EL  PANEL DE CONTROL"
 cp $usuario/$SCRIPTS_version/panel_control.php /var/www/html/panel_control
@@ -195,7 +165,7 @@ fusion=`sed -n '2p'  $usuario/MMDVMHost/MMDVMFUSION.ini`
 frbm=`sed -n '13p'  $usuario/MMDVMHost/MMDVMBM.ini`
 frplus=`sed -n '13p'  $usuario/MMDVMHost/MMDVMPLUS.ini`
 sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$masterbm'&'masterPLUS=$masterplus'&'radio=$masterradio'&'version=$version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
-#Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
+#Lee el fichero INFO_RXF para poner los datos en los iconos INFO                        
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
 cd $usuario/Desktop/
 cp RXF_BM.desktop $usuario/
@@ -283,16 +253,16 @@ sed -i "11c Name=$frecuencia" $usuario/RXF_NXDN.desktop
 cd $usuario
 cp RXF_NXDN.desktop $usuario/Desktop
 rm $usuario/RXF_NXDN.desktop
-#=================================================================================
 
+# Dar permisos al Escritorio
 sudo chmod 777 -R $usuario/Desktop
-
 sleep 2
+
+# Comprueba si DVSWITCH está activado
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
 sudo systemctl stop dmr2ysf.service
-
 sudo systemctl stop analog_bridge.service
 sudo systemctl stop ircddbgateway.service
 sudo systemctl stop md380-emu.service
@@ -305,13 +275,3 @@ sudo rm -R /home/pi/V105/associacioader.com
 sudo rm -R /home/pi/V105/Desktop/associacioader.com
 sudo rm /home/pi/V105/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
-
-
-
-
-
-
-
-
-
-
