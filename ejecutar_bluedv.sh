@@ -12,7 +12,7 @@ sudo cp Abrir_BlueDV.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_BlueDV.desktop
 
-zenity --warning --title=AVISO  --width=500 --text "El BlueDv tardará varios segundos en abrirse \n se paciente y espere que se abra"
+zenity --warning --title=AVISO  --width=500 --text "El BlueDv tardará varios segundos en abrirse \ndependiendo de la velocidad de su Raspberry\nsea paciente y espere que se abra."
 
 
 
