@@ -15,3 +15,5 @@ sudo rm /home/pi/Abrir_BlueDV.desktop
 
 cd /home/pi/bluedv/
 mono BlueDV.exe
+
+zenity --warning --text="El programa BlueDV\ntardara varios segundos\nen abrir...no desespere"
