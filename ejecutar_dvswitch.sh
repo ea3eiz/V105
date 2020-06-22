@@ -10,9 +10,7 @@ GRIS="\033[0m"
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
-echo "${VERDE}"
-read -p 'Quieres activar DVSWITCH? S/N ' seguir   
-if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
+echo "${VERDE}" 
 
 cd /home/pi/Desktop
 sudo cp Activar_dvswitch.desktop /home/pi
@@ -64,6 +62,4 @@ echo "   ***********************************************************************
 echo "   ***************************************************************************"
 sleep 3
 sed -i "18c DVSWITCH=ON" /home/pi/status.ini	
-else
-echo "no lo activa"
-fi				
+			
