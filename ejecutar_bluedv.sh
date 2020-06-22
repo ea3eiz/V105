@@ -13,7 +13,16 @@ sleep 1
 sudo rm /home/pi/Abrir_BlueDV.desktop
 
 #zenity --warning --text="El programa BlueDV\ntardara varios segundos\nen abrir...no desespere"
-zenity --info --title "Saludos al planeta tierra" --text "BlueDV tardará varios segundos en abrir \n Sea Paciente y espera a que se abra" --display=:0
+#zenity --question --title "Saludos al planeta tierra" --text "BlueDV tardará varios segundos en abrir \n Sea Paciente y espera a que se abra" --display=:0
+result="El BlueDv tardará varios segundos en abrirse"
+zenity --info --text "Euler's Numb: $result"
+
+
+
+
+
+
+
 cd /home/pi/bluedv/
 mono BlueDV.exe
 
