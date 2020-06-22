@@ -12,7 +12,8 @@ sudo cp Abrir_BlueDV.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_BlueDV.desktop
 
+zenity --warning --text="El programa BlueDV\ntardara varios segundos\nen abrir...no desespere"
+
 cd /home/pi/bluedv/
 mono BlueDV.exe
 
-zenity --warning --text="El programa BlueDV\ntardara varios segundos\nen abrir...no desespere"
