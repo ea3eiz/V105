@@ -164,7 +164,7 @@ $tg = " TG: " . substr($tg, 13, 10);
               <head> 
             <div class="col-md-4 text-center thumbnail"><br>
                 <img src="../img/DVSWITCH.png" width="127" ></img><br>
-                <a href="../panel_configuracion.php" class="btn btn-danger btn-sm">DVSWITCH DESACTIVADO</a>
+                <a href="../panel_configuracion.php" onclick="activar_dvswitch()" class="btn btn-danger btn-sm">ACTIVAR DVSWITCH</a>
             </div>
               </head>
         <?php
