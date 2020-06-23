@@ -41,7 +41,8 @@ clear
                         [sS]* ) echo ""
                         clear
                         cd /home/pi/$SCRIPTS_version/
-                        sh colocar_iconos1.sh                  
+                        sh colocar_iconos1.sh 
+                        sh colocar_iconos.sh                 
                         break;;
                         [nN]* ) echo ""
                         clear
@@ -58,7 +59,8 @@ clear
                         [sS]* ) echo ""
                         clear
                         cd /home/pi/$SCRIPTS_version/
-                        sh colocar_iconos2.sh                  
+                        sh colocar_iconos2.sh  
+                        sh colocar_iconos.sh                
                         break;;
                         [nN]* ) echo ""
                         clear
