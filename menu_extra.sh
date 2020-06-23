@@ -57,16 +57,8 @@ clear
                         instalarsi=S
                         case $instalarsi in
                         [sS]* ) echo ""
-                        echo "\v\v\v\v\v\v\v\v\v\v"
-                        echo "${ROJO}"
-                        echo "   ************************************************************************"
-                        echo "   *********************                              *********************" 
-                        echo "   *********************    NO HAY ACTUALIZACIONES    *********************"
-                        echo "   *********************                              *********************"
-                        echo "   ************************************************************************"
-                        sleep 5
-sleep 2
-exit;                
+                        cd /home/pi/$SCRIPTS_version/ 
+                        sh skins.sh               
                         break;;
                         [nN]* ) echo ""
                         clear
