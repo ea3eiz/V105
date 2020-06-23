@@ -40,7 +40,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
-                        sudo /home/pi/$SCRIPTS_version/sh colocar_iconos1.sh                 
+                        sudo sh /home/pi/$SCRIPTS_version/colocar_iconos1.sh                 
                         break;;
                         [nN]* ) echo ""
                         clear
@@ -56,7 +56,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
-                        sudo /home/pi/$SCRIPTS_version/sh colocar_iconos2.sh                  
+                        sudo sh /home/pi/$SCRIPTS_version/colocar_iconos2.sh                  
                         break;;
                         [nN]* ) echo ""
                         clear
