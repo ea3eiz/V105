@@ -24,13 +24,13 @@ GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
 echo "${VERDE}"
-echo "   ************************************************************"
+echo "   **************************************************"
 echo -n "${CIAN}"
-echo "                    $script    "
+echo "               $script    "
 echo -n "${ROJO}"
-echo "                          $SCRIPTS_version by EA3EIZ"
+echo "                     $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
-echo "   ************************************************************"
+echo "   **************************************************"
 #==================================================================================
 dstar=$(awk "NR==1" /home/pi/.local/autoarranque.ini)
 dstar=`expr substr $dstar 8 3`
