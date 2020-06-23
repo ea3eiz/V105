@@ -7,8 +7,8 @@ sudo cp /home/pi/V105/SKIN1_FONDO_ADER_V105.jpg /home/pi/V105/FONDO_ADER_V105.jp
 sudo rm /home/pi/.config/xfce4/desktop/icons.screen0-1904x1023.rc
 
 
-cp /home/pi/V105/skin1_icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop/icons.screen0-1904x1023.rc
-cp /home/pi/V105/skin1_icons.screen0-1904x1023.rc /home/pi/icons.screen0-1904x1023.rc
+sudo cp /home/pi/V105/skin1_icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop/icons.screen0-1904x1023.rc
+sudo cp /home/pi/V105/skin1_icons.screen0-1904x1023.rc /home/pi/icons.screen0-1904x1023.rc
 xfdesktop --reload
 
 
