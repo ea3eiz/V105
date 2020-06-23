@@ -29,6 +29,7 @@ sleep 2
                         cd $usuario/AUTOARRANQUEV105
                         git pull
                         sleep 1
+                        sudo chmod 777 -R /home/pi/AUTOARRANQUEV105
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
 cd $usuario/Desktop/
