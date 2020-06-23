@@ -70,7 +70,7 @@ DV4mini=$(awk "NR==4" /home/pi/.local/autoarranque.ini)
 DV4mini=`expr substr $DV4mini 9 3`
 if [ $DV4mini = "ON" ]
 then
-echo "   ${CIAN} 4) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DV4mini"
+echo "   ${CIAN} 4) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}DV4mini"
 else
 echo "   ${CIAN} 4) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DV4mini"
 fi
@@ -82,7 +82,7 @@ MMDVMPLACA=$(awk "NR==5" /home/pi/.local/autoarranque.ini)
 MMDVMPLACA=`expr substr $MMDVMPLACA 7 3`
 if [ $MMDVMPLACA = "ON" ]
 then
-echo "   ${CIAN} 5) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}Radio"
+echo "   ${CIAN} 5) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}Radio"
 else
 echo "   ${CIAN} 5) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}Radio"
 fi
