@@ -70,9 +70,9 @@ DV4mini=$(awk "NR==4" /home/pi/.local/autoarranque.ini)
 DV4mini=`expr substr $DV4mini 9 3`
 if [ $DV4mini = "ON" ]
 then
-echo "   ${CIAN}4) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DV4mini"
+echo "   ${CIAN} 4) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DV4mini"
 else
-echo "   ${CIAN}4) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DV4mini"
+echo "   ${CIAN} 4) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DV4mini"
 fi
 #==================================================================================
 
@@ -82,9 +82,9 @@ MMDVMPLACA=$(awk "NR==5" /home/pi/.local/autoarranque.ini)
 MMDVMPLACA=`expr substr $MMDVMPLACA 7 3`
 if [ $MMDVMPLACA = "ON" ]
 then
-echo "   ${CIAN}5) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}Radio"
+echo "   ${CIAN} 5) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}Radio"
 else
-echo "   ${CIAN}5) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}Radio"
+echo "   ${CIAN} 5) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}Radio"
 fi
 #==================================================================================
 
@@ -93,9 +93,9 @@ MMDVMPLUS=$(awk "NR==6" /home/pi/.local/autoarranque.ini)
 MMDVMPLUS=`expr substr $MMDVMPLUS 6 3`
 if [ $MMDVMPLUS = "ON" ]
 then
-echo "   ${CIAN}6) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR+"
+echo "   ${CIAN} 6) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR+"
 else
-echo "   ${CIAN}6) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMR+"
+echo "   ${CIAN} 6) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMR+"
 fi
 #==================================================================================
 
@@ -104,9 +104,9 @@ MMDVMLIBRE=$(awk "NR==7" /home/pi/.local/autoarranque.ini)
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 10 3`
 if [ $MMDVMLIBRE = "ON" ]
 then
-echo "   ${CIAN}7) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ESPECIAL"
+echo "   ${CIAN} 7) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ESPECIAL"
 else
-echo "   ${CIAN}7) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}ESPECIAL"
+echo "   ${CIAN} 7) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}ESPECIAL"
 fi
 #==================================================================================
 
@@ -115,9 +115,9 @@ MMDVMBM=$(awk "NR==8" /home/pi/.local/autoarranque.ini)
 MMDVMBM=`expr substr $MMDVMBM 4 3`
 if [ $MMDVMBM = "ON" ]
 then
-echo "   ${CIAN}8) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}BM"
+echo "   ${CIAN} 8) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}BM"
 else
-echo "   ${CIAN}8) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}BM"
+echo "   ${CIAN} 8) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}BM"
 fi
 #==================================================================================
 
@@ -126,9 +126,9 @@ SVXLINK=$(awk "NR==9" /home/pi/.local/autoarranque.ini)
 SVXLINK=`expr substr $SVXLINK 9 3`
 if [ $SVXLINK = "ON" ]
 then
-echo "   ${CIAN}9) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SVXLINK"
+echo "   ${CIAN} 9) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SVXLINK"
 else
-echo "   ${CIAN}9) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}SVXLINK"
+echo "   ${CIAN} 9) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}SVXLINK"
 fi
 #==================================================================================
 
