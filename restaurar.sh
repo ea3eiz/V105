@@ -57,6 +57,10 @@ echo "***************************************************"
             cp -f YSF2DMR.ini_copia_04 /home/pi/YSF2DMR
             
             cp -f TG-YSFList.txt /home/pi/DMR2YSF
+
+            cp -f tg_ysf.txt /home/pi/.local
+            cp -f nombre_salas_ysf.txt /home/pi/.local
+            cp -f autoarranque.ini /home/pi/.local
                       
             cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMNXDN.ini /home/pi/MMDVMHost

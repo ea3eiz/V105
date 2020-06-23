@@ -46,6 +46,11 @@
             cd  /home/pi/DMR2YSF
             cp -f TG-YSFList.txt /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
+            cd /home/pi/.local
+            cp -f tg_ysf.txt /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f nombre_salas_ysf.txt /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f autoarranque.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+
             cd  /home/pi/YSFClients/YSFGateway/
             cp -f YSFGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             
@@ -131,7 +136,6 @@ cd /home/pi/.local/COPIA_SEGURIDAD
 tar -zcvf copia.tar.gz Downloads
 cp  copia.tar.gz /var/www/html/upload/files
 sudo rm copia.tar.gz
-
 
 
 

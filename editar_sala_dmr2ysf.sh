@@ -27,7 +27,6 @@ echo ""
 echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
 TG1=$(awk "NR==1" /home/pi/.local/tg_ysf.txt)
 SALA1=$(awk "NR==1" /home/pi/.local/nombre_salas_ysf.txt)
-#echo "${CIAN} TG: ${AMARILLO} $TG1  ${CIAN} SALA: ${AMARILLO} $SALA1"
 echo  "${CIAN}TG: ${AMARILLO}$TG1\t${CIAN}SALA: ${AMARILLO}$SALA1"
 
 echo -n "\33[1;36m   2)\33[0m Modificar TG y sala  - \33[1;33m"
