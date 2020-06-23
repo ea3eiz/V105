@@ -61,7 +61,7 @@ if [ $C4F = "ON" ]
 then
 echo "   ${CIAN}3) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ircDDB"
 else
-echo "   ${CIAN}3) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF"
+echo "   ${CIAN}3) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}YSF"
 fi
 #==================================================================================
 
@@ -72,7 +72,7 @@ if [ $DV4mini = "ON" ]
 then
 echo "   ${CIAN}4) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DV4mini"
 else
-echo "   ${CIAN}4) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DV4mini"
+echo "   ${CIAN}4) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DV4mini"
 fi
 #==================================================================================
 
@@ -84,7 +84,7 @@ if [ $MMDVMPLACA = "ON" ]
 then
 echo "   ${CIAN}5) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}Radio"
 else
-echo "   ${CIAN}5) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}Radio"
+echo "   ${CIAN}5) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}Radio"
 fi
 #==================================================================================
 
@@ -95,7 +95,7 @@ if [ $MMDVMPLUS = "ON" ]
 then
 echo "   ${CIAN}6) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR+"
 else
-echo "   ${CIAN}6) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR+"
+echo "   ${CIAN}6) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMR+"
 fi
 #==================================================================================
 
@@ -106,7 +106,7 @@ if [ $MMDVMLIBRE = "ON" ]
 then
 echo "   ${CIAN}7) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}ESPECIAL"
 else
-echo "   ${CIAN}7) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}ESPECIAL"
+echo "   ${CIAN}7) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}ESPECIAL"
 fi
 #==================================================================================
 
@@ -117,7 +117,7 @@ if [ $MMDVMBM = "ON" ]
 then
 echo "   ${CIAN}8) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}BM"
 else
-echo "   ${CIAN}8) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}BM"
+echo "   ${CIAN}8) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}BM"
 fi
 #==================================================================================
 
@@ -128,7 +128,7 @@ if [ $SVXLINK = "ON" ]
 then
 echo "   ${CIAN}9) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SVXLINK"
 else
-echo "   ${CIAN}9) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}SVXLINK"
+echo "   ${CIAN}9) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}SVXLINK"
 fi
 #==================================================================================
 
@@ -139,7 +139,7 @@ if [ $solod = "ON" ]
 then
 echo "   ${CIAN}10) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SOLO_DSTAR"
 else
-echo "   ${CIAN}10) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}SOLO_DSTAR"
+echo "   ${CIAN}10) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}SOLO_DSTAR"
 fi
 #=================================================================================
 
@@ -150,7 +150,7 @@ if [ $solof = "ON" ]
 then
 echo "   ${CIAN}11) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}SOLO_FUSION"
 else
-echo "   ${CIAN}11) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}SOLO_FUSION"
+echo "   ${CIAN}11) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}SOLO_FUSION"
 fi
 #=================================================================================
 
@@ -161,7 +161,7 @@ if [ $dvrptrq = "ON" ]
 then
 echo "   ${CIAN}12) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DVRPTR"
 else
-echo "   ${CIAN}12) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DVRPTR"
+echo "   ${CIAN}12) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DVRPTR"
 fi
 #=================================================================================
 
@@ -172,7 +172,7 @@ if [ $ambeserver = "ON" ]
 then
 echo "   ${CIAN}13) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}AMBE SERVER"
 else
-echo "   ${CIAN}13) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}AMBE SERVER"
+echo "   ${CIAN}13) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}AMBE SERVER"
 fi
 #=================================================================================
 
@@ -183,7 +183,7 @@ if [ $ysfdmr = "ON" ]
 then
 echo "   ${CIAN}14) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}YSF2DMR"
 else
-echo "   ${CIAN}14) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}YSF2DMR"
+echo "   ${CIAN}14) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}YSF2DMR"
 fi
 #=================================================================================
 
@@ -194,7 +194,7 @@ if [ $dmrysf = "ON" ]
 then
 echo "   ${CIAN}15) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2YSF"
 else
-echo "   ${CIAN}15) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2YSF"
+echo "   ${CIAN}15) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMR2YSF"
 fi
 #=================================================================================
 
@@ -206,7 +206,7 @@ if [ $dmrnxdn = "ON" ]
 then
 echo "   ${CIAN}16) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMR2NXDN"
 else
-echo "   ${CIAN}16) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMR2NXDN"
+echo "   ${CIAN}16) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMR2NXDN"
 fi
 #=================================================================================
 
@@ -217,7 +217,7 @@ if [ $nxdn = "ON" ]
 then
 echo "   ${CIAN}17) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}NXDN"
 else
-echo "   ${CIAN}17) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}NXDN"
+echo "   ${CIAN}17) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}NXDN"
 fi
 #=================================================================================
 
@@ -228,7 +228,7 @@ if [ $dmrgateway = "ON" ]
 then
 echo "   ${CIAN}18) $desconectar  ${VERDE}\t$estado  ON ${CIAN}    \t${VERDE}DMRGateway"
 else
-echo "   ${CIAN}18) $conectar  ${ROJO}\t\t$estado OFF ${CIAN}    \t${ROJO}DMRGateway"
+echo "   ${CIAN}18) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMRGateway"
 fi
 #=========================================================================*========
 
