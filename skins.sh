@@ -57,6 +57,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
+                        sudo su
                         cd /home/pi/V105
                         sh colocar_iconos2.sh  
                  
