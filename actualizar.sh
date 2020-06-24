@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+cd /home/pi//V105
 sudo sh actualizar_IDS_MMDVMHost.sh
 
 # Coloca bien los iconos en el escritorio
