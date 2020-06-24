@@ -49,7 +49,7 @@ clear
                         break;;
 esac
 done;;
-2) echo ""
+2no) echo ""
 while true
 do
 clear                     
@@ -64,6 +64,19 @@ clear
                         clear
                         exit;
                         break;;
+esac
+done;;
+2) echo ""
+while true
+do
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+                        cd /home/pi/V105
+                        sh colocar_iconos2.sh
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
 esac
 done;;
 0) echo ""
