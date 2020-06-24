@@ -73,6 +73,8 @@ do
                           case $actualizar in
 			                    [sS]* ) echo ""
                         cd /home/pi/V105
+sudo rm /home/pi/.config/xfce4/desktop/icons.screen0-1904x1023.rc
+
                         sh colocar_iconos2.sh
                         sleep 2
                         sh colocar_iconos.sh
