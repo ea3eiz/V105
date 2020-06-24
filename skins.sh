@@ -49,7 +49,7 @@ clear
                         break;;
 esac
 done;;
-2no) echo ""
+2) echo ""
 while true
 do
 clear                     
@@ -64,23 +64,6 @@ clear
                         clear
                         exit;
                         break;;
-esac
-done;;
-2) echo ""
-while true
-do
-                          actualizar=S 
-                          case $actualizar in
-			                    [sS]* ) echo ""
-                        cd /home/pi/V105
-sudo rm /home/pi/.config/xfce4/desktop/icons.screen0-1904x1023.rc
-
-                        sh colocar_iconos2.sh
-                        sleep 2
-                        sh colocar_iconos.sh
-			                    break;;
-			                    [nN]* ) echo ""
-			                    break;;
 esac
 done;;
 0) echo ""
