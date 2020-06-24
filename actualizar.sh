@@ -1,6 +1,4 @@
 ﻿#!/bin/bash
-cd /home/pi//V105
-sudo sh actualizar_IDS_MMDVMHost.sh
 
 # Coloca bien los iconos en el escritorio
 sudo cp /home/pi/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
@@ -29,6 +27,11 @@ actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 SCRIPTS_version="V105"
 version="V105-"
 version=$version$actualizacion
+
+
+cd /home/pi/V105
+sudo sh terminal_inicial.sh
+sleep 3
 
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" $usuario/status.ini
