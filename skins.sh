@@ -58,7 +58,7 @@ clear
                         [sS]* ) echo ""
                         clear
                         cd /home/pi/V105
-                        lxterminal -e ;sudo sh colocar_iconos2.sh  
+                        sudo sh colocar_iconos2.sh  
                  
                         break;;
                         [nN]* ) echo ""
