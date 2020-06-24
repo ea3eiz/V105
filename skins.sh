@@ -74,7 +74,7 @@ do
 			                    [sS]* ) echo ""
                         cd /home/pi/V105
                         sh colocar_iconos2.sh
-                        sh colocar_iconos.sh
+                        sudo sh colocar_iconos.sh
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
