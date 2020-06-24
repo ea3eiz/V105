@@ -29,9 +29,9 @@ version="V105-"
 version=$version$actualizacion
 
 
-cd /home/pi/V105
-sudo sh terminal_inicial.sh
-sleep 3
+# xcd /home/pi/V105
+# xsudo sh terminal_inicial.sh
+# xsleep 3
 
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" $usuario/status.ini
