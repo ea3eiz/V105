@@ -57,10 +57,8 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
-                        cd /home/pi/V105
-                        sudo sh colocar_iconos2.sh  
-                        sleep 2
-                        ssudo h colocar_iconos.sh                 
+                        sh colocar_iconos2.sh  
+                 
                         break;;
                         [nN]* ) echo ""
                         clear
