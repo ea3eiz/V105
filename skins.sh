@@ -40,7 +40,8 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
-                        sh /home/pi/V105/colocar_iconos1.sh                 
+                        cd /home/pi/V105
+                        sh colocar_iconos1.sh                 
                         break;;
                         [nN]* ) echo ""
                         clear
@@ -56,7 +57,8 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
-                        sh /home/pi/V105/colocar_iconos2.sh                  
+                        cd /home/pi/V105
+                        sh colocar_iconos2.sh                  
                         break;;
                         [nN]* ) echo ""
                         clear
