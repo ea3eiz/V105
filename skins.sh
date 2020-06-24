@@ -59,8 +59,6 @@ clear
                         clear
                         cd /home/pi/V105
                         sh colocar_iconos2.sh
-                        sleep 3
-                        sh colocar_iconos.sh
                         break;;
                         [nN]* ) echo ""
                         clear
