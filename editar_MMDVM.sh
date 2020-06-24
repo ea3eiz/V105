@@ -3,7 +3,7 @@ clear
 while true
 do
 clear
-# path usuario 
+# path usuario  
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 
 # Versión
