@@ -57,6 +57,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
+                        cd /home/pi
                         sh colocar_iconos2.sh  
                  
                         break;;
