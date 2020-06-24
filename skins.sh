@@ -73,7 +73,7 @@ do
                           case $actualizar in
 			                    [sS]* ) echo ""
                         cd /home/pi/V105
-                        sudo sh colocar_iconos2.sh
+                        sh colocar_iconos2.sh
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
