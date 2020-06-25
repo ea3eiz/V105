@@ -28,11 +28,6 @@ SCRIPTS_version="V105"
 version="V105-"
 version=$version$actualizacion
 
-
-# xcd /home/pi/V105
-# xsudo sh terminal_inicial.sh
-# xsleep 3
-
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" $usuario/status.ini
 sed -i "2c BlueDV=OFF" $usuario/status.ini
