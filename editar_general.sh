@@ -914,10 +914,10 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVM.ini_copia3           
             #ESPECIAL
-            sed -i "5c Timeout=$duplex" /home/pi/MMDVMHost/MMDVMESPECIAL.ini
-            sed -i "5c Timeout=$duplex" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia
-            sed -i "5c Timeout=$duplex" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
-            sed -i "5c Timeout=$duplex" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
+            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMESPECIAL.ini
+            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia
+            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
+            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
 
             #MMDVMDMR2YSF
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
