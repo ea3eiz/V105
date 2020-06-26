@@ -2,13 +2,23 @@
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=ON' ];then
 
-echo "${ROJO}"
+#Colores
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
+GRIS="\033[0m"
+MARRON="\33[38;5;138m"
+
+echo "${GRIS}"
 echo "                  ******************************************"
-echo "                  *           ESTO DESACTIVARÁ             *"
-echo "                  *               DVSWITCH                 *"
+echo "                  *           Al abrir DMR2YSF             *"
+echo "                  *         ${ROJO}se desactiva DVSWITCH${GRIS}          *"
 echo "                  ******************************************"
 sleep 3
 
+# Desactiva DVSWITCH
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 sh stop_dvswitch.sh
 
@@ -72,10 +82,6 @@ sudo cp Abrir_DMR2YSF.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Abrir_DMR2YSF.desktop
 
-
-
-
-
 else
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini`
@@ -131,11 +137,9 @@ sudo cp Abrir_DMR2YSF.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Abrir_DMR2YSF.desktop
 
-
+# Desactiva DVSWITCH
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 sh stop_dvswitch.sh
-
-
 fi
  
   
