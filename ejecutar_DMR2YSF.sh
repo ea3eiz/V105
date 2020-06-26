@@ -22,13 +22,6 @@ sleep 3
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 sh stop_dvswitch.sh
 
-clear
-echo "${VERDE}"
-echo " ******************************************************************************"
-echo " **************************     ABRIENDO DMR2YSF     **************************"
-echo " ******************************************************************************"
-sleep 2
-
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
