@@ -1,6 +1,9 @@
 #!/bin/bash
 sudo killall DMR2YSF
 sudo killall YSFGateway
+
+sh ejecutar_dvswitch.sh
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_DMR2YSF.desktop /home/pi
