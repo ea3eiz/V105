@@ -307,7 +307,7 @@ while true
 do
                         port_modem=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
                         echo "   Valor del Port: ${AMARILLO}$port_modem"
-                        echo "${GRIS}   Ejp. modem,/dev/ttyAMA1,/dev/ttyACM1,/dev/ttyUSB1/,dev/ttyS0,/dev/rfcomm0"
+                        echo "${AMARILLO}   Ejp. /dev/ttyAMA1   /dev/ttyACM1   /dev/ttyUSB1/  "
                         echo -n "${CIAN}   Introduce Port: ${AMARILLO}"
                         read -p '' port
                         actualizar=S 
