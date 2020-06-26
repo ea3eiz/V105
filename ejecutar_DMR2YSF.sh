@@ -9,17 +9,8 @@ echo "                  *               DVSWITCH                 *"
 echo "                  ******************************************"
 sleep 3
 
-
-sudo systemctl stop ysfgateway.service
-sudo systemctl stop dmr2ysf.service
-sudo systemctl stop analog_bridge.service
-sudo systemctl stop ircddbgateway.service
-sudo systemctl stop md380-emu.service
-sudo systemctl stop mmdvm_bridge.service
-sudo systemctl stop nxdngateway.service
-
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
-sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DVSWITCH_OFF.png" /home/pi/Activar_dvswitch.desktop
+sh stop_dvswitch.sh
 
 clear
 echo "${VERDE}"
@@ -139,6 +130,10 @@ cd /home/pi
 sudo cp Abrir_DMR2YSF.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Abrir_DMR2YSF.desktop
+
+
+sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
+sh stop_dvswitch.sh
 
 
 fi
