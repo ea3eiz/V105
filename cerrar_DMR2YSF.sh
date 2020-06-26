@@ -11,10 +11,10 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
-echo "${GRIS}"
+echo "${BLANCO}"
 echo "                  ******************************************"
 echo "                  *           Al cerrar DMR2YSF            *"
-echo "                  *          ${GRIS}se Activa DVSWITCH ${GRIS}           *"
+echo "                  *          ${BLANCO}se Activa DVSWITCH ${BLANCO}           *"
 echo "                  ******************************************"
 sleep 3
 
