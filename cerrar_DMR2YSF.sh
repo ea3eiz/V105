@@ -21,7 +21,7 @@ sleep 3
 
 # Activa DVSWITCH
 cd /home/pi/V105
-sh ejecutar_dvswitch.sh
+sudo sh ejecutar_dvswitch.sh
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop

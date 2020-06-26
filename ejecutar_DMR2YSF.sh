@@ -21,7 +21,7 @@ sleep 3
 # Desactiva DVSWITCH
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 cd /home/pi/V105
-sh stop_dvswitch.sh
+sudo sh stop_dvswitch.sh
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
@@ -134,7 +134,7 @@ sudo rm /home/pi/Abrir_DMR2YSF.desktop
 # Desactiva DVSWITCH
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 cd /home/pi/V105
-sh stop_dvswitch.sh
+sudo sh stop_dvswitch.sh
 fi
  
   
