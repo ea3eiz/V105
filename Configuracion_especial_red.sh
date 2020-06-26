@@ -66,11 +66,11 @@ clear
                         echo "   =============================================="
 
                         echo "${ROJO}"
-                        echo " *********************************************************************"
-                        echo " *                                                                   *"
-                        echo " *         OJO!! Una vez grabado se reiniciará la Raspberry          *"
-                        echo " *                                                                   *"
-                        echo " *********************************************************************"
+                        echo "   *********************************************************************"
+                        echo "   *                                                                   *"
+                        echo "   *         OJO!! Una vez grabado se reiniciará la Raspberry          *"
+                        echo "   *                                                                   *"
+                        echo "   *********************************************************************"
                         echo "${CIAN}"
                         read -p '   Quieres grabar los datos? S/N ' seguir   
                         if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
