@@ -275,3 +275,6 @@ sudo rm -R /home/pi/V105/associacioader.com
 sudo rm -R /home/pi/V105/Desktop/associacioader.com
 sudo rm /home/pi/V105/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
+
+cd /home/pi/V105
+suso sh bienvenida.sh
