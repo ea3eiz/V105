@@ -277,4 +277,4 @@ sudo rm /home/pi/V105/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
 
 cd /home/pi/V105
-sh bienvenida.sh
+sudo sh bienvenida.sh
