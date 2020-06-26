@@ -23,6 +23,7 @@ sleep 3
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 cd /home/pi/V105
 sh stop_dvswitch.sh
+clear
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
