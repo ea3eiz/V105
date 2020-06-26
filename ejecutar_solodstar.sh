@@ -82,7 +82,7 @@ sudo systemctl stop ircddbgateway.service
 cd /home/pi/MMDVMHost
 sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 
-# Cierra el icono Abrir Solo Dstar si no hay conexión 
+# Cierra el icono Abrir Solo Dstar si no hay conexión  
 cd /home/pi/Desktop
 sudo cp Abrir_solodstar.desktop /home/pi
 sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=80x12 -e sudo sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop

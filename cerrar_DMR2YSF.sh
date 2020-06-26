@@ -1,6 +1,17 @@
 #!/bin/bash
 sudo killall DMR2YSF
 sudo killall YSFGateway
+
+
+sudo systemctl restart ysfgateway.service
+sudo systemctl restart dmr2ysf.service
+sudo systemctl restart analog_bridge.service
+sudo systemctl restart ircddbgateway.service
+sudo systemctl restart md380-emu.service
+sudo systemctl restart mmdvm_bridge.service
+sudo systemctl restart nxdngateway.service
+
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_DMR2YSF.desktop /home/pi
