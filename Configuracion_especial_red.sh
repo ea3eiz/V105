@@ -23,7 +23,7 @@ echo -n "${ROJO}"
 echo "                              $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ************************************************************************"
-#echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
+#echo "\33[1;36m   1)\33[1;37m Actualizar imagen" 
 echo "\33[1;36m   1)${BLANCO} Configurar ip fija por cable"
 echo ""
 echo "\33[1;36m   ${AMARILLO}   Para configurar ip fija por Wifi se debe de utilizar el icono"
@@ -65,6 +65,12 @@ clear
                         echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
                         echo "   =============================================="
 
+                        echo "${ROJO}"
+                        echo " *********************************************************************"
+                        echo " *                                                                   *"
+                        echo " *         OJO!! Una vez grabado se reiniciará la Raspberry          *"
+                        echo " *                                                                   *"
+                        echo " *********************************************************************"
                         echo "${CIAN}"
                         read -p '   Quieres grabar los datos? S/N ' seguir   
                         if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
