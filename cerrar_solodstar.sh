@@ -4,9 +4,6 @@ sudo killall ircddbgateway
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
-
-
-
 # Cierra el icono Abrir Solo Dstar si no hay conexión 
 cd /home/pi/Desktop
 sudo cp Abrir_solodstar.desktop /home/pi
@@ -19,8 +16,6 @@ sudo cp Abrir_solodstar.desktop /home/pi/Desktop
 sleep 4
 sudo rm /home/pi/Abrir_solodstar.desktop
 
-
-
 # Cierra el icono Abrir ircDDB si no hay conexión 
 cd /home/pi/Desktop
 sudo cp Abrir_ircDDB.desktop /home/pi
@@ -32,10 +27,6 @@ cd /home/pi
 sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_ircDDB.desktop
-
-
-
-
 
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=ON' ];then
