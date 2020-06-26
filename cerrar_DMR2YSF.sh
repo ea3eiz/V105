@@ -14,7 +14,7 @@ MARRON="\33[38;5;138m"
 echo "${BLANCO}"
 echo "                  ******************************************"
 echo "                  *           Al cerrar DMR2YSF            *"
-echo "                  *          ${BLANCO}se Activa DVSWITCH ${BLANCO}           *"
+echo "                  *          ${VERDE}se Activa DVSWITCH ${BLANCO}           *"
 echo "                  ******************************************"
 sleep 3
 
