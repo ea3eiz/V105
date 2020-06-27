@@ -13,7 +13,7 @@ MARRON="\33[38;5;138m"
 cd /home/pi/Desktop
 sudo cp Abrir_YSF.desktop /home/pi
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sudo sh cerrar_ysf.sh'" /home/pi/Abrir_YSF.desktop
-sed -i "5c Icon=/home/pi/$SCRIPTS_version/YSF_ON.png" /home/pi/Abrir_YSF.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_C4FM_ON.png" /home/pi/Abrir_YSF.desktop
 sed -i "10c Name[es_ES]=Cerrar YSF" /home/pi/Abrir_YSF.desktop
 sed -i "3c YSF=ON" /home/pi/status.ini
 cd /home/pi
@@ -28,6 +28,7 @@ echo " ******************************   ABRIENDO YSF    ************************
 echo " ******************************************************************************"
 sleep 2
 sudo ./YSFGateway YSFGateway.ini
+
 
 
 
