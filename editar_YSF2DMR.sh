@@ -14,7 +14,7 @@ SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
                     sed -i "24c $frec" $usuario/info_panel_control.ini
                     tg=$(awk "NR==30" $usuario/YSF2DMR/YSF2DMR.ini)
                     sed -i "26c $tg" $usuario/info_panel_control.ini
-                    master=$(awk "NR==33" $usuario/YSF2DMR/YSF2DMR.ini)
+                    master=$(awk "NR==45" $usuario/YSF2DMR/YSF2DMR.ini)
                     sed -i "25c $master" $usuario/info_panel_control.ini
 
 #Colores
