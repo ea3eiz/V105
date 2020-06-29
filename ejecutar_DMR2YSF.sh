@@ -118,6 +118,12 @@ sudo cp Abrir_DMR2YSF.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Abrir_DMR2YSF.desktop
 
+
+
+
+
+
+
 cd /home/pi/DMR2YSF
 
 sudo lxterminal --geometry=75x12 -e ./DMR2YSF DMR2YSF.ini & 
@@ -137,10 +143,7 @@ sudo cp Abrir_DMR2YSF.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Abrir_DMR2YSF.desktop
 
-# Desactiva DVSWITCH
-sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
-cd /home/pi/V105
-sh stop_dvswitch.sh
+
 fi
  
   
