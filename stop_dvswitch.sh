@@ -24,5 +24,5 @@ sudo systemctl stop md380-emu.service
 sudo systemctl stop mmdvm_bridge.service
 sudo systemctl stop nxdngateway.service
 
-zenity --info --ok-label= --title=Desactivando_DVSWITCH --width=400 --timeout=3 --text "SE HA DESACTIVADO DVSWITCH"
+zenity --info --ok-label= --title=DVSWITCH --width=400 --timeout=3 --text "DVSWITCH DESACTIVADO"
 
