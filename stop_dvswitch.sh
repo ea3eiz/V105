@@ -1,5 +1,7 @@
 ﻿#!/bin/bash
 
+sed -i "20c MARCA_DVSWITCH=OFF" /home/pi/status.ini
+
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
