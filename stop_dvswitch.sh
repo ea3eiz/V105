@@ -24,3 +24,5 @@ sudo systemctl stop md380-emu.service
 sudo systemctl stop mmdvm_bridge.service
 sudo systemctl stop nxdngateway.service
 
+zenity --info --ok-label= --title=Abriendo_BlueDB --window-icon=/home/pi/V105/ICONO_BLUEDV_ON.png --width=400 --timeout=125 --text "SE HA DESACTIVADO DVSWITCH"
+
