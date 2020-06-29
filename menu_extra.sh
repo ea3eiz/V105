@@ -134,22 +134,9 @@ echo "${VERDE}"
 read -p ' QUIERES SEGUIR CON EL CAMBIO S/N: ' seguir
 	                        case $seguir in
 			            [sS]* ) echo ""
-
-zenity --question --text="Quieres activar Bluetooth?\nEl sistema se reiniciará" 
-if [ $? = 0 ]; then
-
-
-
 					echo "ACTIVANDO BLUETOOTH"
 					sudo sed -i "57c #dtoverlay=pi3-disable-bt" /boot/config.txt
-
-
-                    zenity --info --ok-label= --title=Bluetooth  --width=400 --timeout=5 --text "\n\nActivando Bluetooth"
-sudo reboot
-                    else
-exit
-fi
-			            
+			            sudo reboot
                               break;;
 		                  [nN]* ) echo ""
 clear
