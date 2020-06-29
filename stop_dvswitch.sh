@@ -15,6 +15,22 @@ cd /home/pi
 sudo cp Activar_dvswitch.desktop /home/pi/Desktop
 sudo rm /home/pi/Activar_dvswitch.desktop
 
+
+clear
+echo "${BLANCO}"
+echo "\v\v\v\v\v\v\v\v"
+echo "   ***************************************************************************"
+echo "   ***************************************************************************"
+echo -n "${ROJO}"
+echo "                           SE HA DESACTIVADO DVSWITCH                        "
+echo -n "${BLANCO}"
+echo "   ***************************************************************************"	
+echo "   ***************************************************************************"
+sleep 3
+
+
+
+
 sudo systemctl stop ysfgateway.service
 sudo systemctl stop dmr2ysf.service
 
