@@ -24,7 +24,7 @@ sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 cd /home/pi/V105
 sh stop_dvswitch.sh
 
-# pone marca en ON porque se está utilizando DVSWITCH
+# pone marca en ON porque se está utilizando DVSWITCH 
 sed -i "20c MARCA_DVSWITCH=ON" /home/pi/status.ini
 
 clear
