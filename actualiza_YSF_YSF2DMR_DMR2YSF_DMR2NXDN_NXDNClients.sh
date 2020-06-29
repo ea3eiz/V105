@@ -14,13 +14,15 @@ MARRON="\33[38;5;138m"
                        
                         cp /home/pi/V105/YSFGateway.ini /home/pi/YSFClients/YSFGateway/
                         sudo sed -i "21c YSFGateway_OK" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini
-                        #echo "${VERDE}"
-                        #echo "************************************************************"
-                        #echo "                                                            "
-                        #echo "            ACABAS DE ACTUALIZAR TU YSFGATEWAY              "
-                        #echo " CONFIGURA DE NUEVO TUS DATOS DESDE EL BOTÓN EDITAR YSF/FCS "
-                        #echo "                                                            "
-                        #echo "************************************************************"
+                        echo "${VERDE}"
+                        echo "************************************************************"
+                        echo "                                                            "
+                        echo "            ACABAS DE ACTUALIZAR TU YSFGATEWAY              "
+                        echo "                DESDE EL GITHUB DE ADER                     "
+                        echo "                                                            "
+                        echo "************************************************************"
+                        sleep 3
+                        clear
                         #echo ""
                         #echo "${ROJO}"
                         #echo "************************************************************"
