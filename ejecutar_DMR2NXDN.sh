@@ -19,11 +19,16 @@ echo "                  ******************************************"
 echo "${GRIS}"
 sleep 3
 
-# Desactiva DVSWITCH
+# Desactiva DVSWITCH 
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 cd /home/pi/V105
 sh stop_dvswitch.sh
+
+# pone marca en ON porque se está utilizando DVSWITCH
+sed -i "20c MARCA_DVSWITCH=ON" /home/pi/status.ini
+
 clear
+
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`

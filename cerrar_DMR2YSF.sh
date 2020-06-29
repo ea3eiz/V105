@@ -11,7 +11,6 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
-
 marca_dvswitch=$(awk "NR==20" /home/pi/status.ini)
 if [ "$marca_dvswitch" = 'MARCA_DVSWITCH=ON' ];then
 
