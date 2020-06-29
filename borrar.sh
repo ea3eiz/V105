@@ -1,10 +1,6 @@
 #!/bin/bash
 zenity --question --text="Quieres activar DVSWITCH?" 
 if [ $? = 0 ]; then 
-zenity --info --ok-label= --title=DVSWITCH --window-icon=/home/pi/V105/ICONO_DVSWITCH_ON.png --width=400 --timeout=5 --text "\n\nDVSWITCH ACTIVADO"
-else 
-exit 
-fi
 
 #Colores
 ROJO="\033[1;31m"
