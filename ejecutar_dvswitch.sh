@@ -1,5 +1,5 @@
 #!/bin/bash
-zenity --question --text="Quieres activar DVSWITCH?" 
+zenity --question --width=200 --text="Quieres activar DVSWITCH?" 
 if [ $? = 0 ]; then 
 
 #Colores
