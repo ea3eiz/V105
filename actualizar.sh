@@ -132,7 +132,7 @@ svxlink=$(awk "NR==16" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf)
 sed -i "27c $svxlink" $usuario/info_panel_control.ini
 #YSF2DMR
 frec=$(awk "NR==2" $usuario/YSF2DMR/YSF2DMR.ini)
-master=$(awk "NR==33" $usuario/YSF2DMR/YSF2DMR.ini)
+master=$(awk "NR==46" $usuario/YSF2DMR/YSF2DMR.ini)
 tg=$(awk "NR==30" $usuario/YSF2DMR/YSF2DMR.ini)
 sed -i "24c $frec" $usuario/info_panel_control.ini
 sed -i "25c $master" $usuario/info_panel_control.ini
