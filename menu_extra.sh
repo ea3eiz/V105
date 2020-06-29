@@ -135,7 +135,7 @@ read -p ' QUIERES SEGUIR CON EL CAMBIO S/N: ' seguir
 	                        case $seguir in
 			            [sS]* ) echo ""
 					echo "ACTIVANDO BLUETOOTH"
-					sudo sed -i "57c dtoverlay=pi3-disable-bt" /boot/config.txt
+					sudo sed -i "57c #dtoverlay=pi3-disable-bt" /boot/config.txt
 			            sudo reboot
                               break;;
 		                  [nN]* ) echo ""
@@ -158,7 +158,7 @@ read -p ' QUIERES SEGUIR CON EL CAMBIO S/N: ' seguir
                         case $seguir in
                         [sS]* ) echo ""
                         echo "DESACTIVANDO BLUETOOTH"
-                        sed -i "57c dtoverlay=pi3-disable-bt" /boot/config.txt
+                        sudo sed -i "57c dtoverlay=pi3-disable-bt" /boot/config.txt
                         sudo reboot
                         break;;
                         [nN]* ) echo ""
