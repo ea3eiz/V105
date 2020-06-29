@@ -23,7 +23,7 @@ sed -i "18c DVSWITCH=ON" /home/pi/status.ini
 
 cd /home/pi
 sudo cp Activar_dvswitch.desktop /home/pi/Desktop
-sleep 2
+
 sudo rm /home/pi/Activar_dvswitch.desktop
 
 # Pone Enable=1 en [Dstar Network]
