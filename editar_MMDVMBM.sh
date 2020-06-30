@@ -58,13 +58,13 @@ MARRON="\33[38;5;138m"
 linea_info_memoria="313c" #Linea del MMDVM donde guardamos el nombre de la memoria
 
 echo "${VERDE}"
-echo "   *******************************************************************************************"
+echo "   ***************************************************************************************"
 echo -n "${CIAN}"
 echo "                       Script para Modificar $DIRECTORIO    "
 echo -n "${ROJO}"
 echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
-echo "   ********************************************************************************************"
+echo "   ***************************************************************************************"
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 ind=`grep -n "^Callsign=" $usuario/MMDVMHost/$DIRECTORIO`
