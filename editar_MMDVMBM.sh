@@ -339,7 +339,7 @@ numero_linea=`expr $numero_linea + 1`
 POCSAG=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_POCSAG=$numero_linea$letra
-echo "${CIAN}  \tj) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
+echo "${CIAN}    \tj) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 
 # 24) Latitude=
 echo -n "${CIAN}  24)${GRIS} Coordenada Latitud    - ${AMARILLO}"
