@@ -337,15 +337,35 @@ echo "  ${CIAN} 1)${GRIS} Modificar Indicativo  - ${VERDE}$indi"
 
 
 
-echo -n "\33[1;36m   2)\33[0m Modificar RXFrequency - \33[1;33m"
-rxf=`grep -n "RXFrequency" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
-rxf1=`expr substr $rxf 4 30`
-echo "${VERDE}$rxf1"
+echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${AMARILLO}"
+rxf=`grep -n "^RXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+rxf1=`echo "$rxf" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $rxf1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $rxf1 1 $largo_linea`
+letrac=c
+numero_linea_rxf=$numero_linea$letrac
+contenido_rxf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo "$contenido_rxf"
 
-echo -n "\33[1;36m   3)\33[0m Modificar TXFrequency - \33[1;33m"
-txf=`grep -n "TXFrequency" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
-txf1=`expr substr $txf 4 30`
-echo "${VERDE}$txf1"
+echo -n "${CIAN}   3)${GRIS} Modificar TXFrequency - ${AMARILLO}"
+txf=`grep -n "^TXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+txf1=`echo "$txf" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $txf1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $txf1 1 $largo_linea`
+letrac=c
+numero_linea_txf=$numero_linea$letrac
+contenido_txf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo "$contenido_txf"
+
+
+
+
+
+
 
 
 echo -n "\33[1;36m  30)\33[0m Modificar Daemon      - ${VERDE}"
@@ -1275,7 +1295,7 @@ done;;
 30) echo ""
 while true
 do
-                          echo  "Valor actual del Daemon:$dae"
+                          echo  "Valor actual del Daemon:$daemon1"
                           read -p 'Introducir el valor de Demon a 0  '   dmrac1
                           actualizar=S 
                           case $actualizar in
