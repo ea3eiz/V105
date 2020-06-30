@@ -282,7 +282,6 @@ lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
 echo -n "$lat1"
 
-
 # k) Jitter=
 Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
