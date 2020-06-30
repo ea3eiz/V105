@@ -101,8 +101,8 @@ do
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
-                        sudo geany /usr/local/share/opendv/DExtra_Hosts.txt
-                        sudo cp /usr/local/share/opendv/DExtra_Hosts.txt /usr/share/opendv/DExtra_Hosts.txt
+                        sudo geany /usr/share/opendv/DExtra_Hosts.txt
+                        #sudo cp /usr/local/share/opendv/DExtra_Hosts.txt /usr/share/opendv/DExtra_Hosts.txt
                         break;;
                         [nN]* ) echo ""
                         break;;
