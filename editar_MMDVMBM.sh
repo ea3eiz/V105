@@ -1127,8 +1127,8 @@ done;;
 k) echo ""
 while true
 do                         
-                          echo "Valor actual FM: ${AMARILLO}$FM"
-                          read -p 'Desactivado=0 Activado=1: '   fm
+                          echo "   Valor  actual  FM: ${AMARILLO}$FM"
+                          read -p '   Desactivado=0 Activado=1: '   fm
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
