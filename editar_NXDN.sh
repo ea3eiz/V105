@@ -280,9 +280,37 @@ echo "  ${CIAN}    \tj) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
 lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
-echo -n "$lat1"
+echo  "$lat1"
 
 
+# k) Jitter=
+Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+largo_linea=`expr index $Jitter $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $Jitter 1 $largo_linea`
+Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+letrac=c
+numero_linea_jiter_letrac=$numero_linea$letrac
+echo "  ${CIAN}     \tk) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
+
+# 25) Longitude=
+echo -n "${CIAN}  25)${GRIS} Coordenada Longitud   - ${AMARILLO}"
+long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
+long1=`expr substr $long 4 30`
+echo -n "$long1"
+
+# l) FM Enable=
+var=`grep -n -m 1 "\[FM\]" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1`
+FM=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+letra=c
+linea_sed_FM=$numero_linea$letra
+echo "${CIAN}     \tl) ${GRIS}FM          - ${AMARILLO}$FM"
 
 echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
 long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
