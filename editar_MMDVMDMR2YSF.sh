@@ -130,7 +130,7 @@ rx=`grep -n '\<RXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 rx1=`expr substr $rx 4 30`
 echo -n "$rx1"
 
-echo -n "\33[1;36m      \tb)\33[0m DMR         - \33[1;33m"
+echo -n "\33[1;36m         \tb)\33[0m DMR         - \33[1;33m"
 dmr=`grep -n "\[DMR\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $dmr $buscar` #comprueba el largo incluyendo los dos puntos (:)
@@ -148,7 +148,7 @@ tx=`grep -n -m 1 '\<TXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 tx1=`expr substr $tx 4 30`
 echo -n "$tx1"
 
-echo -n "\33[1;36m      \tc)\33[0m FUSION      - \33[1;33m"
+echo -n "\33[1;36m         \tc)\33[0m FUSION      - \33[1;33m"
 fusion=`grep -n "LowDeviation" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $fusion $buscar` #comprueba el largo incluyendo los dos puntos (:)
@@ -167,7 +167,7 @@ dup1=`expr substr $dup 3 30`
 echo -n "$dup1"
 
 
-echo -n "\33[1;36m        \td)\33[0m P25         - \33[1;33m"
+echo -n "\33[1;36m           \td)\33[0m P25         - \33[1;33m"
 p25=`grep -n "\[P25\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $p25 $buscar` #comprueba el largo incluyendo los dos puntos (:)
@@ -185,7 +185,7 @@ txh=`grep -n -m 1 '\<TXHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 txh1=`expr substr $txh 5 30`
 echo -n "$txh1"
 
-echo -n "\33[1;36m        \te)\33[0m Baliza      - \33[1;33m"
+echo -n "\33[1;36m           \te)\33[0m Baliza      - \33[1;33m"
 cw= sed -n "31p"  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  19)\33[0m Modificar Tramas      - \33[1;33m"
@@ -193,7 +193,7 @@ lg=`grep -n -m 1 '\<DisplayLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 lg1=`expr substr $lg 4 30`
 echo -n "$lg1"
 
-echo -n "\33[1;36m  \tf)\33[0m RFModeHang  - \33[1;33m"
+echo -n "\33[1;36m     \tf)\33[0m RFModeHang  - \33[1;33m"
 modehang=`grep -n -m 1 -c '\<RFModeHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $modehang = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -237,7 +237,7 @@ numero_linea=`expr $numero_linea + 2` # y le suma uno qudando coomo: (75)
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
-echo " ${CIAN}\th) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
+echo " ${CIAN}   \th) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
 
 echo -n "\33[1;36m  22)\33[0m Version Display       - \33[1;33m"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
@@ -258,7 +258,7 @@ numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
 NXDN=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_NXDN=$numero_linea$letra
-echo "  ${CIAN}\ti) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
+echo "  ${CIAN}   \ti) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
 echo -n "\33[1;36m  23)\33[0m Brillo Display Nextion- \33[1;33m"
 Brightness=`grep -n -m 1 -c '\<Brightness\>' $usuario/MMDVMHost/$DIRECTORIO`
@@ -280,7 +280,7 @@ numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
 POCSAG=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_POCSAG=$numero_linea$letra
-echo "  ${CIAN} \tj) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
+echo "  ${CIAN}    \tj) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
 lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
