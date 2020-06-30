@@ -345,23 +345,37 @@ echo "${CIAN}   \tj) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 echo -n "${CIAN}  24)${GRIS} Coordenada Latitud    - ${AMARILLO}"
 lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
-echo "$lat1"
+echo -n "$lat1"
+
+
+
+# k) Jitter=
+Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+largo_linea=`expr index $Jitter $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $Jitter 1 $largo_linea`
+Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+letrac=c
+numero_linea_jiter_letrac=$numero_linea$letrac
+echo "  ${CIAN}        k) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
+
+
+
+
 
 # 25) Longitude=
 echo -n "${CIAN}  25)${GRIS} Coordenada Longitud   - ${AMARILLO}"
 long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
 long1=`expr substr $long 4 30`
-echo "$long1"
-
-echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
-modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
-modu1=`expr substr $modu 4 30`
-echo -n "$modu1"
+echo -n "$long1"
 
 
 
 
-# k) FM Enable=
+
+
+# l) FM Enable=
 var=`grep -n -m 1 "\[FM\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
@@ -376,9 +390,10 @@ echo "${CIAN}   \t\tk) ${GRIS}FM          - ${AMARILLO}$FM"
 
 
 
-
-
-
+echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
+modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
+modu1=`expr substr $modu 4 30`
+echo -n "$modu1"
 
 echo -n "${CIAN}  27)${GRIS} Entra reflector DMR+  - ${AMARILLO}"
 OPCION=`expr substr $pas 1 $largo1`
