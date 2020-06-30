@@ -283,6 +283,35 @@ lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
 echo "$lat1"
 
+# k) Jitter=
+Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+largo_linea=`expr index $Jitter $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $Jitter 1 $largo_linea`
+Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+letrac=c
+numero_linea_jiter_letrac=$numero_linea$letrac
+echo "  ${CIAN}     \tk) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
+
+# 25) Longitude=
+echo -n "${CIAN}  25)${GRIS} Coordenada Longitud   - ${AMARILLO}"
+long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
+long1=`expr substr $long 4 30`
+echo -n "$long1"
+
+# l) FM Enable=
+var=`grep -n -m 1 "\[FM\]" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1`
+FM=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+letra=c
+linea_sed_FM=$numero_linea$letra
+echo "${CIAN}     \tl) ${GRIS}FM          - ${AMARILLO}$FM"
+
 echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
 long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
 long1=`expr substr $long 4 30`
@@ -334,12 +363,6 @@ indi=$(awk "NR==2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "  ${ROJO}PARAMETROS NXDNGateway.ini "
 echo "  ${CIAN} 1)${GRIS} Modificar Indicativo  - ${VERDE}$indi"
 
-
-
-
-
-
-
 echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${VERDE}"
 rxf=`grep -n "^RXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
 rxf1=`echo "$rxf" | tr -d '[[:space:]]'`
@@ -375,12 +398,6 @@ letrac=c
 numero_linea_daemon=$numero_linea$letrac
 contenido_daemon=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$contenido_daemon"
-
-
-
-
-
-
 
 echo -n " ${CIAN} 31)${GRIS} Sala NXDN a conectar  - ${VERDE}"
 var=`grep -n -m 1 '\<Startup\>' $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
@@ -1148,6 +1165,34 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "$linea_sed_POCSAG Enable=$POCSAG1" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+l) echo ""
+while true
+do                         
+                          echo "   Valor  actual  FM: ${AMARILLO}$FM"
+                          read -p '   Desactivado=0 Activado=1: '   fm
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$linea_sed_FM Enable=$fm" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+k) echo ""
+while true
+do                         
+                          echo "Valor actual  del Jitter: ${AMARILLO}$Jitter"
+                          read -p 'Introduce valor entre 360 a 600: '   JITTER
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$numero_linea_jiter_letrac Jitter=$JITTER" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
