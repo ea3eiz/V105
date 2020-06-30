@@ -345,24 +345,7 @@ echo "${CIAN}   j) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 echo -n "${CIAN}  24)${GRIS} Coordenada Latitud    - ${AMARILLO}"
 lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
-echo -n "$lat1"
-
-
-
-# j) FM Enable=
-var=`grep -n -m 1 "\[FM\]" $usuario/MMDVMHost/$DIRECTORIO`
-buscar=":"
-largo_linea=`expr index $var $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-FM=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
-letra=c
-linea_sed_POCSAG=$numero_linea$letra
-echo "${CIAN}   K) ${GRIS}FM          - ${AMARILLO}$POCSAG"
-
-
-
+echo "$lat1"
 
 # 25) Longitude=
 echo -n "${CIAN}  25)${GRIS} Coordenada Longitud   - ${AMARILLO}"
