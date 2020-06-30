@@ -371,7 +371,7 @@ numero_linea=`expr $numero_linea + 1`
 FM=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_FM=$numero_linea$letra
-echo "${CIAN}   k) ${GRIS}FM      - ${AMARILLO}$FM"
+echo "${CIAN}   \tk) ${GRIS}FM      - ${AMARILLO}$FM"
 
 
 
@@ -1127,8 +1127,8 @@ done;;
 k) echo ""
 while true
 do                         
-                          echo "Valor actual  del Jitter: ${AMARILLO}$Jitter"
-                          read -p 'Introduce valor entre 360 a 600: '   fm
+                          echo "Valor actual FM: ${AMARILLO}$FM"
+                          read -p 'Desactivado=0 Activado=1: '   fm
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
