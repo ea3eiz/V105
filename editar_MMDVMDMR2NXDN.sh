@@ -371,11 +371,22 @@ echo "$contenido_txf"
 
 
 
-echo -n "\33[1;36m  30)\33[0m Modificar Daemon      - ${VERDE}"
-daemon=`grep -n "Daemon" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
-daemon1=`expr substr $daemon 4 30`
-echo "$daemon1"
+# echo -n "\33[1;36m  30)\33[0m Modificar Daemon      - ${VERDE}"
+# daemon=`grep -n "Daemon" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+# daemon1=`expr substr $daemon 4 30`
+# echo "$daemon1"
 
+echo -n "${CIAN}   30)${GRIS} Modificar Daemon      - ${VERDE}"
+daemon=`grep -n "^Daemon=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+daemon1=`echo "$daemon" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $daemon1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $daemon1 1 $largo_linea`
+letrac=c
+numero_linea_daemon=$numero_linea$letrac
+contenido_daemon=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo "$contenido_daemon"
 
 
 
@@ -1296,7 +1307,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "8c Daemon=$dmrac1" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
+                          sed -i "$numero_linea_daemon Daemon=$dmrac1" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
