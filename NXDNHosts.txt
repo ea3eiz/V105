@@ -87,7 +87,7 @@
 20945	dl1bh.ddns.net	41400
 
 # 21465 ADER Multimode
-21465 62.171.178.202 41400
+21465 nxdnader.sytes.net 41400
 
 # 22200 IT HBLINK ITALY
 22200 nxdn.hblink.it 41400
