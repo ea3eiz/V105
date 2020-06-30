@@ -337,7 +337,7 @@ echo "  ${CIAN} 1)${GRIS} Modificar Indicativo  - ${VERDE}$indi"
 
 
 
-echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${AMARILLO}"
+echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${VERDE}"
 rxf=`grep -n "^RXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
 rxf1=`echo "$rxf" | tr -d '[[:space:]]'`
 buscar=":"
@@ -349,7 +349,10 @@ numero_linea_rxf=$numero_linea$letrac
 contenido_rxf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$contenido_rxf"
 
-echo -n "${CIAN}   3)${GRIS} Modificar TXFrequency - ${AMARILLO}"
+
+
+
+echo -n "${CIAN}   3)${GRIS} Modificar TXFrequency - ${VERDE}"
 txf=`grep -n "^TXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
 txf1=`echo "$txf" | tr -d '[[:space:]]'`
 buscar=":"
@@ -466,26 +469,20 @@ do
 buscar=":"
 largo=`expr index $rxf $buscar`
 echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
-
-           	          read -p 'Introduce RXFrequency:        ' var2
-                          letra=c
-                          if [ $largo = 3 ]
-                          then
-                          linea=`expr substr $rxf 1 2`
-                          else
-                          linea=`expr substr $rxf 1 3`
-                          fi
-                          linea=$linea$letra
-                          actualizar=S 
-                          case $actualizar in
-			  [sS]* ) echo ""
-                              sed -i "13c RXFrequency=$var2" $usuario/MMDVMHost/$DIRECTORIO
-
-frec=$(awk "NR==13" $usuario/MMDVMHost/$DIRECTORIO)
-sed -i "11c RXFrequency=$var2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
-sed -i "3c $frec" $usuario/info_panel_control.ini
-
-
+           	      read -p 'Introduce RXFrequency:        ' var2
+                  letra=c
+                  if [ $largo = 3 ]
+                  then
+                  linea=`expr substr $rxf 1 2`
+                  else
+                  linea=`expr substr $rxf 1 3`
+                  fi
+                  linea=$linea$letra
+                  actualizar=S 
+                  case $actualizar in
+			[sS]* ) echo ""
+                  sed -i "13c RXFrequency=$var2" $usuario/MMDVMHost/$DIRECTORIO
+                  sed -i "$numero_linea_rxf RXFrequency=$var2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -497,24 +494,23 @@ do
 buscar=":"
 largo=`expr index $txf $buscar`
 echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
-
-           	          read -p 'Introduce TXFrequency:        ' var2
-                          letra=c
-                          if [ $largo = 3 ]
-                          then
-                          linea=`expr substr $txf 1 2`
-                          else
-                          linea=`expr substr $txf 1 3`
-                          fi
-                          linea=$linea$letra
-                          actualizar=S 
-                          case $actualizar in
-			  [sS]* ) echo ""
-                          sed -i "14c TXFrequency=$var2" $usuario/MMDVMHost/$DIRECTORIO
-                          sed -i "12c TXFrequency=$var2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
-			  break;;
-			  [nN]* ) echo ""
-			  break;;
+           	      read -p 'Introduce TXFrequency:        ' var2
+                  letra=c
+                  if [ $largo = 3 ]
+                  then
+                  linea=`expr substr $txf 1 2`
+                  else
+                  linea=`expr substr $txf 1 3`
+                  fi
+                  linea=$linea$letra
+                  actualizar=S 
+                  case $actualizar in
+			[sS]* ) echo ""
+                  sed -i "14c TXFrequency=$var2" $usuario/MMDVMHost/$DIRECTORIO
+                  sed -i "$numero_linea_txf TXFrequency=$var2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
+			break;;
+			[nN]* ) echo ""
+			break;;
 esac
 done;;
 4) echo ""
