@@ -358,7 +358,7 @@ numero_linea=`expr substr $Jitter 1 $largo_linea`
 Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letrac=c
 numero_linea_jiter_letrac=$numero_linea$letrac
-echo "  ${CIAN} \t\tk) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
+echo "  ${CIAN}        \tk) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
 
 
 
