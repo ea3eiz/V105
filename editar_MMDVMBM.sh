@@ -169,7 +169,7 @@ txinv=`grep -n '\<TXInvert\>' $usuario/MMDVMHost/$DIRECTORIO`
 txinv1=`expr substr $txinv 4 30`
 echo -n "$txinv1"
 
-echo -n "${CIAN}        \ta)${GRIS} D-STAR      - ${AMARILLO}"
+echo -n "${CIAN}          \ta)${GRIS} D-STAR      - ${AMARILLO}"
 dstar=`grep -n "\[D-Star\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $dstar $buscar`
@@ -264,7 +264,7 @@ sl=`grep -n -m 1 '\<Slot1\>' $usuario/MMDVMHost/$DIRECTORIO`
 sl1=`expr substr $sl 5 30`
 echo -n "$sl1"
 
-echo -n "${CIAN}           \tg)${GRIS} Timeout     - ${AMARILLO}"
+echo -n "${CIAN}             \tg)${GRIS} Timeout     - ${AMARILLO}"
 timeo=`grep -n -m 1 -c '\<Timeout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $timeo = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
