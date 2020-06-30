@@ -345,7 +345,7 @@ echo "${CIAN}   j) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 echo -n "${CIAN}  24)${GRIS} Coordenada Latitud    - ${AMARILLO}"
 lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
-echo "$lat1"
+echo -n "$lat1"
 
 
 
