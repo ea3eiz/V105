@@ -358,7 +358,7 @@ numero_linea=`expr substr $Jitter 1 $largo_linea`
 Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letrac=c
 numero_linea_jiter_letrac=$numero_linea$letrac
-echo "  ${CIAN}      k) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
+echo "  ${CIAN}      \tk) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
 
 
 
@@ -1371,14 +1371,6 @@ do
 esac
 done;;
 0) echo ""
-clear
-echo "${AMARILLO}   **************************************************"
-echo "   *                                                *"
-echo "   *     CERRANDO SCRIPT                            *"
-echo "   *                                                *"
-echo "   **************************************************"
-sleep 1
-clear
 exit;;	
 esac
 done
