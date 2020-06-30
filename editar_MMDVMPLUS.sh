@@ -347,6 +347,23 @@ lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
 echo "$lat1"
 
+
+
+# j) FM Enable=
+var=`grep -n -m 1 "\[FM\]" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1`
+FM=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+letra=c
+linea_sed_POCSAG=$numero_linea$letra
+echo "${CIAN}   K) ${GRIS}FM      - ${AMARILLO}$POCSAG"
+
+
+
+
 # 25) Longitude=
 echo -n "${CIAN}  25)${GRIS} Coordenada Longitud   - ${AMARILLO}"
 long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
