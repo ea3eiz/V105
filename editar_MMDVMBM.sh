@@ -205,7 +205,7 @@ tx=`grep -n -m 1 '\<TXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 tx1=`expr substr $tx 4 30`
 echo -n "$tx1"
 
-echo -n "${CIAN}        c)${GRIS} FUSION      - ${AMARILLO}"
+echo -n "${CIAN}        \tc)${GRIS} FUSION      - ${AMARILLO}"
 fusion=`grep -n "LowDeviation" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $fusion $buscar`
@@ -223,7 +223,7 @@ dup=`grep -n -m 1 '\<Duplex\>' $usuario/MMDVMHost/$DIRECTORIO`
 dup1=`expr substr $dup 3 30`
 echo -n "$dup1"
 
-echo -n "${CIAN}          d)${GRIS} P25         - ${AMARILLO}"
+echo -n "${CIAN}          \td)${GRIS} P25         - ${AMARILLO}"
 p25=`grep -n "\[P25\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $p25 $buscar`
@@ -241,7 +241,7 @@ txh=`grep -n -m 1 '\<TXHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 txh1=`expr substr $txh 5 30`
 echo -n "$txh1"
 
-echo -n "${CIAN}          e)${GRIS} Baliza      - ${AMARILLO}"
+echo -n "${CIAN}          \te)${GRIS} Baliza      - ${AMARILLO}"
 cw= sed -n "31p"  $usuario/MMDVMHost/$DIRECTORIO;
 
 echo -n "${CIAN}  19)${GRIS} Modificar Tramas      - ${AMARILLO}"
@@ -249,7 +249,7 @@ lg=`grep -n -m 1 '\<DisplayLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 lg1=`expr substr $lg 4 30`
 echo -n "$lg1"
 
-echo -n "${CIAN}    f)${GRIS} RFModeHang  - ${AMARILLO}"
+echo -n "${CIAN}    \tf)${GRIS} RFModeHang  - ${AMARILLO}"
 modehang=`grep -n -m 1 -c '\<RFModeHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $modehang = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -264,7 +264,7 @@ sl=`grep -n -m 1 '\<Slot1\>' $usuario/MMDVMHost/$DIRECTORIO`
 sl1=`expr substr $sl 5 30`
 echo -n "$sl1"
 
-echo -n "${CIAN}           g)${GRIS} Timeout     - ${AMARILLO}"
+echo -n "${CIAN}           \tg)${GRIS} Timeout     - ${AMARILLO}"
 timeo=`grep -n -m 1 -c '\<Timeout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $timeo = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -293,7 +293,7 @@ numero_linea=`expr $numero_linea + 2`
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
-echo " ${CIAN}  h) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
+echo " ${CIAN}  \th) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
 
 echo -n "${CIAN}  22)${GRIS} Version Display       - ${AMARILLO}"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
@@ -315,7 +315,7 @@ numero_linea=`expr $numero_linea + 1`
 NXDN=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_NXDN=$numero_linea$letra
-echo "  ${CIAN}  i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
+echo "  ${CIAN}  \ti) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
 # 23) IdleBrightness=
 var=`grep -n -m 1 "^IdleBrightness=" $usuario/MMDVMHost/$DIRECTORIO`
