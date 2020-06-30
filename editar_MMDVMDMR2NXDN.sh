@@ -334,15 +334,44 @@ indi=$(awk "NR==2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "  ${ROJO}PARAMETROS NXDNGateway.ini "
 echo "  ${CIAN} 1)${GRIS} Modificar Indicativo  - ${VERDE}$indi"
 
-rxf=$(awk "NR==11" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "  ${CIAN} 2)${GRIS} Modificar RXFrequency - ${VERDE}$rxf"
 
-txf=$(awk "NR==12" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "  ${CIAN} 3)${GRIS} Modificar TXFrequency - ${VERDE}$txf"
+
+
+echo -n "\33[1;36m   2)\33[0m Modificar RXFrequency - \33[1;33m"
+rxf=`grep -n "RXFrequency" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+rxf1=`expr substr $rxf 4 30`
+echo "${VERDE}$rxf1"
+
+echo -n "\33[1;36m   3)\33[0m Modificar TXFrequency - \33[1;33m"
+txf=`grep -n "TXFrequency" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+txf1=`expr substr $txf 4 30`
+echo "${VERDE}$txf1"
+
+
+
+
+
+
+
+
+
+# rxf=$(awk "NR==11" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+# echo "  ${CIAN} 2)${GRIS} Modificar RXFrequency - ${VERDE}$rxf"
+
+# txf=$(awk "NR==12" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+# echo "  ${CIAN} 3)${GRIS} Modificar TXFrequency - ${VERDE}$txf"
 
 echo -n " ${CIAN} 30)${GRIS} Modificar Daemon      - ${VERDE}"
 dae=$(awk "NR==8" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$dae"
+
+
+
+
+
+
+
+
 
 echo -n " ${CIAN} 31)${GRIS} Sala NXDN a conectar  - ${VERDE}"
 var=`grep -n -m 1 '\<Startup\>' $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
