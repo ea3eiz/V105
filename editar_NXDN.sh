@@ -319,15 +319,47 @@ indi=$(awk "NR==2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "  ${ROJO}PARAMETROS NXDNGateway.ini "
 echo "  ${CIAN} 1)${GRIS} Modificar Indicativo  - ${VERDE}$indi"
 
-rxf=$(awk "NR==11" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "  ${CIAN} 2)${GRIS} Modificar RXFrequency - ${VERDE}$rxf"
 
-txf=$(awk "NR==12" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "  ${CIAN} 3)${GRIS} Modificar TXFrequency - ${VERDE}$txf"
 
-echo -n " ${CIAN} 30)${GRIS} Modificar Daemon      - ${VERDE}"
-dae=$(awk "NR==8" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "$dae"
+echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${VERDE}"
+rxf=`grep -n "^RXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+rxf1=`echo "$rxf" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $rxf1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $rxf1 1 $largo_linea`
+letrac=c
+numero_linea_rxf=$numero_linea$letrac
+contenido_rxf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo "$contenido_rxf"
+
+echo -n "${CIAN}   3)${GRIS} Modificar TXFrequency - ${VERDE}"
+txf=`grep -n "^TXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+txf1=`echo "$txf" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $txf1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $txf1 1 $largo_linea`
+letrac=c
+numero_linea_txf=$numero_linea$letrac
+contenido_txf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo "$contenido_txf"
+
+echo -n "${CIAN}  30)${GRIS} Modificar Daemon      - ${VERDE}"
+daemon=`grep -n "^Daemon=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+daemon1=`echo "$daemon" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $daemon1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $daemon1 1 $largo_linea`
+letrac=c
+numero_linea_daemon=$numero_linea$letrac
+contenido_daemon=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo "$contenido_daemon"
+
+
+
+
 
 echo -n " ${CIAN} 31)${GRIS} Sala NXDN a conectar  - ${VERDE}"
 var=`grep -n -m 1 '\<Startup\>' $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
