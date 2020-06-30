@@ -1282,8 +1282,8 @@ done;;
 30) echo ""
 while true
 do
-                          echo  "Valor actual del Daemon:$contenido_daemon"
-                          read -p 'Introducir el valor de Demon a 0  '   dmrac1
+                          echo  "   Valor actual $contenido_daemon${AMARILLO}"
+                          read -p 'Introducir valor 0  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
