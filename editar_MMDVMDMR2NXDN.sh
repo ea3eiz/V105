@@ -477,18 +477,10 @@ done;;
 2) echo ""
 while true
 do
-buscar=":"
-largo=`expr index $rxf $buscar`
+
 echo "Valor actual del RXFrequency: $contenido_rxf"
            	      read -p 'Introduce RXFrequency:        ' var2
-                  letra=c
-                  if [ $largo = 3 ]
-                  then
-                  linea=`expr substr $rxf 1 2`
-                  else
-                  linea=`expr substr $rxf 1 3`
-                  fi
-                  linea=$linea$letra
+
                   actualizar=S 
                   case $actualizar in
 			[sS]* ) echo ""
