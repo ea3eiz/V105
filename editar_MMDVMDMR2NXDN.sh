@@ -109,7 +109,7 @@ txinv=`grep -n '\<TXInvert\>' $usuario/MMDVMHost/$DIRECTORIO`
 txinv1=`expr substr $txinv 4 30`
 echo -n "$txinv1"
 
-echo -n "\33[1;36m     \ta)\33[0m D-STAR      - \33[1;33m"
+echo -n "\33[1;36m       \ta)\33[0m D-STAR      - \33[1;33m"
 dstar=`grep -n "\[D-Star\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $dstar $buscar` #comprueba el largo incluyendo los dos puntos (:)
@@ -127,7 +127,7 @@ rx=`grep -n '\<RXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 rx1=`expr substr $rx 4 30`
 echo -n "$rx1"
 
-echo -n "\33[1;36m      \tb)\33[0m DMR         - \33[1;33m"
+echo -n "\33[1;36m        \tb)\33[0m DMR         - \33[1;33m"
 dmr=`grep -n "\[DMR\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $dmr $buscar` #comprueba el largo incluyendo los dos puntos (:)
@@ -145,7 +145,7 @@ tx=`grep -n -m 1 '\<TXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 tx1=`expr substr $tx 4 30`
 echo -n "$tx1"
 
-echo -n "\33[1;36m      \tc)\33[0m FUSION      - \33[1;33m"
+echo -n "\33[1;36m        \tc)\33[0m FUSION      - \33[1;33m"
 fusion=`grep -n "LowDeviation" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $fusion $buscar` #comprueba el largo incluyendo los dos puntos (:)
@@ -163,7 +163,7 @@ dup=`grep -n -m 1 '\<Duplex\>' $usuario/MMDVMHost/$DIRECTORIO`
 dup1=`expr substr $dup 3 30`
 echo -n "$dup1"
 
-echo -n "\33[1;36m        \td)\33[0m P25         - \33[1;33m"
+echo -n "\33[1;36m          \td)\33[0m P25         - \33[1;33m"
 p25=`grep -n "\[P25\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $p25 $buscar` #comprueba el largo incluyendo los dos puntos (:) 
@@ -181,7 +181,7 @@ txh=`grep -n -m 1 '\<TXHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 txh1=`expr substr $txh 5 30`
 echo -n "$txh1"
 
-echo -n "\33[1;36m        \te)\33[0m Baliza      - \33[1;33m"
+echo -n "\33[1;36m          \te)\33[0m Baliza      - \33[1;33m"
 cw= sed -n "31p"  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  19)\33[0m Modificar Tramas      - \33[1;33m"
@@ -204,7 +204,7 @@ sl=`grep -n -m 1 '\<Slot1\>' $usuario/MMDVMHost/$DIRECTORIO`
 sl1=`expr substr $sl 5 30`
 echo -n "$sl1"
 
-echo -n "\33[1;36m         \tg)\33[0m Timeout     - \33[1;33m"
+echo -n "\33[1;36m           \tg)\33[0m Timeout     - \33[1;33m"
 timeo=`grep -n -m 1 -c '\<Timeout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $timeo = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
