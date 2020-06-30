@@ -1233,12 +1233,12 @@ done;;
 30) echo ""
 while true
 do
-                          echo  "Valor actual del Daemon:$dae"
-                          read -p 'Introducir el valor de Demon a 0  '   dmrac1
+                          echo  "   Valor actual $contenido_daemon${AMARILLO}"
+                          read -p '   Introducir valor 0  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "8c Daemon=$dmrac1" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
+                          sed -i "$numero_linea_daemon Daemon=$dmrac1" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
