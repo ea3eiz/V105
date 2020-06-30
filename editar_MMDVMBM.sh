@@ -393,7 +393,7 @@ echo "${CIAN}   \tl) ${GRIS}FM          - ${AMARILLO}$FM"
 echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
 modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
-echo -n "$modu1"
+echo "$modu1"
 
 echo -n "${CIAN}  27)${GRIS} Entra reflector DMR+  - ${AMARILLO}"
 OPCION=`expr substr $pas 1 $largo1`
