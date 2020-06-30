@@ -55,7 +55,7 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
-linea_info_memoria="313c" #Linea del MMDVM donde guardamos el nombre de la memoria 
+linea_info_memoria="313c" #Linea del MMDVM donde guardamos el nombre de la memoria
 
 echo "${VERDE}"
 echo "   ***************************************************************************************"
@@ -169,7 +169,7 @@ txinv=`grep -n '\<TXInvert\>' $usuario/MMDVMHost/$DIRECTORIO`
 txinv1=`expr substr $txinv 4 30`
 echo -n "$txinv1"
 
-echo -n "${CIAN}        a)${GRIS} D-STAR      - ${AMARILLO}"
+echo -n "${CIAN}        \ta)${GRIS} D-STAR      - ${AMARILLO}"
 dstar=`grep -n "\[D-Star\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $dstar $buscar`
@@ -187,7 +187,7 @@ rx=`grep -n '\<RXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 rx1=`expr substr $rx 4 30`
 echo -n "$rx1"
 
-echo -n "${CIAN}        b)${GRIS} DMR         - ${AMARILLO}"
+echo -n "${CIAN}        \tb)${GRIS} DMR         - ${AMARILLO}"
 dmr=`grep -n "\[DMR\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $dmr $buscar`
@@ -205,7 +205,7 @@ tx=`grep -n -m 1 '\<TXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 tx1=`expr substr $tx 4 30`
 echo -n "$tx1"
 
-echo -n "${CIAN}        c)${GRIS} FUSION      - ${AMARILLO}"
+echo -n "${CIAN}        \tc)${GRIS} FUSION      - ${AMARILLO}"
 fusion=`grep -n "LowDeviation" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $fusion $buscar`
@@ -223,7 +223,7 @@ dup=`grep -n -m 1 '\<Duplex\>' $usuario/MMDVMHost/$DIRECTORIO`
 dup1=`expr substr $dup 3 30`
 echo -n "$dup1"
 
-echo -n "${CIAN}          d)${GRIS} P25         - ${AMARILLO}"
+echo -n "${CIAN}          \td)${GRIS} P25         - ${AMARILLO}"
 p25=`grep -n "\[P25\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $p25 $buscar`
@@ -241,7 +241,7 @@ txh=`grep -n -m 1 '\<TXHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 txh1=`expr substr $txh 5 30`
 echo -n "$txh1"
 
-echo -n "${CIAN}          e)${GRIS} Baliza      - ${AMARILLO}"
+echo -n "${CIAN}          \te)${GRIS} Baliza      - ${AMARILLO}"
 cw= sed -n "31p"  $usuario/MMDVMHost/$DIRECTORIO;
 
 echo -n "${CIAN}  19)${GRIS} Modificar Tramas      - ${AMARILLO}"
@@ -249,7 +249,7 @@ lg=`grep -n -m 1 '\<DisplayLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 lg1=`expr substr $lg 4 30`
 echo -n "$lg1"
 
-echo -n "${CIAN}    f)${GRIS} RFModeHang  - ${AMARILLO}"
+echo -n "${CIAN}    \tf)${GRIS} RFModeHang  - ${AMARILLO}"
 modehang=`grep -n -m 1 -c '\<RFModeHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $modehang = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -264,7 +264,7 @@ sl=`grep -n -m 1 '\<Slot1\>' $usuario/MMDVMHost/$DIRECTORIO`
 sl1=`expr substr $sl 5 30`
 echo -n "$sl1"
 
-echo -n "${CIAN}           g)${GRIS} Timeout     - ${AMARILLO}"
+echo -n "${CIAN}           \tg)${GRIS} Timeout     - ${AMARILLO}"
 timeo=`grep -n -m 1 -c '\<Timeout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $timeo = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -293,7 +293,7 @@ numero_linea=`expr $numero_linea + 2`
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
-echo " ${CIAN}  h) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
+echo " ${CIAN}  \th) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
 
 echo -n "${CIAN}  22)${GRIS} Version Display       - ${AMARILLO}"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
@@ -315,7 +315,7 @@ numero_linea=`expr $numero_linea + 1`
 NXDN=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_NXDN=$numero_linea$letra
-echo "  ${CIAN}  i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
+echo "  ${CIAN}  \ti) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
 # 23) IdleBrightness=
 var=`grep -n -m 1 "^IdleBrightness=" $usuario/MMDVMHost/$DIRECTORIO`
@@ -339,24 +339,15 @@ numero_linea=`expr $numero_linea + 1`
 POCSAG=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_POCSAG=$numero_linea$letra
-echo "${CIAN}   j) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
+echo "${CIAN}   \tj) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 
 # 24) Latitude=
 echo -n "${CIAN}  24)${GRIS} Coordenada Latitud    - ${AMARILLO}"
 lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
-echo "$lat1"
+echo -n "$lat1"
 
-# 25) Longitude=
-echo -n "${CIAN}  25)${GRIS} Coordenada Longitud   - ${AMARILLO}"
-long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
-long1=`expr substr $long 4 30`
-echo "$long1"
 
-echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
-modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
-modu1=`expr substr $modu 4 30`
-echo -n "$modu1"
 
 # k) Jitter=
 Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
@@ -367,7 +358,42 @@ numero_linea=`expr substr $Jitter 1 $largo_linea`
 Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letrac=c
 numero_linea_jiter_letrac=$numero_linea$letrac
-echo "  ${CIAN}        k) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
+echo "  ${CIAN}      k) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
+
+
+
+
+
+# 25) Longitude=
+echo -n "${CIAN}  25)${GRIS} Coordenada Longitud   - ${AMARILLO}"
+long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
+long1=`expr substr $long 4 30`
+echo -n "$long1"
+
+
+
+
+
+
+# l) FM Enable=
+var=`grep -n -m 1 "\[FM\]" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1`
+FM=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+letra=c
+linea_sed_FM=$numero_linea$letra
+echo "${CIAN}   \tl) ${GRIS}FM          - ${AMARILLO}$FM"
+
+
+
+
+echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
+modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
+modu1=`expr substr $modu 4 30`
+echo "$modu1"
 
 echo -n "${CIAN}  27)${GRIS} Entra reflector DMR+  - ${AMARILLO}"
 OPCION=`expr substr $pas 1 $largo1`
@@ -843,7 +869,7 @@ do
                           buscar=":"
                           largo=`expr index $Display $buscar`
                           echo "Valor actual del Display=: ${AMARILLO}${Display1#*=}\33[1;37m"
-                          read -p 'Introcuce el nombre de tu Display: ' V
+                          read -p 'Introcuce el nombre de tu Dispaly: ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -1113,6 +1139,20 @@ do
                           break;;
 esac
 done;;
+l) echo ""
+while true
+do                         
+                          echo "   Valor  actual  FM: ${AMARILLO}$FM"
+                          read -p '   Desactivado=0 Activado=1: '   fm
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$linea_sed_FM Enable=$fm" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
 k) echo ""
 while true
 do                         
@@ -1222,6 +1262,7 @@ do
                         read memoria1
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
+                        echo "$linea_info_memoria $usuario $DIRECTORIO $memoria1"
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
                         sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
