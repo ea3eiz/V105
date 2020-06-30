@@ -348,9 +348,9 @@ txf1=`expr substr $txf 4 30`
 echo "${VERDE}$txf1"
 
 
-echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
+echo -n "\33[1;36m  30)\33[0m Modificar Daemon      - \33[1;33m"
 daemon=`grep -n "Daemon" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
-daemon1=`expr substr $daemon 8 1`
+daemon1=`expr substr $daemon 4 30`
 echo "$daemon1"
 
 
