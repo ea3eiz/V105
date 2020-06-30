@@ -109,7 +109,7 @@ txinv=`grep -n '\<TXInvert\>' $usuario/MMDVMHost/$DIRECTORIO`
 txinv1=`expr substr $txinv 4 30`
 echo -n "$txinv1"
 
-echo -n "\33[1;36m       \ta)\33[0m D-STAR      - \33[1;33m"
+echo -n "\33[1;36m         \ta)\33[0m D-STAR      - \33[1;33m"
 dstar=`grep -n "\[D-Star\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $dstar $buscar` #comprueba el largo incluyendo los dos puntos (:)
