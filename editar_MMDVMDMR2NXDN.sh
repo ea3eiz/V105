@@ -492,8 +492,8 @@ done;;
 3) echo ""
 while true
 do
-                  echo "Valor actual del TXFrequency: $contenido_txf"
-           	      read -p 'Introduce TXFrequency:        ' var2
+                  echo "   Valor actual $contenido_txf${AMARILLO}"
+           	      read -p '   Introduce    TXFrequency=' var2
                   actualizar=S 
                   case $actualizar in
 			[sS]* ) echo ""
