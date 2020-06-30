@@ -348,7 +348,10 @@ txf1=`expr substr $txf 4 30`
 echo "${VERDE}$txf1"
 
 
-
+echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
+daemon=`grep -n "Daemon" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+daemon1=`expr substr $daemon 8 1`
+echo "$daemon1"
 
 
 
@@ -361,9 +364,9 @@ echo "${VERDE}$txf1"
 # txf=$(awk "NR==12" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 # echo "  ${CIAN} 3)${GRIS} Modificar TXFrequency - ${VERDE}$txf"
 
-echo -n " ${CIAN} 30)${GRIS} Modificar Daemon      - ${VERDE}"
-dae=$(awk "NR==8" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "$dae"
+# echo -n " ${CIAN} 30)${GRIS} Modificar Daemon      - ${VERDE}"
+# dae=$(awk "NR==8" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+# echo "$dae"
 
 
 
