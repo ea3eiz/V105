@@ -385,7 +385,7 @@ numero_linea=`expr $numero_linea + 1`
 FM=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_FM=$numero_linea$letra
-echo "${CIAN}   \tl) ${GRIS}FM          - ${AMARILLO}$FM"
+echo "${CIAN}     \tl) ${GRIS}FM          - ${AMARILLO}$FM"
 
 
 
