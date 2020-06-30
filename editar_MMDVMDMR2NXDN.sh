@@ -478,7 +478,7 @@ done;;
 while true
 do
                   echo "   Valor actual $contenido_rxf${AMARILLO}"
-           	      read -p '  Introduce RXFrequency=' var2
+           	      read -p '   Introduce    RXFrequency=' var2
                   actualizar=S 
                   case $actualizar in
 			[sS]* ) echo ""
