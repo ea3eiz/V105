@@ -376,7 +376,7 @@ echo "$contenido_txf"
 # daemon1=`expr substr $daemon 4 30`
 # echo "$daemon1"
 
-echo -n "${CIAN}   30)${GRIS} Modificar Daemon      - ${VERDE}"
+echo -n "${CIAN}  30)${GRIS} Modificar Daemon      - ${VERDE}"
 daemon=`grep -n "^Daemon=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
 daemon1=`echo "$daemon" | tr -d '[[:space:]]'`
 buscar=":"
@@ -479,7 +479,7 @@ while true
 do
 buscar=":"
 largo=`expr index $rxf $buscar`
-echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
+echo "Valor actual del RXFrequency: $contenido_rxf"
            	      read -p 'Introduce RXFrequency:        ' var2
                   letra=c
                   if [ $largo = 3 ]
@@ -504,7 +504,7 @@ while true
 do
 buscar=":"
 largo=`expr index $txf $buscar`
-echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
+echo "Valor actual del TXFrequency: $contenido_txf"
            	      read -p 'Introduce TXFrequency:        ' var2
                   letra=c
                   if [ $largo = 3 ]
@@ -1302,7 +1302,7 @@ done;;
 30) echo ""
 while true
 do
-                          echo  "Valor actual del Daemon:$daemon1"
+                          echo  "Valor actual del Daemon:$contenido_daemon"
                           read -p 'Introducir el valor de Demon a 0  '   dmrac1
                           actualizar=S 
                           case $actualizar in
