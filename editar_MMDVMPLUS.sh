@@ -347,8 +347,6 @@ lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
 echo -n "$lat1"
 
-
-
 # k) Jitter=
 Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
@@ -358,22 +356,13 @@ numero_linea=`expr substr $Jitter 1 $largo_linea`
 Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letrac=c
 numero_linea_jiter_letrac=$numero_linea$letrac
-echo "  ${CIAN}      k) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
-
-
-
-
+echo "  ${CIAN}     \tk) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
 
 # 25) Longitude=
 echo -n "${CIAN}  25)${GRIS} Coordenada Longitud   - ${AMARILLO}"
 long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
 long1=`expr substr $long 4 30`
 echo -n "$long1"
-
-
-
-
-
 
 # l) FM Enable=
 var=`grep -n -m 1 "\[FM\]" $usuario/MMDVMHost/$DIRECTORIO`
@@ -385,16 +374,15 @@ numero_linea=`expr $numero_linea + 1`
 FM=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_FM=$numero_linea$letra
-echo "${CIAN}   \tl) ${GRIS}FM          - ${AMARILLO}$FM"
+echo "${CIAN}     \tl) ${GRIS}FM          - ${AMARILLO}$FM"
 
-
-
-
+# 26) Modulo D-STAR=
 echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
 modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
 echo "$modu1"
 
+#27)reflector DMR+=
 echo -n "${CIAN}  27)${GRIS} Entra reflector DMR+  - ${AMARILLO}"
 OPCION=`expr substr $pas 1 $largo1`
 OPCION=`expr $OPCION + 1`
