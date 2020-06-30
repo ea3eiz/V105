@@ -19,13 +19,13 @@ GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
 echo "${VERDE}"
-echo "   ********************************************************************"
+echo "   ***************************************************************************************"
 echo -n "${CIAN}"
-echo "               Script para Modificar $DIRECTORIO   "
+echo "                               Script para Modificar $DIRECTORIO    "
 echo -n "${ROJO}"
-echo "                             $SCRIPTS_version by EA3EIZ"
+echo "                                       $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
-echo "   ********************************************************************"
+echo "   ***************************************************************************************"
 
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" $usuario/MMDVMHost/$DIRECTORIO`

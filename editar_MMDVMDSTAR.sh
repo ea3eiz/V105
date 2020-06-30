@@ -5,6 +5,7 @@ do
 clear
 # path usuario
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
+
 # path usuario
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
@@ -13,6 +14,7 @@ DIRECTORIO="MMDVMDSTAR.ini"
 DIRECTORIO_copia="MMDVMDSTAR.ini_copia"
 DIRECTORIO_copia2="MMDVMDSTAR.ini_copia2"
 DIRECTORIO_copia3="MMDVMDSTAR.ini_copia3"
+
   #Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
 primer="15c"
 segun="16c"
