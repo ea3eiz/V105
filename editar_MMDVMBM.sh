@@ -1139,7 +1139,7 @@ do
                           break;;
 esac
 done;;
-k) echo ""
+l) echo ""
 while true
 do                         
                           echo "   Valor  actual  FM: ${AMARILLO}$FM"
@@ -1148,6 +1148,20 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "$linea_sed_FM Enable=$fm" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+k) echo ""
+while true
+do                         
+                          echo "Valor actual  del Jitter: ${AMARILLO}$Jitter"
+                          read -p 'Introduce valor entre 360 a 600: '   JITTER
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$numero_linea_jiter_letrac Jitter=$JITTER" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
