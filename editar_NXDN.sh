@@ -280,7 +280,7 @@ echo "  ${CIAN}    \tj) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
 lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
-echo  "$lat1"
+echo -n "$lat1"
 
 
 # k) Jitter=
