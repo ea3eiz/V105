@@ -69,10 +69,7 @@ do
                         #sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
                         
                         #ircddbgatewayd 2019
-                        #cambiado el 1-07-2020 
-                        sudo chmod 777 -R /usr/share/ircddbgateway
-                        sido cp DExtra_Hosts.txt /usr/share/ircddbgateway  
-                        sido cp DPplus_Hosts.txt /usr/share/ircddbgateway                    
+                        #cambiado el 1-07-2020                     
                         #sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
                         #sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
                         #sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
