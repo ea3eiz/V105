@@ -77,7 +77,7 @@ numero_linea_port=`expr substr $mode 1 $caracteres_linea`
 mode=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
 echo "$mode"
 echo ""
-echo -n "${CIAN}  10)${GRIS} Modificar ID          - ${AMARILLO}"
+echo -n "${CIAN}  10)${GRIS} Modificar ID          - ${VERDE}"
 idd=`grep -n "^Id=" $usuario/MMDVMHost/$DIRECTORIO`
 idd1=`expr substr $idd 3 30`
 echo "$idd1"
