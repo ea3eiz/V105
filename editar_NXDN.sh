@@ -119,7 +119,7 @@ letra=p
 numero_linea_dstar_letrap=$numero_linea_dstar$letra #crea 74p
 letrac=c
 numero_linea_dstar_letrac=$numero_linea_dstar$letrac #crea 74c
-presentar_valo= sed -n $numero_linea_dstar_letrap  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
+presentar_valor= sed -n $numero_linea_dstar_letrap  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  15)\33[0m Modificar RXLevel     - \33[1;33m"
 rx=`grep -n '\<RXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
