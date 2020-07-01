@@ -58,20 +58,25 @@ do
 
                         #Actualiza reflectores 
                         #ircddbgateway -gui 2019
-                        cd /usr/share/opendv/
-                        #cambiado el 13-05-2020
-                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
+                        cd /home/pi/V105
+                        sudo chmod 777 -R /usr/share/opendv
+                        cp DExtra_Hosts.txt /usr/share/opendv
+                        cp DPlus_Hosts.txt /usr/share/opendv
+                        #cambiado el 1-07-2020
+                        #sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
                         #sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
-                        sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
-                        sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
+                        #sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
+                        #sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
                         
                         #ircddbgatewayd 2019
-                        #cambiado el 13-05-2020 
-                        cd /usr/share/ircddbgateway                       
-                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
+                        #cambiado el 1-07-2020 
+                        sudo chmod 777 -R /usr/share/ircddbgateway
+                        cp DExtra_Hosts.txt /usr/share/ircddbgateway  
+                        cp DPplus_Hosts.txt /usr/share/ircddbgateway                    
+                        #sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
                         #sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
-                        sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
-                        sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
+                        #sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
+                        #sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
                         
                         #Dv4mini
                         cd /usr/local/share/opendv/
