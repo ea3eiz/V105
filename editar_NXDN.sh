@@ -1331,21 +1331,19 @@ esac
 done;;
 33) echo ""
 while true
-do
-                          
-                        
+do                                               
                           actualizar=S 
                           case $actualizar in
-                          [sS]* ) echo ""
-                         
+                          [sS]* ) echo ""                       
                           cd $usuario/NXDNClients/NXDNGateway/
                           rm -R private
                           mkdir private
                           cd $usuario/$SCRIPTS_version
                           cp NXDNHosts.txt $usuario/NXDNClients/NXDNGateway/private
-                          cd $usuario/NXDNClients/NXDNGateway/
-                          rm NXDNHosts.txt
-                          wget https://raw.githubusercontent.com/g4klx/NXDNClients/master/NXDNGateway/NXDNHosts.txt
+                          cp NXDNHosts.txt $usuario/NXDNClients/NXDNGateway
+                          # cd $usuario/NXDNClients/NXDNGateway/  
+                          # rm NXDNHosts.txt
+                          # wget https://raw.githubusercontent.com/g4klx/NXDNClients/master/NXDNGateway/NXDNHosts.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
