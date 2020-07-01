@@ -790,6 +790,12 @@ echo "Valor actual del RFModeHang = : \33[1;33m${modehang1#*=}\33[1;37m"
             sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVM.ini_copia3    
 
+            #ESPECIAL
+            sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVMESPECIAL.ini
+            sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia
+            sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
+            sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
+
             #MMDVMDMR2YSF
             sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini 
 
