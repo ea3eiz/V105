@@ -358,29 +358,45 @@ indi=$(awk "NR==2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "  ${ROJO}PARAMETROS NXDNGateway.ini "
 echo "  ${CIAN} 1)${GRIS} Modificar Indicativo  - ${VERDE}$indi"
 
+
+
+
+
+
+
 echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${VERDE}"
-rxf=`grep -n "^RXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
-rxf1=`echo "$rxf" | tr -d '[[:space:]]'`
+grxf=`grep -n "^RXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+grxf1=`echo "$grxf" | tr -d '[[:space:]]'`
 buscar=":"
-largo_linea=`expr index $rxf1 $buscar`
+largo_linea=`expr index $grxf1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $rxf1 1 $largo_linea`
+numero_linea=`expr substr $grxf1 1 $largo_linea`
 letrac=c
-numero_linea_rxf=$numero_linea$letrac
-contenido_rxf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "$contenido_rxf"
+numero_linea_grxf=$numero_linea$letrac
+contenido_grxf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo "$contenido_grxf"
+
+
+
+
 
 echo -n "${CIAN}   3)${GRIS} Modificar TXFrequency - ${VERDE}"
-txf=`grep -n "^TXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
-txf1=`echo "$txf" | tr -d '[[:space:]]'`
+gtxf=`grep -n "^TXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
+gtxf1=`echo "$gtxf" | tr -d '[[:space:]]'`
 buscar=":"
-largo_linea=`expr index $txf1 $buscar`
+largo_linea=`expr index $gtxf1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $txf1 1 $largo_linea`
+numero_linea=`expr substr $gtxf1 1 $largo_linea`
 letrac=c
-numero_linea_txf=$numero_linea$letrac
-contenido_txf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "$contenido_txf"
+numero_linea_gtxf=$numero_linea$letrac
+contenido_gtxf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo "$contenido_gtxf"
+
+
+
+
+
+
 
 echo -n "${CIAN}  30)${GRIS} Modificar Daemon      - ${VERDE}"
 daemon=`grep -n "^Daemon=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
@@ -467,7 +483,7 @@ do
                   case $actualizar in
 			[sS]* ) echo ""
                   sed -i "13c RXFrequency=$var2" $usuario/MMDVMHost/$DIRECTORIO
-                  sed -i "$numero_linea_rxf RXFrequency=$var2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
+                  sed -i "$numero_linea_grxf RXFrequency=$var2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -482,7 +498,7 @@ do
                   case $actualizar in
 			[sS]* ) echo ""
                   sed -i "14c TXFrequency=$var2" $usuario/MMDVMHost/$DIRECTORIO
-                  sed -i "$numero_linea_txf TXFrequency=$var2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
+                  sed -i "$numero_linea_gtxf TXFrequency=$var2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
