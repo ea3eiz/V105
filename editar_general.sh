@@ -310,15 +310,15 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             sed -i "14c TXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
             sed -i "14c TXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
 
-#RXFrequency YSF
-loc1=`grep -n "^RXFrequency=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
-buscar=":"
-largo_linea=`expr index $loc1 $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $loc1 1 $largo_linea`
-letrac=c
-numero_linea_letrac=$numero_linea$letrac
-sed -i "$numero_linea_letrac RXFrequency=$rxtxfrecuencia" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+            #RXFrequency YSF
+            loc1=`grep -n "^RXFrequency=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
+            buscar=":"
+            largo_linea=`expr index $loc1 $buscar`
+            largo_linea=`expr $largo_linea - 1`
+            numero_linea=`expr substr $loc1 1 $largo_linea`
+            letrac=c
+            numero_linea_letrac=$numero_linea$letrac
+            sed -i "$numero_linea_letrac RXFrequency=$rxtxfrecuencia" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
             
             #YSF2DMR
             sed -i "2c RXFrequency=$rxtxfrecuencia" /home/pi/YSF2DMR/YSF2DMR.ini
@@ -333,9 +333,10 @@ sed -i "$numero_linea_letrac RXFrequency=$rxtxfrecuencia" /home/pi/YSFClients/YS
             sed -i "3c TXFrequency=$rxtxfrecuencia" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
             sed -i "3c TXFrequency=$rxtxfrecuencia" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
 
-             #MMDVMDMR2YSF.ini
+            #MMDVMDMR2YSF.ini
             sed -i "13c RXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
             sed -i "14c TXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
+
             #MMDVMDMR2NXDN.ini
             sed -i "13c RXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
             sed -i "14c TXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
@@ -344,9 +345,15 @@ sed -i "$numero_linea_letrac RXFrequency=$rxtxfrecuencia" /home/pi/YSFClients/YS
             sed -i "13c RXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMNXDN.ini
             sed -i "14c TXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
-            #NXDNGateway.ini
-            sed -i "23c RXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
-            sed -i "24c TXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+            #RXFrequency NXDNGateway.ini
+            loc1=`grep -n "^RXFrequency=" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini`
+            buscar=":"
+            largo_linea=`expr index $loc1 $buscar`
+            largo_linea=`expr $largo_linea - 1`
+            numero_linea=`expr substr $loc1 1 $largo_linea`
+            letrac=c
+            numero_linea_letrac=$numero_linea$letrac
+            sed -i "$numero_linea_letrac RXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
             #SOLODSTAR
             sed -i "13c RXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -406,15 +413,15 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
 
-#TXFrequency YSF
-loc1=`grep -n "^TXFrequency=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
-buscar=":"
-largo_linea=`expr index $loc1 $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $loc1 1 $largo_linea`
-letrac=c
-numero_linea_letrac=$numero_linea$letrac
-sed -i "$numero_linea_letrac TXFrequency=$frecuenciatx" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+            #TXFrequency YSF
+            loc1=`grep -n "^TXFrequency=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
+            buscar=":"
+            largo_linea=`expr index $loc1 $buscar`
+            largo_linea=`expr $largo_linea - 1`
+            numero_linea=`expr substr $loc1 1 $largo_linea`
+            letrac=c
+            numero_linea_letrac=$numero_linea$letrac
+            sed -i "$numero_linea_letrac TXFrequency=$frecuenciatx" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
             
             #YSF2DMR
             sed -i "3c TXFrequency=$frecuenciatx" /home/pi/YSF2DMR/YSF2DMR.ini      
@@ -429,8 +436,15 @@ sed -i "$numero_linea_letrac TXFrequency=$frecuenciatx" /home/pi/YSFClients/YSFG
             #MMDVMDMR2NXDN.ini
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
 
-            #NXDNGateway.ini
-            sed -i "12c TXFrequency=$frecuenciatx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+            #TXFrequency NXDNGateway.ini
+            loc1=`grep -n "^TXFrequency=" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini`
+            buscar=":"
+            largo_linea=`expr index $loc1 $buscar`
+            largo_linea=`expr $largo_linea - 1`
+            numero_linea=`expr substr $loc1 1 $largo_linea`
+            letrac=c
+            numero_linea_letrac=$numero_linea$letrac
+            sed -i "$numero_linea_letrac TXFrequency=$frecuenciatx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
             #MMDVMNXDN.ini
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMNXDN.ini
