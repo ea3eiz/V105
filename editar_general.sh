@@ -352,8 +352,8 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             largo_linea=`expr $largo_linea - 1`
             numero_linea=`expr substr $loc1 1 $largo_linea`
             letrac=c
-            numero_linea_letrac=$numero_linea$letrac
-            sed -i "$numero_linea_letrac RXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+            numero_linea_letracrx=$numero_linea$letrac
+            sed -i "$numero_linea_letracrx RXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
             #SOLODSTAR
             sed -i "13c RXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -443,8 +443,8 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
             largo_linea=`expr $largo_linea - 1`
             numero_linea=`expr substr $loc1 1 $largo_linea`
             letrac=c
-            numero_linea_letrac=$numero_linea$letrac
-            sed -i "$numero_linea_letrac TXFrequency=$frecuenciatx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+            numero_linea_letractx=$numero_linea$letrac
+            sed -i "$numero_linea_letractx TXFrequency=$frecuenciatx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
             #MMDVMNXDN.ini
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMNXDN.ini
