@@ -345,8 +345,8 @@ sed -i "$numero_linea_letrac RXFrequency=$rxtxfrecuencia" /home/pi/YSFClients/YS
             sed -i "14c TXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
             #NXDNGateway.ini
-            sed -i "11c RXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
-            sed -i "12c TXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+            sed -i "23c RXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+            sed -i "24c TXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
             #SOLODSTAR
             sed -i "13c RXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDSTAR.ini
