@@ -351,25 +351,10 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             largo_linea=`expr index $loc1 $buscar`
             largo_linea=`expr $largo_linea - 1`
             numero_linearx=`expr substr $loc1 1 $largo_linea`
-
-
-numero_lineatx=`expr $numero_linearx + 1`
-
-
-            
-           
+            numero_lineatx=`expr $numero_linearx + 1`          
             letrac=c
             numero_linea_letracrx=$numero_linearx$letrac
             numero_linea_letractx=$numero_lineatx$letrac
-
-read a
-echo "numero linea rx $numero_linearx"
-echo "numero linea tx $numero_lineatx"
-
-
-
-
-
             sed -i "$numero_linea_letracrx RXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
             sed -i "$numero_linea_letractx TXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
