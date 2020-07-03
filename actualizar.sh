@@ -184,11 +184,11 @@ rm $usuario/RXF_DMRPLUS.desktop
 
 frecuencia=$(awk "NR==3" $usuario/INFO_RXF)
 cd $usuario/Desktop/
-cp RXF_LIBRE.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_LIBRE.desktop
+cp RXF_ESPECIAL.desktop $usuario/
+sed -i "11c Name=$frecuencia" $usuario/RXF_ESPECIAL.desktop
 cd $usuario
-cp RXF_LIBRE.desktop $usuario/Desktop
-rm $usuario/RXF_LIBRE.desktop
+cp RXF_ESPECIAL.desktop $usuario/Desktop
+rm $usuario/RXF_ESPECIAL.desktop
 
 frecuencia=$(awk "NR==4" $usuario/INFO_RXF)
 cd $usuario/Desktop/
