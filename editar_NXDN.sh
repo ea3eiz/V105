@@ -311,11 +311,6 @@ letra=c
 linea_sed_FM=$numero_linea$letra
 echo "${CIAN}     \tl) ${GRIS}FM          - ${AMARILLO}$FM"
 
-echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
-long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
-long1=`expr substr $long 4 30`
-echo "$long1"
-
 echo -n "\33[1;36m  26)\33[0m Modulo D-STAR         - \33[1;33m"
 modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
