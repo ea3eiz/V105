@@ -194,15 +194,15 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                         sudo sed -i "117c dplusLogin=$tu_indicativo  " /etc/ircddbgateway
 
 
-#Indicativo YSF
-loc1=`grep -n "^Callsign=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
-buscar=":"
-largo_linea=`expr index $loc1 $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $loc1 1 $largo_linea`
-letrac=c
-numero_linea_letrac=$numero_linea$letrac
-sed -i "$numero_linea_letrac Callsign=$tu_indicativo" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                        #Indicativo YSF
+                        loc1=`grep -n "^Callsign=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
+                        buscar=":"
+                        largo_linea=`expr index $loc1 $buscar`
+                        largo_linea=`expr $largo_linea - 1`
+                        numero_linea=`expr substr $loc1 1 $largo_linea`
+                        letrac=c
+                        numero_linea_letrac=$numero_linea$letrac
+                        sed -i "$numero_linea_letrac Callsign=$tu_indicativo" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                         
                         #iNDICATIVO YSF2DMR
                         sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini
@@ -350,10 +350,22 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             buscar=":"
             largo_linea=`expr index $loc1 $buscar`
             largo_linea=`expr $largo_linea - 1`
-            numero_linea=`expr substr $loc1 1 $largo_linea`
+            numero_linearx=`expr substr $loc1 1 $largo_linea`
+            numero_lineatx=$numero_linearx + 1
             letrac=c
-            numero_linea_letracrx=$numero_linea$letrac
+            numero_linea_letracrx=$numero_linearx$letrac
+            numero_linea_letractx=$numero_lineatx$letrac
+
+read a
+echo "numero linea rx $numero_linearx"
+echo "numero linea tx $numero_lineatx"
+
+
+
+
+
             sed -i "$numero_linea_letracrx RXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+            sed -i "$numero_linea_letractx TXFrequency=$rxtxfrecuencia" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
             #SOLODSTAR
             sed -i "13c RXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -435,16 +447,6 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
 
             #MMDVMDMR2NXDN.ini
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
-
-            #TXFrequency NXDNGateway.ini
-            loc1=`grep -n "^TXFrequency=" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini`
-            buscar=":"
-            largo_linea=`expr index $loc1 $buscar`
-            largo_linea=`expr $largo_linea - 1`
-            numero_linea=`expr substr $loc1 1 $largo_linea`
-            letrac=c
-            numero_linea_letractx=$numero_linea$letrac
-            sed -i "$numero_linea_letractx TXFrequency=$frecuenciatx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
             #MMDVMNXDN.ini
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMNXDN.ini
