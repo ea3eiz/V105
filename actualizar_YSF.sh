@@ -42,8 +42,8 @@ echo "*************************************"
 echo "* ACTUALIZANDO LISTADO DE SALAS YSF *"
 echo "* ***********************************"
 sleep 3
-						cd $usuario/YSFClients/YSFGateway
-						sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
+						cp YSFHosts.txt $usuario/YSFClients/YSFGateway
+						#sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
 						sleep 3
 clear
 
