@@ -41,7 +41,7 @@ do
 						#cp /home/pi/V105/YSFHosts.txt /home/pi/YSFClients/YSFGateway
 						#sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
 						clear
-						echo "\v\v\v\v\v\v\v\v"
+						echo "\v\v\v\v\v"
 						echo "${BLANCO}"
 						echo "   **************************************************************************"
 						echo "   **************************************************************************"
