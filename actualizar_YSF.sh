@@ -38,10 +38,7 @@ clear
 			            [sS]* ) echo ""
 			            echo "${VERDE}"
 clear
-echo "*************************************"
-echo "* ACTUALIZANDO LISTADO DE SALAS YSF *"
-echo "* ***********************************"
-sleep 3
+
 						
 						cp $usuario/$SCRIPTS_version/YSFHosts.txt $usuario/YSFClients/YSFGateway
 						#cp /home/pi/V105/YSFHosts.txt /home/pi/YSFClients/YSFGateway
@@ -50,9 +47,9 @@ sleep 3
 clear
 
 echo "${AMARILLO}"			
-echo "**********************************************************"
+echo "*************************************************************************"
 echo "* El fichero YSFHost.txt se ha actualizado correctamente *"
-echo "**********************************************************"
+echo "***************************************************************************"
 sleep 3
 		                break;;
 						[nN]* ) echo ""
