@@ -40,9 +40,15 @@ do
 						cp $usuario/$SCRIPTS_version/YSFHosts.txt $usuario/YSFClients/YSFGateway
 						#cp /home/pi/V105/YSFHosts.txt /home/pi/YSFClients/YSFGateway
 						#sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
-						echo "${AMARILLO}"			
+						clear
+						echo "${BLANCO}"
 						echo "   **************************************************************************"
-						echo "*          El fichero YSFHost.txt se ha actualizado correctamente           *"
+						echo "   **************************************************************************"
+						echo "${VERDE}"
+						echo "                      SE HAN ACTUALIZADO LAS SALAS YSF                       "
+						echo "                                                                             "
+						echo -n "${BLANCO}"
+						echo "   **************************************************************************"
 						echo "   **************************************************************************"
 						sleep 3
 		                break;;
