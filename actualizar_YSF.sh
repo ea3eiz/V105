@@ -32,25 +32,19 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-clear
+						clear
 						read -p ' Quieres actualizar el listado de reflectores YSF S/N ?' ejecutar1
 		    			case $ejecutar1 in
 			            [sS]* ) echo ""
-			            echo "${VERDE}"
-clear
-
-						
+			            echo "${VERDE}"						
 						cp $usuario/$SCRIPTS_version/YSFHosts.txt $usuario/YSFClients/YSFGateway
 						#cp /home/pi/V105/YSFHosts.txt /home/pi/YSFClients/YSFGateway
 						#sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
+						echo "${AMARILLO}"			
+						echo "   **************************************************************************"
+						echo "*          El fichero YSFHost.txt se ha actualizado correctamente           *"
+						echo "   **************************************************************************"
 						sleep 3
-clear
-
-echo "${AMARILLO}"			
-echo "*************************************************************************"
-echo "* El fichero YSFHost.txt se ha actualizado correctamente *"
-echo "***************************************************************************"
-sleep 3
 		                break;;
 						[nN]* ) echo ""
 						clear
