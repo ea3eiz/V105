@@ -123,7 +123,23 @@ echo ""
 echo -n "${CIAN}   Elije una opción: " 
 read escoger_menu
 case $escoger_menu in
-3) echo ""
+a) echo ""
+while true
+do
+                          echo -n "Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
+                          presentar_valor= sed -n $numero_linea_p  /home/pi/MMDVMHost/MMDVMDMRGateway.ini; #presenta el valor en pantalla
+                          read -p 'Introducir el puerto: 62032  '   dmrac1
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          letrac=c
+                          linea=$numero_linea$letrac
+                          sed -i "$linea Local=$dmrac1" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac  
+done;;3) echo ""
 while true
 do
                           echo "Valor actual del RXFrequency: ${AMARILLO}${contenido_rxf#*=}\33[1;37m"
