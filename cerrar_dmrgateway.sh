@@ -7,7 +7,7 @@ cd /home/pi/Desktop
 sudo cp Abrir_dmrgateway.desktop /home/pi/
 sleep 1
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=72x20 -e sudo sh ejecutar_dmrgateway.sh'" /home/pi/Abrir_dmrgateway.desktop
-sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRGATEWAY_ON.png" /home/pi/Abrir_dmrgateway.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRGATEWAY_OFF.png" /home/pi/Abrir_dmrgateway.desktop
 sed -i "10c Name[es_ES]=Open DMRGateway" /home/pi/Abrir_dmrgateway.desktop
 sed -i "19c DMRGateway=OFF" /home/pi/.local/status.ini
 sleep 1
