@@ -70,7 +70,7 @@ numero_linea=`expr substr $var2 1 $largo_linea` # recoge el numero de linea (138
 numero_linea=`expr $numero_linea + 5` # y le suma uno qudando coomo: (143)
 letra=p
 numero_linea_p=$numero_linea$letra #crea 143p
-echo -n "\33[1;36m   a)\33[0m Local port            - ${VERDE}"
+echo -n "\33[1;36m   a)\33[0m Local port                      - ${VERDE}"
 presentar_valor= sed -n $numero_linea_p  /home/pi/MMDVMHost/MMDVMDMRGateway.ini; #presenta el valor en pantalla
 echo ""
 
