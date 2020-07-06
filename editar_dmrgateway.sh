@@ -68,7 +68,6 @@ letra=p
 numero_linea_p=$numero_linea$letra #crea 143p
 echo -n "\33[1;36m   8)\33[0m Local port                      - ${AMARILLO}"
 presentar_valor= sed -n $numero_linea_p  /home/pi/MMDVMHost/MMDVMDMRGateway.ini; #presenta el valor en pantalla
-echo ""
 
 echo "${CIAN}   a)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modificaciones\33[1;33m"
 
