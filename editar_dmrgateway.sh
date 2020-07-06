@@ -59,6 +59,23 @@ echo "$dup1"
 
 echo "${CIAN}   8)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modificaciones\33[1;33m"
 
+
+echo ""
+var1=`grep -n "\[DMR Network\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 138:Enable=1
+var2=`echo "$var1" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $var2 $buscar` #comprueba el largo incluyendo los dos puntos (:)
+largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
+numero_linea=`expr substr $var2 1 $largo_linea` # recoge el numero de linea (138)
+numero_linea=`expr $numero_linea + 5` # y le suma uno qudando coomo: (143)
+letra=p
+numero_linea_p=$numero_linea$letra #crea 143p
+echo -n "\33[1;36m   a)\33[0m Local port            - ${VERDE}"
+presentar_valor= sed -n $numero_linea_p  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
+echo ""
+
+
+
 echo "${MARRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
 echo "  ==========================================="
