@@ -19,7 +19,7 @@ echo "  ************************************************************************
 echo "                  Script Modificar $DIRECTORIO             \33[1;31m by EA3EIZ\33[1;32m   "
 echo "  ***************************************************************************"
 echo "${MARRON}"
-echo "  Modificar Fichero MMDVMHost/DMRGateway.ini"
+echo "  Modificar Fichero MMDVMHost/MMDVMDMRGateway.ini"
 echo "  =========================================="
 
 echo -n "${CIAN}   1)${GRIS} Modificar Indicativo            - ${AMARILLO}"
@@ -57,7 +57,7 @@ dup=`grep -n -m 1 '\<Duplex\>' //home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 dup1=`expr substr $dup 3 30`
 echo "$dup1"
 
-echo "${CIAN}   8)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modificaciones\33[1;33m"
+
 
 
 echo ""
@@ -70,11 +70,11 @@ numero_linea=`expr substr $var2 1 $largo_linea` # recoge el numero de linea (138
 numero_linea=`expr $numero_linea + 5` # y le suma uno qudando coomo: (143)
 letra=p
 numero_linea_p=$numero_linea$letra #crea 143p
-echo -n "\33[1;36m   a)\33[0m Local port                      - ${VERDE}"
+echo -n "\33[1;36m   8)\33[0m Local port                      - ${VERDE}"
 presentar_valor= sed -n $numero_linea_p  /home/pi/MMDVMHost/MMDVMDMRGateway.ini; #presenta el valor en pantalla
 echo ""
 
-
+echo "${CIAN}   a)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modificaciones\33[1;33m"
 
 echo "${MARRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
@@ -123,7 +123,7 @@ echo ""
 echo -n "${CIAN}   Elije una opción: " 
 read escoger_menu
 case $escoger_menu in
-a) echo ""
+8) echo ""
 while true
 do
                           echo -n "Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
@@ -413,7 +413,7 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
 			  break;;
 esac
 done;;
-8) echo ""
+a) echo ""
 while true
 do
                           
