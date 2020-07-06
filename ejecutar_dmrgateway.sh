@@ -53,6 +53,6 @@ sudo cp Abrir_dmrgateway.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_dmrgateway.desktop
 
-zenity --info  --title=DMRGateway --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=400 --timeout=35 --text "\nTG 8 Para hablar por DMR+\nTG 11 Para hablar por XLX"
+zenity --info --ok-label=CERRAR --title=DMRGateway --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=400 --timeout=35 --text "\nTG 8 Para hablar por DMR+\nTG 11 Para hablar por XLX"
 sed -i "18c DVSWITCH=ON" /home/pi/status.ini
 
