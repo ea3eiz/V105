@@ -57,10 +57,6 @@ dup=`grep -n -m 1 '\<Duplex\>' //home/pi/MMDVMHost/MMDVMDMRGateway.ini`
 dup1=`expr substr $dup 3 30`
 echo "$dup1"
 
-
-
-
-echo ""
 var1=`grep -n "\[DMR Network\]" /home/pi/MMDVMHost/MMDVMDMRGateway.ini` # devuelve ejem: 138:Enable=1
 var2=`echo "$var1" | tr -d '[[:space:]]'`
 buscar=":"
