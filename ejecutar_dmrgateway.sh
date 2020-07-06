@@ -11,15 +11,15 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 cd /home/pi/Desktop
 sudo cp Abrir_dmrgateway.desktop /home/pi/
-sleep 1
+#sleep 1
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_dmrgateway.sh'" /home/pi/Abrir_dmrgateway.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRGATEWAY_ON.png" /home/pi/Abrir_dmrgateway.desktop
 sed -i "10c Name[es_ES]=Cerrar DMRGateway" /home/pi/Abrir_dmrgateway.desktop
 sed -i "19c DMRGateway=ON" /home/pi/status.ini
-sleep 1
+#sleep 1
 cd /home/pi/
 sudo cp Abrir_dmrgateway.desktop /home/pi/Desktop
-sleep 1
+#sleep 1
 sudo rm /home/pi/Abrir_dmrgateway.desktop
 
 zenity --info --ok-label=CERRAR_VENTANA_PARA_SEGUIR --title=DMRGateway --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=400 --text "\nTG 8 Para hablar por DMR+\nTG 11 Para hablar por XLX"
