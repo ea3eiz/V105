@@ -518,8 +518,8 @@ done;;
 15) echo ""
 while true
 do                      
-                          echo "\33[1;32m   Password para Brandmeister=passw0rd para DMR+=PASSWORD\33[1;37m" 
-                          read -p '   Introduce Password = ' lon
+                          echo "\33[1;32m   Valor Password actual\33[1;37m" 
+                          read -p '   Introduce Password Personal de Brandmeister = ' lon
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
