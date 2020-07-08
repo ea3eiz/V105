@@ -285,7 +285,7 @@ done;;
 while true
 do
                      
-                      echo "Valor actual del Master: ${AMARILLO}${address_PLUS#*=}\33[1;37m"
+                      echo "   Valor actual del Master: ${AMARILLO}${address_PLUS#*=}\33[1;37m"
                       read -p 'Address DMR+ Spain IPSC2-EA-Hotspot = 212.237.3.141: ' master1
                       actualizar=S 
                       case $actualizar in
