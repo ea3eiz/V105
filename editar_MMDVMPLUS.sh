@@ -630,7 +630,7 @@ while true
 do
                           echo -n "Valor actual del \33[1;37m${var100port#*=}\33[1;37m"
                           var100port= sed -n $linea2port  $usuario/MMDVMHost/$DIRECTORIO;
-                          read -p '   Puerto para DMR+=55555 : ' miid
+                          read -p 'Puerto para Brandmeister=62031 puerto para DMR+=55555 : ' miid
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
@@ -648,7 +648,7 @@ do
                           buscar=":"
                           largo=`expr index $pas $buscar`
                           echo "   Valor actual del Password: ${AMARILLO}${pas#*=}\33[1;37m"
-           	              read -p 'Brandmeister=passw0rd   DMR+=PASSWORD: ' pas1
+           	              read -p 'Password para DMR+=PASSWORD: ' pas1
                           letra=c
                           if [ $largo = 3 ]
                           then
