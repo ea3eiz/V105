@@ -647,8 +647,8 @@ while true
 do
                           buscar=":"
                           largo=`expr index $pas $buscar`
-                          echo "   Valor actual del Password: ${AMARILLO}${pas#*=}\33[1;37m"
-           	              read -p 'Password para DMR+=PASSWORD: ' pas1
+                          echo "   Valor  actual  del Password: ${AMARILLO}${pas#*=}\33[1;37m"
+           	              read -p '   Password para DMR+=PASSWORD: ' pas1
                           letra=c
                           if [ $largo = 3 ]
                           then
