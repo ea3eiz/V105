@@ -271,7 +271,7 @@ done;;
 while true
 do
                       echo "Valor actual del Master: ${AMARILLO}${pas_BM#*=}\33[1;37m"
-                      read -p 'Password Brandmeister: ' pasbm
+                      read -p '   Introduce Password Personal de Brandmeister = ' pasbm
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
