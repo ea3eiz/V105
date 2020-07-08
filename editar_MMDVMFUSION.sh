@@ -608,7 +608,7 @@ while true
 do
                           echo -n "Valor actual del \33[1;37m${var100port#*=}\33[1;37m"
                           var100port= sed -n $linea2port  $usuario/MMDVMHost/$DIRECTORIO;
-                          read -p 'Puerto para Brandmeister=62031 puerto para DMR+=55555 : ' miid
+                          read -p '   Introduce Password (por defecto:PASSWORD) = 'miid
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
