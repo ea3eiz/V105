@@ -69,7 +69,7 @@ numero_linea_p=$numero_linea$letra #crea 143p
 echo -n "\33[1;36m   8)\33[0m Local port                      - ${AMARILLO}"
 presentar_valor= sed -n $numero_linea_p  /home/pi/MMDVMHost/MMDVMDMRGateway.ini; #presenta el valor en pantalla
 
-echo "${CIAN}   a)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modificaciones\33[1;33m"
+echo "${CIAN}   9)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modificaciones\33[1;33m"
 
 echo "${MARRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
@@ -277,6 +277,20 @@ done;;
 9) echo ""
 while true
 do
+                          
+                        actualizar=S 
+                        case $actualizar in
+			      [sS]* ) echo ""
+                        cd /home/pi/MMDVMHost
+                        geany MMDVMDMRGateway.ini
+			      break;;
+			      [nN]* ) echo ""
+			      break;;
+esac
+done;;
+10) echo ""
+while true
+do
                           echo "Valor de la Ciudad: ${AMARILLO}${contenido_location#*=}\33[1;37m"
                           read -p 'Introduce tu Ciudad ' loc1
                           actualizar=S 
@@ -288,7 +302,7 @@ do
 			                    break;;
 esac
 done;;
-10) echo ""
+11) echo ""
 while true
 do
                           echo "Valor de  la  URL   Web: ${AMARILLO}${contenido_url#*=}\33[1;37m"
@@ -303,7 +317,7 @@ do
 			                    break;;
 esac
 done;;
-11) echo ""
+12) echo ""
 while true
 do
                           
@@ -319,7 +333,7 @@ do
                           break;;
 esac                          
 done;;
-12) echo ""
+13) echo ""
 while true
 do
                           echo "Valor actual del Module XLX: ${AMARILLO}${Module#*=}\33[1;37m"
@@ -334,7 +348,7 @@ do
                           break;;
 esac
 done;;
-13) echo ""
+14) echo ""
 while true
 do
                       echo "Valor actual del Master: ${AMARILLO}${address_BM#*=}\33[1;37m"
@@ -350,7 +364,7 @@ do
                       break;;
 esac
 done;;
-14) echo ""
+15) echo ""
 while true
 do
                       echo "Valor actual del Password: ${AMARILLO}${pas_BM#*=}\33[1;37m"
@@ -364,7 +378,7 @@ do
                       break;;
 esac
 done;;
-15) echo ""
+16) echo ""
 while true
 do
                      
@@ -381,7 +395,7 @@ do
                       break;;
 esac
 done;;
-16) echo ""
+17) echo ""
 while true
 do
                       echo "Valor actual del Talk Group: ${AMARILLO}${Talk_Group#*=}\33[1;37m"
@@ -395,7 +409,7 @@ do
                       break;;
 esac
 done;;
-17) echo ""
+18) echo ""
 while true
 do
                       echo "Valor actual del Master: ${AMARILLO}${address_HBLink#*=}\33[1;37m"
@@ -411,7 +425,7 @@ do
                       break;;
 esac
 done;;
-18) echo ""
+19) echo ""
 while true
 do
                           echo "Valor actual del Password HBLink: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
@@ -426,21 +440,7 @@ do
 			                    break;;
 esac
 done;;
-a) echo ""
-while true
-do
-                          
-                        actualizar=S 
-                        case $actualizar in
-			      [sS]* ) echo ""
-                        cd /home/pi/MMDVMHost
-                        geany MMDVMDMRGateway.ini
-			      break;;
-			      [nN]* ) echo ""
-			      break;;
-esac
-done;;
-19) echo ""
+20) echo ""
 while true
 do
                           
