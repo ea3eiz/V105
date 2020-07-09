@@ -102,6 +102,10 @@ echo -n "${CIAN}  15)${GRIS} Modificar Address DMR+          - ${AMARILLO}"
 address_PLUS=$(awk "NR==86" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_PLUS"
 
+echo -n "${CIAN}  d)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
+address_PLUS=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$address_PLUS"
+
 echo -n "${CIAN}  16)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
 address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_HBLink"
