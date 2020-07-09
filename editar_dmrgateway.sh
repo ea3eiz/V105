@@ -109,6 +109,9 @@ largo_linea=`expr index $Talk_Group $buscar`
 echo "$Talk_Group"
 
 
+
+check=${#Talk_Group}
+echo "check=$check"
 echo "largo_linea=$largo_linea"
 echo "numero_linea=$numero_linea"
 read a
