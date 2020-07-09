@@ -114,25 +114,25 @@ check=${#Talk_Group}
 if [ $check -ge 23 ]
 then
 
-Talk_Group=`expr substr $Talk_Group 17 4`
+Talk_Group=`expr substr $Talk_Group 17 5`
 
   
  
 elif [ $check -ge 22 ]
 then
-   
+  Talk_Group=`expr substr $Talk_Group 17 4` 
  
 elif [ $check -ge 21 ]
 then
-   
+  Talk_Group=`expr substr $Talk_Group 17 3` 
 
 elif [ $check -ge 20 ]
 then
-       
+   Talk_Group=`expr substr $Talk_Group 17 2`    
 
 elif [ $check -ge 19 ]
 then
-         
+  Talk_Group=`expr substr $Talk_Group 17 1`       
 else
     echo ""
 fi
