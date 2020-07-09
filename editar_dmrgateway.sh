@@ -142,8 +142,8 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-                          echo "Valor  actual  del Indicativo: ${AMARILLO}${indicativo#*=}\33[1;37m"
-                          read -p 'Introduce el Indicativo ' indicativo
+                          echo "   Valor  actual  del Indicativo: ${AMARILLO}${indicativo#*=}\33[1;37m"
+                          read -p '   Introduce el Indicativo ' indicativo
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
@@ -157,8 +157,8 @@ done;;
 2) echo ""
 while true
 do
-                          echo "Valor  actual  de la Id: ${AMARILLO}${id#*=}\33[1;37m"
-                          read -p 'Introduce la Id ' id
+                          echo "   Valor  actual  de la Id: ${AMARILLO}${id#*=}\33[1;37m"
+                          read -p '   Introduce la Id ' id
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
@@ -171,8 +171,8 @@ done;;
 3) echo ""
 while true
 do
-                          echo "Valor actual del RXFrequency: ${AMARILLO}${contenido_rxf#*=}\33[1;37m"
-           	              read -p 'Introduce RXFrequency:        ' rxfre
+                          echo "   Valor actual del RXFrequency: ${AMARILLO}${contenido_rxf#*=}\33[1;37m"
+           	              read -p '   Introduce RXFrequency:        ' rxfre
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
@@ -185,8 +185,8 @@ done;;
 4) echo ""
 while true
 do
-                          echo "Valor actual del TXFrequency: ${AMARILLO}${contenido_txf#*=}\33[1;37m"
-                          read -p 'Introduce TXFrequency:        ' txfre
+                          echo "   Valor actual del TXFrequency: ${AMARILLO}${contenido_txf#*=}\33[1;37m"
+                          read -p '   Introduce TXFrequency:        ' txfre
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
@@ -227,8 +227,8 @@ timeo1=`expr substr $timeo 5 30`
 fi
 buscar=":"
 largo=`expr index $timeo $buscar`
-echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
-                      read -p 'Introcuce el valor para Timeout (valor optimo de 0 a 180): ' timeou
+echo "   Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
+                      read -p '   Introcuce el valor para Timeout (valor optimo de 0 a 180): ' timeou
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -254,8 +254,8 @@ while true
 do
 buscar=":"
 largo=`expr index $dup $buscar`
-echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
-           	          read -p 'Para un repetidor Duplex=1 Para un Hotspot simple Duplex=0: ' duplex
+echo "   Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
+           	          read -p '   Para un repetidor Duplex=1 Para un Hotspot simple Duplex=0: ' duplex
                           letra=c
                           if [ $largo = 3 ]
                           then
@@ -277,9 +277,9 @@ done;;
 8) echo ""
 while true
 do
-                          echo -n "Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
+                          echo -n "   Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
                           presentar_valor= sed -n $numero_linea_p  /home/pi/MMDVMHost/MMDVMDMRGateway.ini; #presenta el valor en pantalla
-                          read -p 'Introducir el puerto: 62032  '   dmrac1
+                          read -p '   Introducir el puerto: 62032  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
@@ -308,8 +308,8 @@ done;;
 10) echo ""
 while true
 do
-                          echo "Valor de la Ciudad: ${AMARILLO}${contenido_location#*=}\33[1;37m"
-                          read -p 'Introduce tu Ciudad ' loc1
+                          echo "   Valor de la Ciudad: ${AMARILLO}${contenido_location#*=}\33[1;37m"
+                          read -p '   Introduce tu Ciudad ' loc1
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
@@ -322,8 +322,8 @@ done;;
 11) echo ""
 while true
 do
-                          echo "Valor de  la  URL   Web: ${AMARILLO}${contenido_url#*=}\33[1;37m"
-           	              read -p 'Introduce URL de tu Web: ' ur1
+                          echo "   Valor de  la  URL   Web: ${AMARILLO}${contenido_url#*=}\33[1;37m"
+           	              read -p '   Introduce URL de tu Web: ' ur1
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
@@ -339,8 +339,8 @@ while true
 do
                           
 
-                          echo "Valor  actual  del XLX: ${AMARILLO}${Startup#*=}\33[1;37m"
-                          read -p 'Introduce el número del XLX ' xlx
+                          echo "   Valor  actual  del XLX: ${AMARILLO}${Startup#*=}\33[1;37m"
+                          read -p '   Introduce el número del XLX ' xlx
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
@@ -353,8 +353,8 @@ done;;
 13) echo ""
 while true
 do
-                          echo "Valor actual del Module XLX: ${AMARILLO}${Module#*=}\33[1;37m"
-                          read -p 'Introduce la letra del Module XLX ' modu
+                          echo "   Valor actual del Module XLX: ${AMARILLO}${Module#*=}\33[1;37m"
+                          read -p '   Introduce la letra del Module XLX ' modu
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
@@ -368,8 +368,8 @@ done;;
 14) echo ""
 while true
 do
-                      echo "Valor actual del Master: ${AMARILLO}${address_BM#*=}\33[1;37m"
-                      read -p 'Brandmeister Spain = master.spain-dmr.es: ' master
+                      echo "   Valor actual del Master: ${AMARILLO}${address_BM#*=}\33[1;37m"
+                      read -p '   Brandmeister Spain = master.spain-dmr.es: ' master
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
@@ -384,8 +384,8 @@ done;;
 15) echo ""
 while true
 do
-                      echo "Valor actual del Password: ${AMARILLO}${pas_BM#*=}\33[1;37m"
-                      read -p 'Introduce Password Personal de Brandmeister = ' pasbm
+                      echo "   Valor actual del Password: ${AMARILLO}${pas_BM#*=}\33[1;37m"
+                      read -p '   Introduce Password Personal de Brandmeister = ' pasbm
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
@@ -400,7 +400,7 @@ while true
 do
                      
                       echo "   Valor actual del Master: ${AMARILLO}${address_PLUS#*=}\33[1;37m"
-                      read -p 'Address DMR+ Spain IPSC2-EA-Hotspot = 212.237.3.141: ' master1
+                      read -p '   Address DMR+ Spain IPSC2-EA-Hotspot = 212.237.3.141: ' master1
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
@@ -415,8 +415,8 @@ done;;
 17) echo ""
 while true
 do
-                      echo "Valor actual del Talk Group: $TG\33[1;37m"
-                      read -p 'Introduce Talk Group: ' Talk_Group
+                      echo "   Valor actual del Talk Group: $TG\33[1;37m"
+                      read -p '   Introduce Talk Group: ' Talk_Group
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
@@ -429,8 +429,8 @@ done;;
 18) echo ""
 while true
 do
-                      echo "Valor actual del Master: ${AMARILLO}${address_HBLink#*=}\33[1;37m"
-                      read -p 'Introduce Address del HBLink: ' master2
+                      echo "   Valor actual del Master: ${AMARILLO}${address_HBLink#*=}\33[1;37m"
+                      read -p '   Introduce Address del HBLink: ' master2
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
@@ -445,8 +445,8 @@ done;;
 19) echo ""
 while true
 do
-                          echo "Valor actual del Password HBLink: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
-           	              read -p 'Introduce el Password para HBLink: ' pas1
+                          echo "   Valor actual del Password HBLink: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
+           	              read -p '   Introduce el Password para HBLink: ' pas1
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
