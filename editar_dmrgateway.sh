@@ -74,47 +74,59 @@ echo "${CIAN}   9)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modific
 echo "${MARRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
 echo "  ==========================================="
-echo -n "${CIAN}   9)${GRIS} Modificar Location              - ${AMARILLO}"
+echo -n "${CIAN}   10)${GRIS} Modificar Location              - ${AMARILLO}"
 contenido_location=$(awk "NR==33" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_location"
 
-echo -n "${CIAN}  10)${GRIS} Modificar URL                   - ${AMARILLO}"
+echo -n "${CIAN}  11)${GRIS} Modificar URL                   - ${AMARILLO}"
 contenido_url=$(awk "NR==35" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_url"
 
-echo -n "${CIAN}  11)${GRIS} Modificar XLX Startup           - ${AMARILLO}"
+echo -n "${CIAN}  12)${GRIS} Modificar XLX Startup           - ${AMARILLO}"
 Startup=$(awk "NR==47" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$Startup"
 
-echo -n "${CIAN}  12)${GRIS} Modificar XLX Module            - ${AMARILLO}"
+echo -n "${CIAN}  13)${GRIS} Modificar XLX Module            - ${AMARILLO}"
 Module=$(awk "NR==53" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$Module"
 
-echo -n "${CIAN}  13)${GRIS} Modificar Address Brandmeister  - ${AMARILLO}"
+echo -n "${CIAN}  14)${GRIS} Modificar Address Brandmeister  - ${AMARILLO}"
 address_BM=$(awk "NR==59" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_BM"
 
-echo -n "${CIAN}  14)${GRIS} Modificar Password Brandmeister - ${AMARILLO}"
+echo -n "${CIAN}  15)${GRIS} Modificar Password Brandmeister - ${AMARILLO}"
 pas_BM=$(awk "NR==78" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$pas_BM"
 
-echo -n "${CIAN}  15)${GRIS} Modificar Address DMR+          - ${AMARILLO}"
+echo -n "${CIAN}  16)${GRIS} Modificar Address DMR+          - ${AMARILLO}"
 address_PLUS=$(awk "NR==86" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_PLUS"
 
-echo -n "${CIAN}  16)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
+echo -n "${CIAN}  17)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
 Talk_Group=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)
+buscar="T"
+largo_linea=`expr index $Talk_Group $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $Talk_Group`
 echo "$Talk_Group"
 
-echo -n "${CIAN}  17)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
+echo "Talk_Group=$Talk_Group"
+echo "largo_linea=$largo_linea"
+echo "numero_linea=$numero_linea"
+read a
+
+
+
+
+echo -n "${CIAN}  18)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
 address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_HBLink"
 
-echo -n "${CIAN}  18)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
+echo -n "${CIAN}  19)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
 password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_HBLink"
 
-echo "${CIAN}  19)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
+echo "${CIAN}  20)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
 
 echo ""
 echo "${CIAN}   0)\33[1;31m Salir"
