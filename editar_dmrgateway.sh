@@ -102,19 +102,19 @@ echo -n "${CIAN}  15)${GRIS} Modificar Address DMR+          - ${AMARILLO}"
 address_PLUS=$(awk "NR==86" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_PLUS"
 
-echo -n "${CIAN}   d)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
+echo -n "${CIAN}  16)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
 Talk_Group=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)
-echo "$Talk_Group=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)"
+echo "$Talk_Group"
 
-echo -n "${CIAN}  16)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
+echo -n "${CIAN}  17)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
 address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_HBLink"
 
-echo -n "${CIAN}  17)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
+echo -n "${CIAN}  18)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
 password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_HBLink"
 
-echo "${CIAN}  18)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
+echo "${CIAN}  19)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
 
 echo ""
 echo "${CIAN}   0)\33[1;31m Salir"
@@ -122,79 +122,6 @@ echo ""
 echo -n "${CIAN}   Elije una opción: " 
 read escoger_menu
 case $escoger_menu in
-8) echo ""
-while true
-do
-                          echo -n "Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presentar_valor= sed -n $numero_linea_p  /home/pi/MMDVMHost/MMDVMDMRGateway.ini; #presenta el valor en pantalla
-                          read -p 'Introducir el puerto: 62032  '   dmrac1
-                          actualizar=S 
-                          case $actualizar in
-                          [sS]* ) echo ""
-                          letrac=c
-                          linea=$numero_linea$letrac
-                          sed -i "$linea Local=$dmrac1" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
-esac  
-done;;3) echo ""
-while true
-do
-                          echo "Valor actual del RXFrequency: ${AMARILLO}${contenido_rxf#*=}\33[1;37m"
-           	              read -p 'Introduce RXFrequency:        ' rxfre
-                          actualizar=S 
-                          case $actualizar in
-			                    [sS]* ) echo ""
-                          sed -i "13c RXFrequency=$rxfre" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
-			                    break;;
-			                    [nN]* ) echo ""
-			                    break;;
-esac
-done;;
-4) echo ""
-while true
-do
-                          echo "Valor actual del TXFrequency: ${AMARILLO}${contenido_txf#*=}\33[1;37m"
-                          read -p 'Introduce TXFrequency:        ' txfre
-                          actualizar=S 
-                          case $actualizar in
-                          [sS]* ) echo ""
-                          sed -i "14c TXFrequency=$txfre" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
-esac
-done;;
-9) echo ""
-while true
-do
-                          echo "Valor de la Ciudad: ${AMARILLO}${contenido_location#*=}\33[1;37m"
-                          read -p 'Introduce tu Ciudad ' loc1
-                          actualizar=S 
-                          case $actualizar in
-			                    [sS]* ) echo ""
-                          sed -i "33c Location=$loc1" /home/pi/DMRGateway/DMRGateway.ini
-			                    break;;
-			                    [nN]* ) echo ""
-			                    break;;
-esac
-done;;
-10) echo ""
-while true
-do
-                          echo "Valor de  la  URL   Web: ${AMARILLO}${contenido_url#*=}\33[1;37m"
-           	              read -p 'Introduce URL de tu Web: ' ur1
-                          actualizar=S 
-                          case $actualizar in
-			                    [sS]* ) echo ""
-			                    ur1=`echo "$ur1" | tr -d '[[:space:]]'`
-                          sed -i "35c URL=$ur1" /home/pi/DMRGateway/DMRGateway.ini
-			                    break;;
-			                    [nN]* ) echo ""
-			                    break;;
-esac
-done;;
 1) echo ""
 while true
 do
@@ -224,128 +151,32 @@ do
                           break;;
 esac
 done;;
-11) echo ""
+3) echo ""
 while true
 do
-                          
-
-                          echo "Valor  actual  del XLX: ${AMARILLO}${Startup#*=}\33[1;37m"
-                          read -p 'Introduce el número del XLX ' xlx
-                          actualizar=S 
-                          case $actualizar in
-                          [sS]* ) echo ""
-                          sed -i "47c Startup=$xlx" /home/pi/DMRGateway/DMRGateway.ini
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
-esac                          
-done;;
-12) echo ""
-while true
-do
-                          echo "Valor actual del Module XLX: ${AMARILLO}${Module#*=}\33[1;37m"
-                          read -p 'Introduce la letra del Module XLX ' modu
-                          actualizar=S 
-                          case $actualizar in
-                          [sS]* ) echo ""
-                          
-                          sed -i "53c Module=$modu" /home/pi/DMRGateway/DMRGateway.ini
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
-esac
-done;;
-13) echo ""
-while true
-do
-                      echo "Valor actual del Master: ${AMARILLO}${address_BM#*=}\33[1;37m"
-                      read -p 'Brandmeister Spain = master.spain-dmr.es: ' master
-                      actualizar=S 
-                      case $actualizar in
-                      [sS]* ) echo ""
-                      master=`echo "$master" | tr -d '[[:space:]]'`
-                      master=`echo "$master" | tr [:upper:] [:lower:]`
-                      sed -i "59c Address=$master" /home/pi/DMRGateway/DMRGateway.ini
-                      break;;
-                      [nN]* ) echo ""
-                      break;;
-esac
-done;;
-14) echo ""
-while true
-do
-                      echo "Valor actual del Password: ${AMARILLO}${pas_BM#*=}\33[1;37m"
-                      read -p 'Introduce Password Personal de Brandmeister = ' pasbm
-                      actualizar=S 
-                      case $actualizar in
-                      [sS]* ) echo ""
-                      sed -i "78c Password=$pasbm" /home/pi/DMRGateway/DMRGateway.ini
-                      break;;
-                      [nN]* ) echo ""
-                      break;;
-esac
-done;;
-15) echo ""
-while true
-do
-                     
-                      echo "   Valor actual del Master: ${AMARILLO}${address_PLUS#*=}\33[1;37m"
-                      read -p 'Address DMR+ Spain IPSC2-EA-Hotspot = 212.237.3.141: ' master1
-                      actualizar=S 
-                      case $actualizar in
-                      [sS]* ) echo ""
-                      master1=`echo "$master1" | tr -d '[[:space:]]'`
-                      master1=`echo "$master1" | tr [:upper:] [:lower:]`
-                      sed -i "86c Address=$master1" /home/pi/DMRGateway/DMRGateway.ini
-                      break;;
-                      [nN]* ) echo ""
-                      break;;
-esac
-done;;
-
-16) echo ""
-while true
-do
-                      echo "Valor actual del Master: ${AMARILLO}${address_HBLink#*=}\33[1;37m"
-                      read -p 'Introduce Address del HBLink: ' master2
-                      actualizar=S 
-                      case $actualizar in
-                      [sS]* ) echo ""
-                      master2=`echo "$master2" | tr -d '[[:space:]]'`
-                      master2=`echo "$master2" | tr [:upper:] [:lower:]`
-                      sed -i "118c Address=$master2" /home/pi/DMRGateway/DMRGateway.ini
-                      break;;
-                      [nN]* ) echo ""
-                      break;;
-esac
-done;;
-d) echo ""
-while true
-do
-                      echo "Valor actual del Talk Group: ${AMARILLO}${Talk_Group#*=}\33[1;37m"
-                      read -p 'Introduce Talk Group: ' Talk_Group
-                      actualizar=S 
-                      case $actualizar in
-                      [sS]* ) echo ""
-                      sed -i "90c TGRewrite=2,8,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
-                      break;;
-                      [nN]* ) echo ""
-                      break;;
-esac
-done;;
-17) echo ""
-while true
-do
-                          echo "Valor actual del Password HBLink: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
-           	              read -p 'Introduce el Password para HBLink: ' pas1
+                          echo "Valor actual del RXFrequency: ${AMARILLO}${contenido_rxf#*=}\33[1;37m"
+           	              read -p 'Introduce RXFrequency:        ' rxfre
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-			                    pas1=`echo "$pas1" | tr -d '[[:space:]]'`
-                          sed -i "123c Password=$pas1" /home/pi/DMRGateway/DMRGateway.ini
+                          sed -i "13c RXFrequency=$rxfre" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
+esac
+done;;
+4) echo ""
+while true
+do
+                          echo "Valor actual del TXFrequency: ${AMARILLO}${contenido_txf#*=}\33[1;37m"
+                          read -p 'Introduce TXFrequency:        ' txfre
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "14c TXFrequency=$txfre" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
 5) echo ""
@@ -426,6 +257,175 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
 			  break;;
 esac
 done;;
+8) echo ""
+while true
+do
+                          echo -n "Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
+                          presentar_valor= sed -n $numero_linea_p  /home/pi/MMDVMHost/MMDVMDMRGateway.ini; #presenta el valor en pantalla
+                          read -p 'Introducir el puerto: 62032  '   dmrac1
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          letrac=c
+                          linea=$numero_linea$letrac
+                          sed -i "$linea Local=$dmrac1" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac  
+done;;
+9) echo ""
+while true
+do
+                          echo "Valor de la Ciudad: ${AMARILLO}${contenido_location#*=}\33[1;37m"
+                          read -p 'Introduce tu Ciudad ' loc1
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+                          sed -i "33c Location=$loc1" /home/pi/DMRGateway/DMRGateway.ini
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
+10) echo ""
+while true
+do
+                          echo "Valor de  la  URL   Web: ${AMARILLO}${contenido_url#*=}\33[1;37m"
+           	              read -p 'Introduce URL de tu Web: ' ur1
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+			                    ur1=`echo "$ur1" | tr -d '[[:space:]]'`
+                          sed -i "35c URL=$ur1" /home/pi/DMRGateway/DMRGateway.ini
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
+11) echo ""
+while true
+do
+                          
+
+                          echo "Valor  actual  del XLX: ${AMARILLO}${Startup#*=}\33[1;37m"
+                          read -p 'Introduce el número del XLX ' xlx
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "47c Startup=$xlx" /home/pi/DMRGateway/DMRGateway.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac                          
+done;;
+12) echo ""
+while true
+do
+                          echo "Valor actual del Module XLX: ${AMARILLO}${Module#*=}\33[1;37m"
+                          read -p 'Introduce la letra del Module XLX ' modu
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          
+                          sed -i "53c Module=$modu" /home/pi/DMRGateway/DMRGateway.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+13) echo ""
+while true
+do
+                      echo "Valor actual del Master: ${AMARILLO}${address_BM#*=}\33[1;37m"
+                      read -p 'Brandmeister Spain = master.spain-dmr.es: ' master
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      master=`echo "$master" | tr -d '[[:space:]]'`
+                      master=`echo "$master" | tr [:upper:] [:lower:]`
+                      sed -i "59c Address=$master" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
+esac
+done;;
+14) echo ""
+while true
+do
+                      echo "Valor actual del Password: ${AMARILLO}${pas_BM#*=}\33[1;37m"
+                      read -p 'Introduce Password Personal de Brandmeister = ' pasbm
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      sed -i "78c Password=$pasbm" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
+esac
+done;;
+15) echo ""
+while true
+do
+                     
+                      echo "   Valor actual del Master: ${AMARILLO}${address_PLUS#*=}\33[1;37m"
+                      read -p 'Address DMR+ Spain IPSC2-EA-Hotspot = 212.237.3.141: ' master1
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      master1=`echo "$master1" | tr -d '[[:space:]]'`
+                      master1=`echo "$master1" | tr [:upper:] [:lower:]`
+                      sed -i "86c Address=$master1" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
+esac
+done;;
+16) echo ""
+while true
+do
+                      echo "Valor actual del Talk Group: ${AMARILLO}${Talk_Group#*=}\33[1;37m"
+                      read -p 'Introduce Talk Group: ' Talk_Group
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      sed -i "90c TGRewrite=2,8,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
+esac
+done;;
+17) echo ""
+while true
+do
+                      echo "Valor actual del Master: ${AMARILLO}${address_HBLink#*=}\33[1;37m"
+                      read -p 'Introduce Address del HBLink: ' master2
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      master2=`echo "$master2" | tr -d '[[:space:]]'`
+                      master2=`echo "$master2" | tr [:upper:] [:lower:]`
+                      sed -i "118c Address=$master2" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
+esac
+done;;
+18) echo ""
+while true
+do
+                          echo "Valor actual del Password HBLink: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
+           	              read -p 'Introduce el Password para HBLink: ' pas1
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+			                    pas1=`echo "$pas1" | tr -d '[[:space:]]'`
+                          sed -i "123c Password=$pas1" /home/pi/DMRGateway/DMRGateway.ini
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
 a) echo ""
 while true
 do
@@ -440,7 +440,7 @@ do
 			      break;;
 esac
 done;;
-18) echo ""
+19) echo ""
 while true
 do
                           
