@@ -114,41 +114,26 @@ check=${#Talk_Group}
 if [ $check -ge 23 ]
 then
 
-Talk_Group=`expr substr $Talk_Group 17 5`
+TG=`expr substr $Talk_Group 17 5`
 
   
  
 elif [ $check -ge 22 ]
 then
-  Talk_Group=`expr substr $Talk_Group 17 4` 
+  TG=`expr substr $Talk_Group 17 4` 
  
 elif [ $check -ge 21 ]
 then
-  Talk_Group=`expr substr $Talk_Group 17 3` 
-
-elif [ $check -ge 20 ]
-then
-   Talk_Group=`expr substr $Talk_Group 17 2`    
+  TG=`expr substr $Talk_Group 17 2`    
 
 elif [ $check -ge 19 ]
 then
-  Talk_Group=`expr substr $Talk_Group 17 1`       
+  TG=`expr substr $Talk_Group 17 1`       
 else
     echo ""
 fi
 
-echo "$Talk_Group"
-
-
-
-
-echo "check=$check"
-echo "largo_linea=$largo_linea"
-echo "numero_linea=$numero_linea"
-read a
-
-
-
+echo "TGRewrite=$TG"
 
 echo -n "${CIAN}  18)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
 address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
@@ -442,7 +427,7 @@ done;;
 17) echo ""
 while true
 do
-                      echo "Valor actual del Talk Group: ${AMARILLO}${Talk_Group#*=}\33[1;37m"
+                      echo "Valor actual del Talk Group: $TG\33[1;37m"
                       read -p 'Introduce Talk Group: ' Talk_Group
                       actualizar=S 
                       case $actualizar in
