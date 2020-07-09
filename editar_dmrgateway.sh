@@ -106,8 +106,6 @@ echo -n "${CIAN}  17)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
 Talk_Group=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)
 buscar="T"
 largo_linea=`expr index $Talk_Group $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $Talk_Group 1 $Talk_Group`
 echo "$Talk_Group"
 
 
