@@ -74,7 +74,7 @@ echo "${CIAN}   9)${BLANCO} Abrir fichero MMDVMDMRGateway.ini para hacer modific
 echo "${MARRON}"
 echo "  Modificar Fichero DMRGateway/DMRGateway.ini"
 echo "  ==========================================="
-echo -n "${CIAN}   10)${GRIS} Modificar Location              - ${AMARILLO}"
+echo -n "${CIAN}  10)${GRIS} Modificar Location              - ${AMARILLO}"
 contenido_location=$(awk "NR==33" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$contenido_location"
 
@@ -104,35 +104,23 @@ echo "$address_PLUS"
 
 echo -n "${CIAN}  17)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
 Talk_Group=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)
-
-
-
-
-check=${#Talk_Group}
-
-
-if [ $check -ge 23 ]
+longitud_telk_group=${#Talk_Group}
+if [ $longitud_telk_group -ge 23 ]
 then
-
-TG=`expr substr $Talk_Group 17 5`
-
-  
- 
-elif [ $check -ge 22 ]
+      TG=`expr substr $Talk_Group 17 5`
+elif [ $longitud_telk_group -ge 22 ]
 then
-  TG=`expr substr $Talk_Group 17 4` 
- 
-elif [ $check -ge 21 ]
+      TG=`expr substr $Talk_Group 17 4` 
+elif [ $longitud_telk_group -ge 21 ]
 then
-  TG=`expr substr $Talk_Group 17 2`    
+      TG=`expr substr $Talk_Group 17 2`    
 
-elif [ $check -ge 19 ]
+elif [ $longitud_telk_group -ge 19 ]
 then
-  TG=`expr substr $Talk_Group 17 1`       
+      TG=`expr substr $Talk_Group 17 1`       
 else
-    echo ""
+      echo ""
 fi
-
 echo "TGRewrite=$TG"
 
 echo -n "${CIAN}  18)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
