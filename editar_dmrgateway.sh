@@ -105,7 +105,10 @@ echo "$address_PLUS"
 echo -n "${CIAN}  17)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
 Talk_Group=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)
 longitud_telk_group=${#Talk_Group}
-if [ $longitud_telk_group -ge 23 ]
+  if [ $longitud_telk_group -ge 24 ]
+then
+      TG=`expr substr $Talk_Group 17 6`
+elif [ $longitud_telk_group -ge 23 ]
 then
       TG=`expr substr $Talk_Group 17 5`
 elif [ $longitud_telk_group -ge 22 ]
@@ -113,7 +116,10 @@ then
       TG=`expr substr $Talk_Group 17 4` 
 elif [ $longitud_telk_group -ge 21 ]
 then
-      TG=`expr substr $Talk_Group 17 2`    
+      TG=`expr substr $Talk_Group 17 3`  
+elif [ $longitud_telk_group -ge 20 ]
+then
+      TG=`expr substr $Talk_Group 17 2`        
 
 elif [ $longitud_telk_group -ge 19 ]
 then
