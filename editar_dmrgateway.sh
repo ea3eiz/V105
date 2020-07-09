@@ -104,9 +104,7 @@ echo "$address_PLUS"
 
 echo -n "${CIAN}  17)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
 Talk_Group=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)
-buscar="T"
-largo_linea=`expr index $Talk_Group $buscar`
-echo "$Talk_Group"
+
 
 
 
@@ -115,20 +113,31 @@ check=${#Talk_Group}
 
 if [ $check -ge 23 ]
 then
-    echo "Very 23"
+
+Talk_Group=`expr substr $Talk_Group 17 4`
+
+  
  
 elif [ $check -ge 22 ]
 then
-    echo "Good 22"
+   
  
 elif [ $check -ge 21 ]
 then
-    echo "Just 21"
+   
+
+elif [ $check -ge 20 ]
+then
+       
+
+elif [ $check -ge 19 ]
+then
+         
 else
-    echo "Not OK"
+    echo ""
 fi
 
-
+echo "$Talk_Group"
 
 
 
