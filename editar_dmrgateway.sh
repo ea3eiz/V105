@@ -111,6 +111,28 @@ echo "$Talk_Group"
 
 
 check=${#Talk_Group}
+
+
+if [ $check -ge 23 ]
+then
+    echo "Very 23"
+ 
+elif [ $check -ge 22 ]
+then
+    echo "Good 22"
+ 
+elif [ $check -ge 21 ]
+then
+    echo "Just 21"
+else
+    echo "Not OK"
+fi
+
+
+
+
+
+
 echo "check=$check"
 echo "largo_linea=$largo_linea"
 echo "numero_linea=$numero_linea"
