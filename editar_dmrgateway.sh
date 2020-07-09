@@ -110,7 +110,7 @@ largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $Talk_Group`
 echo "$Talk_Group"
 
-echo "Talk_Group=$Talk_Group"
+
 echo "largo_linea=$largo_linea"
 echo "numero_linea=$numero_linea"
 read a
