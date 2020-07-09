@@ -319,6 +319,20 @@ do
                       break;;
 esac
 done;;
+d) echo ""
+while true
+do
+                      echo "Valor actual del Talk Group: ${AMARILLO}${Talk_Group#*=}\33[1;37m"
+                      read -p 'Introduce Talk Group: ' Talk_Group
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      sed -i "90c TGRewrite=2,8,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
+esac
+done;;
 17) echo ""
 while true
 do
