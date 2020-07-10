@@ -376,6 +376,7 @@ do
                           lonM=`echo "$lon" | tr [:lower:] [:upper:]`
                           lonM=`echo "$lonM" | tr -d '[[:space:]]'` #quita espacios
                           sed -i "13c Callsign=$lonM" $usuario/YSF2DMR/YSF2DMR.ini
+                          sed -i "72c AprsCallsign=$lonM" $usuario/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;

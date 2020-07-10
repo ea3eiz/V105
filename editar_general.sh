@@ -206,6 +206,7 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                         
                         #iNDICATIVO YSF2DMR
                         sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini
+                        sed -i "72c AprsCallsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini
                         sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
                         sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
                         sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
