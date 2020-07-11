@@ -20,8 +20,8 @@ MARRON="\33[38;5;138m"
 
 echo "${VERDE}"
 echo "   **************************************************************************"
-echo "   *                         Script para actualizar BlueDV                            *"
-echo "   *${ROJO}                      $SCRIPTS_version           by EA3EIZ  ${VERDE}                                  *"
+echo "   *                         Script para actualizar BlueDV                       *"
+echo "   *${ROJO}                      $SCRIPTS_version           by EA3EIZ  ${VERDE}                             *"
 echo -n "${VERDE}"
 echo "   **************************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV"
@@ -34,7 +34,6 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-			read a
 			clear
 			echo "\33[1;33m"
 	        read -p ' Quieres actualizar el BlueDV Si/No: ' ejecutar1
