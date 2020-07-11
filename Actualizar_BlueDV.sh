@@ -44,28 +44,39 @@ do
 #if [ -d /home/pi/bluedv_anterior/ ];
 #then
 			clear
-			echo "\v\v\v\v\v\v\v"
+			echo "\v\v\v\v"
+			echo "${VERDE}"
 			echo "   **************************************************************************"
-			echo "${VERDE}      YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "            YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
 			echo "   **************************************************************************"
 			sleep 1
 			clear
-			echo "\v\v\v\v\v\v\v"
+			echo "${BLANCO}"
+			echo "\v\v\v\v"
 			echo "   **************************************************************************"
-			echo "${AMARILLO}      YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "            YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
 			echo "   **************************************************************************"
 			sleep 1
+			clear
+			echo "${AMARILLO}"
+			echo "\v\v\v\v"
+			echo "   **************************************************************************"
+			echo "            YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "   **************************************************************************"
 			sleep 1
 			clear
-			echo "\33[1;32mYA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "${ROJO}"
+			echo "\v\v\v\v"
+			echo "   **************************************************************************"
+			echo "            YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "   **************************************************************************"
 			sleep 1
 			clear
-			echo "\33[1;31mYA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
-			sleep 1
-			clear
-			echo "\33[1;32m******************************************************"
-			echo "\33[1;32m* YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE *"
-			echo "\33[1;32m******************************************************"
+			echo "${VERDE}"
+			echo "\v\v\v\v"
+			echo "   **************************************************************************"
+			echo "            YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "   **************************************************************************"
 			sleep 3
 # else
 # 			cd /home/pi/
