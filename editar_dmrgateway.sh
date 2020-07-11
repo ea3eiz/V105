@@ -105,25 +105,25 @@ echo "$address_PLUS"
 echo -n "${CIAN}  17)${GRIS} Modificar Talk Group DMR+       - ${AMARILLO}"
 Talk_Group=$(awk "NR==90" /home/pi/DMRGateway/DMRGateway.ini)
 longitud_telk_group=${#Talk_Group}
-  if [ $longitud_telk_group -ge 24 ]
+  if [ $longitud_telk_group -ge 25 ]
 then
-      TG=`expr substr $Talk_Group 17 6`
+      TG=`expr substr $Talk_Group 18 6`
+elif [ $longitud_telk_group -ge 24 ]
+then
+      TG=`expr substr $Talk_Group 18 5`
 elif [ $longitud_telk_group -ge 23 ]
 then
-      TG=`expr substr $Talk_Group 17 5`
+      TG=`expr substr $Talk_Group 18 4` 
 elif [ $longitud_telk_group -ge 22 ]
 then
-      TG=`expr substr $Talk_Group 17 4` 
+      TG=`expr substr $Talk_Group 18 3`  
 elif [ $longitud_telk_group -ge 21 ]
 then
-      TG=`expr substr $Talk_Group 17 3`  
+      TG=`expr substr $Talk_Group 18 2`        
+
 elif [ $longitud_telk_group -ge 20 ]
 then
-      TG=`expr substr $Talk_Group 17 2`        
-
-elif [ $longitud_telk_group -ge 19 ]
-then
-      TG=`expr substr $Talk_Group 17 1`       
+      TG=`expr substr $Talk_Group 18 1`       
 else
       echo ""
 fi
@@ -426,7 +426,7 @@ do
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
-                      sed -i "90c TGRewrite=2,8,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
+                      sed -i "90c TGRewrite0=2,8,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
                       break;;
                       [nN]* ) echo ""
                       break;;
