@@ -28,15 +28,16 @@ echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV"
 #echo "\33[1;36m   2)\33[1;37m Volver a la versión BlueDV Version 1.0.0.9441"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 2: " 
+echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
 1) echo ""
 while true
 do
-clear
-echo "\33[1;33m"
+			read a
+			clear
+			echo "\33[1;33m"
 	        read -p ' Quieres actualizar el BlueDV Si/No: ' ejecutar1
 		    case $ejecutar1 in
 			[sS]* ) echo ""
