@@ -97,6 +97,7 @@ do
 			echo ""
 			break;;
 			[nN]* ) echo ""
+			exit;
 			break;;
 esac
 done;;
