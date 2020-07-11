@@ -20,11 +20,10 @@ MARRON="\33[38;5;138m"
 
 echo "${VERDE}"
 echo "   **************************************************************************"
-echo "   *               Script para actualizar BlueDV                      *"
-echo -n "${ROJO}"
-echo "   *                      $SCRIPTS_version by EA3EIZ                              *"
+echo "   *               Script para actualizar BlueDV                            *"
+echo "   *${ROJO}                      $SCRIPTS_version by EA3EIZ  ${VERDE}                                  *"
 echo -n "${VERDE}"
-echo "   *********************************************************************************"
+echo "   **************************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV"
 #echo "\33[1;36m   2)\33[1;37m Volver a la versión BlueDV Version 1.0.0.9441"
 echo ""
@@ -45,10 +44,17 @@ do
 #if [ -d /home/pi/bluedv_anterior/ ];
 #then
 			clear
-			echo "\33[1;32mYA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "\v\v\v\v\v\v\v"
+			echo "   **************************************************************************"
+			echo "${VERDE}      YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "   **************************************************************************"
 			sleep 1
 			clear
-			echo "\33[1;31mYA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "\v\v\v\v\v\v\v"
+			echo "   **************************************************************************"
+			echo "${AMARILLO}      YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
+			echo "   **************************************************************************"
+			sleep 1
 			sleep 1
 			clear
 			echo "\33[1;32mYA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE"
