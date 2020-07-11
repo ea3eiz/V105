@@ -22,13 +22,11 @@ echo "${VERDE}"
 echo "   ********************************************************************"
 echo "   *               Script para actualizar BlueDV                      *"
 echo -n "${ROJO}"
-echo "   *                      $SCRIPTS_version by EA3EIZ                               *"
+echo "   *                      $SCRIPTS_version by EA3EIZ                              *"
 echo -n "${VERDE}"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV"
 #echo "\33[1;36m   2)\33[1;37m Volver a la versión BlueDV Version 1.0.0.9441"
-echo ""
-echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
 echo -n "\33[1;36m   Elige una opción del 0 al 2: " 
 read escoger_menu
@@ -86,7 +84,7 @@ echo "\33[1;33m"
 			break;;
 esac
 done;;
-2) echo ""
+2bloqueado) echo ""
 while true
 do
 clear
