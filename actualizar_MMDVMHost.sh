@@ -30,7 +30,10 @@ MARRON="\33[38;5;138m"
                     case $ejecutar1 in
                     [sS]* ) echo ""
                     echo "ok >>>>>"
-                    cd /home/pi 
+
+                    # guarda el fichero MMDVMDMRGateway.ini para recuperarlo después de la actualización
+                    cp /home/pi/MMDVMHost/MMDVMDMRGateway.ini /home/pi
+                    cd /home/pi
                     sudo rm -r /home/pi/MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
                     #git clone https://github.com/ea3eiz/MMDVMHost
@@ -112,7 +115,8 @@ MARRON="\33[38;5;138m"
 
                     cp MMDVM.ini MMDVMNXDN.ini
 
-                    cp MMDVM.ini MMDVMDMRGateway.ini
+                    # recoge el fichero MMDVMDMRGateway.ini para ponerlo en el MMDVMHost
+                    cp /home/pi/MMDVMDMRGateway.ini /home/pi/MMDVMHost
 
                     #=================================================
 
