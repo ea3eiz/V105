@@ -127,7 +127,7 @@ then
 else
       echo ""
 fi
-echo "TGRewrite=$TG"
+echo "TGRewrite0=$TG"
 
 echo -n "${CIAN}  18)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
 address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
