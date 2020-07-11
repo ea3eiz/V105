@@ -631,7 +631,8 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
                           sed -i "$linea Id=$tu_id" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
 
             #ID DMRGATEWAY
-            sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
+            id_corta=`expr substr $tu_id 1 7`
+            sed -i "3c Id=$id_corta" /home/pi/MMDVMHost/MMDVMDMRGateway.ini
 
             #DMR+
             sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMPLUS.ini
