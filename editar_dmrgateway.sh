@@ -185,11 +185,11 @@ fi
 
 echo -n "${CIAN}  26)${MARRON} Hblink Enabled                  - ${VERDE}"
 enabled_hblink=$(awk "NR==117" /home/pi/DMRGateway/DMRGateway.ini)
-if  [ $enabled_tgif = "Enabled=1" ]
+if  [ $enabled_hblink = "Enabled=1" ]
 then
-echo "${VERDE}$enabled_tgif"
+echo "${VERDE}$enabled_hblink"
 else
-echo "${ROJO}$enabled_tgif"
+echo "${ROJO}$enabled_hblink"
 fi
 
 echo ""
