@@ -550,6 +550,66 @@ do
 			                    break;;
 esac
 done;;
+23) echo ""
+while true
+do
+                          echo "   Valor actual Enabled: ${AMARILLO}$enabled_xlx\33[1;37m"
+           	              read -p '   Introduce 0 ó 1: ' enabledxlx
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+			                    enabledxlx=`echo "$enabledxlx" | tr -d '[[:space:]]'`
+                          sed -i "38c Enabled=$enabledxlx" /home/pi/DMRGateway/DMRGateway.ini
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
+24) echo ""
+while true
+do
+                          echo "   Valor actual Enabled: ${AMARILLO}$enabled_bm\33[1;37m"
+           	              read -p '   Introduce 0 ó 1: ' enabledbm
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+			                    enabledbm=`echo "$enabledbm" | tr -d '[[:space:]]'`
+                          sed -i "105c Enabled=$enabledbm" /home/pi/DMRGateway/DMRGateway.ini
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
+25) echo ""
+while true
+do
+                          echo "   Valor actual Enabled: ${AMARILLO}$enabled_plus\33[1;37m"
+           	              read -p '   Introduce 0 ó 1: ' enabledplus
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+			                    √=`echo "$√" | tr -d '[[:space:]]'`
+                          sed -i "84c Enabled=$√" /home/pi/DMRGateway/DMRGateway.ini
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
+26) echo ""
+while true
+do
+                          echo "   Valor actual Enabled: ${AMARILLO}$enabled_hblink\33[1;37m"
+           	              read -p '   Introduce 0 ó 1: ' enabledhblink
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+			                    enabledhblink=`echo "$enabledhblink" | tr -d '[[:space:]]'`
+                          sed -i "105c Enabled=$enabledtgif" /home/pi/DMRGateway/DMRGateway.ini
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
 27) echo ""
 while true
 do
