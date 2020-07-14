@@ -149,7 +149,12 @@ echo ""
 
 echo -n "${CIAN}  22)${MARRON} TGIF Enabled                    - ${VERDE}"
 enabled_tgif=$(awk "NR==105" /home/pi/DMRGateway/DMRGateway.ini)
-echo "$enabled_tgif"
+if  [ $enabled_tgif = "Enabled=1" ]
+then
+echo "${VERDE}$enabled_tgif"
+else
+echo "${ROJO}$enabled_tgif"
+fi
 
 echo -n "${CIAN}  23)${MARRON} XLX Enabled                     - ${VERDE}"
 enabled_xlx=$(awk "NR==38" /home/pi/DMRGateway/DMRGateway.ini)
