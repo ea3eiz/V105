@@ -138,7 +138,7 @@ password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_HBLink"
 
 echo -n "${CIAN}  20)${GRIS} Modificar Address TGIF          - ${AMARILLO}"
-password_TGIF=$(awk "NR==110" /home/pi/DMRGateway/DMRGateway.ini)
+password_TGIF=$(awk "NR==109" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_TGIF"
 
 echo -n "${CIAN}  21)${GRIS} Modificar Password TGIF         - ${AMARILLO}"
@@ -518,7 +518,7 @@ do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-			                    pastgif=`echo "$enabledtgif" | tr -d '[[:space:]]'`
+			                    enabledtgif=`echo "$enabledtgif" | tr -d '[[:space:]]'`
                           sed -i "105c Password=$enabledtgif" /home/pi/DMRGateway/DMRGateway.ini
 			                    break;;
 			                    [nN]* ) echo ""
