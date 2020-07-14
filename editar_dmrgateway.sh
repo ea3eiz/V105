@@ -574,7 +574,7 @@ do
                           case $actualizar in
 			                    [sS]* ) echo ""
 			                    enabledbm=`echo "$enabledbm" | tr -d '[[:space:]]'`
-                          sed -i "105c Enabled=$enabledbm" /home/pi/DMRGateway/DMRGateway.ini
+                          sed -i "57c Enabled=$enabledbm" /home/pi/DMRGateway/DMRGateway.ini
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
@@ -588,8 +588,8 @@ do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-			                    √=`echo "$√" | tr -d '[[:space:]]'`
-                          sed -i "84c Enabled=$√" /home/pi/DMRGateway/DMRGateway.ini
+			                    enabledplus=`echo "$enabledplus" | tr -d '[[:space:]]'`
+                          sed -i "84c Enabled=$enabledplus" /home/pi/DMRGateway/DMRGateway.ini
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
@@ -604,7 +604,7 @@ do
                           case $actualizar in
 			                    [sS]* ) echo ""
 			                    enabledhblink=`echo "$enabledhblink" | tr -d '[[:space:]]'`
-                          sed -i "105c Enabled=$enabledtgif" /home/pi/DMRGateway/DMRGateway.ini
+                          sed -i "117c Enabled=$enabledhblink" /home/pi/DMRGateway/DMRGateway.ini
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
