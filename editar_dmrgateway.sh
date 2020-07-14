@@ -158,19 +158,39 @@ fi
 
 echo -n "${CIAN}  23)${MARRON} XLX Enabled                     - ${VERDE}"
 enabled_xlx=$(awk "NR==38" /home/pi/DMRGateway/DMRGateway.ini)
-echo "$enabled_xlx"
+if  [ $enabled_xlx = "Enabled=1" ]
+then
+echo "${VERDE}$enabled_xlx"
+else
+echo "${ROJO}$enabled_xlx"
+fi
 
 echo -n "${CIAN}  24)${MARRON} Brandmeister Enabled            - ${VERDE}"
 enabled_bm=$(awk "NR==57" /home/pi/DMRGateway/DMRGateway.ini)
-echo "$enabled_bm"
+if  [ $enabled_bm = "Enabled=1" ]
+then
+echo "${VERDE}$enabled_bm"
+else
+echo "${ROJO}$enabled_bm"
+fi
 
 echo -n "${CIAN}  25)${MARRON} DMR+ Enabled                    - ${VERDE}"
 enabled_plus=$(awk "NR==84" /home/pi/DMRGateway/DMRGateway.ini)
-echo "$enabled_plus"
+if  [ $enabled_plus = "Enabled=1" ]
+then
+echo "${VERDE}$enabled_plus"
+else
+echo "${ROJO}$enabled_plus"
+fi
 
 echo -n "${CIAN}  26)${MARRON} Hblink Enabled                  - ${VERDE}"
 enabled_hblink=$(awk "NR==117" /home/pi/DMRGateway/DMRGateway.ini)
-echo "$enabled_hblink"
+if  [ $enabled_tgif = "Enabled=1" ]
+then
+echo "${VERDE}$enabled_tgif"
+else
+echo "${ROJO}$enabled_tgif"
+fi
 
 echo ""
 
