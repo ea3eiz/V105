@@ -137,11 +137,39 @@ echo -n "${CIAN}  19)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
 password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_HBLink"
 
-echo -n "${CIAN}  20)${GRIS} Modificar Password TGIF         - ${AMARILLO}"
+echo -n "${CIAN}  20)${GRIS} Modificar Address TGIF          - ${AMARILLO}"
 password_TGIF=$(awk "NR==110" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_TGIF"
 
-echo "${CIAN}  21)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
+echo -n "${CIAN}  21)${GRIS} Modificar Password TGIF         - ${AMARILLO}"
+password_TGIF=$(awk "NR==110" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$password_TGIF"
+
+echo ""
+
+echo -n "${CIAN}  22)${MARRON} TGIF Enabled                    - ${VERDE}"
+enabled_tgif=$(awk "NR==105" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$enabled_tgif"
+
+echo -n "${CIAN}  23)${MARRON} XLX Enabled                     - ${VERDE}"
+enabled_xlx=$(awk "NR==38" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$enabled_xlx"
+
+echo -n "${CIAN}  24)${MARRON} Brandmeister Enabled            - ${VERDE}"
+enabled_bm=$(awk "NR==57" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$enabled_bm"
+
+echo -n "${CIAN}  25)${MARRON} DMR+ Enabled                    - ${VERDE}"
+enabled_plus=$(awk "NR==84" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$enabled_plus"
+
+echo -n "${CIAN}  26)${MARRON} Hblink Enabled                  - ${VERDE}"
+enabled_hblink=$(awk "NR==117" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$enabled_hblink"
+
+echo ""
+
+echo "${CIAN}  27)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
 
 echo ""
 echo "${CIAN}   0)\33[1;31m Salir"
@@ -467,7 +495,7 @@ do
 			                    break;;
 esac
 done;;
-20) echo ""
+21) echo ""
 while true
 do
                           echo "   Valor actual del Password TGIF: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
@@ -482,7 +510,7 @@ do
 			                    break;;
 esac
 done;;
-21) echo ""
+27) echo ""
 while true
 do
                           
