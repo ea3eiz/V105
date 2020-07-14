@@ -137,7 +137,11 @@ echo -n "${CIAN}  19)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
 password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_HBLink"
 
-echo "${CIAN}  20)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
+echo -n "${CIAN}  20)${GRIS} Modificar Password TGIF         - ${AMARILLO}"
+password_TGIF=$(awk "NR==110" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$password_TGIF"
+
+echo "${CIAN}  21)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
 
 echo ""
 echo "${CIAN}   0)\33[1;31m Salir"
