@@ -467,6 +467,21 @@ do
 			                    break;;
 esac
 done;;
+20) echo ""
+while true
+do
+                          echo "   Valor actual del Password TGIF: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
+           	              read -p '   Introduce el Password para TGIF: ' pastgif
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+			                    pastgif=`echo "$pastgif" | tr -d '[[:space:]]'`
+                          sed -i "110c Password=$pastgif" /home/pi/DMRGateway/DMRGateway.ini
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
 21) echo ""
 while true
 do
