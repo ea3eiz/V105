@@ -519,7 +519,7 @@ do
                           case $actualizar in
 			                    [sS]* ) echo ""
 			                    enabledtgif=`echo "$enabledtgif" | tr -d '[[:space:]]'`
-                          sed -i "105c Password=$enabledtgif" /home/pi/DMRGateway/DMRGateway.ini
+                          sed -i "105c Enabled=$enabledtgif" /home/pi/DMRGateway/DMRGateway.ini
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
