@@ -20,7 +20,7 @@ echo "                  Script Modificar $DIRECTORIO             \33[1;31m by EA
 echo "  ***************************************************************************"
 echo "${MARRON}"
 echo "  Modificar Fichero MMDVMHost/MMDVMDMRGateway.ini"
-echo "  =========================================="
+echo "  ==============================================="
 
 echo -n "${CIAN}   1)${GRIS} Modificar Indicativo            - ${AMARILLO}"
 indicativo=$(awk "NR==2" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
