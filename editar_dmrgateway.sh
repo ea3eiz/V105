@@ -510,6 +510,21 @@ do
 			                    break;;
 esac
 done;;
+22) echo ""
+while true
+do
+                          echo "   Valor actual Enabled: ${AMARILLO}$enabled_tgif\33[1;37m"
+           	              read -p '   Introduce 0 ó 1: ' enabledtgif
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+			                    pastgif=`echo "$enabledtgif" | tr -d '[[:space:]]'`
+                          sed -i "105c Password=$enabledtgif" /home/pi/DMRGateway/DMRGateway.ini
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
 27) echo ""
 while true
 do
