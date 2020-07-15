@@ -591,7 +591,7 @@ done;;
 21) echo ""
 while true
 do
-                      echo "                   Valor actual del Master: ${AMARILLO}${master_gif#*=}\33[1;37m"
+                      echo "                     Valor actual del Address: ${AMARILLO}${master_tgif#*=}\33[1;37m"
                       read -p '   El address debe de ser: prime.tgif.network: ' master3
                       actualizar=S 
                       case $actualizar in
