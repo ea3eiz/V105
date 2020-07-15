@@ -132,23 +132,23 @@ echo "TGRewrite0=$TG"
 echo -n "${CIAN}   a)${GRIS} Modificar Talk Group TGIF       - ${AMARILLO}"
 talk_group_tgif=$(awk "NR==107" /home/pi/DMRGateway/DMRGateway.ini)
 longitud_talk_group_tgif=${#talk_group_tgif}
-  if [ $longitud_talk_group_tgif -ge 25 ]
+  if [ $longitud_talk_group_tgif -ge 26 ]
 then
       TG=`expr substr $talk_group_tgif 18 6`
-elif [ $longitud_talk_group_tgif -ge 24 ]
+elif [ $longitud_talk_group_tgif -ge 25 ]
 then
       TG=`expr substr $talk_group_tgif 18 5`
-elif [ $longitud_talk_group_tgif -ge 23 ]
+elif [ $longitud_talk_group_tgif -ge 24 ]
 then
       TG=`expr substr $talk_group_tgif 18 4` 
-elif [ $longitud_talk_group_tgif -ge 22 ]
+elif [ $longitud_talk_group_tgif -ge 23 ]
 then
       TG=`expr substr $talk_group_tgif 18 3`  
-elif [ $longitud_talk_group_tgif -ge 21 ]
+elif [ $longitud_talk_group_tgif -ge 22 ]
 then
       TG=`expr substr $talk_group_tgif 18 2`        
 
-elif [ $longitud_talk_group_tgif -ge 20 ]
+elif [ $longitud_talk_group_tgif -ge 21 ]
 then
       TG=`expr substr $talk_group_tgif 18 1`       
 else
@@ -516,6 +516,26 @@ do
                       break;;
 esac
 done;;
+
+
+a) echo ""
+while true
+do
+                      echo "   Valor actual del Talk Group: $TG\33[1;37m"
+                      read -p '   Introduce Talk Group: ' Talk_Group
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      sed -i "107c TGRewrite0=2,10,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
+esac
+done;;
+
+
+
+
 18) echo ""
 while true
 do
