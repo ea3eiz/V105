@@ -157,7 +157,7 @@ fi
 echo "TGRewrite0=$TG1"
 
 
-echo -n "${CIAN}   b)${GRIS} Modificar Talk Group HBLINK      - ${AMARILLO}"
+echo -n "${CIAN}   b)${GRIS} Modificar Talk Group HBLINK     - ${AMARILLO}"
 talk_group_hblink=$(awk "NR==122" /home/pi/DMRGateway/DMRGateway.ini)
 longitud_talk_group_hblink=${#talk_group_hblink}
   if [ $longitud_talk_group_hblink -ge 26 ]
