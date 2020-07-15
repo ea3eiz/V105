@@ -129,33 +129,13 @@ else
 fi
 echo "TGRewrite0=$TG"
 
-echo -n "${CIAN}   a)${GRIS} Modificar Talk Group TGIF       - ${AMARILLO}"
-talk_group_tgif=$(awk "NR==107" /home/pi/DMRGateway/DMRGateway.ini)
-longitud_talk_group_tgif=${#talk_group_tgif}
-  if [ $longitud_talk_group_tgif -ge 26 ]
-then
-      TG1=`expr substr $talk_group_tgif 19 6`
-elif [ $longitud_talk_group_tgif -ge 25 ]
-then
-      TG1=`expr substr $talk_group_tgif 19 5`
-elif [ $longitud_talk_group_tgif -ge 24 ]
-then
-      TG1=`expr substr $talk_group_tgif 19 4` 
-elif [ $longitud_talk_group_tgif -ge 23 ]
-then
-      TG1=`expr substr $talk_group_tgif 19 3`  
-elif [ $longitud_talk_group_tgif -ge 22 ]
-then
-      TG1=`expr substr $talk_group_tgif 19 2`        
+echo -n "${CIAN}  18)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
+address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$address_HBLink"
 
-elif [ $longitud_talk_group_tgif -ge 21 ]
-then
-      TG1=`expr substr $talk_group_tgif 19 1`       
-else
-      echo ""
-fi
-echo "TGRewrite0=$TG1"
-
+echo -n "${CIAN}  19)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
+password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$password_HBLink"
 
 echo -n "${CIAN}   b)${GRIS} Modificar Talk Group HBLINK     - ${AMARILLO}"
 talk_group_hblink=$(awk "NR==122" /home/pi/DMRGateway/DMRGateway.ini)
@@ -184,16 +164,6 @@ else
 fi
 echo "TGRewrite0=$TG2"
 
-
-
-echo -n "${CIAN}  18)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
-address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
-echo "$address_HBLink"
-
-echo -n "${CIAN}  19)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
-password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
-echo "$password_HBLink"
-
 echo -n "${CIAN}  20)${GRIS} Modificar Address TGIF          - ${AMARILLO}"
 password_TGIF=$(awk "NR==109" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_TGIF"
@@ -201,6 +171,33 @@ echo "$password_TGIF"
 echo -n "${CIAN}  21)${GRIS} Modificar Password TGIF         - ${AMARILLO}"
 password_TGIF=$(awk "NR==110" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_TGIF"
+
+echo -n "${CIAN}   a)${GRIS} Modificar Talk Group TGIF       - ${AMARILLO}"
+talk_group_tgif=$(awk "NR==107" /home/pi/DMRGateway/DMRGateway.ini)
+longitud_talk_group_tgif=${#talk_group_tgif}
+  if [ $longitud_talk_group_tgif -ge 26 ]
+then
+      TG1=`expr substr $talk_group_tgif 19 6`
+elif [ $longitud_talk_group_tgif -ge 25 ]
+then
+      TG1=`expr substr $talk_group_tgif 19 5`
+elif [ $longitud_talk_group_tgif -ge 24 ]
+then
+      TG1=`expr substr $talk_group_tgif 19 4` 
+elif [ $longitud_talk_group_tgif -ge 23 ]
+then
+      TG1=`expr substr $talk_group_tgif 19 3`  
+elif [ $longitud_talk_group_tgif -ge 22 ]
+then
+      TG1=`expr substr $talk_group_tgif 19 2`        
+
+elif [ $longitud_talk_group_tgif -ge 21 ]
+then
+      TG1=`expr substr $talk_group_tgif 19 1`       
+else
+      echo ""
+fi
+echo "TGRewrite0=$TG1"
 
 echo ""
 
