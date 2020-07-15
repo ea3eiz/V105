@@ -134,23 +134,23 @@ talk_group_tgif=$(awk "NR==107" /home/pi/DMRGateway/DMRGateway.ini)
 longitud_talk_group_tgif=${#talk_group_tgif}
   if [ $longitud_talk_group_tgif -ge 26 ]
 then
-      TG=`expr substr $talk_group_tgif 18 6`
+      TG=`expr substr $talk_group_tgif 19 6`
 elif [ $longitud_talk_group_tgif -ge 25 ]
 then
-      TG=`expr substr $talk_group_tgif 18 5`
+      TG=`expr substr $talk_group_tgif 19 5`
 elif [ $longitud_talk_group_tgif -ge 24 ]
 then
-      TG=`expr substr $talk_group_tgif 18 4` 
+      TG=`expr substr $talk_group_tgif 19 4` 
 elif [ $longitud_talk_group_tgif -ge 23 ]
 then
-      TG=`expr substr $talk_group_tgif 18 3`  
+      TG=`expr substr $talk_group_tgif 19 3`  
 elif [ $longitud_talk_group_tgif -ge 22 ]
 then
-      TG=`expr substr $talk_group_tgif 18 2`        
+      TG=`expr substr $talk_group_tgif 19 2`        
 
 elif [ $longitud_talk_group_tgif -ge 21 ]
 then
-      TG=`expr substr $talk_group_tgif 18 1`       
+      TG=`expr substr $talk_group_tgif 19 1`       
 else
       echo ""
 fi
