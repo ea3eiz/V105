@@ -567,7 +567,6 @@ do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-			                    pas1=`echo "$pas1" | tr -d '[[:space:]]'`
                           sed -i "123c Password=$pas1" /home/pi/DMRGateway/DMRGateway.ini
 			                    break;;
 			                    [nN]* ) echo ""
