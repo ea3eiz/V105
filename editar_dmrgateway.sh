@@ -129,6 +129,33 @@ else
 fi
 echo "TGRewrite0=$TG"
 
+echo -n "${CIAN}   a)${GRIS} Modificar Talk Group TGIF       - ${AMARILLO}"
+talk_group_tgif=$(awk "NR==107" /home/pi/DMRGateway/DMRGateway.ini)
+longitud_talk_group_tgif=${#talk_group_tgif}
+  if [ $longitud_talk_group_tgif -ge 25 ]
+then
+      TG=`expr substr $talk_group_tgif 18 6`
+elif [ $longitud_talk_group_tgif -ge 24 ]
+then
+      TG=`expr substr $talk_group_tgif 18 5`
+elif [ $longitud_talk_group_tgif -ge 23 ]
+then
+      TG=`expr substr $talk_group_tgif 18 4` 
+elif [ $longitud_talk_group_tgif -ge 22 ]
+then
+      TG=`expr substr $talk_group_tgif 18 3`  
+elif [ $longitud_talk_group_tgif -ge 21 ]
+then
+      TG=`expr substr $talk_group_tgif 18 2`        
+
+elif [ $longitud_talk_group_tgif -ge 20 ]
+then
+      TG=`expr substr $talk_group_tgif 18 1`       
+else
+      echo ""
+fi
+echo "TGRewrite0=$TG"
+
 echo -n "${CIAN}  18)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
 address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$address_HBLink"

@@ -39,7 +39,7 @@ sleep 2
 			            sed -i "107c TGRewrite0=2,10,2,9,1" $usuario/DMRGateway/DMRGateway.ini
                         sed -i "21c MARCA_TGIF=ON" /home/pi/status.ini
                         else
-                        echo "no hace nada"
+                        echo ""
                         fi
 
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
