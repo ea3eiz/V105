@@ -571,7 +571,7 @@ do
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
-                      sed -i "122c TGRewrite0=2,10,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
+                      sed -i "122c TGRewrite0=2,11,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
                       break;;
                       [nN]* ) echo ""
                       break;;
