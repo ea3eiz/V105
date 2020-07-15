@@ -201,7 +201,7 @@ echo "TGRewrite0=$TG1"
 
 echo ""
 
-echo -n "${CIAN}  22)${MARRON} TGIF Enabled                    - ${VERDE}"
+echo -n "${CIAN}  24)${MARRON} TGIF Enabled                    - ${VERDE}"
 enabled_tgif=$(awk "NR==105" /home/pi/DMRGateway/DMRGateway.ini)
 if  [ $enabled_tgif = "Enabled=1" ]
 then
@@ -210,7 +210,7 @@ else
 echo "${ROJO}$enabled_tgif"
 fi
 
-echo -n "${CIAN}  23)${MARRON} XLX Enabled                     - ${VERDE}"
+echo -n "${CIAN}  25)${MARRON} XLX Enabled                     - ${VERDE}"
 enabled_xlx=$(awk "NR==38" /home/pi/DMRGateway/DMRGateway.ini)
 if  [ $enabled_xlx = "Enabled=1" ]
 then
@@ -219,7 +219,7 @@ else
 echo "${ROJO}$enabled_xlx"
 fi
 
-echo -n "${CIAN}  24)${MARRON} Brandmeister Enabled            - ${VERDE}"
+echo -n "${CIAN}  26)${MARRON} Brandmeister Enabled            - ${VERDE}"
 enabled_bm=$(awk "NR==57" /home/pi/DMRGateway/DMRGateway.ini)
 if  [ $enabled_bm = "Enabled=1" ]
 then
@@ -228,7 +228,7 @@ else
 echo "${ROJO}$enabled_bm"
 fi
 
-echo -n "${CIAN}  25)${MARRON} DMR+ Enabled                    - ${VERDE}"
+echo -n "${CIAN}  27)${MARRON} DMR+ Enabled                    - ${VERDE}"
 enabled_plus=$(awk "NR==84" /home/pi/DMRGateway/DMRGateway.ini)
 if  [ $enabled_plus = "Enabled=1" ]
 then
@@ -237,7 +237,7 @@ else
 echo "${ROJO}$enabled_plus"
 fi
 
-echo -n "${CIAN}  26)${MARRON} Hblink Enabled                  - ${VERDE}"
+echo -n "${CIAN}  28)${MARRON} Hblink Enabled                  - ${VERDE}"
 enabled_hblink=$(awk "NR==117" /home/pi/DMRGateway/DMRGateway.ini)
 if  [ $enabled_hblink = "Enabled=1" ]
 then
@@ -248,7 +248,7 @@ fi
 
 echo ""
 
-echo "${CIAN}  27)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
+echo "${CIAN}  29)${BLANCO} Abrir fichero DMRGateway.ini para hacer modificaciones\33[1;33m"
 
 echo ""
 echo "${CIAN}   0)\33[1;31m Salir"
@@ -638,7 +638,7 @@ do
 			                    break;;
 esac
 done;;
-22) echo ""
+24) echo ""
 while true
 do
                           echo "   Valor actual Enabled: ${AMARILLO}$enabled_tgif\33[1;37m"
@@ -653,7 +653,7 @@ do
 			                    break;;
 esac
 done;;
-23) echo ""
+25) echo ""
 while true
 do
                           echo "   Valor actual Enabled: ${AMARILLO}$enabled_xlx\33[1;37m"
@@ -668,7 +668,7 @@ do
 			                    break;;
 esac
 done;;
-24) echo ""
+26) echo ""
 while true
 do
                           echo "   Valor actual Enabled: ${AMARILLO}$enabled_bm\33[1;37m"
@@ -683,7 +683,7 @@ do
 			                    break;;
 esac
 done;;
-25) echo ""
+27) echo ""
 while true
 do
                           echo "   Valor actual Enabled: ${AMARILLO}$enabled_plus\33[1;37m"
@@ -698,7 +698,7 @@ do
 			                    break;;
 esac
 done;;
-26) echo ""
+28) echo ""
 while true
 do
                           echo "   Valor actual Enabled: ${AMARILLO}$enabled_hblink\33[1;37m"
@@ -713,7 +713,7 @@ do
 			                    break;;
 esac
 done;;
-27) echo ""
+29) echo ""
 while true
 do
                           
