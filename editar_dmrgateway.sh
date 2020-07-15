@@ -543,39 +543,6 @@ do
                       break;;
 esac
 done;;
-
-
-22) echo ""
-while true
-do
-                      echo "   Valor actual del Talk Group: $TG1\33[1;37m"
-                      read -p '   Introduce Talk Group: ' Talk_Group
-                      actualizar=S 
-                      case $actualizar in
-                      [sS]* ) echo ""
-                      sed -i "107c TGRewrite0=2,10,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
-                      break;;
-                      [nN]* ) echo ""
-                      break;;
-esac
-done;;
-
-20) echo ""
-while true
-do
-                      echo "   Valor actual del Talk Group: $TG2\33[1;37m"
-                      read -p '   Introduce Talk Group: ' Talk_Group
-                      actualizar=S 
-                      case $actualizar in
-                      [sS]* ) echo ""
-                      sed -i "122c TGRewrite0=2,11,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
-                      break;;
-                      [nN]* ) echo ""
-                      break;;
-esac
-done;;
-
-
 18) echo ""
 while true
 do
@@ -595,7 +562,7 @@ done;;
 19) echo ""
 while true
 do
-                          echo "   Valor actual del Password HBLink: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
+                          echo "   Valor actual del Password HBLink: ${AMARILLO}$password_HBLink\33[1;37m"
            	              read -p '   Introduce el Password para HBLink: ' pas1
                           actualizar=S 
                           case $actualizar in
@@ -608,6 +575,20 @@ do
 esac
 done;;
 20) echo ""
+while true
+do
+                      echo "   Valor actual del Talk Group: $TG2\33[1;37m"
+                      read -p '   Introduce Talk Group HBLINK: ' Talk_Group
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      sed -i "122c TGRewrite0=2,11,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
+esac
+done;;
+21) echo ""
 while true
 do
                       echo "   Valor actual del Master: ${AMARILLO}$master_tgif\33[1;37m"
@@ -623,10 +604,10 @@ do
                       break;;
 esac
 done;;
-21) echo ""
+22) echo ""
 while true
 do
-                          echo "   Valor actual del Password TGIF: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
+                          echo "   Valor actual del Password TGIF: ${AMARILLO}$password_TGIF\33[1;37m"
            	              read -p '   Introduce el Password para TGIF: ' pastgif
                           actualizar=S 
                           case $actualizar in
@@ -636,6 +617,21 @@ do
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
+esac
+done;;
+
+23) echo ""
+while true
+do
+                      echo "   Valor actual del Talk Group: $TG1\33[1;37m"
+                      read -p '   Introduce Talk Group TGIF: ' Talk_Group
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      sed -i "107c TGRewrite0=2,10,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
 esac
 done;;
 24) echo ""
