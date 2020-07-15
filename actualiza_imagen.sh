@@ -36,7 +36,7 @@ sleep 2
                         tgif_on_off=$(awk "NR==11" /home/pi/status.ini)
                         if [ $tgif_on_off = "MARCA_TGIF=OFF" ]
                         then
-			            sed -i "107c TGRewrite0=2,2,2,9,9999998" $usuario/DMRGateway/DMRGateway.ini
+			            sed -i "107c TGRewrite0=2,10,2,9,1" $usuario/DMRGateway/DMRGateway.ini
                         sed -i "21c MARCA_TGIF=ON" /home/pi/status.ini
                         else
                         echo "no hace nada"
