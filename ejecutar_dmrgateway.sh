@@ -22,7 +22,7 @@ sudo cp Abrir_dmrgateway.desktop /home/pi/Desktop
 #sleep 1
 sudo rm /home/pi/Abrir_dmrgateway.desktop
 
-zenity --info --ok-label=ESTA_VENTANA_SE_CERRARÁ_EN_10_SEGUNDOS --title=DMRGateway --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=400 --timeout=10 --text "\nTG 6 Para hablar por XLX\nTG 8 Para hablar por DMR+\nTG 10 para hablar por TGIF\nTG 11 Para hablar por HBLINK\nCualquier TG menos (8, 6, 10 y 11) Para hablar por BM"
+zenity --info --ok-label=ESTA_VENTANA_SE_CERRARÁ_EN_10_SEGUNDOS --title=DMRGateway --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=400 --timeout=10 --text "\nTG 6 Para hablar por XLX\nTG 8 Para hablar por DMR+\nTG 10 para hablar por TGIF\nTG 11 Para hablar por HBLINK\nPara hablar por BM cualquier TG menos (8, 6, 10 y 11)"
 
 echo "${VERDE}"
 echo "************************************************************************"
