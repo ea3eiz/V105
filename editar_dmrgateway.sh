@@ -165,8 +165,8 @@ fi
 echo "TGRewrite0=$TG2"
 
 echo -n "${CIAN}  20)${GRIS} Modificar Address TGIF          - ${AMARILLO}"
-password_TGIF=$(awk "NR==109" /home/pi/DMRGateway/DMRGateway.ini)
-echo "$password_TGIF"
+master_tgif=$(awk "NR==109" /home/pi/DMRGateway/DMRGateway.ini)
+echo "$master_tgif"
 
 echo -n "${CIAN}  21)${GRIS} Modificar Password TGIF         - ${AMARILLO}"
 password_TGIF=$(awk "NR==110" /home/pi/DMRGateway/DMRGateway.ini)
@@ -605,6 +605,22 @@ do
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
+esac
+done;;
+20) echo ""
+while true
+do
+                      echo "   Valor actual del Master: ${AMARILLO}$master_tgif\33[1;37m"
+                      read -p '   Introduce Address TGIF: ' master3
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      master3=`echo "$master3" | tr -d '[[:space:]]'`
+                      master3=`echo "$master3" | tr [:upper:] [:lower:]`
+                      sed -i "109c Address=$master3" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
 esac
 done;;
 21) echo ""
