@@ -134,27 +134,57 @@ talk_group_tgif=$(awk "NR==107" /home/pi/DMRGateway/DMRGateway.ini)
 longitud_talk_group_tgif=${#talk_group_tgif}
   if [ $longitud_talk_group_tgif -ge 26 ]
 then
-      TG=`expr substr $talk_group_tgif 19 6`
+      TG1=`expr substr $talk_group_tgif 19 6`
 elif [ $longitud_talk_group_tgif -ge 25 ]
 then
-      TG=`expr substr $talk_group_tgif 19 5`
+      TG1=`expr substr $talk_group_tgif 19 5`
 elif [ $longitud_talk_group_tgif -ge 24 ]
 then
-      TG=`expr substr $talk_group_tgif 19 4` 
+      TG1=`expr substr $talk_group_tgif 19 4` 
 elif [ $longitud_talk_group_tgif -ge 23 ]
 then
-      TG=`expr substr $talk_group_tgif 19 3`  
+      TG1=`expr substr $talk_group_tgif 19 3`  
 elif [ $longitud_talk_group_tgif -ge 22 ]
 then
-      TG=`expr substr $talk_group_tgif 19 2`        
+      TG1=`expr substr $talk_group_tgif 19 2`        
 
 elif [ $longitud_talk_group_tgif -ge 21 ]
 then
-      TG=`expr substr $talk_group_tgif 19 1`       
+      TG1=`expr substr $talk_group_tgif 19 1`       
 else
       echo ""
 fi
-echo "TGRewrite0=$TG"
+echo "TGRewrite0=$TG1"
+
+
+echo -n "${CIAN}   b)${GRIS} Modificar Talk Group HBLINK      - ${AMARILLO}"
+talk_group_hblink=$(awk "NR==122" /home/pi/DMRGateway/DMRGateway.ini)
+longitud_talk_group_hblink=${#talk_group_hblink}
+  if [ $longitud_talk_group_hblink -ge 26 ]
+then
+      TG2=`expr substr $talk_group_hblink 19 6`
+elif [ $longitud_talk_group_hblink -ge 25 ]
+then
+      TG2=`expr substr $talk_group_hblink 19 5`
+elif [ $longitud_talk_group_hblink -ge 24 ]
+then
+      TG2=`expr substr $talk_group_hblink 19 4` 
+elif [ $longitud_talk_group_hblink -ge 23 ]
+then
+      TG2=`expr substr $talk_group_hblink 19 3`  
+elif [ $longitud_talk_group_hblink -ge 22 ]
+then
+      TG2=`expr substr $talk_group_hblink 19 2`        
+
+elif [ $longitud_talk_group_hblink -ge 21 ]
+then
+      TG2=`expr substr $talk_group_hblink 19 1`       
+else
+      echo ""
+fi
+echo "TGRewrite0=$TG2"
+
+
 
 echo -n "${CIAN}  18)${GRIS} Modificar Address HBLink        - ${AMARILLO}"
 address_HBLink=$(awk "NR==118" /home/pi/DMRGateway/DMRGateway.ini)
@@ -521,7 +551,7 @@ done;;
 a) echo ""
 while true
 do
-                      echo "   Valor actual del Talk Group: $TG\33[1;37m"
+                      echo "   Valor actual del Talk Group: $TG1\33[1;37m"
                       read -p '   Introduce Talk Group: ' Talk_Group
                       actualizar=S 
                       case $actualizar in
@@ -533,7 +563,20 @@ do
 esac
 done;;
 
-
+b) echo ""
+while true
+do
+                      echo "   Valor actual del Talk Group: $TG2\33[1;37m"
+                      read -p '   Introduce Talk Group: ' Talk_Group
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      sed -i "122c TGRewrite0=2,10,2,$Talk_Group,1" /home/pi/DMRGateway/DMRGateway.ini
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
+esac
+done;;
 
 
 18) echo ""
