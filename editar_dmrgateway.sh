@@ -164,15 +164,15 @@ else
 fi
 echo "TGRewrite0=$TG2"
 
-echo -n "${CIAN}  20)${GRIS} Modificar Address TGIF          - ${AMARILLO}"
+echo -n "${CIAN}  21)${GRIS} Modificar Address TGIF          - ${AMARILLO}"
 master_tgif=$(awk "NR==109" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$master_tgif"
 
-echo -n "${CIAN}  21)${GRIS} Modificar Password TGIF         - ${AMARILLO}"
+echo -n "${CIAN}  22)${GRIS} Modificar Password TGIF         - ${AMARILLO}"
 password_TGIF=$(awk "NR==110" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_TGIF"
 
-echo -n "${CIAN}  22)${GRIS} Modificar Talk Group TGIF       - ${AMARILLO}"
+echo -n "${CIAN}  23)${GRIS} Modificar Talk Group TGIF       - ${AMARILLO}"
 talk_group_tgif=$(awk "NR==107" /home/pi/DMRGateway/DMRGateway.ini)
 longitud_talk_group_tgif=${#talk_group_tgif}
   if [ $longitud_talk_group_tgif -ge 26 ]
