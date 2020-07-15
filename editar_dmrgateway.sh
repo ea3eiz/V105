@@ -562,7 +562,7 @@ done;;
 19) echo ""
 while true
 do
-                          echo "   Valor actual del Password HBLink: ${AMARILLO}$password_HBLink\33[1;37m"
+                          echo "   Valor actual del Password  HBLink: ${AMARILLO}${password_HBLink#*=}\33[1;37m"
            	              read -p '   Introduce el Password para HBLink: ' pas1
                           actualizar=S 
                           case $actualizar in
