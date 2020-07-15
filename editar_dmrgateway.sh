@@ -611,7 +611,7 @@ done;;
 while true
 do
                       echo "   Valor actual del Master: ${AMARILLO}$master_tgif\33[1;37m"
-                      read -p '   Introduce Address TGIF: ' master3
+                      read -p '   Introduce Address TGIF prime.tgif.network: ' master3
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
