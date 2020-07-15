@@ -33,7 +33,7 @@ sleep 2
 
 
                         # 14-07-2020 agrega esta linea a TGIF
-			            sed -i "107c TGRewrite0=2,2,2,2,9999998" $usuario/DMRGateway/DMRGateway.ini
+			            sed -i "107c TGRewrite0=2,2,2,9,9999998" $usuario/DMRGateway/DMRGateway.ini
 
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
