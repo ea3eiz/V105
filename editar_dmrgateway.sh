@@ -137,7 +137,7 @@ echo -n "${CIAN}  19)${GRIS} Modificar Password HBLink       - ${AMARILLO}"
 password_HBLink=$(awk "NR==123" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_HBLink"
 
-echo -n "${CIAN}   b)${GRIS} Modificar Talk Group HBLINK     - ${AMARILLO}"
+echo -n "${CIAN}  20)${GRIS} Modificar Talk Group HBLINK     - ${AMARILLO}"
 talk_group_hblink=$(awk "NR==122" /home/pi/DMRGateway/DMRGateway.ini)
 longitud_talk_group_hblink=${#talk_group_hblink}
   if [ $longitud_talk_group_hblink -ge 26 ]
@@ -172,7 +172,7 @@ echo -n "${CIAN}  21)${GRIS} Modificar Password TGIF         - ${AMARILLO}"
 password_TGIF=$(awk "NR==110" /home/pi/DMRGateway/DMRGateway.ini)
 echo "$password_TGIF"
 
-echo -n "${CIAN}   a)${GRIS} Modificar Talk Group TGIF       - ${AMARILLO}"
+echo -n "${CIAN}  22)${GRIS} Modificar Talk Group TGIF       - ${AMARILLO}"
 talk_group_tgif=$(awk "NR==107" /home/pi/DMRGateway/DMRGateway.ini)
 longitud_talk_group_tgif=${#talk_group_tgif}
   if [ $longitud_talk_group_tgif -ge 26 ]
@@ -545,7 +545,7 @@ esac
 done;;
 
 
-a) echo ""
+22) echo ""
 while true
 do
                       echo "   Valor actual del Talk Group: $TG1\33[1;37m"
@@ -560,7 +560,7 @@ do
 esac
 done;;
 
-b) echo ""
+20) echo ""
 while true
 do
                       echo "   Valor actual del Talk Group: $TG2\33[1;37m"
