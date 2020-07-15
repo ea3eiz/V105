@@ -622,7 +622,7 @@ done;;
 while true
 do
                       echo "   Valor actual del Talk Group: $TG1\33[1;37m"
-                      read -p '   Introduce Talk Group TGIF: ' Talk_Group
+                      read -p '   Introduce  Talk Group  TGIF: ' Talk_Group
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
