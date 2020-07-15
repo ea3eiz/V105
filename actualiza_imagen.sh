@@ -33,7 +33,14 @@ sleep 2
 
 
                         # 14-07-2020 agrega esta linea a TGIF
+                        tgif_on_off=$(awk "NR==11" /home/pi/status.ini)
+                        if [ $tgif_on_off = "MARCA_TGIF=OFF" ]
+                        then
 			            sed -i "107c TGRewrite0=2,2,2,9,9999998" $usuario/DMRGateway/DMRGateway.ini
+                        sed -i "21c MARCA_TGIF=ON" /home/pi/status.ini
+                        else
+                        echo "no hace nada"
+                        fi
 
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
