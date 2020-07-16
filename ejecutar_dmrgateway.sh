@@ -22,7 +22,7 @@ sudo cp Abrir_dmrgateway.desktop /home/pi/Desktop
 #sleep 1
 sudo rm /home/pi/Abrir_dmrgateway.desktop
 
-zenity --info --ok-label=CERRAR_VENTANA --title=DMRGateway --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=500 --timeout=15 --text "\nTG 6 Para hablar por XLX\nTG 8 Para hablar por DMR+\nTG 10 para hablar por TGIF\nTG 11 Para hablar por HBLINK\nPara hablar por BM cualquier TG menos (8, 6, 10 y 11)\n\nALERTA!! BM & DMR+ no son compatible con DVSWITCH"
+zenity --info --ok-label=CERRAR_VENTANA --title=DMRGateway --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=500 --timeout=15 --text "\nTG 6 Para hablar por XLX\nTG 8 Para hablar por DMR+\nTG 10 para hablar por TGIF\nTG 11 Para hablar por HBLINK\nPara hablar por BM cualquier TG menos (8, 6, 10 y 11)\n\nALERTA!! BM y DMR+ no son compatible con DVSWITCH"
 
 echo "${VERDE}"
 echo "************************************************************************"
