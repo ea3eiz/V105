@@ -62,16 +62,15 @@ do
                         sudo chmod 777 -R /usr/share/opendv
                         cp DExtra_Hosts.txt /usr/share/opendv
                         cp DPlus_Hosts.txt /usr/share/opendv
-
-
+                        cp DCS_Hosts.txt /usr/share/opendv
 
                         sudo chmod 777 -R /usr/local/share/opendv
                         cp DExtra_Hosts.txt /usr/local/share/opendv
                         cp DPlus_Hosts.txt /usr/local/share/opendv
-
+                        cp DCS_Hosts.txt /usr/local/share/opendv
 
                         #cambiado el 1-07-2020
-                        #sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
+                        #sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt 
                         #sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
                         #sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
                         #sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
