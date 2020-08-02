@@ -32,11 +32,10 @@ sleep 2
                         sudo chmod 777 -R /home/pi/AUTOARRANQUEV105
 
 
-                        # 02-08-2020
+                        # 02-08-2020 cambio quitar sistema actual:
                         cd /home/pi/V105
                         rm /var/www/html/panel_configuracion.php
                         cp panel_configuracion.php /var/www/html
-                        cp borrar.sh /var/www/html
 
                         # 14-07-2020 agrega esta linea a TGIF
                         tgif_on_off=$(awk "NR==21" /home/pi/status.ini)
