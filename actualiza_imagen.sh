@@ -32,6 +32,12 @@ sleep 2
                         sudo chmod 777 -R /home/pi/AUTOARRANQUEV105
 
 
+                        # 02-08-2020
+                        cd /home/pi/V105
+                        rm /var/www/html/panel_configuracion.php
+                        cp panel_configuracion.php /var/www/html
+
+
                         # 14-07-2020 agrega esta linea a TGIF
                         tgif_on_off=$(awk "NR==21" /home/pi/status.ini)
                         if [ $tgif_on_off = "MARCA_TGIF=OFF" ]
