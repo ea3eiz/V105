@@ -36,7 +36,7 @@ sleep 2
                         cd /home/pi/V105
                         rm /var/www/html/panel_configuracion.php
                         cp panel_configuracion.php /var/www/html
-
+                        cp borrar.sh /var/www/html
 
                         # 14-07-2020 agrega esta linea a TGIF
                         tgif_on_off=$(awk "NR==21" /home/pi/status.ini)
