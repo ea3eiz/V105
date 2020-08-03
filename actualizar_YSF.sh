@@ -37,9 +37,9 @@ do
 		    			case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo "${VERDE}"						
-						cp $usuario/$SCRIPTS_version/YSFHosts.txt $usuario/YSFClients/YSFGateway
-						#cp /home/pi/V105/YSFHosts.txt /home/pi/YSFClients/YSFGateway
-						#sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
+						cd $usuario/YSFClients/YSFGateway
+						sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
+						sleep 
 						clear
 						echo "\v\v\v\v\v"
 						echo "${BLANCO}"
