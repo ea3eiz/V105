@@ -36,6 +36,7 @@ MARRON="\33[38;5;138m"
                     cd /home/pi
                     sudo rm -r /home/pi/MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
+                    cd MMDVMHost
                     git clone https://github.com/hallard/ArduiPi_OLED
 
                     #git clone https://github.com/ea3eiz/MMDVMHost
