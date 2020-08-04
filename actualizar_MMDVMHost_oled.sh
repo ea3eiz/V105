@@ -42,17 +42,17 @@ MARRON="\33[38;5;138m"
                     #git clone https://github.com/ea3eiz/MMDVMHost
                     cd /home/pi/MMDVMHost
 
-                    HOY=$(date +%Y%m%d)
-                    FIJA="const char* VERSION = "\"
-                    PI="ADER105"\"
-                    HOY1=$HOY$PI
-                    PUNTO=";"   
+                    # HOY=$(date +%Y%m%d)
+                    # FIJA="const char* VERSION = "\"
+                    # PI="ADER105"\"
+                    # HOY1=$HOY$PI
+                    # PUNTO=";"   
                     
-                    sed -i "22c $FIJA$HOY1$PUNTO" /home/pi/MMDVMHost/Version.h
+                    #sed -i "22c $FIJA$HOY1$PUNTO" /home/pi/MMDVMHost/Version.h
 
 
 
-                    cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
+                    #cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
 
 
 
