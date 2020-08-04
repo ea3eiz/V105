@@ -39,7 +39,7 @@ sleep 2
 
                         # 14-07-2020 agrega esta linea a TGIF
                         tgif_on_off=$(awk "NR==21" /home/pi/status.ini)
-                        if [ $tgif_on_off = "MARCA_TGIF=OFF" ]
+                        if [ $tgif_on_off = "MARCA_TGIF=OFF" ];
                         then
 			            sed -i "107c TGRewrite0=2,10,2,9,1" $usuario/DMRGateway/DMRGateway.ini
                         sed -i "21c MARCA_TGIF=ON" /home/pi/status.ini
