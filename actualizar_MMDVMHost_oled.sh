@@ -56,8 +56,8 @@ MARRON="\33[38;5;138m"
 
 
 
-                    sudo make clean
-                    sudo make -f Makefile.Pi.OLED
+                    make clean
+                    make -f Makefile.Pi.OLED
 
                     #Instala la secion [NextionDriver] en todos los .ini y todas sus memorias
                     cd /home/pi/NextionDriverInstaller
