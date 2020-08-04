@@ -57,7 +57,7 @@ while true
 do
                     echo -n "Valor actual del puerto MODEM: \33[1;33m"
                     var1= sed -n '2p'  $usuario/.local/ambe_server.ini
-                    echo "${VERDE}ejp. /dev/ttyUSB0"
+                    echo "${VERDE}Ej. /dev/ttyUSB0"
                     actualizar=S
                     case $actualizar in
                     [sS]* )
@@ -74,7 +74,7 @@ while true
 do
                     echo -n "Valor actual de la velocidad: \33[1;33m"
                     var1= sed -n '3p'  $usuario/.local/ambe_server.ini
-                    echo "${VERDE}ejp. Ambe 3000= 230400  dv stick 30 = 460800"
+                    echo "${VERDE}Ej. Ambe 3000= 230400  dv stick 30 = 460800"
                     actualizar=S
                     case $actualizar in
                     [sS]* )

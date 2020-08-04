@@ -447,7 +447,7 @@ do
                           lonng1=`expr substr $lonng 17 30`
                           echo "   Valor de StartupDstId  =\33[1;33m $lonng1"
                           echo -n "\33[1;32m"
-                          echo "   valor para DMR+=9  para Brandmeister Talkgroup ejp. (214)"
+                          echo "   valor para DMR+=9  para Brandmeister Talkgroup Ej. (214)"
                           echo -n "\33[1;37m"
                           read -p '   Introduce StartupDstId = ' lon
                           actualizar=S 

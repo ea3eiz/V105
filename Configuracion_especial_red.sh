@@ -52,12 +52,12 @@ clear
                         echo "   ************************************************************************"
                         
                         echo "${CIAN}"
-                        echo "   Introduce la ip que quires fijar: ${AMARILLO}Ejp.192.168.1.15 ${BLANCO}"
+                        echo "   Introduce la ip que quires fijar: ${AMARILLO}Ej.192.168.1.15 ${BLANCO}"
                         echo -n "   "
                         read ip
 
                         echo "${CIAN}"
-                        echo "   Introduce la ip del router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
+                        echo "   Introduce la ip del router: ${AMARILLO}Ej.192.168.1.1 ${BLANCO}"
                         echo -n "   "
                         read gateway
                         

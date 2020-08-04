@@ -571,7 +571,7 @@ do
 
                           port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
                           echo "Valor del Port: ${AMARILLO}$port_modem"
-                          read -p 'Ejp. /dev/ttyAMA1  /dev/ttyACM1  /dev/ttyUSB1  : ' port
+                          read -p 'Ej. /dev/ttyAMA1  /dev/ttyACM1  /dev/ttyUSB1  : ' port
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
@@ -1034,7 +1034,7 @@ do
                           buscar=":"
                           largo=`expr index $modehang $buscar`
                           echo "Valor actual del RFModeHang = : ${AMARILLO}${modehang1#*=}\33[1;37m"
-                          read -p 'Introcuce el valor para RFModeHang (optimo=5): ' V
+                          read -p 'Introduce el valor para RFModeHang (optimo=5): ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -1066,7 +1066,7 @@ do
                           buscar=":"
                           largo=`expr index $timeo $buscar`
                           echo "Valor actual del Timeout = : ${AMARILLO}${timeo1#*=}\33[1;37m"
-                          read -p 'Introcuce el valor para Timeout (valor optimo=0): ' V
+                          read -p 'Introduce el valor para Timeout (valor optimo=0): ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -1089,7 +1089,7 @@ h) echo ""
 while true
 do
                           echo "Valor del Port: ${AMARILLO}$MODEMNEXTION"
-                          read -p 'Ejp. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' lat1
+                          read -p 'Ej. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' lat1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""

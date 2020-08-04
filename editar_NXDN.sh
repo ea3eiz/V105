@@ -866,7 +866,7 @@ fi
 buscar=":"
 largo=`expr index $Display $buscar`
 echo "Valor actual del Display=: \33[1;33m${Display1#*=}\33[1;37m"
-                      read -p 'Introcuce el nombre de tu Display: ' V
+                      read -p 'Introduce el nombre de tu Display: ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -1065,7 +1065,7 @@ fi
 buscar=":"
 largo=`expr index $modehang $buscar`
 echo "Valor actual del RFModeHang = : \33[1;33m${modehang1#*=}\33[1;37m"
-                      read -p 'Introcuce el valor para RFModeHang (optimo=5): ' V
+                      read -p 'Introduce el valor para RFModeHang (optimo=5): ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -1097,7 +1097,7 @@ fi
 buscar=":"
 largo=`expr index $timeo $buscar`
 echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
-                      read -p 'Introcuce el valor para Timeout (valor optimo=0): ' V
+                      read -p 'Introduce el valor para Timeout (valor optimo=0): ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -1120,7 +1120,7 @@ h) echo ""
 while true
 do
 echo "Valor del Port: \33[1;33m$MODEMNEXTION"
-                          read -p 'Ejp. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' lat1
+                          read -p 'Ej. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' lat1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""

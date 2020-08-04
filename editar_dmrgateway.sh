@@ -318,7 +318,7 @@ while true
 do
                         port_modem=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVMDMRGateway.ini)
                         echo "   Valor del Port: ${AMARILLO}$port_modem"
-                        echo "${AMARILLO}   Ejp. /dev/ttyAMA1   /dev/ttyACM1   /dev/ttyUSB1/  "
+                        echo "${AMARILLO}   Ej. /dev/ttyAMA1   /dev/ttyACM1   /dev/ttyUSB1/  "
                         echo -n "${CIAN}   Introduce Port: ${AMARILLO}"
                         read -p '' port
                         actualizar=S 
@@ -345,7 +345,7 @@ fi
 buscar=":"
 largo=`expr index $timeo $buscar`
 echo "   Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
-                      read -p '   Introcuce el valor para Timeout (valor optimo de 0 a 180): ' timeou
+                      read -p '   Introduce el valor para Timeout (valor optimo de 0 a 180): ' timeou
                           letra=c
                           if [ $largo = 2 ]
                           then
