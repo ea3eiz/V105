@@ -37,6 +37,7 @@ MARRON="\33[38;5;138m"
                     sudo rm -r /home/pi/MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
                     git clone https://github.com/hallard/ArduiPi_OLED
+
                     #git clone https://github.com/ea3eiz/MMDVMHost
                     cd /home/pi/MMDVMHost
 
@@ -54,8 +55,8 @@ MARRON="\33[38;5;138m"
 
 
 
-                    make clean
-                    make -f Makefile.Pi.OLED
+                    sudo make clean
+                    sudo make -f Makefile.Pi.OLED
 
                     #Instala la secion [NextionDriver] en todos los .ini y todas sus memorias
                     cd /home/pi/NextionDriverInstaller
