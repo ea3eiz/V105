@@ -866,7 +866,7 @@ fi
 buscar=":"
 largo=`expr index $Display $buscar`
 echo "Valor actual del Display=: \33[1;33m${Display1#*=}\33[1;37m"
-                      read -p 'Introduce el nombre de tu Display: ' V
+                      read -p 'Introduce tipo de Display Ej. Nextion ó OLED: ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
