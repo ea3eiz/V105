@@ -49,7 +49,7 @@ MARRON="\33[38;5;138m"
 
 
 
-                    cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
+                    #cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
 
 
 
