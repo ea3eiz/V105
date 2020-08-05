@@ -47,12 +47,6 @@ MARRON="\33[38;5;138m"
                     
                     sed -i "22c $FIJA$HOY1$PUNTO" /home/pi/MMDVMHost/Version.h
 
-
-
-                    #cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
-
-
-
                     make clean
                     make
 
