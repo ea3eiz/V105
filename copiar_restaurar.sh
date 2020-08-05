@@ -273,13 +273,13 @@ sleep 3
             cp -f NXDNGateway.ini /home/pi/NXDNClients/NXDNGateway
             cp -f DMR2YSF.ini /home/pi/DMR2YSF
 
-            sudo cp -f YSFGateway.ini /home/pi/YSFClients/YSFGateway/
+            cp -f YSFGateway.ini /home/pi/YSFClients/YSFGateway/
 
-            sudo cp -f BlueDVconfig.ini /home/pi/bluedv/
+            cp -f BlueDVconfig.ini /home/pi/bluedv/
 
-            sudo cp -f svxlink.conf /usr/local/etc/svxlink/
+            cp -f svxlink.conf /usr/local/etc/svxlink/
             
-            sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
+            cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
 
             cp ircddbgateway /etc/
             cp dstarrepeater /etc/
