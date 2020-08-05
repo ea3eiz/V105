@@ -580,9 +580,13 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
+                          if [ $port = "" ]
+                          then
                           letra=c
                           numero_linea_port=$numero_linea_port$letra
                           sed -i "$numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
+                          else
+                          echo ""
                           break;;
                           [nN]* ) echo ""
                           break;;
