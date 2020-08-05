@@ -232,7 +232,7 @@ numero_linea=`expr $numero_linea + 2` # y le suma uno qudando coomo: (75)
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
-echo " ${CIAN}   \th) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
+echo " ${CIAN}   \t\th) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
 
 echo -n "\33[1;36m  22)\33[0m Version Display       - \33[1;33m"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
