@@ -587,6 +587,7 @@ do
                           sed -i "$numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
                           else
                           echo ""
+                          fi
                           break;;
                           [nN]* ) echo ""
                           break;;
