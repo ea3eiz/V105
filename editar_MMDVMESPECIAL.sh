@@ -445,10 +445,15 @@ do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
+                          if [ $indicativo = "" ]
+                          then
                           indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
 			                    indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
                           sed -i "$numero_linea_indi Callsign=$indicativo" $usuario/MMDVMHost/$DIRECTORIO
                           sed -i "$primero $contenido_indicativo" $usuario/info_panel_control.ini
+                          else
+                          echo""
+                          fi
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
