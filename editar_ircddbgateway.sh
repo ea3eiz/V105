@@ -206,7 +206,7 @@ done;;
 while true
 do
                         echo "Valor de Latitud:     ${AMARILLO}${contenido_latitud#*=}${BLANCO}"
-                        read -p 'Introduce Frecuencia: ' latitud
+                        read -p 'Introduce Latitud: ' latitud
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
@@ -227,7 +227,7 @@ done;;
 while true
 do
                         echo "Valor de Longitud:    ${AMARILLO}${contenido_longitud#*=}${BLANCO}"
-                        read -p 'Introduce Frecuencia: ' longitud
+                        read -p 'Introduce Longitud: ' longitud
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
