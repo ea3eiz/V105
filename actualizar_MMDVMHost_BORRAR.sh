@@ -45,7 +45,7 @@ MARRON="\33[38;5;138m"
                     HOY1=$HOY$PI
                     PUNTO=";"   
                     
-                    sed -i "22c $FIJA$HOY1$PUNTO" /home/pi/MMDVMHost/Version.h
+                    #sed -i "22c $FIJA$HOY1$PUNTO" /home/pi/MMDVMHost/Version.h
 
                     make clean
                     make
