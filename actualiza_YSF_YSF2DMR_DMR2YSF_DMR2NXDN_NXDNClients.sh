@@ -23,6 +23,7 @@ MARRON="\33[38;5;138m"
                         echo " ****************************************************************************"
                         sleep 3
                         cd /home/pi
+                        sudo rm -R YSFClients
                         git clone https://github.com/g4klx/YSFClients
                         cd YSFClients
                         cd YSFGateway
