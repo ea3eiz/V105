@@ -56,11 +56,8 @@ MARRON="\33[38;5;138m"
 
 
 
-cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
-cp /home/pi/$SCRIPTS_version/MMDVMHost.cpp /home/pi/MMDVMHost
-cp /home/pi/$SCRIPTS_version/Conf.cpp /home/pi/MMDVMHost
-cp /home/pi/$SCRIPTS_version/Conf.h /home/pi/MMDVMHost
-cp /home/pi/$SCRIPTS_version/YSFControl.h /home/pi/MMDVMHost
+                    #cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
+
 
 
                     make clean
