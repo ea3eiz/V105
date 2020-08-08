@@ -16,22 +16,41 @@ MARRON="\33[38;5;138m"
                         echo "                                                                             "
                         echo "                                 ACTUALIZANDO                                "
                         echo -n "${AMARILLO}"
-                        echo "                 YSF, YSF2DMR, DMR2YSF, DMR2NXDN y NXDNClients               "
+                        echo "                                  YSFClients              "
                         echo -n "${VERDE}"
                         echo "                                                                             "
                         echo " ****************************************************************************"
                         echo " ****************************************************************************"
-                        sleep 15
+                        sleep 3
+                        cd /home/pi
+                        git clone https://github.com/g4klx/YSFClients
+                        cd YSFClients
+                        cd YSFGateway
+                        make
+                        sudo make install
                         clear
-
+                        echo "\v\v\v\v\v\v\v\v\v\v\v"
+                        echo "${ROJO}"
+                        echo " ****************************************************************************"
+                        echo " ****************************************************************************"
+                        echo "                                                                             "
+                        echo "                            FIN DE LA ACTUALIZACIÓN                                "
+                        echo -n "${AMARILLO}"
+                        echo "                                  YSFClients              "
+                        echo -n "${ROJO}"
+                        echo "                                                                             "
+                        echo " ****************************************************************************"
+                        echo " ****************************************************************************"
+                        sleep 3
+                        clear
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
                         echo "${BLANCO}"
                         echo " ****************************************************************************"
                         echo " ****************************************************************************"
                         echo "                                                                             "
-                        echo "                   YA TIENES LAS ÚLTIMAS ACTUALIZACIONES                     "
+                        echo "                   YA TIENES LAS ÚLTIMAS ACTUALIZACIONES DE:                     "
                         echo -n "${VERDE}"
-                        echo "               YSF, YSF2DMR, DMR2YSF, DMR2NXDN y NXDNClients                 "
+                        echo "                   YSF2DMR, DMR2YSF, DMR2NXDN y NXDNClients                 "
                         echo -n "${BLANCO}"
                         echo "                                                                             "
                         echo " ****************************************************************************"
