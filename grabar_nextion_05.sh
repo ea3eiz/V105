@@ -106,8 +106,11 @@ clear
 			            echo ">>>>>>>>> GRABAR NEXTION ORIGINAL 3.2 pulgadas >>>>>>>>"
 			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
 			            sudo cp -f /home/pi/MMDVMHost/Nextion_G4KLX/nextion.py /home/pi/MMDVMHost/Nextion_ON7LDS
+                        #cd /home/pi/MMDVMHost/Nextion_ON7LDS
+                        #sudo python nextion.py NX3224T032-L3.tft /dev/ttyUSB0
                         cd /home/pi/MMDVMHost/Nextion_G4KLX
                         sudo python nextion.py NX4024K032.tft /dev/ttyUSB0
+
                         sleep 10
 		                break;;
 		                [nN]* ) echo ""
