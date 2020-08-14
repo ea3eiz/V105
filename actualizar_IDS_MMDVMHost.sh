@@ -1,7 +1,7 @@
 ﻿#!/bin/bash
 clear
-echo "\33[1;32m     <<<<< ACTUALIZANDO IDS INDICATIVOS >>>>>"
-echo "\33[1;32m <<<<< ACTUALIZANDO DMRIds.dat para DVSWITCH >>>>>"
+echo "\33[1;32mACTUALIZANDO IDS INDICATIVOS"
+echo "\33[1;32mACTUALIZANDO DMRIds.dat para DVSWITCH"
 sleep 10
 echo "\33[0;30m"
 var=`grep -n -m 1 '\<DMRIDPATH\>' /home/pi/MMDVMHost/linux/DMRIDUpdate.sh`
