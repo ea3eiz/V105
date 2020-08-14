@@ -394,7 +394,7 @@ numero_linea=`expr $numero_linea + 1`
 tipo_oled=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_oled=$numero_linea$letra
-echo "${CIAN}     \tm) ${GRIS}Tipo OLED          - ${AMARILLO}$tipo_oled"
+echo "${CIAN}     \t\tm) ${GRIS}Tipo OLED          - ${AMARILLO}$tipo_oled"
 
 
 
@@ -1150,6 +1150,20 @@ while true
 do                         
                           echo "   Valor  actual  FM: ${AMARILLO}$FM"
                           read -p '   Desactivado=0 Activado=1: '   fm
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$linea_sed_FM Enable=$fm" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+m) echo ""
+while true
+do                         
+                          echo "   Valor  actual  tipo OLED: ${AMARILLO}$tipo_oled"
+                          read -p '   OLED tipo 0.96 Type=3 tipo 1.3 Type=6: '   fm
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
