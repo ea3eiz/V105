@@ -1167,7 +1167,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$linea_sed_FM Enable=$oled" $usuario/MMDVMHost/$DIRECTORIO
+                          sed -i "$linea_sed_oled Type=$oled" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
