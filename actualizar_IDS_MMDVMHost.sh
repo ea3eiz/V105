@@ -1,7 +1,7 @@
 ﻿#!/bin/bash
 clear
-echo "\33[1;32m ACTUALIZANDO IDS INDICATIVOS >>>>>"
-echo "\33[1;32m ACTUALIZANDO DMRIds.dat para DVSWITCH >>>>>"
+echo "\33[1;32m     <<<<< ACTUALIZANDO IDS INDICATIVOS >>>>>"
+echo "\33[1;32m <<<<< ACTUALIZANDO DMRIds.dat para DVSWITCH >>>>>"
 sleep 10
 
 var=`grep -n -m 1 '\<DMRIDPATH\>' /home/pi/MMDVMHost/linux/DMRIDUpdate.sh`
@@ -23,10 +23,8 @@ letrac=c
 linea_sed=$numero_linea$letrac
 sed -i "$linea_sed DATABASEURL='https://ham-digital.org/status/users.csv'" /home/pi/MMDVMHost/linux/DMRIDUpdate.sh
 
-
 sudo sh /home/pi/MMDVMHost/linux/DMRIDUpdate.sh
 
-cp /home/pi/MMDVMHost/DMRIds.dat /var/lib/mmdvm
 
                         # 14-08-2020 cambio actualizar para que salgan los indicativos en DVSWITCH:
                         cd /var/lib/mmdvm
