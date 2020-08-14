@@ -394,7 +394,7 @@ numero_linea=`expr $numero_linea + 1`
 tipo_oled=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_oled=$numero_linea$letra
-echo "${CIAN}     \t\tm) ${GRIS}Tipo OLED          - ${AMARILLO}$tipo_oled"
+echo "${CIAN}     \t\tm) ${GRIS}Tipo OLED   - ${AMARILLO}$tipo_oled"
 
 
 
