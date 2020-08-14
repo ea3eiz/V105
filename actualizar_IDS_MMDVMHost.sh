@@ -10,8 +10,10 @@ MARRON="\33[38;5;138m"
 NEGRO="\33[0;30m"
 clear
 echo ""
-echo "${AMARILLO}ACTUALIZANDO IDS INDICATIVOS"
-echo "${VERDE}ACTUALIZANDO DMRIds.dat para DVSWITCH"
+echo -n "${AMARILLO}"
+echo "    ACTUALIZANDO IDS INDICATIVOS "
+echo -n "${VERDE}"
+echo "ACTUALIZANDO DMRIds.dat para DVSWITCH"
 sleep 10
 echo "${NEGRO}"
 var=`grep -n -m 1 '\<DMRIDPATH\>' /home/pi/MMDVMHost/linux/DMRIDUpdate.sh`
