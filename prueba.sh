@@ -380,7 +380,7 @@ echo "${CIAN}     \tl) ${GRIS}FM          - ${AMARILLO}$FM"
 echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
 modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
-echo "$modu1"
+echo -n "$modu1"
 
 
 
@@ -394,7 +394,7 @@ numero_linea=`expr $numero_linea + 1`
 tipo_oled=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_oled=$numero_linea$letra
-echo "${CIAN}     \tl) ${GRIS}Tipo OLED          - ${AMARILLO}$tipo_oled"
+echo "${CIAN}     \tm) ${GRIS}Tipo OLED          - ${AMARILLO}$tipo_oled"
 
 
 
