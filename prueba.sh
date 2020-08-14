@@ -1163,11 +1163,11 @@ m) echo ""
 while true
 do                         
                           echo "   Valor  actual  tipo OLED: ${AMARILLO}$tipo_oled"
-                          read -p '   OLED tipo 0.96 Type=3 tipo 1.3 Type=6: '   fm
+                          read -p '   Para OLED 0.96 Type=3 / Para OLED 1.3 Type=6: '   oled
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$linea_sed_FM Enable=$fm" $usuario/MMDVMHost/$DIRECTORIO
+                          sed -i "$linea_sed_FM Enable=$oled" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
