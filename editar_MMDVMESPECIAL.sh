@@ -380,7 +380,7 @@ echo "${CIAN}     \tl) ${GRIS}FM          - ${AMARILLO}$FM"
 echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
 modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
-echo "$modu1"
+echo -n "$modu1"
 
 # M) OLED Type=
 var=`grep -n -m 1 "\[OLED\]" $usuario/MMDVMHost/$DIRECTORIO`
