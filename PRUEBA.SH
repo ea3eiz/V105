@@ -16,7 +16,7 @@ echo "   ***********************************************************************
 echo "   *                                                                        *"
 echo "   *                   Script para Actualizar DV4MINI                       *" 
 echo -n "${ROJO}"   
-echo "  ${VERDE} *                             by EA3EIZ ${VERDE}                                 *"
+echo "  ${VERDE} * ${ROJO}                            by EA3EIZ ${VERDE}                                 *"
 echo -n "${VERDE}" 
 echo "   *                                                                        *"
 echo "   **************************************************************************"
