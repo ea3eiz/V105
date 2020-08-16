@@ -315,7 +315,19 @@ echo "${CIAN}     \tl) ${GRIS}FM          - ${AMARILLO}$FM"
 echo -n "\33[1;36m  26)\33[0m Modulo D-STAR         - \33[1;33m"
 modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
-echo "$modu1"
+echo -n "$modu1"
+
+# M) OLED Type=
+var=`grep -n -m 1 "\[OLED\]" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1`
+tipo_oled=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+letra=c
+linea_sed_oled=$numero_linea$letra
+echo "${CIAN}     \t\tm) ${GRIS}Tipo OLED   - ${AMARILLO}$tipo_oled"
 
 echo -n "\33[1;36m  27)\33[0m Entra reflector DMR+  - \33[1;33m"
 OPCION=`expr substr $pas 1 $largo1`
@@ -1190,6 +1202,20 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "$linea_sed_FM Enable=$fm" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+m) echo ""
+while true
+do                         
+                          echo "   Valor  actual  tipo OLED: ${AMARILLO}$tipo_oled"
+                          read -p '   Para OLED 0.96 Type=3 / Para OLED 1.3 Type=6: '   oled
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$linea_sed_oled Type=$oled" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
