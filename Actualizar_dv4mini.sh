@@ -22,6 +22,7 @@ echo  "\33[1;36m   2)\33[1;33m Volver a la versión \33[1;32mDV4MINI20190127   \
 echo  "\33[1;36m   3)\33[1;33m Volver a la versión \33[1;32mDV4MINI20170517   \33[1;33m"
 echo  "\33[1;36m   4)\33[1;33m Actualizar \33[1;32mDV4MINI20190307${AMARILLO} (NEW)   \33[1;33m"
 echo  "\33[1;36m   5)\33[1;33m Actualizar \33[1;32mDV4MINI-RPI_2020_03_03${AMARILLO} (NEW)   \33[1;33m"
+
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
@@ -182,9 +183,9 @@ clear
                         sudo mkdir /home/pi/dv4mini
                         sudo chmod 777 -R /home/pi/dv4mini
                         cd /home/pi/$CRIPTS_version/DV4MINI/DV4MINI-RPI_2020_03_03
-                        cp dv_serial /home/pi/dv4mini
-                        cp dv4mini.exe /home/pi/dv4mini
-                        cp xref.ip /home/pi/dv4mini
+                        sudo cp dv_serial /home/pi/dv4mini
+                        sudo cp dv4mini.exe /home/pi/dv4mini
+                        sudo cp xref.ip /home/pi/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
