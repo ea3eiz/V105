@@ -62,7 +62,7 @@ echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
 echo -n "${VERDE}"
 echo "  ******************************************"
 
-echo -n "${CIAN}  Pulsa enter para cerrar esta ventana"
+echo -n "${CIAN}  Pulsa enter para cerrar esta ventana "
 read a
 
 # echo -n "${MARRON}"
