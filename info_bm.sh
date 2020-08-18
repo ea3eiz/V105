@@ -61,9 +61,12 @@ echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
 echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
 echo -n "${VERDE}"
 echo "  ******************************************"
-# echo -n "${MARRON}"
+
 echo -n "${CIAN}  Pulsa enter para cerrar esta ventana"
 read a
+
+# echo -n "${MARRON}"
+# echo -n "  Se cerrará en 10."
 # sleep 1
 # echo -n "9."
 # sleep 1
