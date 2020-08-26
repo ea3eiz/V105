@@ -51,6 +51,25 @@ sleep 2
                         echo ""
                         fi
 
+                        # 26-08-2020 actualizar salas DSTAR
+                        cd /usr/share/opendv/
+                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
+                        sleep 1
+                        sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
+                        sleep 1
+                        sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
+
+                        # 26-08-2020 actualizar salas DSTAR
+                        cd /usr/local/share/opendv/
+                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
+                        sleep 1
+                        sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
+                        sleep 1
+                        sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
+                        
+                        # 26-08-2020 actualizar salas dv4mini
+                        sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
+
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
 cd $usuario/Desktop/
