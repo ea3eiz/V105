@@ -21,11 +21,12 @@ echo "   *                         EN LA IMAGEN ADER ${AMARILLO}$SCRIPTS_version
 echo "   *************************************************************************"
 echo "${CIAN}"
 sleep 2
-#Actualiza IMAGEN 
+                        # Actualiza IMAGEN 
                         cd $usuario/$SCRIPTS_version
                         git pull
                         sleep 1
-#Actualiza AUTORRANQUEV105
+
+                        # Actualiza AUTORRANQUEV105
                         cd $usuario/AUTOARRANQUEV105
                         git pull
                         sleep 1
@@ -70,38 +71,38 @@ sleep 2
                         # 26-08-2020 actualizar salas dv4mini
                         sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
 
-#Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
-frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-sudo cp RXF_BM.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_BM.desktop
-cd $usuario
-sudo cp RXF_BM.desktop $usuario/Desktop
-sudo rm $usuario/RXF_BM.desktop
+                        #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
+                        frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
+                        cd $usuario/Desktop/
+                        sudo cp RXF_BM.desktop $usuario/
+                        sed -i "11c Name=$frecuencia" $usuario/RXF_BM.desktop
+                        cd $usuario
+                        sudo cp RXF_BM.desktop $usuario/Desktop
+                        sudo rm $usuario/RXF_BM.desktop
 
-frecuencia=$(awk "NR==2" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-sudo cp RXF_DMRPLUS.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_DMRPLUS.desktop
-cd $usuario
-sudo cp RXF_DMRPLUS.desktop $usuario/Desktop
-sudo rm $usuario/RXF_DMRPLUS.desktop
+                        frecuencia=$(awk "NR==2" $usuario/INFO_RXF)
+                        cd $usuario/Desktop/
+                        sudo cp RXF_DMRPLUS.desktop $usuario/
+                        sed -i "11c Name=$frecuencia" $usuario/RXF_DMRPLUS.desktop
+                        cd $usuario
+                        sudo cp RXF_DMRPLUS.desktop $usuario/Desktop
+                        sudo rm $usuario/RXF_DMRPLUS.desktop
 
-frecuencia=$(awk "NR==14" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-sudo cp RXF_DMR2YSF.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_DMR2YSF.desktop
-cd $usuario
-sudo cp RXF_DMR2YSF.desktop $usuario/Desktop
-sudo rm $usuario/RXF_DMR2YSF.desktop
+                        frecuencia=$(awk "NR==14" $usuario/INFO_RXF)
+                        cd $usuario/Desktop/
+                        sudo cp RXF_DMR2YSF.desktop $usuario/
+                        sed -i "11c Name=$frecuencia" $usuario/RXF_DMR2YSF.desktop
+                        cd $usuario
+                        sudo cp RXF_DMR2YSF.desktop $usuario/Desktop
+                        sudo rm $usuario/RXF_DMR2YSF.desktop
 
-frecuencia=$(awk "NR==17" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-sudo cp RXF_NXDN.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_NXDN.desktop
-cd $usuario
-sudo cp RXF_NXDN.desktop $usuario/Desktop
-sudo rm $usuario/RXF_NXDN.desktop
+                        frecuencia=$(awk "NR==17" $usuario/INFO_RXF)
+                        cd $usuario/Desktop/
+                        sudo cp RXF_NXDN.desktop $usuario/
+                        sed -i "11c Name=$frecuencia" $usuario/RXF_NXDN.desktop
+                        cd $usuario
+                        sudo cp RXF_NXDN.desktop $usuario/Desktop
+                        sudo rm $usuario/RXF_NXDN.desktop
 
 clear
 echo "${VERDE}"
