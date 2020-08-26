@@ -49,26 +49,30 @@ echo "${CIAN}  $Servidor ${AMARILLO}$address   "
 echo "${CIAN}  Memoria:    ${AMARILLO}$memoria   "
 echo "${VERDE}"
 echo "  ******************************************"
-echo -n "${MARRON}"
-echo -n "  Se cerrará en 10."
-sleep 1
-echo -n "9."
-sleep 1
-echo -n "8."
-sleep 1
-echo -n "7."
-sleep 1
-echo -n "6."
-sleep 1
-echo -n "5."
-sleep 1
-echo -n "4."
-sleep 1
-echo -n "3."
-sleep 1
-echo -n "2."
-sleep 1
-echo -n "1."
-sleep 1
-echo -n "0"
-sleep 1
+
+echo -n "${CIAN}  Pulsa enter para cerrar esta ventana "
+read a
+
+# echo -n "${MARRON}"
+# echo -n "  Se cerrará en 10."
+# sleep 1
+# echo -n "9."
+# sleep 1
+# echo -n "8."
+# sleep 1
+# echo -n "7."
+# sleep 1
+# echo -n "6."
+# sleep 1
+# echo -n "5."
+# sleep 1
+# echo -n "4."
+# sleep 1
+# echo -n "3."
+# sleep 1
+# echo -n "2."
+# sleep 1
+# echo -n "1."
+# sleep 1
+# echo -n "0"
+# sleep 1
