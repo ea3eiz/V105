@@ -15,36 +15,6 @@ DIRECTORIO_copia="MMDVMPLUS.ini_copia"
 DIRECTORIO_copia2="MMDVMPLUS.ini_copia2"
 DIRECTORIO_copia3="MMDVMPLUS.ini_copia3"
 
-#Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control 
-primero="11c"
-segundo="12c"
-tercero="13c"
-cuarto="14c"
-  #Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
-primer="31c"
-segun="32c"
-tercer="33c"
-  #Lee los datos del fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3 
-primer1="31c"
-segun1="32c"
-tercer1="33c"
-# Recoge datos para leer desde el panel de control
-indi=$(awk "NR==2" $usuario/MMDVMHost/$DIRECTORIO)
-sed -i "$primero $indi" $usuario/info_panel_control.ini
-ide=$(awk "NR==3" $usuario/MMDVMHost/$DIRECTORIO)
-sed -i "$segundo $ide" $usuario/info_panel_control.ini
-frec=$(awk "NR==13" $usuario/MMDVMHost/$DIRECTORIO)
-sed -i "$tercero $frec" $usuario/info_panel_control.ini
-master=`grep -n -m 1 "^Address=" $usuario/MMDVMHost/$DIRECTORIO`
-buscar=":"
-largo=`expr index $master $buscar`
-largo=`expr $largo + 1`
-largo1=`expr $largo - 2`
-largo=`expr substr $master 1 $largo1`
-letra=c            
-linea_master=$largo$letra
-master=$(awk "NR==$linea_master" $usuario/MMDVMHost/$DIRECTORIO)
-sed -i "$cuarto $master" $usuario/info_panel_control.ini
 
 #Colores
 ROJO="\033[1;31m"
