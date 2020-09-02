@@ -4,7 +4,7 @@ while true
 do
 clear
 # path usuario
-usuario=$(awk "NR==1" ~/usuario)
+usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 
 # path Versión
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
@@ -15,7 +15,7 @@ DIRECTORIO_copia="MMDVMPLUS.ini_copia"
 DIRECTORIO_copia2="MMDVMPLUS.ini_copia2"
 DIRECTORIO_copia3="MMDVMPLUS.ini_copia3"
 
-#Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
+#Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control 
 primero="11c"
 segundo="12c"
 tercero="13c"
