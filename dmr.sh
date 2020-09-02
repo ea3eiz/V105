@@ -15,6 +15,36 @@ DIRECTORIO_copia="MMDVMPLUS.ini_copia"
 DIRECTORIO_copia2="MMDVMPLUS.ini_copia2"
 DIRECTORIO_copia3="MMDVMPLUS.ini_copia3"
 
+#Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
+primero="11c"
+segundo="12c"
+tercero="13c"
+cuarto="14c"
+  #Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
+primer="31c"
+segun="32c"
+tercer="33c"
+  #Lee los datos del fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3 
+primer1="31c"
+segun1="32c"
+tercer1="33c"
+# Recoge datos para leer desde el panel de control
+indi=$(awk "NR==2" $usuario/MMDVMHost/$DIRECTORIO)
+sed -i "$primero $indi" $usuario/info_panel_control.ini
+ide=$(awk "NR==3" $usuario/MMDVMHost/$DIRECTORIO)
+sed -i "$segundo $ide" $usuario/info_panel_control.ini
+frec=$(awk "NR==13" $usuario/MMDVMHost/$DIRECTORIO)
+sed -i "$tercero $frec" $usuario/info_panel_control.ini
+master=`grep -n -m 1 "^Address=" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+largo=`expr index $master $buscar`
+largo=`expr $largo + 1`
+largo1=`expr $largo - 2`
+largo=`expr substr $master 1 $largo1`
+letra=c            
+linea_master=$largo$letra
+master=$(awk "NR==$linea_master" $usuario/MMDVMHost/$DIRECTORIO)
+sed -i "$cuarto $master" $usuario/info_panel_control.ini
 
 #Colores
 ROJO="\033[1;31m"
@@ -931,7 +961,109 @@ do
 			                    break;;
 esac
 done;;
-
+29) echo ""
+while true
+do
+                        actualizar=S
+                        case $actualizar in
+			                  [sS]* ) echo ""
+                        clear
+                        echo "Introduce nombre memoria máximo 10 caracteres"
+                        read memoria1
+                        echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
+                        sleep 3
+                        echo "$linea_info_memoria $usuario $DIRECTORIO $memoria1"
+                        sed -i "$primer $memoria1" $usuario/info_panel_control.ini
+                        sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
+                        sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
+			                  break;;
+			                  [nN]* ) echo ""
+			                  break;;
+esac
+done;;
+30) echo ""
+while true
+do
+                        actualizar=S
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Restaurando copia de seguridad de la M1 >>>>>"
+                        sleep 3
+                        sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia $usuario/MMDVMHost/$DIRECTORIO
+			                  break;;
+			                  [nN]* ) echo ""
+			                  break;;
+esac
+done;;
+31) echo ""
+while true
+do
+                        actualizar=S 
+                        case $actualizar in
+			                  [sS]* ) echo ""
+                        clear
+                        echo "Introduce nombre memoria máximo 10 caracteres"
+                        read memoria2
+                        echo "<<<<<< Haciendo copia de seguridad de la M2 >>>>>"
+                        sleep 3
+                        sed -i "$segun $memoria2" $usuario/info_panel_control.ini
+                        sed -i "$linea_info_memoria $memoria2" $usuario/MMDVMHost/$DIRECTORIO
+                        sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia2
+			                  break;;
+			                  [nN]* ) echo ""
+			                  break;;
+esac
+done;;
+32) echo ""
+while true
+do
+                        actualizar=S 
+                        case $actualizar in
+			                  [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Restaurando copia de seguridad  de la M2 >>>>>"
+                        sleep 3
+                        sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia2 $usuario/MMDVMHost/$DIRECTORIO
+			                  break;;
+			                  [nN]* ) echo ""
+			                  break;;
+esac
+done;;
+33) echo ""
+while true
+do
+                        actualizar=S 
+                        case $actualizar in
+			                  [sS]* ) echo ""
+                        clear
+                        echo "Introduce nombre memoria máximo 10 caracteres"
+                        read memoria3
+                        echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
+                        sleep 3
+                        sed -i "$tercer $memoria3" $usuario/info_panel_control.ini
+                        sed -i "$linea_info_memoria $memoria3" $usuario/MMDVMHost/$DIRECTORIO
+                        sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia3
+			                  break;;
+			                  [nN]* ) echo ""
+			                  break;;
+esac
+done;;
+34) echo ""
+while true
+do
+                        actualizar=S 
+                        case $actualizar in
+			                  [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Restaurando copia de seguridad de la M3 >>>>>"
+                        sleep 3
+                        sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia3 $usuario/MMDVMHost/$DIRECTORIO
+			                  break;;
+			                  [nN]* ) echo ""
+			                  break;;
+esac
+done;;
 35) echo ""
 while true
 do
