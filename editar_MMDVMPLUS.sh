@@ -579,17 +579,10 @@ done;;
 9) echo ""
 while true
 do
-                          
-
-                          port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
-                          echo "Valor del Port: ${AMARILLO}$port_modem"
-                          read -p 'Ej. /dev/ttyAMA1  /dev/ttyACM1  /dev/ttyUSB1  : ' port
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          letra=c
-                          numero_linea_port=$numero_linea_port$letra
-                          sed -i "$numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
+                          sh Puertos.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
