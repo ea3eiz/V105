@@ -582,8 +582,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          DIRECTORIO="MMDVMBM.ini"
-                          sh Puertos.sh
+                          sh Puertos_MMDVMBM.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
