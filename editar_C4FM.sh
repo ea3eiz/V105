@@ -403,6 +403,20 @@ echo "Valor actual:   \33[1;33m$Inactiv"
                            break;;
 esac
 done;;
+12) echo ""
+while true
+do
+echo "Valor actual:   \33[1;33m$OPTIONS"
+                           read -p 'Introduce DG-ID Ej. 24,22,62,65: ' Valor                     
+                           actualizar=S 
+                           case $actualizar in
+                           [sS]* ) echo ""
+                           sudo sed -i "$linea_sed_OPTIONS Options=$Valor" $usuario/YSFClients/YSFGateway/YSFGateway.ini
+                           break;;
+                           [nN]* ) echo ""
+                           break;;
+esac
+done;;
 28) echo ""
 while true
 do
