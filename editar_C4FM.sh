@@ -230,7 +230,7 @@ echo "Valor actual:   \33[1;33m$INDICATIVO"
                            actualizar=S 
                            case $actualizar in
 			                     [sS]* ) echo ""
-                            #Convierte de minúsculas a Mayúsculas
+                            #Convierte de minúsculas a Mayúsculas 
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
