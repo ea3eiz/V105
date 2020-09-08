@@ -209,7 +209,7 @@ echo -n "\33[1;36m  11)\33[0m InactivityTimeout     - "
 echo -n "${AMARILLO}$Inactiv"
 
 echo -n "\33[1;36m  12)\33[0m Modificar Options     - "
-echo -n "${AMARILLO}$linea_sed_OPTIONS"
+echo -n "${AMARILLO}$OPTIONS"
 
 echo ""
 echo ""
