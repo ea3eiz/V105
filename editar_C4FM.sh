@@ -155,6 +155,26 @@ linea_sed_Inactiv=$numero_linea$letra
 
 
 
+
+
+var2=`grep -n -m 1 "\[Network\]" $usuario/YSFClients/YSFGateway/YSFGateway.ini`
+
+buscar=":"
+largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var2 1 $largo_linea`
+numero_linea=`expr $numero_linea + 4` # y le suma uno qudando coomo: (75)
+OPTIONS=$(awk "NR==$numero_linea" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
+letra=c
+linea_sed_OPTIONS=$numero_linea$letra
+
+
+
+
+
+
+
+
 echo -n "\33[1;36m   1)\33[0m Modificar Indicativo  - \33[1;33m"
 echo "$INDICATIVO"
 
@@ -187,6 +207,9 @@ echo "$FCS"
 
 echo -n "\33[1;36m  11)\33[0m InactivityTimeout     - "
 echo -n "${AMARILLO}$Inactiv"
+
+echo -n "\33[1;36m  12)\33[0m Modificar Options     - "
+echo -n "${AMARILLO}$linea_sed_OPTIONS"
 
 echo ""
 echo ""
