@@ -151,29 +151,16 @@ Inactiv=$(awk "NR==$numero_linea" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_Inactiv=$numero_linea$letra
 
-
-
-
-
-
-
+#12
 var2=`grep -n -m 1 "\[Network\]" $usuario/YSFClients/YSFGateway/YSFGateway.ini`
-
 buscar=":"
 largo_linea=`expr index $var2 $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 4` # y le suma uno qudando coomo: (75)
+numero_linea=`expr $numero_linea + 5` # y le suma uno qudando coomo: (75)
 OPTIONS=$(awk "NR==$numero_linea" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_OPTIONS=$numero_linea$letra
-
-
-
-
-
-
-
 
 echo -n "\33[1;36m   1)\33[0m Modificar Indicativo  - \33[1;33m"
 echo "$INDICATIVO"
@@ -407,7 +394,7 @@ done;;
 while true
 do
 echo "Valor actual:   \33[1;33m$OPTIONS"
-                           read -p 'Introduce DG-ID Ej. 24,22,62,65: ' Valor                     
+                           read -p 'Introduce DG-ID Ej. 9,14,22,24,62,63,65: ' Valor                     
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
