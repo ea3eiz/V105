@@ -394,7 +394,7 @@ done;;
 while true
 do
 echo "Valor actual:   \33[1;33m$OPTIONS"
-                           read -p 'Introduce DG-ID Ej. 9,14,22,24,62,63,65: ' Valor                     
+                           read -p 'Introduce DG-ID Ej. 9,14,24,63,65: ' Valor                     
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
