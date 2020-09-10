@@ -329,7 +329,7 @@ letra=c
 linea_sed_IdleBrightness=$numero_linea$letra
 echo -n "  ${CIAN}23) ${GRIS}Brillo reposo Nextion - ${AMARILLO}$IdleBrightness_CORTO"
 
-# j) POCSAG Enable=
+# j) POCSAG Enable= 
 var=`grep -n -m 1 "\[POCSAG\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
