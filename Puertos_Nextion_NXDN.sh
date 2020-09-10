@@ -33,8 +33,8 @@ SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 # #Editor MMDVMDMR2NXDN.ini
 # DIRECTORIO="MMDVMDMR2NXDN.ini"
 
-#Editor NXDN.ini
-DIRECTORIO="NXDN.ini"
+#Editor MMDVMNXDN.ini
+DIRECTORIO="MMDVMNXDN.ini"
 
 #Colores
 ROJO="\033[1;31m"
