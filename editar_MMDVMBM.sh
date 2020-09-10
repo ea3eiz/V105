@@ -329,7 +329,7 @@ letra=c
 linea_sed_IdleBrightness=$numero_linea$letra
 echo -n "  ${CIAN}23) ${GRIS}Brillo reposo Nextion - ${AMARILLO}$IdleBrightness_CORTO"
 
-# j) POCSAG Enable= 
+# j) POCSAG Enable=
 var=`grep -n -m 1 "\[POCSAG\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
@@ -1093,13 +1093,15 @@ done;;
 h) echo ""
 while true
 do
+                          echo "Valor del Port: ${AMARILLO}$MODEMNEXTION"
+                          read -p 'Ej. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' lat1
                           actualizar=S 
                           case $actualizar in
-			                    [sS]* ) echo ""
-                          lxterminal --geometry=66x18 -e sudo sh Puertos_Nextion_BM.sh
-			                    break;;
-			                    [nN]* ) echo ""
-			                    break;;
+                          [sS]* ) echo ""
+                          sed -i "$linea_sed_MN Port=$lat1" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
 i) echo ""
