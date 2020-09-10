@@ -9,8 +9,8 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 # path Versión
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
-#Editor MMDVMBM.ini
-DIRECTORIO="MMDVMBM.ini"
+# #Editor MMDVMBM.ini
+# DIRECTORIO="MMDVMBM.ini"
 
 # #Editor MMDVMPLUS.ini
 # DIRECTORIO="MMDVMPLUS.ini"
@@ -18,17 +18,23 @@ DIRECTORIO="MMDVMBM.ini"
 # #Editor MMDVM.ini
 # DIRECTORIO="MMDVM.ini"
 
+#Editor MMDVMDSTAR.ini
+DIRECTORIO="MMDVMDSTAR.ini"
+
 # #Editor MMDVMESPECIAL.ini
-# DIRECTORIO="MMDVM.ini"
+# DIRECTORIO="MMDVMESPECIAL.ini"
 
 # #Editor MMDVMFUSION.ini
-# DIRECTORIO="MMDVMDSTAR.ini"
+# DIRECTORIO="MMDVMFUSION.ini"
 
 # #Editor MMDVMDMR2YSF.ini
-# DIRECTORIO="MMDVM.ini"
+# DIRECTORIO="MMDVMDMR2YSF.ini"
 
 # #Editor MMDVM.ini
 # DIRECTORIO="MMDVM.ini"
+
+
+
 
 #Colores
 ROJO="\033[1;31m"

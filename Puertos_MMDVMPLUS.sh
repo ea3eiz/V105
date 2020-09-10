@@ -18,6 +18,18 @@ DIRECTORIO="MMDVMPLUS.ini"
 # #Editor MMDVM.ini
 # DIRECTORIO="MMDVM.ini"
 
+# #Editor MMDVM.ini
+# DIRECTORIO="MMDVM.ini"
+
+# #Editor MMDVMESPECIAL.ini
+# DIRECTORIO="MMDVM.ini"
+
+# #Editor MMDVMFUSION.ini
+# DIRECTORIO="MMDVMDSTAR.ini"
+
+# #Editor MMDVMDMR2YSF.ini
+# DIRECTORIO="MMDVM.ini"
+
 #Colores
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
