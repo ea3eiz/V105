@@ -67,8 +67,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sed -i "$numero_linea_port Port=/dev/ttyACM20" $usuario/MMDVMHost/$DIRECTORIO
-                            # sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyACM0
+                            sed -i "$numero_linea_port Port=/dev/ttyACM0" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
@@ -81,7 +80,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyACM1
+                            sed -i "$numero_linea_port Port=/dev/ttyACM1" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
@@ -94,7 +93,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyACM2
+                            sed -i "$numero_linea_port Port=/dev/ttyACM2" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
@@ -107,7 +106,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyACM3
+                            sed -i "$numero_linea_port Port=/dev/ttyACM3" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
@@ -120,7 +119,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyAMA0
+                            sed -i "$numero_linea_port Port=/dev/ttyAMA0" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
@@ -133,7 +132,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyAMA1
+                            sed -i "$numero_linea_port Port=/dev/ttyAMA1" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
@@ -146,7 +145,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyAMA2
+                            sed -i "$numero_linea_port Port=/dev/ttyAMA2" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
@@ -159,7 +158,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyAMA3
+                            sed -i "$numero_linea_port Port=/dev/ttyAMA3" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
@@ -172,7 +171,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyUSB0
+                            sed -i "$numero_linea_port Port=/dev/ttyUSB0" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
@@ -185,7 +184,7 @@ do
                             actualizar=S 
                             case $actualizar in
 			                [sS]* ) echo ""
-                            sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO Modem Port /dev/ttyUSB1
+                            sed -i "$numero_linea_port Port=/dev/ttyUSB1" $usuario/MMDVMHost/$DIRECTORIO
                             exit
 			                break;;
 			                [nN]* ) echo ""
