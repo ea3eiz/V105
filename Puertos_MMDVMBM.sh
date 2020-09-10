@@ -22,6 +22,20 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
+
+
+mode=`grep -n -m 1 "^Port=" $usuario/MMDVMHost/$DIRECTORIO`
+buscar=":"
+caracteres=`expr index $mode $buscar`
+caracteres_linea=`expr $caracteres - 1`
+numero_linea_port=`expr substr $mode 1 $caracteres_linea`
+
+
+
+
+
+
+
 echo "${VERDE}"
 echo "   ***************************************************************************************"
 echo -n "${CIAN}"
