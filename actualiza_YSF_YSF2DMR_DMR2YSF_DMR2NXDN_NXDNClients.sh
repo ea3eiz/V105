@@ -24,7 +24,7 @@ MARRON="\33[38;5;138m"
                         sleep 3
                         cd /home/pi
                         sudo rm -R YSFClients
-                        git clone https://github.com/g4klx/YSFClients
+                        git clone https://github.com/ea3eiz/YSFClients
                         cd YSFClients
                         cd YSFGateway
                         make
