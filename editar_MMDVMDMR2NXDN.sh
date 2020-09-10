@@ -370,12 +370,6 @@ indi=$(awk "NR==2" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "  ${ROJO}PARAMETROS NXDNGateway.ini "
 echo "  ${CIAN} 1)${GRIS} Modificar Indicativo  - ${VERDE}$indi"
 
-
-
-
-
-
-
 echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${VERDE}"
 grxf=`grep -n "^RXFrequency=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
 grxf1=`echo "$grxf" | tr -d '[[:space:]]'`
@@ -403,12 +397,6 @@ letrac=c
 numero_linea_gtxf=$numero_linea$letrac
 contenido_gtxf=$(awk "NR==$numero_linea" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$contenido_gtxf"
-
-
-
-
-
-
 
 echo -n "${CIAN}  30)${GRIS} Modificar Daemon      - ${VERDE}"
 daemon=`grep -n "^Daemon=" $usuario/NXDNClients/NXDNGateway/NXDNGateway.ini`
@@ -1154,15 +1142,13 @@ done;;
 h) echo ""
 while true
 do
-echo "Valor del Port: \33[1;33m$MODEMNEXTION"
-                          read -p 'Ej. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' lat1
                           actualizar=S 
                           case $actualizar in
-                          [sS]* ) echo ""
-                          sed -i "$linea_sed_MN Port=$lat1" $usuario/MMDVMHost/$DIRECTORIO
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
+			                    [sS]* ) echo ""
+                          sh Puertos_Nextion_DMR2NXDN.sh
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
 esac
 done;;
 i) echo ""

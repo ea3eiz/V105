@@ -1093,15 +1093,13 @@ done;;
 h) echo ""
 while true
 do
-                          echo "Valor del Port: ${AMARILLO}$MODEMNEXTION"
-                          read -p 'Ej. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' lat1
                           actualizar=S 
                           case $actualizar in
-                          [sS]* ) echo ""
-                          sed -i "$linea_sed_MN Port=$lat1" $usuario/MMDVMHost/$DIRECTORIO
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
+			                    [sS]* ) echo ""
+                          sh Puertos_Nextion_MMDVM.sh
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
 esac
 done;;
 i) echo ""

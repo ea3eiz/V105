@@ -12,8 +12,8 @@ SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 # #Editor MMDVMBM.ini
 # DIRECTORIO="MMDVMBM.ini"
 
-#Editor MMDVMPLUS.ini
-DIRECTORIO="MMDVMPLUS.ini"
+# #Editor MMDVMPLUS.ini
+# DIRECTORIO="MMDVMPLUS.ini"
 
 # #Editor MMDVM.ini
 # DIRECTORIO="MMDVM.ini"
@@ -30,12 +30,11 @@ DIRECTORIO="MMDVMPLUS.ini"
 # #Editor MMDVMDMR2YSF.ini
 # DIRECTORIO="MMDVMDMR2YSF.ini"
 
-# #Editor MMDVMDMR2NXDN.ini
-# DIRECTORIO="MMDVMDMR2NXDN.ini"
+#Editor MMDVMDMR2NXDN.ini
+DIRECTORIO="MMDVMDMR2NXDN.ini"
 
 # #Editor NXDN.ini
 # DIRECTORIO="NXDN.ini"
-
 
 #Colores
 ROJO="\033[1;31m"
