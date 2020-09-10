@@ -29,8 +29,8 @@ buscar=":"
 caracteres=`expr index $mode $buscar`
 caracteres_linea=`expr $caracteres - 1`
 numero_linea_port=`expr substr $mode 1 $caracteres_linea`
-
-
+letra=c
+numero_linea_port=$numero_linea_port$letra
 
 
 echo "parada"
