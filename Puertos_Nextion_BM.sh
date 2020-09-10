@@ -65,7 +65,6 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "$linea_sed_MN Port=/dev/ttyAMA0" $usuario/MMDVMHost/$DIRECTORIO
-                          exit;
                           break;;
                           [nN]* ) echo ""
                           break;;
