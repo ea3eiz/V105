@@ -9,9 +9,11 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 # path Versión
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
-#Editor MMDVMPLUS.ini
+#Editor MMDVMBM.ini
 DIRECTORIO="MMDVMBM.ini"
 
+# #Editor MMDVMPLUS.ini
+# DIRECTORIO="MMDVMPLUS.ini"
 
 #Colores
 ROJO="\033[1;31m"
