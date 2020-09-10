@@ -1096,7 +1096,7 @@ do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-                          sh Puertos_Nextion_BM.sh
+                          sudo lxterminal --geometry=66x18 -e sh Puertos_Nextion_BM.sh
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
