@@ -33,8 +33,8 @@ numero_linea_port=`expr substr $mode 1 $caracteres_linea`
 
 
 
-
-
+echo "parada"
+read a
 
 echo "${VERDE}"
 echo "   ***************************************************************************************"
