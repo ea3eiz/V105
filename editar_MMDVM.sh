@@ -28,7 +28,7 @@ tercer="39c"
 primer1="37c"
 segun1="38c"
 tercer1="39c"
-# Recoge datos para leer desde el panel de control
+# Recoge datos para leer desde el panel de control 
 indi=$(awk "NR==2" $usuario/MMDVMHost/$DIRECTORIO)
 sed -i "$primero $indi" $usuario/info_panel_control.ini
 ide=$(awk "NR==3" $usuario/MMDVMHost/$DIRECTORIO)
@@ -122,7 +122,7 @@ echo "$url1"
 echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberry Pi (ttyAMA0)${AMARILLO}"
 echo "${CIAN}   7)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM0)${AMARILLO}"
 echo "${CIAN}   8)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
-echo "${CIAN}   9)${GRIS} Entrar Puerto manual  ${CIAN}"
+echo "${CIAN}   9)${VERDE} Menú elegir Puerto  ${CIAN}"
 
 echo -n "                            - "
 
@@ -579,16 +579,10 @@ done;;
 9) echo ""
 while true
 do
-                          
-                          port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
-                          echo "Valor del Port: ${AMARILLO}$port_modem"
-                          read -p 'Ej. /dev/ttyAMA1  /dev/ttyACM1  /dev/ttyUSB1  : ' port
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          letra=c
-                          numero_linea_port=$numero_linea_port$letra
-                          sed -i "$numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
+sh Puertos_MMDVM.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
