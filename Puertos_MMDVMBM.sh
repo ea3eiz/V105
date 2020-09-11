@@ -48,10 +48,6 @@ numero_linea_port=`expr substr $mode 1 $caracteres_linea`
 letra=c
 numero_linea_port=$numero_linea_port$letra
 
-echo "linea port $numero_linea_port"
-
-read autostart
-
 echo "${VERDE}"
 echo "   ***************************************************************************************"
 echo -n "${CIAN}"
