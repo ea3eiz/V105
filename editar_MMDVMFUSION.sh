@@ -571,7 +571,7 @@ while true
 do
                           buscar=":"
                           largo=`expr index $idd $buscar`
-                          echo "Valor  actual  del Id: ${AMARILLO}${idd#*=}\33[1;37m"
+                          echo "Valor  actual  del Id: ${AMARILLO}$YA{idd#*=}\33[1;37m"
            	              read -p 'Introduce un ID válido ' miid
                           letra=c
                           if [ $largo = 3 ]
