@@ -59,7 +59,7 @@ C4F=$(awk "NR==3" /home/pi/.local/autoarranque.ini)
 C4F=`expr substr $C4F 5 3`
 if [ $C4F = "ON" ]
 then
-echo "   ${CIAN} 3) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}ircDDB"
+echo "   ${CIAN} 3) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}YSF"
 else
 echo "   ${CIAN} 3) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}YSF"
 fi
