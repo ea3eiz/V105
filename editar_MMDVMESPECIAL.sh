@@ -587,7 +587,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-sh Puertos_MMDVMBM.sh
+sh Puertos_MMDVMESPECIAL.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
