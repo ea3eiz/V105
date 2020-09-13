@@ -27,6 +27,8 @@ MARRON="\33[38;5;138m"
                         git clone https://github.com/ea3eiz/YSFClients
                         cd YSFClients
                         cd YSFGateway
+                        sudo sed -i '209c std::string name = "IMAGEN ADER V105";' YSFGateway.cpp
+
                         make
                         sudo make install
                         clear
