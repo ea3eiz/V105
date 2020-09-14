@@ -38,7 +38,15 @@ sleep 2
                         sudo chmod 777 -R /var/lib/mmdvm
 
                         cd $usuario/YSFClients/YSFGateway
-                        sudo rm *.cpp && rm *.o && rm *.h && rm *.log && rm *.vcxp && rm*.vcxproj && rm *.filters && rm Makefile && rm *.md
+                        sudo rm *.cpp
+                        sudo rm *.o
+                        sudo rm *.h
+                        sudo rm *.log 
+                        sudo rm *.vcxp 
+                        sudo rm*.vcxproj
+                        sudo rm *.filters 
+                        sudo rm Makefile
+                        sudo rm *.md
 
                         # 02-08-2020 cambio quitar sistema actual:
                         cd /home/pi/V105
