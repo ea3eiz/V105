@@ -39,14 +39,24 @@ sleep 2
 
                         cd $usuario/YSFClients/YSFGateway
                         sudo rm *.cpp
+sleep 1
                         sudo rm *.o
+sleep 1
                         sudo rm *.h
-                        sudo rm *.log 
-                        sudo rm *.vcxp 
-                        sudo rm*.vcxproj
+sleep 1
+                        sudo rm *.log
+sleep 1
+                        sudo rm *.vcxp
+sleep 1
+                        sudo rm *.vcxproj
+sleep 1
                         sudo rm *.filters 
+sleep 1
                         sudo rm Makefile
+sleep 1
                         sudo rm *.md
+sleep 1
+                        sudo rm *.sh
 
                         # 02-08-2020 cambio quitar sistema actual:
                         cd /home/pi/V105
