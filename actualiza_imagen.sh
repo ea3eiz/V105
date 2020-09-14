@@ -42,7 +42,7 @@ sleep 2
 
                         # 02-08-2020 cambio quitar sistema actual:
                         cd /home/pi/V105
-                        rm /var/www/html/panel_configuracion.php
+                        sudo rm /var/www/html/panel_configuracion.php
                         cp panel_configuracion.php /var/www/html
 
                         # 14-07-2020 agrega esta linea a TGIF
