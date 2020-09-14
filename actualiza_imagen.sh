@@ -37,6 +37,9 @@ sleep 2
                         sudo curl --fail -o DMRIds.dat -s http://www.pistar.uk/downloads/DMRIds.dat
                         sudo chmod 777 -R /var/lib/mmdvm
 
+                        cd $usuario/YSFClients/YSFGateway
+                        rm *.cpp && rm *.o && rm *.h && *.log && *.vcxp
+
                         # 02-08-2020 cambio quitar sistema actual:
                         cd /home/pi/V105
                         rm /var/www/html/panel_configuracion.php
