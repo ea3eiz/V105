@@ -28,28 +28,17 @@ MARRON="\33[38;5;138m"
                         cd YSFClients
                         cd YSFGateway
                         sudo sed -i '209c std::string name = "IMAGEN ADER V105";' YSFGateway.cpp
-
                         make
                         sudo make install
-
-sudo rm *.cpp
-sleep 1
+                        sudo rm *.cpp
                         sudo rm *.o
-sleep 1
                         sudo rm *.h
-sleep 1
                         sudo rm *.log
-sleep 1
                         sudo rm *.vcxp
-sleep 1
                         sudo rm *.vcxproj
-sleep 1
                         sudo rm *.filters 
-sleep 1
                         sudo rm Makefile
-sleep 1
                         sudo rm *.md
-sleep 1
                         sudo rm *.sh
                         clear
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
