@@ -33,7 +33,7 @@ case $escoger_menu in
 while true
 do
 						clear
-						read -p ' Quieres actualizar el listado de reflectores YSF S/N ?' ejecutar1
+						read -p ' Quieres actualizar el listado de reflectores S/N ?' ejecutar1
 		    			case $ejecutar1 in
 			            [sS]* ) echo ""
 						echo "*******************************************"
