@@ -41,6 +41,7 @@ MARRON="\33[38;5;138m"
                         # sudo rm Makefile
                         # sudo rm *.md
                         # sudo rm *.sh
+                        sudo chmod 777 -R /home/pi/YSFClients/YSFGateway
                         clear
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
                         echo "${ROJO}"
