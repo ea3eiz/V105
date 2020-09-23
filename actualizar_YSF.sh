@@ -36,6 +36,7 @@ do
 						read -p ' Quieres actualizar el listado de reflectores S/N ?' ejecutar1
 		    			case $ejecutar1 in
 			            [sS]* ) echo ""
+						clear
 						echo "*******************************************"
 						echo "* ACTUALIZANDO LISTADO DE SALAS YSF y FCS *"
 						echo "* *****************************************"
@@ -52,7 +53,7 @@ do
 						echo "   **************************************************************************"
 						echo "   **************************************************************************"
 						echo "${VERDE}"
-						echo "             El fichero YSFHost.txt y FCSRooms.txt se han actualizado        "
+						echo "             Los fichero YSFHost.txt y FCSRooms.txt se han actualizado       "
 						echo "                                                                             "
 						echo -n "${BLANCO}"
 						echo "   **************************************************************************"
