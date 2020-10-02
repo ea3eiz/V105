@@ -81,7 +81,7 @@ do
    			mkdir bluedv_anterior
              sudo cp bluedv/*.* bluedv_anterior/
              sudo rm -r /home/pi/bluedv
- 			git clone https://github.com/ea3eiz/bluedv			
+ 			git clone https://github.com/ea3eiz/bluedv9593			
  			cd /home/pi/bluedv
  			sudo chmod 777 DExtra_Hosts.txt		
  #fi	
