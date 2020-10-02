@@ -23,14 +23,14 @@ echo "   ***********************************************************************
 echo "                         Script para actualizar BlueDV                       "
 echo "${ROJO}                                   by EA3EIZ ${VERDE}                 "
 echo "   **************************************************************************"
-echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV Versión 9593"
-echo "\33[1;36m   2)\33[1;37m Volver a la versión BlueDV anterior"
+#echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV Versión 9593"
+#echo "\33[1;36m   2)\33[1;37m Volver a la versión BlueDV anterior"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
-1) echo ""
+1bloqueado) echo ""
 while true
 do
 			clear
@@ -99,7 +99,7 @@ then
 			break;;
 esac
 done;;
-2) echo ""
+2bloqueado) echo ""
 while true
 do
 clear
@@ -167,7 +167,7 @@ exit;
 			break;;
 esac
 done;;
-30000) echo ""
+30000bloqueado) echo ""
 while true
 do
 clear
@@ -192,7 +192,7 @@ fi
 			break;;
 esac
 done;;
-31) echo ""
+31bloqueado) echo ""
 while true
 do
 clear
@@ -211,7 +211,7 @@ clear
 			break;;
 esac
 done;;
-32) echo ""
+32bloqueado) echo ""
 while true
 do
 clear
@@ -230,7 +230,7 @@ clear
 			break;;
 esac
 done;;
-33) echo ""
+33bloqueado) echo ""
 while true
 do
 clear
@@ -249,7 +249,7 @@ clear
 			break;;
 esac
 done;;
-34) echo ""
+34bloqueado) echo ""
 while true
 do
 clear
@@ -268,7 +268,7 @@ clear
 			break;;
 esac
 done;;
-41) echo ""
+41bloqueado) echo ""
 while true
 do
 clear
@@ -291,7 +291,7 @@ clear
 			break;;
 esac
 done;;
-42) echo ""
+42bloqueado) echo ""
 while true
 do
 clear
@@ -310,7 +310,7 @@ clear
 			break;;
 esac
 done;;
-43) echo ""
+43bloqueado) echo ""
 while true
 do
 clear
@@ -329,7 +329,7 @@ clear
 			break;;
 esac
 done;;
-44) echo ""
+44bloqueado) echo ""
 while true
 do
 clear
@@ -348,7 +348,7 @@ clear
 			break;;
 esac
 done;;
-1a) echo ""
+1abloqueado) echo ""
 while true
 do
 clear
