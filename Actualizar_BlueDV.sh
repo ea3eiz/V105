@@ -35,7 +35,7 @@ while true
 do
 			clear
 			echo "\33[1;33m"
-	        read -p ' Quieres actualizar el BlueDV Si/No: ' ejecutar1
+	        read -p ' Quieres actualizar el BlueDV 9593 Si/No: ' ejecutar1
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
@@ -45,35 +45,35 @@ then
 			echo "\v\v\v"
 			echo "${VERDE}"
 			echo "   **************************************************************************"
-			echo "              YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE             "
+			echo "                    YA TIENES ACTUALIZADA LA VERSIÓN 9593             "
 			echo "   **************************************************************************"
 			sleep 1
 			clear
 			echo "${BLANCO}"
 			echo "\v\v\v"
 			echo "   **************************************************************************"
-			echo "              YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE             "
+			echo "                    YA TIENES ACTUALIZADA LA VERSIÓN 9593             "
 			echo "   **************************************************************************"
 			sleep 1
 			clear
 			echo "${AMARILLO}"
 			echo "\v\v\v"
 			echo "   **************************************************************************"
-			echo "              YA TIENES ACTUALIZADA LA VERSIÓN 9593            "
+			echo "                    YA TIENES ACTUALIZADA LA VERSIÓN 9593            "
 			echo "   **************************************************************************"
 			sleep 1
 			clear
 			echo "${ROJO}"
 			echo "\v\v\v"
 			echo "   **************************************************************************"
-			echo "              YA TIENES ACTUALIZADA LA VERSIÓN 9593             "
+			echo "                    YA TIENES ACTUALIZADA LA VERSIÓN 9593             "
 			echo "   **************************************************************************"
 			sleep 1
 			clear
 			echo "${VERDE}"
 			echo "\v\v\v"
 			echo "   **************************************************************************"
-			echo "              YA TIENES ACTUALIZADA LA VERSIÓN 9593             "
+			echo "                    YA TIENES ACTUALIZADA LA VERSIÓN 9593             "
 			echo "   **************************************************************************"
 			sleep 3
  else
@@ -82,7 +82,7 @@ then
             cp bluedv/*.* bluedv_anterior/
             rm -r /home/pi/bluedv
  			git clone https://github.com/ea3eiz/bluedv9593			
- 			mv /home/pi/bluedv9593 /home/pi/bluedv1
+ 			mv /home/pi/bluedv9593 /home/pi/bluedv
  			sudo chmod 777 DExtra_Hosts.txt		
  fi	
 			 echo "\33[1;32m******************************************************"
