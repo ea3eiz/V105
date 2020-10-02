@@ -39,8 +39,8 @@ do
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
-#if [ -d /home/pi/bluedv_anterior/ ];
-#then
+if [ -d /home/pi/bluedv_anterior/ ];
+then
 			clear
 			echo "\v\v\v"
 			echo "${VERDE}"
@@ -76,21 +76,19 @@ do
 			echo "              YA TIENES ACTUALIZADA LA ÚLTIMA VERSIÓN DISPONIBLE             "
 			echo "   **************************************************************************"
 			sleep 3
-# else
-# 			cd /home/pi/
-#   			mkdir bluedv_anterior
-#             sudo cp bluedv/*.* bluedv_anterior/
-#             sudo rm -r /home/pi/bluedv
-# 			git clone https://github.com/ea3eiz/bluedv
-			
-# 			cd /home/pi/bluedv
-# 			sudo chmod 777 DExtra_Hosts.txt
-		
-# fi	
-			# echo "\33[1;32m******************************************************"
-			# echo "\33[1;32m*  SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN DISPONIBLE  *"
-			# echo "\33[1;32m******************************************************"
-			# sleep 3
+ else
+ 			cd /home/pi/
+   			mkdir bluedv_anterior
+             sudo cp bluedv/*.* bluedv_anterior/
+             sudo rm -r /home/pi/bluedv
+ 			git clone https://github.com/ea3eiz/bluedv			
+ 			cd /home/pi/bluedv
+ 			sudo chmod 777 DExtra_Hosts.txt		
+ fi	
+			 echo "\33[1;32m******************************************************"
+			 echo "\33[1;32m*  SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN DISPONIBLE  *"
+			 echo "\33[1;32m******************************************************"
+			 sleep 3
 			exit;
 		    echo ""
 			echo "Ok, se ha ejecutado correctamente"
