@@ -24,7 +24,7 @@ echo "                         Script para actualizar BlueDV                    
 echo "${ROJO}                                   by EA3EIZ ${VERDE}                 "
 echo "   **************************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV Versión 9593"
-#echo "\33[1;36m   2)\33[1;37m Volver a la versión BlueDV Version 1.0.0.9441"
+echo "\33[1;36m   2)\33[1;37m Volver a la versión BlueDV anterior"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
@@ -99,7 +99,7 @@ then
 			break;;
 esac
 done;;
-2bloqueado) echo ""
+2) echo ""
 while true
 do
 clear
@@ -127,7 +127,7 @@ then
 			echo "\33[1;32m* VOLVIENDO A LA VERSIÓN ANTERIOR *"
 			echo "\33[1;32m***********************************"
 			sleep 5
-						cd /home/pi/
+			cd /home/pi/
             sudo cp bluedv_anterior/*.* bluedv/
             sudo rm -R bluedv_anterior
 			
