@@ -129,7 +129,7 @@ then
 			sleep 5
 			cd /home/pi/
             sudo cp /home/pi/bluedv_anterior/*.* /home/pi/bluedv/
-            #udo rm -R bluedv_anterior
+            sudo rm -R bluedv_anterior
 			
 else
 			
