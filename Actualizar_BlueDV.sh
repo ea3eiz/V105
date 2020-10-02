@@ -128,8 +128,8 @@ then
 			echo "\33[1;32m***********************************"
 			sleep 5
 			cd /home/pi/
-            sudo cp bluedv_anterior/*.* bluedv/
-            sudo rm -R bluedv_anterior
+            sudo cp /home/pi/bluedv_anterior/*.* /home/pi/bluedv/
+            #udo rm -R bluedv_anterior
 			
 else
 			
