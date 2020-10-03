@@ -74,6 +74,20 @@ sleep 2
                         # 26-08-2020 actualizar salas dv4mini
                         sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
 
+
+                        # Cambio 01-10-2020 para que funcione el cambiar de sistemas desde la app dvswitch
+                        sudo cp $usuario/$SCRIPTS_version/ab-restart.sh /usr/local/sbin/
+                        sudo cp $usuario/$SCRIPTS_version/call_id.sh /usr/local/sbin/
+                        sudo cp $usuario/$SCRIPTS_version/ssz.sh /usr/local/sbin/
+                        sudo cp $usuario/$SCRIPTS_version/test.sh /usr/local/sbin/
+
+                        sudo chmod +x ab-restart.sh
+                        sudo chmod +x call_id.sh
+                        sudo chmod +x ssz.sh
+                        sudo chmod +x test.sh
+                        sudo chmod +x tune.sh
+
+
                         #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
                         frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
                         cd $usuario/Desktop/
