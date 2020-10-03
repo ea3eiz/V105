@@ -20,7 +20,7 @@ MARRON="\33[38;5;138m"
 
 echo "${VERDE}"
 echo "   **************************************************************************"
-echo "                         Script para actualizar BlueDV                       "
+echo "                         sScript para actualizar BlueDV                       "
 echo "${ROJO}                                   by EA3EIZ ${VERDE}                 "
 echo "   **************************************************************************"
 #echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV Versión 9593"
