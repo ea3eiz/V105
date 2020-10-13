@@ -77,13 +77,41 @@ then
 			echo "   **************************************************************************"
 			sleep 3
  else
- 			cd /home/pi/
-   			mkdir bluedv_anterior
-            cp bluedv/*.* bluedv_anterior/
-            rm -r /home/pi/bluedv
- 			git clone https://github.com/ea3eiz/bluedv9593			
- 			mv /home/pi/bluedv9593 /home/pi/bluedv
- 			sudo chmod 777 DExtra_Hosts.txt		
+ 			#cd /home/pi/
+   			#mkdir bluedv_anterior
+            #cp bluedv/*.* bluedv_anterior/
+            #rm -r /home/pi/bluedv
+ 			#git clone https://github.com/ea3eiz/bluedv9593			
+ 			#mv /home/pi/bluedv9593 /home/pi/bluedv
+ 			#sudo chmod 777 DExtra_Hosts.txt		
+
+
+
+sudo apt-get remove mono-complete
+
+sudo apt-get purge mono-complete
+
+sudo apt-get autoremove
+
+echo "deb https://download.mono-project.com/repo/debian buster/snapshots/6.8.0 main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+
+sudo apt-get update
+
+sudo apt-get install mono-complete
+
+sudo apt clean
+
+sudo reboot
+
+
+
+
+
+
+
+
+
+
  fi	
 			 echo "\33[1;32m******************************************************"
 			 echo "\33[1;32m*  SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN 9593  *"
