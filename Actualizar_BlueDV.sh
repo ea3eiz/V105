@@ -23,14 +23,14 @@ echo "   ***********************************************************************
 echo "                       Script para actualizar BlueDV                       "
 echo "${ROJO}                                   By EA3EIZ ${VERDE}                 "
 echo "   **************************************************************************"
-echo "\33[1;36m   1)\33[1;37m Actualizar a BlueDV Versión 9593"
+echo "\33[1;36m   1)${AMARILLO} Actualizar a BlueDV Versión 9593 ${VERDE} (NEW)"
 echo "\33[1;36m   2)\33[1;37m Volver a BlueDV Versión 9582"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
-1bloqueado) echo ""
+1) echo ""
 while true
 do
 			clear
@@ -95,7 +95,7 @@ do
 			break;;
 esac
 done;;
-2bloqueado) echo ""
+2) echo ""
 while true
 do
 			clear
@@ -146,218 +146,6 @@ do
 			sleep 5	
 			fi	
 			exit;
-		    echo ""
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-30000bloqueado) echo ""
-while true
-do
-			clear
-			echo "\33[1;33m"
-	        read -p ' Quieres actualizar el BlueDV Si/No: ' ejecutar1
-		    case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-
-if [ -d /home/pi/bluedv_anterior/ ];
-then
-echo "Sí, sí existe."
-else
-echo "No, no existe"
-fi
-	read a
-		    echo ""
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-31bloqueado) echo ""
-while true
-do
-clear
-	        ejecutar1=S
-		    case $ejecutar1 in
-		    [sS]* ) echo ""
-			echo "ok >>>>>"
-                                    sed -i "4c Exec=sh -c """ /home/pi/Desktop/Boton_1
-                                    sed -i "5c Icon=/home/pi/V30/OCULTO.png" /home/pi/Desktop/Boton_1
-                                    sed -i "10c Name[es_ES]=." /home/pi/Desktop/Boton_1
-		            echo ""
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-32bloqueado) echo ""
-while true
-do
-clear
-	                        ejecutar1=S
-		            case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-                                    sed -i "4c Exec=sh -c """ /home/pi/Desktop/Boton_2
-                                    sed -i "5c Icon=/home/pi/V30/OCULTO.png" /home/pi/Desktop/Boton_2
-                                    sed -i "10c Name[es_ES]=." /home/pi/Desktop/Boton_2
-		            echo ""
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-33bloqueado) echo ""
-while true
-do
-clear
-	                        ejecutar1=S
-		            case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-                                    sed -i "4c Exec=sh -c """ /home/pi/Desktop/Boton_3
-                                    sed -i "5c Icon=/home/pi/V30/OCULTO.png" /home/pi/Desktop/Boton_3
-                                    sed -i "10c Name[es_ES]=." /home/pi/Desktop/Boton_3
-		            echo ""
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-34bloqueado) echo ""
-while true
-do
-clear
-	                        ejecutar1=S
-		            case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-                                    sed -i "4c Exec=sh -c """ /home/pi/Desktop/Boton_4
-                                    sed -i "5c Icon=/home/pi/V30/OCULTO.png" /home/pi/Desktop/Boton_4
-                                    sed -i "10c Name[es_ES]=." /home/pi/Desktop/Boton_4
-  		            echo ""
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-41bloqueado) echo ""
-while true
-do
-clear
-	        ejecutar1=S
-		    case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-			cd /home/pi/MMDVMHost
-			sudo cp MMDVMHost MMDVMSOLODSTAR
-			sudo cp MMDVMBM.ini MMDVMSOLODSTAR.ini
-                                    sed -i "4c Exec=sh -c 'cd /home/pi/V30/;sudo sh ejecutar_solodstar_04.sh'" /home/pi/Desktop/Boton_1
-                                    sed -i "5c Icon=/home/pi/V30/SOLO_DSTAR.png" /home/pi/Desktop/Boton_1
-                                    sed -i "10c Name[es_ES]=Abrir solo D_STAR" /home/pi/Desktop/Boton_1
-                                    sed -i "9c Terminal=true" /home/pi/Desktop/Boton_1
-		    echo ""
-		    echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-42bloqueado) echo ""
-while true
-do
-clear
-	                        ejecutar1=S
-		            case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-                                    sed -i "4c Exec=sh -c 'cd /home/pi/V30/;lxterminal --geometry=80x47 -e sudo sh actualizar_IDS_MMDVMHost.sh'" /home/pi/Desktop/Boton_2
-                                    sed -i "5c Icon=/home/pi/V30/EDITAR.png" /home/pi/Desktop/Boton_2
-                                    sed -i "10c Name[es_ES]=Actualizar IDS MMDVMHost" /home/pi/Desktop/Boton_2
-		            echo ""0
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-43bloqueado) echo ""
-while true
-do
-clear
-	                        ejecutar1=S
-		            case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-                                    sed -i "4c Exec=sh -c """ /home/pi/Desktop/Boton_3
-                                    sed -i "5c Icon=/home/pi/V30/AUTOARRANQUE.png" /home/pi/Desktop/Boton_3
-                                    sed -i "10c Name[es_ES]=." /home/pi/Desktop/Boton_3
-		            echo ""
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-44bloqueado) echo ""
-while true
-do
-clear
-	                        ejecutar1=S
-		            case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-                                    sed -i "4c Exec=sh -c 'cd /home/pi/V30;sudo sh actualizar_YSF_30.sh'" /home/pi/Desktop/Boton_4
-                                    sed -i "5c Icon=/home/pi/V30/ACTUALIZAR_BD.png" /home/pi/Desktop/Boton_4
-                                    sed -i "10c Name[es_ES]=Actualizar YSF" /home/pi/Desktop/Boton_4
-		            echo ""
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-1abloqueado) echo ""
-while true
-do
-clear
-echo "\33[1;33m"
-	        read -p ' Quieres actualizar el BlueDV Si/No: ' ejecutar1
-		    case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-
-			cd /home/pi/
-  			#mkdir bluedv_anterior
-            #sudo cp bluedv/*.* bluedv_anterior/
-            sudo rm -r /home/pi/bluedv
-			git clone https://github.com/ea3eiz/bluedv09488
-			
-			cd /home/pi/bluedv
-			sudo chmod 777 DExtra_Hosts.txt			
-			echo "\33[1;32m******************************************************"
-			echo "\33[1;32m*  SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN DISPONIBLE  *"
-			echo "\33[1;32m******************************************************"
-			sleep 3
-exit;
 		    echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
