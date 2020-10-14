@@ -85,11 +85,6 @@ do
 			mv /home/pi/bluedv9593 /home/pi/bluedv
 			sudo chmod 777 DExtra_Hosts.txt		
 			fi	
-			clear 
-			echo "\33[1;32m******************************************************"
-			echo "\33[1;32m*      SE HA ACTUALIZADO A LA VERSIÓN 9593           *"
-			echo "\33[1;32m******************************************************"
-			sleep 5
 			exit;
 		    echo ""
 			echo "Ok, se ha ejecutado correctamente"
