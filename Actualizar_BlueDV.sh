@@ -23,8 +23,8 @@ echo "   ***********************************************************************
 echo "                       Script para actualizar BlueDV                       "
 echo "${ROJO}                                   By EA3EIZ ${VERDE}                 "
 echo "   **************************************************************************"
-#echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV Versión 9593"
-#echo "\33[1;36m   2)\33[1;37m Volver a la versión BlueDV anterior"
+echo "\33[1;36m   1)\33[1;37m Actualizar a BlueDV Versión 9593"
+echo "\33[1;36m   2)\33[1;37m Volver a BlueDV Versión 9582"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
@@ -35,12 +35,12 @@ while true
 do
 			clear
 			echo "\33[1;33m"
-	        read -p ' Quieres actualizar el BlueDV 9593 Si/No: ' ejecutar1
+	        read -p ' Quieres actualizar BlueDV Versión 9593 Si/No: ' ejecutar1
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
-if [ -d /home/pi/bluedv_anterior/ ];
-then
+			if [ -d /home/pi/bluedv_anterior/ ];
+			then
 			clear
 			echo "\v\v\v"
 			echo "${VERDE}"
@@ -76,43 +76,17 @@ then
 			echo "                    YA TIENES ACTUALIZADA LA VERSIÓN 9593             "
 			echo "   **************************************************************************"
 			sleep 3
- else
-cd /home/pi/
-mkdir bluedv_anterior
-cp bluedv/*.* bluedv_anterior/
-rm -r /home/pi/bluedv
-git clone https://github.com/ea3eiz/bluedv9593			
-mv /home/pi/bluedv9593 /home/pi/bluedv
-sudo chmod 777 DExtra_Hosts.txt		
-
-#sudo apt-get remove mono-complete
-#
-#sudo apt-get purge mono-complete
-#
-#sudo apt-get autoremove
-#
-#echo "deb https://download.mono-project.com/repo/debian buster/snapshots/6.8.0 main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
-#
-#sudo apt-get update
-#
-#sudo apt-get install mono-complete
-#
-#sudo apt clean
-#
-#sudo reboot
-
-
-
-
-
-
-
-
-
-
- fi	
+ 			else
+			cd /home/pi/
+			mkdir bluedv_anterior
+			cp bluedv/*.* bluedv_anterior/
+			rm -r /home/pi/bluedv
+			git clone https://github.com/ea3eiz/bluedv9593			
+			mv /home/pi/bluedv9593 /home/pi/bluedv
+			sudo chmod 777 DExtra_Hosts.txt		
+			fi	
 			 echo "\33[1;32m******************************************************"
-			 echo "\33[1;32m*  SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN 9593  *"
+			 echo "\33[1;32m*      SE HA ACTUALIZADO A LA VERSIÓN 9593           *"
 			 echo "\33[1;32m******************************************************"
 			 sleep 3
 			exit;
@@ -128,63 +102,54 @@ done;;
 2bloqueado) echo ""
 while true
 do
-clear
-echo "\33[1;33m"
-	        read -p ' Quieres volver a la versión anterior Si/No: ' ejecutar1
+			clear
+			echo "\33[1;33m"
+	        read -p ' Quieres volver a BlueDV Versión 9582 Si/No: ' ejecutar1
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
-if [ -d /home/pi/bluedv_anterior/ ];
-then
+			if [ -d /home/pi/bluedv_anterior/ ];
+			then
 			clear
-			echo "\33[1;32mVOLVIENDO A LA VERSIÓN ANTERIOR"
+			echo "\33[1;32mVOLVIENDO A LA VERSIÓN 9582"
 			sleep 1
 			clear
-			echo "\33[1;31mVOLVIENDO A LA VERSIÓN ANTERIOR"
+			echo "\33[1;31mVOLVIENDO A LA VERSIÓN 9582"
 			sleep 1
 			clear
-			echo "\33[1;32mVOLVIENDO A LA VERSIÓN ANTERIOR"
+			echo "\33[1;32mVOLVIENDO A LA VERSIÓN 9582"
 			sleep 1
 			clear
-			echo "\33[1;31mVOLVIENDO A LA VERSIÓN ANTERIOR"
+			echo "\33[1;31mVOLVIENDO A LA VERSIÓN 9582"
 			sleep 1
 			clear
 			echo "\33[1;32m***********************************"
-			echo "\33[1;32m* VOLVIENDO A LA VERSIÓN ANTERIOR *"
+			echo "\33[1;32m* VOLVIENDO A LA VERSIÓN 9582     *"
 			echo "\33[1;32m***********************************"
 			sleep 5
 			cd /home/pi/
             sudo cp /home/pi/bluedv_anterior/*.* /home/pi/bluedv/
-            sudo rm -R bluedv_anterior
-			
-else
-			
-
-
-clear
-			echo "\33[1;32mYA ESTÁS EN LA VERSIÓN ANTERIOR, NO HAS ACTUALIZADO NUNCA"
+            sudo rm -R bluedv_anterior			
+			else
+			clear
+			echo "\33[1;32mYA ESTÁS EN LA VERSIÓN 9582"
 			sleep 1
 			clear
-			echo "\33[1;31mYA ESTÁS EN LA VERSIÓN ANTERIOR, NO HAS ACTUALIZADO NUNCA"
+			echo "\33[1;31mYA ESTÁS EN LA VERSIÓN 9582"
 			sleep 1
 			clear
-			echo "\33[1;32mYA ESTÁS EN LA VERSIÓN ANTERIOR, NO HAS ACTUALIZADO NUNCA"
+			echo "\33[1;32mYA ESTÁS EN LA VERSIÓN 9582"
 			sleep 1
 			clear
-			echo "\33[1;31mYA ESTÁS EN LA VERSIÓN ANTERIOR, NO HAS ACTUALIZADO NUNCA"
+			echo "\33[1;31mYA ESTÁS EN LA VERSIÓN 9582"
 			sleep 1
 			clear
 			echo "\33[1;32m*************************************************************"
-			echo "\33[1;32m* YA ESTÁS EN LA VERSIÓN ANTERIOR, NO HAS ACTUALIZADO NUNCA *"
+			echo "\33[1;32m*            YA ESTÁS EN LA VERSIÓN 9582                    *"
 			echo "\33[1;32m*************************************************************"
-			sleep 5
-
-
-sleep 5
-
-		
-fi	
-exit;
+			sleep 5	
+			fi	
+			exit;
 		    echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
@@ -196,8 +161,8 @@ done;;
 30000bloqueado) echo ""
 while true
 do
-clear
-echo "\33[1;33m"
+			clear
+			echo "\33[1;33m"
 	        read -p ' Quieres actualizar el BlueDV Si/No: ' ejecutar1
 		    case $ejecutar1 in
 			[sS]* ) echo ""
