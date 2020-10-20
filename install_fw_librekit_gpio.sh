@@ -72,8 +72,8 @@ fi
 # Stop MMDVMHost process to free serial port
 sudo killall MMDVMHost >/dev/null 2>&1
 
-# Upload the firmware
-#eval sudo $STM32FLASH -v -w zumspot_rpi_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
+# Upload the firmware 
+eval sudo $STM32FLASH -v -w zumspot_rpi_fw.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
 
 
 
