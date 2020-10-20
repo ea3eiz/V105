@@ -19,6 +19,22 @@ else
 echo ""
 fi
 
+  sudo echo 20 > /sys/class/gpio/export
+  sudo echo 21 > /sys/class/gpio/export
+  sudo echo out > /sys/class/gpio/gpio20/direction
+  sudo echo out > /sys/class/gpio/gpio21/direction
+  sudo sleep 0.5
+  sudo echo 0 > /sys/class/gpio/gpio20/value
+  sudo echo 0 > /sys/class/gpio/gpio21/value
+  sudo echo 1 > /sys/class/gpio/gpio21/value
+  sudo sleep 1
+  sudo echo 0 > /sys/class/gpio/gpio20/value
+  sudo echo 1 > /sys/class/gpio/gpio20/value
+  sudo sleep 0.5
+  sudo echo 20 > /sys/class/gpio/unexport
+  sudo echo 21 > /sys/class/gpio/unexport
+
+
 # path usuario
 usuario="/home/pi"
 usuario="$usuario"
