@@ -1,10 +1,8 @@
 ﻿#!/bin/bash
-
 # Coloca bien los iconos en el escritorio
 sudo cp /home/pi/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
 sleep 2
 xfdesktop --reload
-
 # Comprueba si DVSWITCH está activado
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
@@ -18,7 +16,6 @@ sudo systemctl stop nxdngateway.service
 else
 echo ""
 fi
-
 # path usuario
 usuario="/home/pi"
 usuario="$usuario"
@@ -27,7 +24,6 @@ actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 SCRIPTS_version="V105"
 version="V105-"
 version=$version$actualizacion
-
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" $usuario/status.ini
 sed -i "2c BlueDV=OFF" $usuario/status.ini
@@ -48,24 +44,18 @@ sed -i "16c DMR2NXDN=OFF" $usuario/status.ini
 sed -i "17c NXDN=OFF" $usuario/status.ini
 #sed -i "18c DVSWITCH=OFF" $usuario/status.ini
 sed -i "19c DMRGateway=OFF" $usuario/status.ini
-
 #Actualiza Imagen
 cd $usuario/$SCRIPTS_version
 git pull
-
 sleep 2
-
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario/.local #deja el icono en el estado que se reinició
 sudo cp $usuario/Desktop/Activar_NextionDriver.desktop $usuario/.local #deja el icono en el estado que se reinició
-
 cd $usuario/$SCRIPTS_version/Desktop
 cp * $usuario/Desktop
 sudo chmod 777 -R $usuario/Desktop
-
 sudo cp $usuario/.local/Activar_dvswitch.desktop $usuario/Desktop #deja el icono en el estado que se reinició
 sudo cp $usuario/.local/Activar_NextionDriver.desktop $usuario/Desktop #deja el icono en el estado que se reinició
-
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
 bm=`sed -n '2p'  $usuario/MMDVMHost/MMDVMBM.ini`
 plus=`sed -n '2p'  $usuario/MMDVMHost/MMDVMPLUS.ini`
@@ -155,7 +145,6 @@ largo1=`expr $largo - 2`
 linea_YSFGateway=`expr substr $master 1 $largo1`
 masterYSFGateway=$(awk "NR==$linea_YSFGateway" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 masterYSFGateway=`echo "$masterYSFGateway" | tr -d '[[:space:]]'`
-
 #ACTUALIZA EL  PANEL DE CONTROL"
 sudo echo 20 > /sys/class/gpio/export
 sudo echo 21 > /sys/class/gpio/export
@@ -178,8 +167,7 @@ dstar=`sed -n '2p'  $usuario/MMDVMHost/MMDVMDSTAR.ini`
 fusion=`sed -n '2p'  $usuario/MMDVMHost/MMDVMFUSION.ini`
 frbm=`sed -n '13p'  $usuario/MMDVMHost/MMDVMBM.ini`
 frplus=`sed -n '13p'  $usuario/MMDVMHost/MMDVMPLUS.ini`
-sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$masterbm'&'masterPLUS=$masterplus'&'radio=$masterradio'&'version=$version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
-#Lee el fichero INFO_RXF para poner los datos en los iconos INFO                        
+sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$masterbm'&'masterPLUS=$masterplus'&'radio=$masterradio'&'version=$version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway                        
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
 cd $usuario/Desktop/
 cp RXF_BM.desktop $usuario/
