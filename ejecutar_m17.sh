@@ -12,7 +12,7 @@ cd /home/pi
 sudo cp top.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/top.desktop
-zenity --info --ok-label= --title=Abriendo_BlueDB --window-icon=/home/pi/V105/ICONO_BLUEDV_ON.png --width=400 --timeout=125 --text 
+zenity --info --ok-label= --title=Abriendo_BlueDB --window-icon=/home/pi/V105/ICONO_BLUEDV_ON.png --width=400 --timeout=15 --text 
 "Próximamente podreis descargar desde la web:\nwww.associacioader.com\una nueva versión V105 (26-10-2020)\n en la cual podreis usar el sistema M17."
 
 cd /home/pi/mvoice
