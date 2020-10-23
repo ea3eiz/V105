@@ -12,7 +12,7 @@ cd /home/pi
 sudo cp top.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/top.desktop
-zenity --warning --ok-label=CERRAR --title=DMRGateway --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=500 --timeout=15 --text "Próximamente podreis descargar desde la web:\nwww.associacioader.com\una nueva versión V105 (26-10-2020)\n en la cual podreis usar el sistema M17."
+zenity --warning --ok-label=CERRAR --title=DMRGateway --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=500 --text "Próximamente podreis descargar desde la web:\nwww.associacioader.com\nuna nueva versión V105 (26-10-2020)\n en la cual podreis usar el sistema M17."
 
 cd /home/pi/mvoice
 ./mvoice
