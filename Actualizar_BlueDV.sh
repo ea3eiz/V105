@@ -23,7 +23,7 @@ echo "   ***********************************************************************
 echo "                       Script para actualizar BlueDV                       "
 echo "${ROJO}                                   By EA3EIZ ${VERDE}                 "
 echo "   **************************************************************************"
-echo "\33[1;36m   1)${AMARILLO} Actualizar BlueDV a la Versión 9593c ${VERDE} (NEW)"
+echo "\33[1;36m   1)${AMARILLO} Actualizar BlueDV a la Versión 9593 ${VERDE} (NEW)"
 echo "\33[1;36m   2)\33[1;37m Volver a BlueDV Versión 9582"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
