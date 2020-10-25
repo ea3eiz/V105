@@ -1071,7 +1071,7 @@ do
                           buscar=":"
                           largo=`expr index $timeo $buscar`
                           echo "Valor actual del Timeout = : ${AMARILLO}${timeo1#*=}\33[1;37m"
-                          read -p 'Introduce el valor para Timeout (valor optimo=0): ' V
+                          read -p 'Introduce el valor para Timeout (valor optimo=180): ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
