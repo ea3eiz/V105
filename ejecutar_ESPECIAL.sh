@@ -50,7 +50,7 @@ echo " *************************************************************************
 echo " **************************    ABRIENDO ESPECIAL    ***************************"
 echo " ******************************************************************************"
 sleep 2
-sudo ./MMDVMESPECIAL MMDVMESPECIAL.ini
+lxterminal --geometry=50x50+300+400 -e sudo ./MMDVMESPECIAL MMDVMESPECIAL.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_ESPECIAL.desktop /home/pi
