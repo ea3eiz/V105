@@ -18,7 +18,7 @@ sudo rm /home/pi/top.desktop
             cd /home/pi/mvoice
             ./mvoice
             else
-            cd /home/pi/prueba
-            #./borrar1
-zenity --warning --ok-label=CERRAR --title=Sistema_M17 --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=500 --text "Próximamente podreis descargar desde la web:\nhttp://www.associacioader.com\nuna nueva versión V105 (25-10-2020)\ncon la cual podréis usar este sistema M17."
+            cd /home/pi/V105
+            ./borrar
+#zenity --warning --ok-label=CERRAR --title=Sistema_M17 --window-icon=/home/pi/V105/ICONO_DMRGATEWAY_ON.png --width=500 --text "Próximamente podreis descargar desde la web:\nhttp://www.associacioader.com\nuna nueva versión V105 (25-10-2020)\ncon la cual podréis usar este sistema M17."
             fi
