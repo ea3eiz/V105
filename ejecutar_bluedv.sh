@@ -1,6 +1,4 @@
 #!/bin/bash
-cd /home/pi/V105
-./aviso
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_BlueDV.desktop /home/pi
