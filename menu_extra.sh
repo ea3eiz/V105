@@ -651,7 +651,7 @@ clear
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
                                 rm -R /home/pi/mvoice
-                                cp /home/pi/V105/mvoice /home/pi
+                                cp -R /home/pi/V105/mvoice /home/pi
                                 sleep 2
                                 cd /home/pi/mvoice
                                 make
