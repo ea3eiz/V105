@@ -376,7 +376,7 @@ exit;
 break;;
 esac
 done;;
-12) echo ""
+12bloqueado) echo ""
 while true
 do
 clear
@@ -640,6 +640,27 @@ sleep 3
                     echo ""
 
 clear
+break;;
+esac
+done;;
+1000) echo ""
+while true
+do
+clear
+                                ejecutar1=S
+                                case $ejecutar1 in
+                                [sS]* ) echo ""
+                                rm -R /home/pi/mvoice
+                                cp /home/pi/V105/mvoice /home/pi
+                                sleep 2
+                                cd /home/pi/mvoice
+                                make
+                                make install
+                                echo ""
+                                break;;
+                                [nN]* ) echo ""
+clear
+exit;
 break;;
 esac
 done;;
