@@ -12,7 +12,7 @@ sudo cp Abrir_BlueDV.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_BlueDV.desktop
 
-zenity --info --ok-label= --title=Abriendo_BlueDB --window-icon=/home/pi/V105/ICONO_BLUEDV_ON.png --width=400 --timeout=125 --text "El BlueDv tardará unos minutos en abrirse \ndependiendo de la velocidad de su Raspberry\nsea paciente y espere que se abra."
+#zenity --info --ok-label= --title=Abriendo_BlueDB --window-icon=/home/pi/V105/ICONO_BLUEDV_ON.png --width=400 --timeout=125 --text "El BlueDv tardará unos minutos en abrirse \ndependiendo de la velocidad de su Raspberry\nsea paciente y espere que se abra."
 
 cd /home/pi/bluedv/
 /home/pi/V105/./aviso | mono BlueDV.exe
