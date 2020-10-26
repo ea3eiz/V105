@@ -234,7 +234,7 @@ void CMainWindow::on_M17DestActionButton_clicked()
 		for (const auto &member : routeMap.GetKeys())
 			pM17DestCallsignComboBox->append(member);
 		pM17DestCallsignComboBox->set_active_text(cs);
-	} else if (0 == label.compare("Delete")) {
+	} else if (0 == label.compare("Delete1")) {
 		int index = pM17DestCallsignComboBox->get_active_row_number();
 		pM17DestCallsignComboBox->remove_text(index);
 		routeMap.Erase(cs);
@@ -427,7 +427,7 @@ void CMainWindow::FixM17DestActionButton()
 					SetDestActionButton(true, "Update");
 				} else {
 					// perfect match
-					SetDestActionButton(true, "Delete");
+					SetDestActionButton(true, "Delete1");
 					pM17DestCallsignComboBox->set_active_text(cs);
 				}
 			} else {
