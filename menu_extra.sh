@@ -655,10 +655,6 @@ clear
 
 			
 
-            else
-            cd /home/pi/V105
-            ./aviso
-            fi
 
 
 
