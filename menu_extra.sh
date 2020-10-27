@@ -651,13 +651,17 @@ clear
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
 version_a_instalar=$(awk "NR==1" /home/pi/V105/mvoice/version)
-version_instalada=$(awk "NR==12" /home/pi/info.ini)
+version_instalada=$(awk "NR==3" /home/pi/info.ini)
 
 echo "versión a instalar: $version_a_instalar"
 echo "Versión instalada: $version_instalada"
 
 
 read a
+
+
+if [ $CADENA1 != $CADENA2 ]; then
+
 if [ $version_a_instalar != $version_instalada ];then
                                 rm -R /home/pi/mvoice
                                 cp -R /home/pi/V105/mvoice /home/pi
@@ -665,7 +669,7 @@ if [ $version_a_instalar != $version_instalada ];then
                                 cd /home/pi/mvoice
                                 make
                                 make install
-                                sed -i "12c $version_a_instalar" /home/pi/info.ini
+                                sed -i "3c $version_a_instalar" /home/pi/info.ini
                                 else
                                 echo "ya tienes la última versión instalada"
                                 sleep 5
