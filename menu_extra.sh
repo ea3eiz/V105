@@ -652,7 +652,7 @@ clear
                                 [sS]* ) echo ""
 version_a_instalar=$(awk "NR==1" /home/pi/V105/mvoice/version)
 version_instalada=$(awk "NR==12" /home/pi/info.ini)
-if [ "$version_a_instalar" != $version_instalada ];then
+if [ $version_a_instalar != $version_instalada ];then
                                 rm -R /home/pi/mvoice
                                 cp -R /home/pi/V105/mvoice /home/pi
                                 sleep 2
