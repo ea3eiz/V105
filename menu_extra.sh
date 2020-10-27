@@ -664,6 +664,7 @@ clear
                                 /home/pi/V105/./aviso_mvoice_version
                                 fi
                                 echo ""
+                                exit
                                 break;;
                                 [nN]* ) echo ""
 clear
