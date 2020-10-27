@@ -660,8 +660,6 @@ echo "Versión instalada: $version_instalada"
 read a
 
 
-if [ $CADENA1 != $CADENA2 ]; then
-
 if [ $version_a_instalar != $version_instalada ];then
                                 rm -R /home/pi/mvoice
                                 cp -R /home/pi/V105/mvoice /home/pi
