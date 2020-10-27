@@ -652,6 +652,20 @@ clear
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
+
+			
+
+            else
+            cd /home/pi/V105
+            ./aviso
+            fi
+
+
+
+
+
+                                if [ -d /home/pi/mvoice/ ];
+			                    then
                                 version_a_instalar=$(awk "NR==1" /home/pi/V105/mvoice/version)
                                 version_instalada=$(awk "NR==3" /home/pi/info.ini)
                                 if [ $version_a_instalar != $version_instalada ];then
@@ -665,6 +679,11 @@ clear
                                 else
                                 /home/pi/V105/./aviso_mvoice_version
                                 fi
+            else
+            cd /home/pi/V105
+            ./aviso
+            fi
+
                                 echo ""
                                 exit;
                                 break;;
