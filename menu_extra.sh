@@ -564,7 +564,7 @@ sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/dmrplus.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/especial.ini
-#sudo sed -i "17c $location" /opt/NXDNGateway.ini
+#sudo sed -i "17c $location" /opt/NXDNGateway.ini 
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
 url=$(awk "NR==9" /home/pi/.local/RESTAURAR/Downloads/datos_dvswitch)
@@ -650,12 +650,20 @@ clear
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
+version_a_instalar=$(awk "NR==1" /home/pi/V105/mvoice/version)
+version_instalada=$(awk "NR==12" /home/pi/info.ini)
+if [ "$version_a_instalar" != $version_instalada ];then
                                 rm -R /home/pi/mvoice
                                 cp -R /home/pi/V105/mvoice /home/pi
                                 sleep 2
                                 cd /home/pi/mvoice
                                 make
                                 make install
+                                sed -i "12c $version_a_instalar" /home/pi/info.ini
+                                else
+                                echo "ya tienes la última versión instalada"
+                                sleep 5
+                                fi
                                 echo ""
                                 break;;
                                 [nN]* ) echo ""
