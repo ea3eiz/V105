@@ -46,6 +46,8 @@ echo "${CIAN}   9)${BLANCO} Grabar pantalla Nextion"
 echo "${CIAN}  10)${VERDE} Menú Actualizar MMDVM_HS Libre kit y ZUMSpot"
 echo "${CIAN}  11)${CIAN} Configuración especial de Red"
 echo ""
+echo "${CIAn}  12)${AMARILLO} Actualizar mvoice M17"
+echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
@@ -643,7 +645,7 @@ clear
 break;;
 esac
 done;;
-1000) echo ""
+12) echo ""
 while true
 do
 clear
@@ -661,7 +663,6 @@ clear
                                 make install
                                 sed -i "3c $version_a_instalar" /home/pi/info.ini
                                 else
-                                clear
                                 /home/pi/V105/./aviso_mvoice_version
                                 fi
                                 echo ""
