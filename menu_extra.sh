@@ -661,6 +661,7 @@ clear
                                 make install
                                 sed -i "3c $version_a_instalar" /home/pi/info.ini
                                 else
+                                clear
                                 /home/pi/V105/./aviso_mvoice_version
                                 fi
                                 echo ""
