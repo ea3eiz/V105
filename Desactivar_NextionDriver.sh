@@ -1,4 +1,5 @@
 #!/bin/bash
+/home/pi/V105/./nextiondriver_desactivar
 # path usuario
 usuario="/home/pi"
 usuario="$usuario"
@@ -13,19 +14,8 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 echo "${AMARILLO}"
-echo " *********************************************************************"
-echo " *                                                                   *"
-echo " * Si Desactivas NextionDriver funcionará la China pinchada en Raspi *"
-echo " *                                                                   *"
-echo " *********************************************************************"
-echo ""
-echo "${ROJO}"
-echo " *********************************************************************"
-echo " *                                                                   *"
-echo " *        OJO!! Una vez desactivado se reiniciará la Raspberry       *"
-echo " *                                                                   *"
-echo " *********************************************************************"
-echo "${CIAN}"
+echo "\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v"
+echo "${AMARILLO}"
 echo -n " Quieres Desactivar NextionDriver S/N ? "
 read desactivar
 case "$desactivar" in
