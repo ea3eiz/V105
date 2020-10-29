@@ -1,4 +1,5 @@
 #!/bin/bash
+/home/pi/V105/./dvswitch_activado
 # path usuario
 usuario="/home/pi"
 usuario=$(awk "NR==1" $usuario/.config/autostart/usuario)
