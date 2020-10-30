@@ -284,6 +284,7 @@ clear
                         mkdir /home/pi/.temp
                         cd /home/pi/.temp
                         wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
+                        sudo apt update
                         sudo dpkg -i anydesk_2.9.4-1_armhf.deb
                         sudo apt-get install -f
                         sudo rm /home/pi/.local/RESTAURAR/Downloads/anydesk_2.9.4-1_armhf.deb
