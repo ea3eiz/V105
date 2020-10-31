@@ -35,10 +35,6 @@ sleep 2
                         # 31-10-2020 poner version V-25-10-20 en Web DVSWITCH
 			            sed -i "11c 25-10-20" $usuario/info.ini
 
-                        # 31-10-2020 ejecutable modificado
-                        cd /home/pi/V105
-                        sudo cp MMDVM_Bridge /opt/MMDVM_Bridge/
-
                         # 14-08-2020 cambio actualizar para que salgan los indicativos en DVSWITCH:
                         cd /var/lib/mmdvm
                         sudo curl --fail -o DMRIds.dat -s http://www.pistar.uk/downloads/DMRIds.dat
