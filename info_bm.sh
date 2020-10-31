@@ -2,9 +2,9 @@
 
 if [ -f /home/pi/.local/memoria_bm]; 
 then
-cp memoria_bm /home/pi/.local/
-else
 echo ""
+else
+cp memoria_bm /home/pi/.local/
 fi
 
 DIRECTORIO="MMDVMBM.ini"
