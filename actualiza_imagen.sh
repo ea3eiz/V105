@@ -31,14 +31,16 @@ sleep 2
                         git pull
                         sleep 1
                         sudo chmod 777 -R /home/pi/AUTOARRANQUEV105
-
+                        
+                        # 31-110-2020 poner version V-25-10-20 en Web DVSWITCH
+			            sed -i "11c 25-10-20" $usuario/info.ini
+                       
                         # 14-08-2020 cambio actualizar para que salgan los indicativos en DVSWITCH:
                         cd /var/lib/mmdvm
                         sudo curl --fail -o DMRIds.dat -s http://www.pistar.uk/downloads/DMRIds.dat
                         sudo chmod 777 -R /var/lib/mmdvm
 
                         cd $usuario/YSFClients/YSFGateway
-
 
                         # 02-08-2020 cambio quitar sistema actual:
                         cd /home/pi/V105
