@@ -86,7 +86,7 @@ sleep 2
                         sudo chmod +x /usr/local/sbin/call_id.sh
                         sudo chmod +x /usr/local/sbin/ssz.sh
                         sudo chmod +x /usr/local/sbin/test.sh
-                        sudo chmod +x /usr/local/sbin/tune.sh
+                        #sudo chmod +x /usr/local/sbin/tune.sh
 
                         #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
                         frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
