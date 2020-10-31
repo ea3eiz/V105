@@ -223,18 +223,30 @@ dup=`grep -n -m 1 '\<Duplex\>' $usuario/MMDVMHost/$DIRECTORIO`
 dup1=`expr substr $dup 3 30`
 echo -n "$dup1"
 
-echo -n "${CIAN}          \td)${GRIS} P25         - ${AMARILLO}"
-p25=`grep -n "\[P25\]" $usuario/MMDVMHost/$DIRECTORIO`
-buscar=":"
-largo_linea=`expr index $p25 $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $p25 1 $largo_linea`
-numero_linea_p25=`expr $numero_linea + 1`
-letra=p
-numero_linea_p25_letrap=$numero_linea_p25$letra
-letrac=c
-numero_linea_p25_letrac=$numero_linea_p25$letrac
-presentar_valor= sed -n $numero_linea_p25_letrap  $usuario/MMDVMHost/$DIRECTORIO;
+#echo -n "${CIAN}          \td)${GRIS} P25         - ${AMARILLO}"
+#p25=`grep -n "\[P25\]" $usuario/MMDVMHost/$DIRECTORIO`
+#buscar=":"
+#largo_linea=`expr index $p25 $buscar`
+#largo_linea=`expr $largo_linea - 1`
+#numero_linea=`expr substr $p25 1 $largo_linea`
+#numero_linea_p25=`expr $numero_linea + 1`
+#letra=p
+#numero_linea_p25_letrap=$numero_linea_p25$letra
+#letrac=c
+#numero_linea_p25_letrac=$numero_linea_p25$letrac
+#presentar_valor= sed -n $numero_linea_p25_letrap  $usuario/MMDVMHost/$DIRECTORIO;
+
+
+
+
+#d) P25 Enable=
+echo -n "${CIAN}          \t\td)${GRIS} P25         - ${AMARILLO}"
+p25_enable=$(sudo crudini --get $usuario/MMDVMHost/$DIRECTORIO P25 Enable)
+echo "$p25_enable"
+
+
+
+
 
 echo -n "${CIAN}  18)${GRIS} Modificar TXHang      - ${AMARILLO}"
 txh=`grep -n -m 1 '\<TXHang\>' $usuario/MMDVMHost/$DIRECTORIO`
@@ -1003,16 +1015,30 @@ do
                           break;;
 esac
 done;;
+#d) echo ""
+#while true
+#do
+#                          echo -n "Valor  actual  P25 ${AMARILLO}${presentar_valor#*=}\33[1;37m"
+#                          presenta_valor= sed -n $numero_linea_p25_letrap  $usuario/MMDVMHost/$DIRECTORIO;
+#                          read -p 'Desactivado=0 Activado=1: '   dmrac1
+#                          actualizar=S 
+#                          case $actualizar in
+#                          [sS]* ) echo ""
+#                          sed -i "$numero_linea_p25_letrac Enable=$dmrac1" $usuario/MMDVMHost/$DIRECTORIO
+#                          break;;
+#                          [nN]* ) echo ""
+#                          break;;
+#esac
+#done;;
 d) echo ""
 while true
 do
-                          echo -n "Valor  actual  P25 ${AMARILLO}${presentar_valor#*=}\33[1;37m"
-                          presenta_valor= sed -n $numero_linea_p25_letrap  $usuario/MMDVMHost/$DIRECTORIO;
-                          read -p 'Desactivado=0 Activado=1: '   dmrac1
+                          echo -n "   Valor  actual  P25 ${AMARILLO}$p25_enable\33[1;37m"
+                          read -p '   Desactivado=0 Activado=1: '   p25
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$numero_linea_p25_letrac Enable=$dmrac1" $usuario/MMDVMHost/$DIRECTORIO
+sudo crudini --set $usuario/MMDVMHost/$DIRECTORIO P25 Enable $p25
                           break;;
                           [nN]* ) echo ""
                           break;;
