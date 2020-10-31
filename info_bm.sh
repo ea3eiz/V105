@@ -44,13 +44,13 @@ address="  "$address
 memoria=$(awk "NR==$linea_info_memoria" /home/pi/MMDVMHost/$DIRECTORIO)
 
 #Modificación 31-10-2020
-sed -i "3c    $indicativo" /home/pi/.local/memoria_bm
-sed -i "4c        $id" /home/pi/.local/memoria_bm
-sed -i "5c   $rxfrecuencia" /home/pi/.local/memoria_bm
-sed -i "6c   $txfrecuencia" /home/pi/.local/memoria_bm
-sed -i "7c    $puerto" /home/pi/.local/memoria_bm
-sed -i "8c    $address" /home/pi/.local/memoria_bm
-sed -i "9c    $memoria" /home/pi/.local/memoria_bm
+sudo sed -i "3c    $indicativo" /home/pi/.local/memoria_bm
+sudo sed -i "4c        $id" /home/pi/.local/memoria_bm
+sudo sed -i "5c   $rxfrecuencia" /home/pi/.local/memoria_bm
+sudo sed -i "6c   $txfrecuencia" /home/pi/.local/memoria_bm
+sudo sed -i "7c    $puerto" /home/pi/.local/memoria_bm
+sudo sed -i "8c    $address" /home/pi/.local/memoria_bm
+sudo sed -i "9c    $memoria" /home/pi/.local/memoria_bm
 
 #Colores
 ROJO="\033[1;31m"
