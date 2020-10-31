@@ -16,6 +16,11 @@ mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/$DIRECTORIO)
 puerto=`expr substr $mode 11 9`
 puerto="  "$puerto
 
+
+sed -i "6c $puerto" /home/pi/.local/memoria_bm
+
+
+
 rxfrecuencia=$(awk "NR==13" /home/pi/MMDVMHost/$DIRECTORIO)
 rxfrecuencia=`expr substr $rxfrecuencia 13 17`
 rxfrecuencia=$rxfrecuencia
