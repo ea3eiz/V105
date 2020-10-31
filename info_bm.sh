@@ -16,11 +16,6 @@ mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/$DIRECTORIO)
 puerto=`expr substr $mode 11 9`
 puerto="  "$puerto
 
-
-sed -i "6c $puerto" /home/pi/.local/memoria_bm
-
-
-
 rxfrecuencia=$(awk "NR==13" /home/pi/MMDVMHost/$DIRECTORIO)
 rxfrecuencia=`expr substr $rxfrecuencia 13 17`
 rxfrecuencia=$rxfrecuencia
@@ -47,6 +42,15 @@ address=`expr substr $address 13 35`
 address="  "$address
 
 memoria=$(awk "NR==$linea_info_memoria" /home/pi/MMDVMHost/$DIRECTORIO)
+
+#Modificación 31-10-2020
+sed -i "3c    $indicativo" /home/pi/.local/memoria_bm
+sed -i "4c        $id" /home/pi/.local/memoria_bm
+sed -i "5c   $rxfrecuencia" /home/pi/.local/memoria_bm
+sed -i "6c   $txfrecuencia" /home/pi/.local/memoria_bm
+sed -i "7c    $puerto" /home/pi/.local/memoria_bm
+sed -i "8c    $address" /home/pi/.local/memoria_bm
+sed -i "9c    $memoria" /home/pi/.local/memoria_bm
 
 #Colores
 ROJO="\033[1;31m"
