@@ -122,7 +122,7 @@ sleep 2
                         sudo rm $usuario/RXF_NXDN.desktop
 
 clear
-/home/pi/V105/./imagen_atualizada
+/home/pi/V105/./imagen_actualizada
 # echo "${VERDE}"
 # echo "\v\v\v\v\v"
 # echo "   *************************************************************************"
