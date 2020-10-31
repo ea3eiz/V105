@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cp memoria_bm /home/pi/.local/
+
+
+
 DIRECTORIO="MMDVMBM.ini"
 linea_info_memoria="313c" #Linea del MMDVM donde guardamos el nombre de la memoria
 
