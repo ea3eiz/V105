@@ -1,6 +1,7 @@
 #!/bin/bash
 
-if [ -f /home/pi/.local/memoria_bm] then
+if [ -f /home/pi/.local/memoria_bm]; 
+then
 cp memoria_bm /home/pi/.local/
 else
 echo ""
