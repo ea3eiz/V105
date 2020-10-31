@@ -51,8 +51,8 @@ sudo sed -i "3c Indicativo:   $indicativo" /home/pi/.local/memoria_bm
 sudo sed -i "4c Id:           $id" /home/pi/.local/memoria_bm
 sudo sed -i "5c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_bm
 sudo sed -i "6c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_bm
-sudo sed -i "7c Puerto:       $puerto" /home/pi/.local/memoria_bm
-sudo sed -i "8c Address:      $address" /home/pi/.local/memoria_bm
+sudo sed -i "7c Puerto:     $puerto" /home/pi/.local/memoria_bm
+sudo sed -i "8c Address:    $address" /home/pi/.local/memoria_bm
 sudo sed -i "9c Memoria:      $memoria" /home/pi/.local/memoria_bm
 
 #Colores
