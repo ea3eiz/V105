@@ -1250,6 +1250,7 @@ do
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
                         sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
 sudo sed -i "18c $memoria1" $usuario/.local/memorias
+sudo sed -i "17c $memoria1" $usuario/.local/memorias
 
 
                   
@@ -1291,6 +1292,7 @@ do
 
 
 sudo sed -i "19c $memoria2" $usuario/.local/memorias
+sudo sed -i "17c $memoria2" $usuario/.local/memorias
 
 			                  break;;
 			                  [nN]* ) echo ""
@@ -1328,6 +1330,7 @@ do
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia3
 
 sudo sed -i "20c $memoria3" $usuario/.local/memorias
+sudo sed -i "17c $memoria3" $usuario/.local/memorias
 
 			                  break;;
 			                  [nN]* ) echo ""
