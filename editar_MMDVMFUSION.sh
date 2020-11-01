@@ -1270,7 +1270,7 @@ do
                         echo "<<<<<< Restaurando copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia $usuario/MMDVMHost/$DIRECTORIO
-                        sudo sed -i "17c $memoria1" $usuario/.local/memorias
+sudo sed -i "17c $memoria1" $usuario/.local/memorias
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -1310,7 +1310,7 @@ do
                         echo "<<<<<< Restaurando copia de seguridad  de la M2 >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia2 $usuario/MMDVMHost/$DIRECTORIO
-                        sudo sed -i "17c $memoria2" $usuario/.local/memorias
+sudo sed -i "17c $memoria2" $usuario/.local/memorias
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -1349,6 +1349,7 @@ do
                         echo "<<<<<< Restaurando copia de seguridad de la M3 >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia3 $usuario/MMDVMHost/$DIRECTORIO
+sudo sed -i "17c $memoria3" $usuario/.local/memorias
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -1365,7 +1366,6 @@ do
                         echo "<<<<<< Restaurando el fichero original $DIRECTORIO >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/MMDVM.ini_original $usuario/MMDVMHost/$DIRECTORIO
-                        sudo sed -i "17c $memoria3" $usuario/.local/memorias
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
