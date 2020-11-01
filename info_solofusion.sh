@@ -37,7 +37,7 @@ mode=$(awk "NR==$numero_linea_address" /home/pi/MMDVMHost/$DIRECTORIO)
 address=`expr substr $address 13 35`
 address="  "$address
 
-memoria=$(awk "NR==$linea_info_memoria" /home/pi/MMDVMHost/$DIRECTORIO)
+memoria=$(awk "NR==17" /home/pi/.local/memorias)
 
 #Modificación 31-10-2020
 sudo sed -i "1c Indicativo:   $indicativo" /home/pi/.local/memoria_solofusion
@@ -46,12 +46,10 @@ sudo sed -i "3c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_solofusion
 sudo sed -i "4c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_solofusion
 sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_solofusion
 sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_solofusion
+sudo sed -i "7c Memoria:      $memoria" /home/pi/.local/memoria_solofusion
 
-memoriaprueba=$(awk "NR==17" /home/pi/.local/memorias)
 Startup=$(awk "NR==42" /home/pi/YSFClients/YSFGateway/YSFGateway.ini)
 Startup=`expr substr $Startup 9 20`
-
-sudo sed -i "7c Memoria:      $memoriaprueba" /home/pi/.local/memoria_solofusion
 sudo sed -i "8c Startup:      $Startup" /home/pi/.local/memoria_solofusion
 
 #Colores
