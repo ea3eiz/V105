@@ -39,6 +39,18 @@ address="  "$address
 
 memoria=$(awk "NR==$linea_info_memoria" /home/pi/MMDVMHost/$DIRECTORIO)
 
+#Modificación 31-10-2020
+sudo sed -i "1c Indicativo:   $indicativo" /home/pi/.local/memoria_solofision
+sudo sed -i "2c Id:           $id" /home/pi/.local/memoria_solofision
+sudo sed -i "3c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_solofision
+sudo sed -i "4c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_solofision
+sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_solofision
+sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_solofision
+
+memoriaprueba=$(awk "NR==17" /home/pi/.local/memorias)
+
+sudo sed -i "7c Memoria:      $memoriaprueba" /home/pi/.local/memoria_solofision
+
 #Colores
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
