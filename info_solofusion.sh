@@ -48,8 +48,10 @@ sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_solofusion
 sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_solofusion
 
 memoriaprueba=$(awk "NR==17" /home/pi/.local/memorias)
+Startup=$(awk "NR==42" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 
 sudo sed -i "7c Memoria:      $memoriaprueba" /home/pi/.local/memoria_solofusion
+sudo sed -i "8c Startup:      $Startup" /home/pi/.local/memoria_solofusion
 
 #Colores
 ROJO="\033[1;31m"
