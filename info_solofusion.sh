@@ -74,6 +74,7 @@ echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
 echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
 echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
 echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
+echo "${CIAN}  Startup:      ${AMARILLO}$Startup   "
 echo -n "${VERDE}"
 echo "  ******************************************"
 
