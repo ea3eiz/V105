@@ -50,7 +50,7 @@ sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_solofision
 memoriaprueba=$(awk "NR==17" /home/pi/.local/memorias)
 
 sudo sed -i "7c Memoria:      $memoriaprueba" /home/pi/.local/memoria_solofision
-
+read a
 #Colores
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
