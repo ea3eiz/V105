@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [ -f /home/pi/.local/memoria_solofusion ]
+then
+echo ""
+else
+cp memoria_solofusion /home/pi/.local/
+fi
+
 DIRECTORIO="MMDVMFUSION.ini"
 linea_info_memoria="313" #Linea del MMDVM donde guardamos el nombre de la memoria
 
