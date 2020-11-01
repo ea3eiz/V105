@@ -1,12 +1,11 @@
 ﻿#!/bin/bash
 
-if [ -f /home/pi/.local/memorias];
+if [ -f /home/pi/.local/memorias]; 
 then
 echo ""
 else
-cp /home/pi/V105/memorias /home/pi/.local/
+cp memorias /home/pi/.local/
 fi
-
 
 clear
 while true
