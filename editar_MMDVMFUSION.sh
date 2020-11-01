@@ -34,6 +34,7 @@ GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
 linea_info_memoria="313c" #Linea del MMDVM donde guardamos el nombre de la memoria
+posicion_memoria="17c" #Linea memoria MMDVMFUSION.ini donde guardamos la memoria MMDVMFUSION.ini_copia, MMDVMFUSION.ini_copia1 y MMDVMFUSION.ini_copia2 en /home/pi/.local/memorias
 
 echo "${VERDE}"
 echo "   ***************************************************************************************"
@@ -1248,6 +1249,10 @@ do
                         echo "$linea_info_memoria $usuario $DIRECTORIO $memoria1"
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
                         sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
+sudo sed -i "18c $memoria1" $usuario/.local/memorias
+
+
+                  
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
@@ -1283,6 +1288,10 @@ do
                         sed -i "$segun $memoria2" $usuario/info_panel_control.ini
                         sed -i "$linea_info_memoria $memoria2" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia2
+
+
+sudo sed -i "19c $memoria2" $usuario/.local/memorias
+
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -1317,6 +1326,9 @@ do
                         sed -i "$tercer $memoria3" $usuario/info_panel_control.ini
                         sed -i "$linea_info_memoria $memoria3" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia3
+
+sudo sed -i "20c $memoria3" $usuario/.local/memorias
+
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
