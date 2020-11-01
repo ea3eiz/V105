@@ -49,7 +49,7 @@ sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_solofusion
 
 memoriaprueba=$(awk "NR==17" /home/pi/.local/memorias)
 Startup=$(awk "NR==42" /home/pi/YSFClients/YSFGateway/YSFGateway.ini)
-Startup=`expr substr $Startup 9 11`
+Startup=`expr substr $Startup 9 20`
 
 sudo sed -i "7c Memoria:      $memoriaprueba" /home/pi/.local/memoria_solofusion
 sudo sed -i "8c Startup:      $Startup" /home/pi/.local/memoria_solofusion
