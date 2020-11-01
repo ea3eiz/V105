@@ -88,6 +88,28 @@ sleep 2
                         sudo chmod +x /usr/local/sbin/test.sh
                         #sudo chmod +x /usr/local/sbin/tune.sh
 
+#Cambios 01-11-2020
+if [ -f /home/pi/.local/memoria_bm ]
+then
+echo ""
+else
+cp memoria_bm /home/pi/.local/
+fi
+
+if [ -f /home/pi/.local/memoria_solofusion ]
+then
+echo ""
+else
+cp memoria_solofusion /home/pi/.local/
+fi
+
+if [ -f /home/pi/.local/memorias ] 
+then
+echo ""
+else
+cp memorias /home/pi/.local/
+fi
+
                         #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
                         frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
                         cd $usuario/Desktop/
