@@ -1,12 +1,5 @@
 #!/bin/bash
 
-if [ -f /home/pi/.local/memoria_bm ]
-then
-echo ""
-else
-cp memoria_bm /home/pi/.local/
-fi
-
 DIRECTORIO="MMDVMBM.ini"
 linea_info_memoria="313c" #Linea del MMDVM donde guardamos el nombre de la memoria
 

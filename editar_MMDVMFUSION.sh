@@ -1,12 +1,5 @@
 ﻿#!/bin/bash
 
-if [ -f /home/pi/.local/memorias ] 
-then
-echo ""
-else
-cp memorias /home/pi/.local/
-fi
-
 clear
 while true
 do
