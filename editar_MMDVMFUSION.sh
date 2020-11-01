@@ -1,6 +1,6 @@
 ﻿#!/bin/bash
 
-if [ -f /home/pi/.local/memorias]; 
+if [ -f /home/pi/.local/memorias ] 
 then
 echo ""
 else
