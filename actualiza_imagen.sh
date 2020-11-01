@@ -93,21 +93,21 @@ if [ -f /home/pi/.local/memoria_bm ]
 then
 echo ""
 else
-cp memoria_bm /home/pi/.local/
+sudo cp memoria_bm /home/pi/.local/
 fi
 
 if [ -f /home/pi/.local/memoria_solofusion ]
 then
 echo ""
 else
-cp memoria_solofusion /home/pi/.local/
+sudo cp memoria_solofusion /home/pi/.local/
 fi
 
 if [ -f /home/pi/.local/memorias ] 
 then
 echo ""
 else
-cp memorias /home/pi/.local/
+sudo cp memorias /home/pi/.local/
 fi
 
                         #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
