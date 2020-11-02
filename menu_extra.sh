@@ -692,6 +692,44 @@ exit;
 break;;
 esac
 done;;
+1000) echo ""
+while true
+do
+clear
+                                ejecutar1=S
+                                case $ejecutar1 in
+                                [sS]* ) echo ""
+                                if [ -d /home/pi/DMR2M17/ ];
+			                    then
+                                #version_a_instalar=$(awk "NR==1" /home/pi/V105/mvoice/version)
+                                #version_instalada=$(awk "NR==3" /home/pi/info.ini)
+                                #if [ $version_a_instalar != $version_instalada ];then
+                                #rm -R /home/pi/mvoice
+                                cp -R /home/pi/V105/DMR2M17/home/pi
+                                sleep 2
+                                cd /home/pi/DMR2M17
+                                make
+                                make install
+                                #sed -i "3c $version_a_instalar" /home/pi/info.ini
+                                
+                                #else
+                                #/home/pi/V105/./aviso_mvoice_version
+                                #fi
+
+                                #else
+                                #cd /home/pi/V105
+                                #./aviso
+                                #fi
+
+                                echo ""
+                                exit;
+                                break;;
+                                [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 0) echo ""
 clear
 echo "${AMARILLO}"
