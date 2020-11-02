@@ -705,6 +705,10 @@ clear
                                 #version_instalada=$(awk "NR==3" /home/pi/info.ini)
                                 #if [ $version_a_instalar != $version_instalada ];then
                                 #rm -R /home/pi/mvoice
+
+git clone https://github.com/nostar/md380_vocoder
+cd md380_vocoder
+make clean all                               
                                 cp -R /home/pi/V105/DMR2M17 /home/pi
                                 sleep 2
                                 cd /home/pi/DMR2M17
