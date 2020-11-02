@@ -705,7 +705,7 @@ clear
                                 #version_instalada=$(awk "NR==3" /home/pi/info.ini)
                                 #if [ $version_a_instalar != $version_instalada ];then
                                 #rm -R /home/pi/mvoice                              
-
+cd /home/pi/
 git clone https://github.com/nostar/md380_vocoder
 
 
