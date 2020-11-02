@@ -706,11 +706,9 @@ clear
                                 #if [ $version_a_instalar != $version_instalada ];then
                                 #rm -R /home/pi/mvoice                              
 
+git clone https://github.com/nostar/md380_vocoder
 
 
-
-
-                                git clone https://github.com/nostar/md380_vocoder
                                 sleep 1
                                 cd /home/pi/md380_vocoder
                                 make clean all
