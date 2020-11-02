@@ -699,41 +699,27 @@ clear
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
-                                #if [ -d /home/pi/DMR2M17/ ];
-			                    #then
-                                #version_a_instalar=$(awk "NR==1" /home/pi/V105/mvoice/version)
-                                #version_instalada=$(awk "NR==3" /home/pi/info.ini)
-                                #if [ $version_a_instalar != $version_instalada ];then
-                                #rm -R /home/pi/mvoice                              
-cd /home/pi/
-git clone https://github.com/nostar/md380_vocoder
-
-
+                                                                
+                                cd /home/pi/
+                                git clone https://github.com/nostar/md380_vocoder
                                 sleep 1
                                 cd /home/pi/md380_vocoder
                                 make clean all
-                                
-                                #cp -R /home/pi/V105/DMR2M17 /home/pi
-                                #sleep 1
-                                #cd /home/pi/DMR2M17
-                                #make
-                                #make install
+                                sudo make install
 
+                                cp -R /home/pi/V105/DMR2M17 /home/pi
+                                sleep 1
+                                cd /home/pi/DMR2M17
+                                make
+                                sudo make install
 
+                                # Crea el ejecutable DMR2M17
+                                cd /home/pi/MMDVMHost
+                                cp DMR2YSF MMDVMDMR2M17
 
-
-
-
-                                #sed -i "3c $version_a_instalar" /home/pi/info.ini
-                                
-                                #else
-                                #/home/pi/V105/./aviso_mvoice_version
-                                #fi
-
-                                #else
-                                #cd /home/pi/V105
-                                #./aviso
-                                #fi
+                                # Crea el ejecutable DMR2M17.ini
+                                cd /home/pi/MMDVMHost
+                                cp MMDVMDMR2YSF.ini  MMDVMDMR2M17.ini
 
                                 echo ""
                                 exit;
