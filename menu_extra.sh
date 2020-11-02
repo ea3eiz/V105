@@ -699,8 +699,8 @@ clear
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
-                                if [ -d /home/pi/DMR2M17/ ];
-			                    then
+                                #if [ -d /home/pi/DMR2M17/ ];
+			                    #then
                                 #version_a_instalar=$(awk "NR==1" /home/pi/V105/mvoice/version)
                                 #version_instalada=$(awk "NR==3" /home/pi/info.ini)
                                 #if [ $version_a_instalar != $version_instalada ];then
