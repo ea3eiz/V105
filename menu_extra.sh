@@ -721,7 +721,7 @@ clear
                                 #cd /home/pi/MMDVMHost
                                 #cp MMDVMDMR2YSF.ini  MMDVMDMR2M17.ini
 
-                                cp /home/pi/V105/ABRIR DMR2M17.desktop /home/pi/Desktop
+                                cp /home/pi/V105/ABRIR_DMR2M17.desktop /home/pi/Desktop
 
                                 echo ""
                                 exit;
