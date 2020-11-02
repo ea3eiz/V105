@@ -708,15 +708,15 @@ clear
 
 
 
-                                    
-                                          
-                                cp -R /home/pi/V105/md380_vocoder /home/pi
-                                sleep 2
+
+
+                                git clone https://github.com/nostar/md380_vocoder
+                                sleep 1
                                 cd /home/pi/md380_vocoder
                                 make clean all
                                 
                                 #cp -R /home/pi/V105/DMR2M17 /home/pi
-                                #sleep 2
+                                #sleep 1
                                 #cd /home/pi/DMR2M17
                                 #make
                                 #make install
