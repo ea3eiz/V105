@@ -369,7 +369,7 @@ echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
 echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
 echo "  ${CIAN} P) \33[0mModificar DstName     - ${VERDE}$dstname \t${CIAN}R)${AMARILLO} Importar de una lista"
 echo "  ${CIAN} Q) \33[0mModificar DstAddress  - ${VERDE}$dstadddress"
-
+echo ""
 echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
