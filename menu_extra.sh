@@ -741,21 +741,21 @@ do
 clear
                                 ejecutar1=S
                                 case $ejecutar1 in
-                                [sS]* ) echo ""
-                                                                
+                                [sS]* ) echo ""                                                                
                                 sudo rm -R /home/pi/md380_vocoder
-
-                                sudo rm -R /home/pi/V105/DMR2M17
                                 sleep 1
-
+                                sudo rm -R /home/pi/DMR2M17
+                                sleep 1
                                 cd /home/pi/MMDVMHost
                                 sudo rm MMDVMDMR2M17.ini
-
+                                sleep 1
+                                sudo rm MMDVMDMR2M17
+                                sleep 1
                                 rm /home/pi/Desktop/ABRIR_DMR2M17.desktop
+                                sleep 1
                                 rm /home/pi/Desktop/Editar_DMR2M17.desktop
-
+                                sleep 1
                                 sudo cp /home/pi/V105/FONDO_ADER_V105_SIN_M17.jpg /home/pi/V105/FONDO_ADER_V105.jpg
-
                                 echo ""
                                 exit;
                                 break;;
