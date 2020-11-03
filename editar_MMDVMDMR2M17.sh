@@ -577,7 +577,7 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
                           numero_linea_idd=$numero_linea_idd$letra
 
                           sed -i "3c Id=$miid" $usuario/MMDVMHost/$DIRECTORIO
-                          sed -i "12c Id=$miid" $usuario/DMR2m17/DMR2m17.ini
+                          sed -i "12c Id=$miid" $usuario/DMR2M17/DMR2M17.ini
 
                           ide=$(awk "NR==3" $usuario/MMDVMHost/$DIRECTORIO)
                           sed -i "2c $ide" $usuario/info_panel_control.ini
