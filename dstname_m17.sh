@@ -27,7 +27,7 @@ echo -n "${VERDE}"
 echo "   ***************************************************************************************"
 echo ""
 echo "${AMARILLO}      DstName        DstAddress"
-echo "      ========       ===================="
+echo "      =========      ========================"
 echo  "${CIAN}   1)${BLANCO} M17-ESP D      IP: 5.249.148.156"
 echo  "${CIAN}   2)${BLANCO} M17-EA3 Y      IP: aderdigital.ddns.net"
 
