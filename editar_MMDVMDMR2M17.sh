@@ -1209,6 +1209,18 @@ do
                           break;;
 esac
 done;;
+R) echo ""
+while true
+do                         
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          ./home/pi/V105/dstname_m17.sh
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
 24) echo ""
 while true
 do
