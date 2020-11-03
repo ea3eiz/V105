@@ -41,7 +41,6 @@ echo " ************************    ABRIENDO BRANDMEISTER    ********************
 echo " ******************************************************************************"
 
 
-
 sleep 2
  /home/pi/V105/./qt_ejecuta_bm & sudo ./MMDVMBM MMDVMBM.ini
 
