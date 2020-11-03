@@ -1215,7 +1215,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          ./home/pi/V105/dstname_m17.sh
+                          sudo sh /home/pi/V105/dstname_m17.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
