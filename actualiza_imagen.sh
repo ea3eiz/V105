@@ -89,26 +89,26 @@ sleep 2
                         #sudo chmod +x /usr/local/sbin/tune.sh
 
 #Cambios 01-11-2020
-cd /home/pi/V105/
+
 if [ -f /home/pi/.local/memoria_bm ]
 then
 echo ""
 else
-cp memoria_bm /home/pi/.local/
+cp /home/pi/V105/memoria_bm /home/pi/.local/
 fi
 
 if [ -f /home/pi/.local/memoria_solofusion ]
 then
 echo ""
 else
-cp memoria_solofusion /home/pi/.local/
+cp /home/pi/V105/memoria_solofusion /home/pi/.local/
 fi
 
 if [ -f /home/pi/.local/memorias ] 
 then
 echo ""
 else
-cp memorias /home/pi/.local/
+cp /home/pi/V105/memorias /home/pi/.local/
 fi
 
                         #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
