@@ -26,7 +26,8 @@ echo "                                       $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ***************************************************************************************"
 
-echo  "${CIAN}   1)${BLANCO} M17-ESP D      IP:5.249.148.156"
+echo  "${CIAN}   1)${BLANCO} M17-ESP D      IP: 5.249.148.156"
+echo  "${CIAN}   2)${BLANCO} M17-EA3 Y      IP: aderdigital.ddns.net"
 
 echo ""
 echo "   ${ROJO}0) Salir"
@@ -36,7 +37,6 @@ read escoger_menu
 
 case $escoger_menu in
 
-
 1) echo ""
 while true
 do                         
@@ -45,6 +45,20 @@ do
                           [sS]* ) echo ""
                           sed -i "4c DstName=M17-ESP D" $usuario/DMR2M17/DMR2M17.ini
                           sed -i "5c DstAddress=5.249.148.156" $usuario/DMR2M17/DMR2M17.ini
+                          exit
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+2) echo ""
+while true
+do                         
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "4c DstName=M17-EA3 Y" $usuario/DMR2M17/DMR2M17.ini
+                          sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
                           exit
                           break;;
                           [nN]* ) echo ""
