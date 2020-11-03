@@ -1139,6 +1139,20 @@ do
                           break;;
 esac
 done;;
+k) echo ""
+while true
+do                         
+                          echo "Valor actual  del Jitter: ${AMARILLO}$Jitter"
+                          read -p 'Introduce valor entre 360 a 600: '   JITTER
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$numero_linea_jiter_letrac Jitter=$JITTER" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
 l) echo ""
 while true
 do                         
@@ -1167,15 +1181,29 @@ do
                           break;;
 esac
 done;;
-k) echo ""
+p) echo ""
 while true
 do                         
-                          echo "Valor actual  del Jitter: ${AMARILLO}$Jitter"
-                          read -p 'Introduce valor entre 360 a 600: '   JITTER
+                          echo "Valor actual  DstName: ${AMARILLO}$dstname"
+                          read -p 'Introduce valor (ej: M17-SPA d) : '   dst
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$numero_linea_jiter_letrac Jitter=$JITTER" $usuario/MMDVMHost/$DIRECTORIO
+                          sed -i "4c DstName=$dst" $usuario/DMR2M17/DMR2M17.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+q) echo ""
+while true
+do                         
+                          echo "Valor actual  DstAddress: ${AMARILLO}$dstaddress"
+                          read -p 'Introduce valor (ej: 5.249.148.156): '   dsta
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "5c DstAddress=$dsta" $usuario/DMR2M17/DMR2M17.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
