@@ -369,11 +369,10 @@ echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
 echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
 echo "  ${CIAN} P) \33[0mModificar DstName     - ${VERDE}$dstname \t"
 echo "  ${CIAN} Q) \33[0mModificar DstAddress  - ${VERDE}$dstadddress"
-echo "  ${CIAN} R)${AMARILLO} Importar DstName & DstAddress de una lista"
-
-echo "   ${ROJO}0) Salir"
+echo "  ${CIAN} R)${AMARILLO} Importar  DstName & DstAddress de una lista"
 echo ""
-echo -n "\33[1;36m   Elige una opción: " 
+echo "   ${ROJO}0) Salir    ${CIAN}Elige una opción: "
+
 read escoger_menu
 case $escoger_menu in
 1) echo ""
