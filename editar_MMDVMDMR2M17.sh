@@ -1337,14 +1337,6 @@ do
 esac
 done;;
 0) echo ""
-clear
-echo "\33[1;33m   **************************************************"
-echo "   *                                                *"
-echo "   *     CERRANDO SCRIPT                            *"
-echo "   *                                                *"
-echo "   **************************************************"
-sleep 1
-clear
 exit;;	
 esac
 done
