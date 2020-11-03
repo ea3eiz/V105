@@ -49,7 +49,7 @@ read escoger_menu
 case $escoger_menu in
 
 
-1001) echo ""
+1) echo ""
 while true
 do                         
                           actualizar=S 
@@ -57,12 +57,13 @@ do
                           [sS]* ) echo ""
                           sed -i "4c DstName=M17-ESP D" $usuario/DMR2M17/DMR2M17.ini
                           sed -i "5c DstAddress=5.249.148.156" $usuario/DMR2M17/DMR2M17.ini
+                          exit
                           break;;
                           [nN]* ) echo ""
                           break;;
 esac
 done;;
-1) echo ""
+1bloqueado) echo ""
 while true
 do
                             actualizar=S 
