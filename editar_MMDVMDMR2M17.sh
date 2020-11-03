@@ -373,8 +373,6 @@ echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
 echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
 
 echo ""
-echo "\33[1;36m  30)${AMARILLO} Editor memorias TG DMR - SALA YSF\33[1;33m"
-echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
@@ -404,7 +402,7 @@ indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
 			              indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
                     sed -i "$linea Callsign=$indicativo" $usuario/MMDVMHost/$DIRECTORIO
 
-                    sed -i "$linea Callsign=$indicativo" $usuario/DMR2YSF/DMR2YSF.ini
+                    sed -i "2c Callsign=$indicativo" $usuario/DMR2M17/DMR2M17.ini
 
 indi=$(awk "NR==2" $usuario/MMDVMHost/$DIRECTORIO)
 sed -i "1c $indi" $usuario/info_panel_control.ini
@@ -584,7 +582,7 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
                           numero_linea_idd=$numero_linea_idd$letra
 
                           sed -i "3c Id=$miid" $usuario/MMDVMHost/$DIRECTORIO
-                          sed -i "$numero_linea_idd Id=$miid" $usuario/DMR2YSF/DMR2YSF.ini
+                          sed -i "12c Id=$miid" $usuario/DMR2m17/DMR2m17.ini
 
                           ide=$(awk "NR==3" $usuario/MMDVMHost/$DIRECTORIO)
                           sed -i "2c $ide" $usuario/info_panel_control.ini
@@ -1287,7 +1285,7 @@ do
                           break;;
 esac  
 done;;
-30) echo ""
+30bloqueado) echo ""
 while true
 do
                           actualizar=S 
