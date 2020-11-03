@@ -359,13 +359,16 @@ presentar_valor= sed -n $numero_linea_p  $usuario/MMDVMHost/$DIRECTORIO; #presen
 echo ""
 
 indicativo=$(awk "NR==2" $usuario/DMR2M17/DMR2M17.ini)
-
 idd1=$(awk "NR==12" $usuario/DMR2M17/DMR2M17.ini)
+dstname=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
+dstadddress=$(awk "NR==5" $usuario/DMR2M17/DMR2M17.ini)
 
 echo "  PARAMETROS DMR2M17.ini ${BLANCO}"
 echo "  ${VERDE}======================"
 echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
 echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
+echo "  ${CIAN}10) \33[0mModificar DstName     - ${VERDE}$dstname"
+echo "  ${CIAN}10) \33[0mModificar DstAddress  - ${VERDE}$dstaddress"
 
 echo ""
 echo "   ${ROJO}0) Salir"
