@@ -751,6 +751,9 @@ clear
                                 cd /home/pi/MMDVMHost
                                 sudo rm MMDVMDMR2M17.ini
 
+                                rm /home/pi/Desktop/ABRIR_DMR2M17.desktop
+                                rm /home/pi/Desktop/Editar_DMR2M17.desktop
+
                                 sudo cp /home/pi/V105/FONDO_ADER_V105_SIN_M17.jpg /home/pi/V105/FONDO_ADER_V105.jpg
 
                                 echo ""
