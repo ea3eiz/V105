@@ -371,7 +371,7 @@ echo "  ${CIAN} P) \33[0mModificar DstName     - ${VERDE}$dstname \t"
 echo "  ${CIAN} Q) \33[0mModificar DstAddress  - ${VERDE}$dstadddress"
 echo "  ${CIAN} R)${AMARILLO} Importar  DstName & DstAddress de una lista"
 echo ""
-echo "   ${ROJO}0) Salir    ${CIAN}Elige una opción: "
+echo -n "   ${ROJO}0) Salir    ${CIAN}Elige una opción: "
 
 read escoger_menu
 case $escoger_menu in
