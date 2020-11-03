@@ -700,26 +700,26 @@ clear
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
                                                                 
-                                cd /home/pi/
-                                git clone https://github.com/nostar/md380_vocoder
-                                sleep 1
-                                cd /home/pi/md380_vocoder
-                                make clean all
-                                sudo make install
-
-                                cp -R /home/pi/V105/DMR2M17 /home/pi
-                                sleep 1
-                                cd /home/pi/DMR2M17
-                                make
-                                sudo make install
-
-                                # Crea el ejecutable DMR2M17
-                                cd /home/pi/MMDVMHost
-                                cp DMR2YSF MMDVMDMR2M17
-
-                                # Crea el ejecutable DMR2M17.ini
-                                cd /home/pi/MMDVMHost
-                                cp MMDVMDMR2YSF.ini  MMDVMDMR2M17.ini
+                                #cd /home/pi/
+                                #git clone https://github.com/nostar/md380_vocoder
+                                #sleep 1
+                                #cd /home/pi/md380_vocoder
+                                #make clean all
+                                #sudo make install
+#
+                                #cp -R /home/pi/V105/DMR2M17 /home/pi
+                                #sleep 1
+                                #cd /home/pi/DMR2M17
+                                #make
+                                #sudo make install
+#
+                                ## Crea el ejecutable DMR2M17
+                                #cd /home/pi/MMDVMHost
+                                #cp DMR2YSF MMDVMDMR2M17
+#
+                                ## Crea el ejecutable DMR2M17.ini
+                                #cd /home/pi/MMDVMHost
+                                #cp MMDVMDMR2YSF.ini  MMDVMDMR2M17.ini
 
                                 cp /home/pi/V105/ABRIR_DMR2M17.desktop /home/pi/Desktop
                                 cp /home/pi/V105/Editar_DMR2M17.desktop /home/pi/Desktop
