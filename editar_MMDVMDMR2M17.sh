@@ -367,7 +367,7 @@ echo "  PARAMETROS DMR2M17.ini ${BLANCO}"
 echo "  ${VERDE}======================"
 echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
 echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
-echo "  ${CIAN} p) \33[0mModificar DstName     - ${VERDE}$dstname \t\t${CIAN}R)${AMARILLO} Importar de una lista"
+echo "  ${CIAN} p) \33[0mModificar DstName     - ${VERDE}$dstname \t${CIAN}R)${AMARILLO} Importar de una lista"
 
 echo ""
 echo "   ${ROJO}0) Salir"
