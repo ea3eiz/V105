@@ -360,12 +360,7 @@ echo ""
 
 indicativo=$(awk "NR==2" $usuario/DMR2M17/DMR2M17.ini)
 
-idd1=`grep -n -m 1 "^Id=" $usuario/DMR2M17/DMR2M17.ini`
-buscar=":"
-caracteres=`expr index $idd1 $buscar`
-caracteres_linea=`expr $caracteres - 1`
-numero_linea_idd=`expr substr $idd1 1 $caracteres_linea`
-idd1=$(awk "NR==$numero_linea_idd" $usuario/DMR2M17/DMR2M17.ini)
+idd1=$(awk "NR==12" $usuario/DMR2M17/DMR2M17.ini)
 
 echo "  PARAMETROS DMR2M17.ini ${BLANCO}"
 echo "  ${VERDE}======================"
