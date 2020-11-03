@@ -724,11 +724,12 @@ clear
                                 cp /home/pi/V105/ABRIR_DMR2M17.desktop /home/pi/Desktop
                                 cp /home/pi/V105/Editar_DMR2M17.desktop /home/pi/Desktop
 
-                                cp /home/pi/V105/FONDO_ADER_V105_M17.jpg /home/pi/V105/FONDO_ADER_V105.jpg
+                                sudo cp /home/pi/V105/FONDO_ADER_V105_M17.jpg /home/pi/V105/FONDO_ADER_V105.jpg
 
                                 clear 
                                 echo "AHORA SE REINICIARÁ LA RASPBERRY PI"
                                 sleep 3
+                                read a
                                 sudo reboot
 
                                 echo ""
