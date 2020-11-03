@@ -735,6 +735,33 @@ exit;
 break;;
 esac
 done;;
+1001) echo ""
+while true
+do
+clear
+                                ejecutar1=S
+                                case $ejecutar1 in
+                                [sS]* ) echo ""
+                                                                
+                                sudo rm -R /home/pi/md380_vocoder
+
+                                sudo rm -R /home/pi/V105/DMR2M17
+                                sleep 1
+
+                                cd /home/pi/MMDVMHost
+                                sudo rm MMDVMDMR2M17.ini
+
+                                sudo cp /home/pi/V105/FONDO_ADER_V105_SIN_M17.jpg /home/pi/V105/FONDO_ADER_V105.jpg
+
+                                echo ""
+                                exit;
+                                break;;
+                                [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 0) echo ""
 clear
 echo "${AMARILLO}"
