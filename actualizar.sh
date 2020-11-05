@@ -24,7 +24,7 @@ actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 SCRIPTS_version="V105"
 if [ -d /home/pi/DMR2M17 ]
 then
-version="V105-M17"
+version="V105-DMR2M17"
 else
 version="V105-"
 version=$version$actualizacion
