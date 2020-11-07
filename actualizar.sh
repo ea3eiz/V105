@@ -176,7 +176,7 @@ sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
 cd $usuario/Desktop/
 cp RXF_BM.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_BM.desktop
+sed -i "12c Name=$frecuencia" $usuario/RXF_BM.desktop
 cd $usuario
 cp RXF_BM.desktop $usuario/Desktop
 rm $usuario/RXF_BM.desktop

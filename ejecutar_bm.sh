@@ -13,7 +13,7 @@ sudo cp RXF_BM.desktop /home/pi
 frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMBM.ini)
 frecuencia=`expr substr $frecuencia 13 17`
 frecuencia=$frecuencia$puerto
-sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
+sed -i "12c Name=$frecuencia" /home/pi/RXF_BM.desktop
 
 sudo cp /home/pi/RXF_BM.desktop /home/pi/Desktop
 
