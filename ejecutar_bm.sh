@@ -13,14 +13,14 @@ sudo cp RXF_BM.desktop /home/pi
 frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMBM.ini)
 frecuencia=`expr substr $frecuencia 13 17`
 frecuencia=$frecuencia$puerto
-sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
+sudo sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
 
 sudo cp /home/pi/RXF_BM.desktop /home/pi/Desktop
 
 sudo rm /home/pi/RXF_BM.desktop
 
 #Escribe en el fichero INFO_RXF para poner los datos en el icono INFO TXF                        
-sed -i "1c $frecuencia" /home/pi/INFO_RXF
+sudo sed -i "1c $frecuencia" /home/pi/INFO_RXF
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
