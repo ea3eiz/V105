@@ -658,7 +658,7 @@ clear
 	                     	actualizar=S
 		                   	case $actualizar in
 			                [sS]* ) echo ""
-                            if [ $dmrnxdn = "ON" ]
+                            if [ $dmr2m17 = "DMRGateway=ON" ]
                             then
                             rm /home/pi/.config/autostart/ABRIR_DMR2M17.desktop
                             sed -i "19c DMRGateway=OFF" /home/pi/.local/autoarranque.ini
