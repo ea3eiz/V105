@@ -218,7 +218,7 @@ dmr2m17=`grep "DMRGateway" /home/pi/.local/autoarranque.ini`
 echo "$dmr2m17"
 read a
 dmr2m17=`expr substr $dmr2m17 12 3`
-echo "$dmr2m17"
+echo "12-13$dmr2m17"
 read a
 if [ $dmr2m17 = "ON" ]
 then
