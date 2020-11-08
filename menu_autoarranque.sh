@@ -211,17 +211,6 @@ fi
 #=================================================================================
 
 #==================================================================================
-dmr2m17=$(awk "NR==19" /home/pi/.local/autoarranque.ini)
-if [ $dmr2m17 = "DMRGateway=ON" ]
-then
-echo "   ${CIAN}xx) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}DMR2M17"
-else
-echo "   ${CIAN}xx) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMR2M17"
-fi
-#=================================================================================
-
-
-#==================================================================================
 nxdn=$(awk "NR==17" /home/pi/.local/autoarranque.ini)
 nxdn=`expr substr $nxdn 6 3`
 if [ $nxdn = "ON" ]
@@ -243,9 +232,19 @@ echo "   ${CIAN}18) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMRGatew
 fi
 #=========================================================================*========
 
+#==================================================================================
+dmr2m17=$(awk "NR==19" /home/pi/.local/autoarranque.ini)
+if [ $dmr2m17 = "DMRGateway=ON" ]
+then
+echo "   ${CIAN}19) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}DMR2M17"
+else
+echo "   ${CIAN}19) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMR2M17"
+fi
+#=================================================================================
+
 echo ""
 
-echo "\33[1;36m   19)\33[1;32m *** $restablece"
+echo "\33[1;36m   20)\33[1;32m *** $restablece"
 
 echo ""
 echo -n "\33[1;36m   $elige: " 
@@ -651,7 +650,7 @@ clear
 			                break;;
 esac
 done;;
-a) echo ""
+19) echo ""
 while true
 do
 clear
@@ -671,7 +670,7 @@ clear
 			                break;;
 esac
 done;;
-19) echo ""
+20) echo ""
 while true
 do
 clear
