@@ -212,15 +212,7 @@ fi
 
 #==================================================================================
 dmr2m17=$(awk "NR==19" /home/pi/.local/autoarranque.ini)
-echo "$dmr2m17"
-read a
-dmr2m17=`grep "DMRGateway" /home/pi/.local/autoarranque.ini`
-echo "$dmr2m17"
-read a
-dmr2m17=`expr substr $dmr2m17 12 3`
-echo "12-13$dmr2m17"
-read a
-if [ $dmr2m17 = "ON" ]
+if [ $dmr2m17 = "DMRGateway=ON" ]
 then
 echo "   ${CIAN}xx) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}DMR2M17"
 else
