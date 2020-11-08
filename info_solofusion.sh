@@ -39,7 +39,7 @@ address="  "$address
 
 memoria=$(awk "NR==17" /home/pi/.local/memorias)
 
-#Modificación 31-10-2020
+#Modificación 31-10-2020 
 sudo sed -i "1c Indicativo:   $indicativo" /home/pi/.local/memoria_solofusion
 sudo sed -i "2c Id:           $id" /home/pi/.local/memoria_solofusion
 sudo sed -i "3c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_solofusion
@@ -52,32 +52,33 @@ Startup=$(awk "NR==42" /home/pi/YSFClients/YSFGateway/YSFGateway.ini)
 Startup=`expr substr $Startup 9 20`
 sudo sed -i "8c Startup:      $Startup" /home/pi/.local/memoria_solofusion
 
+/home/pi/V105/./qt_info_solofusion
 #Colores
-ROJO="\033[1;31m"
-VERDE="\033[1;32m"
-BLANCO="\033[1;37m"
-AMARILLO="\033[1;33m"
-CIAN="\033[1;36m"
-GRIS="\033[0m"
-MARRON="\33[38;5;138m"
-
-echo "${BLANCO}"
-echo "  INFORMACIÓN (SOLO FUSION)"
-echo -n "${VERDE}"
-echo "  ******************************************"
-echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
-echo "${CIAN}  Id:           ${AMARILLO}$id   "
-echo "${CIAN}  RXFrecuencia: ${AMARILLO}$rxfrecuencia   "
-echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
-echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
-echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
-echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
-echo "${CIAN}  Startup:      ${AMARILLO}$Startup   "
-echo -n "${VERDE}"
-echo "  ******************************************"
-
-echo -n "${CIAN}  Pulsa enter para cerrar esta ventana "
-read a
+#ROJO="\033[1;31m"
+#VERDE="\033[1;32m"
+#BLANCO="\033[1;37m"
+#AMARILLO="\033[1;33m"
+#CIAN="\033[1;36m"
+#GRIS="\033[0m"
+#MARRON="\33[38;5;138m"
+#
+#echo "${BLANCO}"
+#echo "  INFORMACIÓN (SOLO FUSION)"
+#echo -n "${VERDE}"
+#echo "  ******************************************"
+#echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
+#echo "${CIAN}  Id:           ${AMARILLO}$id   "
+#echo "${CIAN}  RXFrecuencia: ${AMARILLO}$rxfrecuencia   "
+#echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
+#echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
+#echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
+#echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
+#echo "${CIAN}  Startup:      ${AMARILLO}$Startup   "
+#echo -n "${VERDE}"
+#echo "  ******************************************"
+#
+#echo -n "${CIAN}  Pulsa enter para cerrar esta ventana "
+#read a
 
 # echo -n "${MARRON}"
 # echo -n "  Se cerrará en 10."
