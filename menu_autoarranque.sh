@@ -212,8 +212,8 @@ fi
 
 #==================================================================================
 dmr2m17=$(awk "NR==19" /home/pi/.local/autoarranque.ini)
-dmr2m17=`grep "DMR2M17" /home/pi/.local/autoarranque.ini`
-dmr2m17=`expr substr $dmr2m17 9 3`
+dmr2m17=`grep "DMRGateway" /home/pi/.local/autoarranque.ini`
+dmr2m17=`expr substr $dmr2m17 12 3`
 if [ $dmr2m17 = "ON" ]
 then
 echo "   ${CIAN}xx) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}DMR2M17"
@@ -663,10 +663,10 @@ clear
                             if [ $dmrnxdn = "ON" ]
                             then
                             rm /home/pi/.config/autostart/ABRIR_DMR2M17.desktop
-                            sed -i "19c DMR2M17=OFF" /home/pi/.local/autoarranque.ini
+                            sed -i "19c DMRGateway=OFF" /home/pi/.local/autoarranque.ini
                             else
                             cp /home/pi/Desktop/ABRIR_DMR2M17.desktop /home/pi/.config/autostart
-                            sed -i "19c DMR2M17=ON" /home/pi/.local/autoarranque.ini
+                            sed -i "19c DMRGateway=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""
