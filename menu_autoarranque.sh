@@ -216,9 +216,9 @@ dmr2m17=`grep "DMRGateway" /home/pi/.local/autoarranque.ini`
 dmr2m17=`expr substr $dmr2m17 12 3`
 if [ $dmr2m17 = "ON" ]
 then
-echo "   ${CIAN}xx) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}DMR2M17"
+echo "   ${CIAN}a) $desconectar  ${VERDE}\t$estado ON ${CIAN}    \t${VERDE}DMR2M17"
 else
-echo "   ${CIAN}xx) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMR2M17"
+echo "   ${CIAN}a) $conectar  ${ROJO}\t$estado OFF ${CIAN}    \t${ROJO}DMR2M17"
 fi
 #=================================================================================
 
