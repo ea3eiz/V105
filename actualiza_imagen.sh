@@ -1,6 +1,6 @@
 #!/bin/bash
 # path usuario
-sudo rm /home/pi/V105/qt_info_solofusion
+
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 version=`expr substr $SCRIPTS_version 2 2`
