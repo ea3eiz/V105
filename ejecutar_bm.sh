@@ -39,10 +39,8 @@ echo "\33[38;5;138m"
 echo " ******************************************************************************"
 echo " ************************    ABRIENDO BRANDMEISTER    *************************"
 echo " ******************************************************************************"
-
-
 sleep 2
- /home/pi/V105/./qt_ejecuta_bm & sudo ./MMDVMBM MMDVMBM.ini
+/home/pi/V105/./qt_ejecuta_bm & sudo ./MMDVMBM MMDVMBM.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_MMDVMBM.desktop /home/pi

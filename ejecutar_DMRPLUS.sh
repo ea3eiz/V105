@@ -9,6 +9,7 @@ puerto=`expr substr $mode 11 9`
 puerto="  "$puerto
 cd /home/pi/Desktop
 sudo cp RXF_DMRPLUS.desktop /home/pi
+
 frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMPLUS.ini)
 frecuencia=`expr substr $frecuencia 13 9`
 frecuencia=$frecuencia$puerto
@@ -39,7 +40,7 @@ echo " *************************************************************************
 echo " ****************************    ABRIENDO DMR+    *****************************"
 echo " ******************************************************************************"
 sleep 2
-sudo ./MMDVMPLUS MMDVMPLUS.ini
+/home/pi/V105/./qt_ejecuta_dmrplus &sudo ./MMDVMPLUS MMDVMPLUS.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_MMDVMPLUS.desktop /home/pi
