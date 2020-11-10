@@ -1288,7 +1288,8 @@ do
                         echo "<<<<<< Restaurando copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia $usuario/MMDVMHost/$DIRECTORIO
-			                  break;;
+sudo sed -i "1c $memoria1" $usuario/.local/memorias
+                        break;;
 			                  [nN]* ) echo ""
 			                  break;;
 esac
@@ -1305,8 +1306,10 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M2 >>>>>"
                         sleep 3
                         sed -i "$segun $memoria2" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria2" $usuario/MMDVMHost/$DIRECTORIO
+                        #sed -i "$linea_info_memoria $memoria2" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia2
+sudo sed -i "3c $memoria2" $usuario/.local/memorias
+sudo sed -i "1c $memoria2" $usuario/.local/memorias
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -1322,7 +1325,8 @@ do
                         echo "<<<<<< Restaurando copia de seguridad  de la M2 >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia2 $usuario/MMDVMHost/$DIRECTORIO
-			                  break;;
+sudo sed -i "1c $memoria2" $usuario/.local/memorias			                  
+                        break;;
 			                  [nN]* ) echo ""
 			                  break;;
 esac
@@ -1339,8 +1343,10 @@ do
                         echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
                         sleep 3
                         sed -i "$tercer $memoria3" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria3" $usuario/MMDVMHost/$DIRECTORIO
+                        #sed -i "$linea_info_memoria $memoria3" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia3
+sudo sed -i "4c $memoria3" $usuario/.local/memorias
+sudo sed -i "1c $memoria3" $usuario/.local/memorias
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -1356,7 +1362,8 @@ do
                         echo "<<<<<< Restaurando copia de seguridad de la M3 >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia3 $usuario/MMDVMHost/$DIRECTORIO
-			                  break;;
+sudo sed -i "1c $memoria3" $usuario/.local/memorias			                  
+                        break;;
 			                  [nN]* ) echo ""
 			                  break;;
 esac
