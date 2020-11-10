@@ -63,7 +63,6 @@ echo "***************************************************"
             cp -f nombre_salas_ysf.txt /home/pi/.local
             cp -f autoarranque.ini /home/pi/.local
 
-
                             info=$(awk "NR==1" /home/pi/.local/autoarranque.ini)
                             if [ $info = "ircDDB=OFF" ]
                             then
@@ -99,12 +98,6 @@ echo "***************************************************"
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp DV4MINI.desktop /home/pi/.config/autostart
                             fi
-
-
-
-
-
-
 
                             info=$(awk "NR==5" /home/pi/.local/autoarranque.ini)
                             if [ $info = "Radio=OFF" ]
