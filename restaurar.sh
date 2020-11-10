@@ -92,7 +92,7 @@ echo "***************************************************"
                             fi
 
                             info=$(awk "NR==4" /home/pi/.local/autoarranque.ini)
-                            if [ $info = "DV4mini=ON" ]
+                            if [ $info = "DV4mini=OFF" ]
                             then
                             echo "no hace nada"
                             else
@@ -110,7 +110,7 @@ echo "***************************************************"
                             fi
 
                             info=$(awk "NR==6" /home/pi/.local/autoarranque.ini)
-                            if [ $info = "DMR+=ON" ]
+                            if [ $info = "DMR+=OFF" ]
                             then
                             echo "no hace nada"
                             else
