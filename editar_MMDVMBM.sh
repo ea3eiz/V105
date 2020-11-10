@@ -1269,7 +1269,9 @@ do
                         sleep 3
                         echo "$linea_info_memoria $usuario $DIRECTORIO $memoria1"
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO
+                        #sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO 
+sudo sed -i "2c $memoria1" $usuario/.local/memorias
+sudo sed -i "17c $memoria1" $usuario/.local/memorias               
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
