@@ -97,6 +97,13 @@ else
 cp /home/pi/V105/memoria_bm /home/pi/.local/
 fi
 
+if [ -f /home/pi/.local/memoria_dmrplus ]
+then
+echo ""
+else
+cp /home/pi/V105/memoria_dmrplus /home/pi/.local/
+fi
+
 if [ -f /home/pi/.local/memoria_especial ]
 then
 echo ""
