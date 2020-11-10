@@ -100,6 +100,12 @@ echo "***************************************************"
                             sudo cp DV4MINI.desktop /home/pi/.config/autostart
                             fi
 
+
+
+
+
+
+
                             info=$(awk "NR==5" /home/pi/.local/autoarranque.ini)
                             if [ $info = "Radio=OFF" ]
                             then
