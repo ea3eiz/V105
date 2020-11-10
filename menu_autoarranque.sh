@@ -517,6 +517,28 @@ clear
 			                break;;
 esac
 done;;
+13) echo ""
+while true
+do
+clear
+	                     	actualizar=S
+		                   	case $actualizar in
+			                [sS]* ) echo ""
+                            if [ $ambeserver = "ON" ]
+                            then
+                            cd /home/pi/.config/autostart
+                            sudo rm AMBE_SERVER.desktop
+                            sed -i "13c AMBE_SERVER=OFF" /home/pi/.local/autoarranque.ini
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp AMBE_SERVER.desktop /home/pi/.config/autostart
+                            sed -i "13c AMBE_SERVER=ON" /home/pi/.local/autoarranque.ini
+                            fi
+			                break;;
+			                [nN]* ) echo ""
+			                break;;
+esac
+done;;
 14) echo ""
 while true
 do
@@ -534,28 +556,6 @@ clear
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp YSF2DMR.desktop /home/pi/.config/autostart
                             sed -i "14c YSF2DMR=ON" /home/pi/.local/autoarranque.ini
-                            fi
-			                break;;
-			                [nN]* ) echo ""
-			                break;;
-esac
-done;;
-13) echo ""
-while true
-do
-clear
-	                     	actualizar=S
-		                   	case $actualizar in
-			                [sS]* ) echo ""
-                            if [ $ambeserver = "ON" ]
-                            then
-                            cd /home/pi/.config/autostart
-                            sudo rm AMBE_SERVER.desktop
-                            sed -i "13c AMBE_SERVER=OFF" /home/pi/.local/autoarranque.ini
-                            else
-                            cd /home/pi/AUTOARRANQUEV105
-                            sudo cp AMBE_SERVER.desktop /home/pi/.config/autostart
-                            sed -i "13c AMBE_SERVER=ON" /home/pi/.local/autoarranque.ini
                             fi
 			                break;;
 			                [nN]* ) echo ""

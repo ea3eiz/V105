@@ -64,18 +64,176 @@ echo "***************************************************"
             cp -f autoarranque.ini /home/pi/.local
 
 
-MMDVMBM=$(awk "NR==8" /home/pi/.local/autoarranque.ini)
-                            if [ $MMDVMBM = "BM=OFF" ]
+                            info=$(awk "NR==1" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "ircDDB=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                       		cd /home/pi/AUTOARRANQUEV105
+                  		    sudo cp IRCDDB.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==2" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "BlueDV=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp BLUEDV.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==3" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "YSF=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp YSF.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==4" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "DV4mini=ON" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp DV4MINI.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==5" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "Radio=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp RADIO.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==6" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "DMR+=ON" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp DMRPLUS.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==7" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "ESPECIAL=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp LIBRE.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==8" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "BM=OFF" ]
                             then
                             echo "no hace nada"
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp BM.desktop /home/pi/.config/autostart
-                            sed -i "8c BM=ON" /home/pi/.local/autoarranque.ini
                             fi
 
+                            info=$(awk "NR==9" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "SVXLINK=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp SVXLINK.desktop /home/pi/.config/autostart
+                            fi
 
+                            info=$(awk "NR==10" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "SOLO_DSTAR=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp DSTARSOLO_05.desktop /home/pi/.config/autostart
+                            fi
 
+                            info=$(awk "NR==11" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "SOLO_FUSION=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp FUSIONSOLO.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==12" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "DVRPTR=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp DVRPTR.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==13" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "AMBE_SERVER=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp AMBE_SERVER.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==14" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "YSF2DMR=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp YSF2DMR.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==15" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "DMR2YSF=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp DMR2YSF.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==16" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "DMR2NXDN=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp DMR2NXDN.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==17" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "NXDN=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp NXDN.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==18" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "DMRGateway=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp DMRGateway.desktop /home/pi/.config/autostart
+                            fi
+
+                            info=$(awk "NR==19" /home/pi/.local/autoarranque.ini)
+                            if [ $info = "DMRGateway=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            cp /home/pi/Desktop/ABRIR_DMR2M17.desktop /home/pi/.config/autostart
+                            fi                            
 
             cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
