@@ -1,5 +1,4 @@
 #!/bin/bash
-
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVM.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -41,11 +40,11 @@ echo " *************************************************************************
 echo " ***************************    ABRIENDO RADIO    *****************************"
 echo " ******************************************************************************"
 sleep 2
-sudo ./MMDVMHost MMDVM.ini
+/home/pi/V105/./qt_ejecuta_radio & sudo ./MMDVMHost MMDVM.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_Radio.desktop /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=80x12 -e sudo sh ejecutar_radio.sh'" /home/pi/Abrir_Radio.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=80x15 -e sudo sh ejecutar_radio.sh'" /home/pi/Abrir_Radio.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_RADIO_OFF.png" /home/pi/Abrir_Radio.desktop
 sed -i "10c Name[es_ES]=Abrir RADIO" /home/pi/Abrir_Radio.desktop
 sed -i "5c MMDVM=OFF" /home/pi/status.ini
