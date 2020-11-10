@@ -50,11 +50,11 @@ echo " *************************************************************************
 echo " **************************    ABRIENDO ESPECIAL    ***************************"
 echo " ******************************************************************************"
 sleep 2
-sudo ./MMDVMESPECIAL MMDVMESPECIAL.ini
+/home/pi/V105/./qt_ejecuta_especial & sudo ./MMDVMESPECIAL MMDVMESPECIAL.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_ESPECIAL.desktop /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=80x12 -e sudo sh ejecutar_ESPECIAL.sh'" /home/pi/Abrir_ESPECIAL.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=80x15 -e sudo sh ejecutar_ESPECIAL.sh'" /home/pi/Abrir_ESPECIAL.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_ESPECIAL_OFF.png" /home/pi/Abrir_ESPECIAL.desktop
 sed -i "10c Name[es_ES]=Abrir Especial" /home/pi/Abrir_ESPECIAL.desktop
 
