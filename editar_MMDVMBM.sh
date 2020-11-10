@@ -1271,7 +1271,7 @@ do
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
                         #sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO 
 sudo sed -i "2c $memoria1" $usuario/.local/memorias
-sudo sed -i "17c $memoria1" $usuario/.local/memorias               
+sudo sed -i "1c $memoria1" $usuario/.local/memorias               
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
