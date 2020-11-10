@@ -58,10 +58,25 @@ echo "***************************************************"
             
             cp -f TG-YSFList.txt /home/pi/DMR2YSF
 
+
             cp -f tg_ysf.txt /home/pi/.local
             cp -f nombre_salas_ysf.txt /home/pi/.local
             cp -f autoarranque.ini /home/pi/.local
-                      
+
+
+MMDVMBM=$(awk "NR==8" /home/pi/.local/autoarranque.ini)
+                            if [ $MMDVMBM = "BM=OFF" ]
+                            then
+                            echo "no hace nada"
+                            else
+                            cd /home/pi/AUTOARRANQUEV105
+                            sudo cp BM.desktop /home/pi/.config/autostart
+                            sed -i "8c BM=ON" /home/pi/.local/autoarranque.ini
+                            fi
+
+
+
+
             cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMDMR2YSF.ini /home/pi/MMDVMHost
