@@ -97,6 +97,13 @@ else
 cp /home/pi/V105/memoria_bm /home/pi/.local/
 fi
 
+if [ -f /home/pi/.local/memoria_especial ]
+then
+echo ""
+else
+cp /home/pi/V105/memoria_especial /home/pi/.local/
+fi
+
 if [ -f /home/pi/.local/memoria_solofusion ]
 then
 echo ""
