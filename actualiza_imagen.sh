@@ -126,6 +126,13 @@ else
 cp /home/pi/V105/memoria_solofusion /home/pi/.local/
 fi
 
+if [ -f /home/pi/.local/memoria_solodstar ]
+then
+echo ""
+else
+cp /home/pi/V105/memoria_solodstar /home/pi/.local/
+fi
+
 if [ -f /home/pi/.local/memorias ] 
 then
 echo ""
