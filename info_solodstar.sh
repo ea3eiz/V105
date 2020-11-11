@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIRECTORIO="MMDVMDSTAR.ini"
-linea_info_memoria="313" #Linea del MMDVM donde guardamos el nombre de la memoria
+#linea_info_memoria="313" #Linea del MMDVM donde guardamos el nombre de la memoria
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/$DIRECTORIO`
 buscar=":"
@@ -37,55 +37,66 @@ mode=$(awk "NR==$numero_linea_address" /home/pi/MMDVMHost/$DIRECTORIO)
 address=`expr substr $address 13 35`
 address="  "$address
 
-memoria=$(awk "NR==$linea_info_memoria" /home/pi/MMDVMHost/$DIRECTORIO)
+memoria=$(awk "NR==21" /home/pi/.local/memorias)
 
-#Colores
-ROJO="\033[1;31m"
-VERDE="\033[1;32m"
-BLANCO="\033[1;37m"
-AMARILLO="\033[1;33m"
-CIAN="\033[1;36m"
-GRIS="\033[0m"
-MARRON="\33[38;5;138m"
+#Modificación 31-10-2020
+sudo sed -i "1c Indicativo:   $indicativo" /home/pi/.local/memoria_solodstar
+sudo sed -i "2c Id:           $id" /home/pi/.local/memoria_solodstar
+sudo sed -i "3c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_solodstar
+sudo sed -i "4c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_solodstar
+sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_solodstar
+sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_solodstar
+sudo sed -i "7c Memoria:      $memoria" /home/pi/.local/memoria_solodstar
 
-echo "${BLANCO}"
-echo "  INFORMACIÓN (SOLO DSTAR)"
-echo -n "${VERDE}"
-echo "  ******************************************"
-echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
-echo "${CIAN}  Id:           ${AMARILLO}$id   "
-echo "${CIAN}  RXFrecuencia: ${AMARILLO}$rxfrecuencia   "
-echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
-echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
-echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
-echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
-echo -n "${VERDE}"
-echo "  ******************************************"
-echo -n "${MARRON}"
+/home/pi/V105/./qt_info_solodstar
 
-echo -n "${CIAN}  Pulsa enter para cerrar esta ventana "
-read a
-
-# echo -n "${MARRON}"
-# echo -n "  Se cerrará en 10."
-# sleep 1
-# echo -n "9."
-# sleep 1
-# echo -n "8."
-# sleep 1
-# echo -n "7."
-# sleep 1
-# echo -n "6."
-# sleep 1
-# echo -n "5."
-# sleep 1
-# echo -n "4."
-# sleep 1
-# echo -n "3."
-# sleep 1
-# echo -n "2."
-# sleep 1
-# echo -n "1."
-# sleep 1
-# echo -n "0"
-# sleep 1
+##Colores
+#ROJO="\033[1;31m"
+#VERDE="\033[1;32m"
+#BLANCO="\033[1;37m"
+#AMARILLO="\033[1;33m"
+#CIAN="\033[1;36m"
+#GRIS="\033[0m"
+#MARRON="\33[38;5;138m"
+#
+#echo "${BLANCO}"
+#echo "  INFORMACIÓN (SOLO DSTAR)"
+#echo -n "${VERDE}"
+#echo "  ******************************************"
+#echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
+#echo "${CIAN}  Id:           ${AMARILLO}$id   "
+#echo "${CIAN}  RXFrecuencia: ${AMARILLO}$rxfrecuencia   "
+#echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
+#echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
+#echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
+#echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
+#echo -n "${VERDE}"
+#echo "  ******************************************"
+#echo -n "${MARRON}"
+#
+#echo -n "${CIAN}  Pulsa enter para cerrar esta ventana "
+#read a
+#
+## echo -n "${MARRON}"
+## echo -n "  Se cerrará en 10."
+## sleep 1
+## echo -n "9."
+## sleep 1
+## echo -n "8."
+## sleep 1
+## echo -n "7."
+## sleep 1
+## echo -n "6."
+## sleep 1
+## echo -n "5."
+## sleep 1
+## echo -n "4."
+## sleep 1
+## echo -n "3."
+## sleep 1
+## echo -n "2."
+## sleep 1
+## echo -n "1."
+## sleep 1
+## echo -n "0"
+## sleep 1
