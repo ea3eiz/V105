@@ -131,14 +131,11 @@ sed -i "12c $sala_fcs" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 sed -i "13c $sala_nxdn" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 sed -i "14c $selfcare" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 sed -i "15c $reflector_dstar" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-echo pausa para ver si ha creado downloads
-
-read a
 
 cd /home/pi/.local/COPIA_SEGURIDAD
 tar -zcvf copia.tar.gz Downloads
 cp  copia.tar.gz /var/www/html/upload/files
-#sudo rm copia.tar.gz
+sudo rm copia.tar.gz
 
 
 
