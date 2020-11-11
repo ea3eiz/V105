@@ -1,8 +1,7 @@
 #!/bin/bash
-sudo chmod 777 -R /var/www/html/upload/files
 cd /var/www/html/upload/files
 
-sudo cp copia.tar.gz /home/pi/.local/COPIA_SEGURIDAD
+cp copia.tar.gz /home/pi/.local/COPIA_SEGURIDAD
 
 sudo rm -R /home/pi/.local/COPIA_SEGURIDAD/Dowloads
 cd /home/pi/.local/COPIA_SEGURIDAD
