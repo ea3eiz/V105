@@ -135,7 +135,7 @@ sed -i "15c $reflector_dstar" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dv
 cd /home/pi/.local/COPIA_SEGURIDAD
 tar -zcvf copia.tar.gz Downloads
 cp  copia.tar.gz /var/www/html/upload/files
-sudo rm copia.tar.gz
+#sudo rm copia.tar.gz
 
 
 
