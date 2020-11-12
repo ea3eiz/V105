@@ -9,7 +9,7 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 # Versión
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
-#Editor MMDVMFUSION.ini
+#Editor MMDVMDMR2M17.ini
 DIRECTORIO="MMDVMDMR2M17.ini"
 
 #Colores
