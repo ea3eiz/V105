@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+./home/pi/V105/qt_mmdvm_off
 exit;
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
