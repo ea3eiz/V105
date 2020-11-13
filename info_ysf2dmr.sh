@@ -48,53 +48,65 @@ address="  "$address
 
 memoria=$(awk "NR==25" /home/pi/.local/memorias)
 
+#Modificación 31-10-2020 
+sudo sed -i "1c Indicativo:   $indicativo" /home/pi/.local/memoria_ysf2dmr
+sudo sed -i "2c Id:           $id" /home/pi/.local/memoria_ysf2dmr
+sudo sed -i "3c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_ysf2dmr
+sudo sed -i "4c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_ysf2dmr
+sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_ysf2dmr
+sudo sed -i "6c Servidor:   $address" /home/pi/.local/memoria_ysf2dmr
+sudo sed -i "7c Options:    $options" /home/pi/.local/memoria_ysf2dmr
+sudo sed -i "8c Memoria:    $memoria" /home/pi/.local/memoria_ysf2dmr
+
+/home/pi/V105/./qt_info_ysf2dmr
+
 #Colores
-ROJO="\033[1;31m"
-VERDE="\033[1;32m"
-BLANCO="\033[1;37m"
-AMARILLO="\033[1;33m"
-CIAN="\033[1;36m"
-GRIS="\033[0m"
-MARRON="\33[38;5;138m"
-#figlet $puerto
-echo "${BLANCO}"
-echo "  $informacion (YSF2DMR)"
-echo "${VERDE}"
-echo "  ******************************************"
-echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
-echo "${CIAN}  Id:           ${AMARILLO}$id   "
-echo "${CIAN}  RXFrecuencia: ${AMARILLO}$rxfrecuencia   "
-echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
-echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
-echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
-echo "${CIAN}  Options:      ${AMARILLO}$options   "
-echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
-echo -n "${VERDE}"
-echo "  ******************************************"
-
-echo -n "${CIAN}  Pulsa enter para cerrar esta ventana "
-read a
-
-# echo -n "${MARRON}"
-# echo -n "  Se cerrará en 10."
-# sleep 1
-# echo -n "9."
-# sleep 1
-# echo -n "8."
-# sleep 1
-# echo -n "7."
-# sleep 1
-# echo -n "6."
-# sleep 1
-# echo -n "5."
-# sleep 1
-# echo -n "4."
-# sleep 1
-# echo -n "3."
-# sleep 1
-# echo -n "2."
-# sleep 1
-# echo -n "1."
-# sleep 1
-# echo -n "0"
-# sleep 1
+#ROJO="\033[1;31m"
+#VERDE="\033[1;32m"
+#BLANCO="\033[1;37m"
+#AMARILLO="\033[1;33m"
+#CIAN="\033[1;36m"
+#GRIS="\033[0m"
+#MARRON="\33[38;5;138m"
+##figlet $puerto
+#echo "${BLANCO}"
+#echo "  $informacion (YSF2DMR)"
+#echo "${VERDE}"
+#echo "  ******************************************"
+#echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
+#echo "${CIAN}  Id:           ${AMARILLO}$id   "
+#echo "${CIAN}  RXFrecuencia: ${AMARILLO}$rxfrecuencia   "
+#echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
+#echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
+#echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
+#echo "${CIAN}  Options:      ${AMARILLO}$options   "
+#echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
+#echo -n "${VERDE}"
+#echo "  ******************************************"
+#
+#echo -n "${CIAN}  Pulsa enter para cerrar esta ventana "
+#read a
+#
+## echo -n "${MARRON}"
+## echo -n "  Se cerrará en 10."
+## sleep 1
+## echo -n "9."
+## sleep 1
+## echo -n "8."
+## sleep 1
+## echo -n "7."
+## sleep 1
+## echo -n "6."
+## sleep 1
+## echo -n "5."
+## sleep 1
+## echo -n "4."
+## sleep 1
+## echo -n "3."
+## sleep 1
+## echo -n "2."
+## sleep 1
+## echo -n "1."
+## sleep 1
+## echo -n "0"
+## sleep 1
