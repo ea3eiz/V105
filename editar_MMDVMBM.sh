@@ -114,7 +114,8 @@ numero_linea_letrac=$numero_linea$letrac
 contenido_location=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 echo "$contenido_location"
 
-
+echo "Vontenido_::::$contenido_location"
+read a
 url1=`expr substr $contenido_location 10 30`
 
 echo "LOcation: $url1"
