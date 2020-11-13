@@ -33,7 +33,7 @@ if [ $bm = "O" ]
 then
 options="#Options="
 else
-options=`expr substr $options 9 30`
+options=`expr substr $options 9 45`
 options=$options
 fi
 
