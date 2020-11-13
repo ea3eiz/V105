@@ -133,6 +133,13 @@ else
 cp /home/pi/V105/memoria_solo_dstar /home/pi/.local/
 fi
 
+if [ -f /home/pi/.local/memoria_ysf2dmr ]
+then
+echo ""
+else
+cp /home/pi/V105/memoria_ysf2dmr /home/pi/.local/
+fi
+
 if [ -f /home/pi/.local/memorias ] 
 then
 echo ""

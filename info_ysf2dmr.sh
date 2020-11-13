@@ -26,7 +26,9 @@ indicativo=$(awk "NR==13" /home/pi/YSF2DMR/YSF2DMR.ini)
 indicativo=`expr substr $indicativo 10 8`
 indicativo=$indicativo
 
-
+options=$(awk "NR==54" /home/pi/YSF2DMR/YSF2DMR.ini)
+options=`expr substr $options 10 8`
+options=$options
 
 address=`grep -n -m 1 "^Address=" /home/pi/YSF2DMR/YSF2DMR.ini`
 buscar=":"
@@ -58,6 +60,7 @@ echo "${CIAN}  RXFrecuencia: ${AMARILLO}$rxfrecuencia   "
 echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
 echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
 echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
+echo "${CIAN}  Options:    ${AMARILLO}$options   "
 echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
 echo -n "${VERDE}"
 echo "  ******************************************"
