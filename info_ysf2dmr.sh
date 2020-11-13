@@ -28,13 +28,13 @@ indicativo=$indicativo
 
 options=$(awk "NR==54" /home/pi/YSF2DMR/YSF2DMR.ini)
 
-bm=`expr substr $options 1 1`
+bm=`expr substr $options 2 1`
 
 echo "options:   $bm"
 read a
 
 
-if [ $bm == "#" ]
+if [ $bm == "O" ]
 then
 options="#Options="
 else
