@@ -543,8 +543,8 @@ do
                         echo "$linea_info_memoria $usuario $DIRECTORIO $memoria1"
                         sed -i "$primer $memoria1" $usuario/info_panel_control.ini
                         #sed -i "$linea_info_memoria $memoria1" $usuario/MMDVMHost/$DIRECTORIO 
-sudo sed -i "22c $memoria1" $usuario/.local/memorias
-sudo sed -i "21c $memoria1" $usuario/.local/memorias               
+sudo sed -i "26c $memoria1" $usuario/.local/memorias
+sudo sed -i "25c $memoria1" $usuario/.local/memorias               
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia
 			                  break;;
 			                  [nN]* ) echo ""
@@ -561,7 +561,7 @@ do
                         echo "<<<<<< Restaurando copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia $usuario/MMDVMHost/$DIRECTORIO
-sudo sed -i "21c $memoria1" $usuario/.local/memorias
+sudo sed -i "25c $memoria1" $usuario/.local/memorias
                         break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -581,8 +581,8 @@ do
                         sed -i "$segun $memoria2" $usuario/info_panel_control.ini
                         #sed -i "$linea_info_memoria $memoria2" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia2
-sudo sed -i "23c $memoria2" $usuario/.local/memorias
-sudo sed -i "21c $memoria2" $usuario/.local/memorias
+sudo sed -i "27c $memoria2" $usuario/.local/memorias
+sudo sed -i "25c $memoria2" $usuario/.local/memorias
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -598,7 +598,7 @@ do
                         echo "<<<<<< Restaurando copia de seguridad  de la M2 >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia2 $usuario/MMDVMHost/$DIRECTORIO
-sudo sed -i "21c $memoria2" $usuario/.local/memorias			                  
+sudo sed -i "25c $memoria2" $usuario/.local/memorias			                  
                         break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -618,8 +618,8 @@ do
                         sed -i "$tercer $memoria3" $usuario/info_panel_control.ini
                         #sed -i "$linea_info_memoria $memoria3" $usuario/MMDVMHost/$DIRECTORIO
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia3
-sudo sed -i "24c $memoria3" $usuario/.local/memorias
-sudo sed -i "21c $memoria3" $usuario/.local/memorias
+sudo sed -i "28c $memoria3" $usuario/.local/memorias
+sudo sed -i "25c $memoria3" $usuario/.local/memorias
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -635,7 +635,7 @@ do
                         echo "<<<<<< Restaurando copia de seguridad de la M3 >>>>>"
                         sleep 3
                         sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia3 $usuario/MMDVMHost/$DIRECTORIO
-sudo sed -i "21c $memoria3" $usuario/.local/memorias			                  
+sudo sed -i "25c $memoria3" $usuario/.local/memorias			                  
                         break;;
 			                  [nN]* ) echo ""
 			                  break;;
@@ -643,20 +643,23 @@ esac
 done;;
 22) echo ""
 while true
-do                
+do
                         actualizar=S 
                         case $actualizar in
-                        [sS]* ) echo ""
+			                  [sS]* ) echo ""
                         clear
                         echo "Introduce nombre memoria máximo 10 caracteres"
-                        read memoria4
+                        read memoria3
+                        echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
                         sleep 3
-                        sed -i "54c $memoria4" $usuario/info_panel_control.ini
-                        sed -i "$linea_info_memoria $memoria4" $usuario/YSF2DMR/YSF2DMR.ini
-                        sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini $usuario/YSF2DMR/YSF2DMR.ini_copia_04
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
+                        sed -i "$tercer $memoria3" $usuario/info_panel_control.ini
+                        #sed -i "$linea_info_memoria $memoria3" $usuario/MMDVMHost/$DIRECTORIO
+                        sudo cp -f $usuario/MMDVMHost/$DIRECTORIO $usuario/MMDVMHost/$DIRECTORIO_copia3
+sudo sed -i "29c $memoria3" $usuario/.local/memorias
+sudo sed -i "25c $memoria3" $usuario/.local/memorias
+			                  break;;
+			                  [nN]* ) echo ""
+			                  break;;
 esac
 done;;
 23) echo ""
@@ -664,23 +667,15 @@ while true
 do
                         actualizar=S 
                         case $actualizar in
-                        [sS]* ) echo ""
+			                  [sS]* ) echo ""
                         clear
-                        echo "<<<<<< Restaurando copia de seguridad de la M4 >>>>>"
+                        echo "<<<<<< Restaurando copia de seguridad de la M3 >>>>>"
                         sleep 3
-                        sudo cp -f $usuario/YSF2DMR/YSF2DMR.ini_copia_04 $usuario/YSF2DMR/YSF2DMR.ini
-
-master=$(awk "NR==26" $usuario/YSF2DMR/YSF2DMR.ini_copia_04)
-sed -i "25c $master" $usuario/info_panel_control.ini 
-
-frec=$(awk "NR==2" $usuario/YSF2DMR/YSF2DMR.ini_copia_04)
-sed -i "24c $frec" $usuario/info_panel_control.ini
-
-tg=$(awk "NR==23" $usuario/YSF2DMR/YSF2DMR.ini_copia_04)
-sed -i "26c $tg" $usuario/info_panel_control.ini                       
+                        sudo cp -f $usuario/MMDVMHost/$DIRECTORIO_copia3 $usuario/MMDVMHost/$DIRECTORIO
+sudo sed -i "25c $memoria3" $usuario/.local/memorias			                  
                         break;;
-                        [nN]* ) echo ""
-                        break;;
+			                  [nN]* ) echo ""
+			                  break;;
 esac
 done;;
 27) echo ""
