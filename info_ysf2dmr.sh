@@ -9,9 +9,9 @@ mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVMFUSION.ini)
 puerto=`expr substr $mode 11 9`
 puerto="  "$puerto
 
-frecuencia=$(awk "NR==2" /home/pi/YSF2DMR/YSF2DMR.ini)
-frecuencia=`expr substr $frecuencia 13 17`
-frecuencia=$frecuencia
+rxfrecuencia=$(awk "NR==2" /home/pi/YSF2DMR/YSF2DMR.ini)
+rxfrecuencia=`expr substr $rxfrecuencia 13 17`
+rxfrecuencia=$rxfrecuencia
 
 txfrecuencia=$(awk "NR==3" /home/pi/YSF2DMR/YSF2DMR.ini)
 txfrecuencia=`expr substr $txfrecuencia 13 17`
