@@ -114,15 +114,6 @@ numero_linea_letrac=$numero_linea$letrac
 contenido_location=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 echo "$contenido_location"
 
-echo "Vontenido_::::$contenido_location"
-read a
-url1=`expr substr $contenido_location 10 30`
-
-echo "LOcation: $url1"
-
-read a
-
-
 echo -n "${CIAN}   5)${GRIS} Modificar URL         - ${AMARILLO}"
 url=`grep -n "URL" $usuario/MMDVMHost/$DIRECTORIO`
 url1=`expr substr $url 4 30`
