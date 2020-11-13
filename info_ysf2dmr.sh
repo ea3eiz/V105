@@ -34,7 +34,7 @@ echo "options:   $bm"
 read a
 
 
-if [ $bm == "O" ]
+if [ $bm = "O" ]
 then
 options="#Options="
 else
