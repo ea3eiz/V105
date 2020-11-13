@@ -164,7 +164,7 @@ largo=`expr index $reflector $buscar`
 largo=`expr $largo + 9`
 copia1=`expr substr $reflector $largo 40`
 echo -n "$copia1"
-memoria1=$(awk "NR==51" $usuario/info_panel_control.ini)
+memoria1=$(awk "NR==26" $usuario/.local/memorias)
 echo " - $memoria1"
 
 echo ""
