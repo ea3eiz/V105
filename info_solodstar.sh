@@ -50,8 +50,8 @@ sudo sed -i "7c Memoria:      $memoria" /home/pi/.local/memoria_solo_dstar
 
 contenido_reflector=$(awk "NR==18" /etc/ircddbgateway)
 
-contenido = (echo ${cadena:9:13})
-sudo sed -i "8c Reflector:    $contenido" /home/pi/.local/memoria_solo_dstar
+
+sudo sed -i "8c .             $contenido_reflector" /home/pi/.local/memoria_solo_dstar
 
 /home/pi/V105/./qt_info_solodstar
 
