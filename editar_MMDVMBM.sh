@@ -105,12 +105,6 @@ echo "$contenido_txf"
 echo -n "${CIAN}   4)${GRIS} Modificar Location    - ${AMARILLO}"
 loc=`grep -n "^Location=" $usuario/MMDVMHost/$DIRECTORIO`
 loc1=`echo "$loc" | tr -d '[[:space:]]'`
-
-echo "locatin: $loc1"
-
-read a
-
-
 buscar=":"
 largo_linea=`expr index $loc1 $buscar`
 largo_linea=`expr $largo_linea - 1`
