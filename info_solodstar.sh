@@ -49,7 +49,7 @@ sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_solodstar
 sudo sed -i "7c Memoria:      $memoria" /home/pi/.local/memoria_solodstar
 
 contenido_reflector=$(awk "NR==18" /etc/ircddbgateway)
-sudo sed -i '$a' /home/pi/.local/memoria_solodstar
+sudo sed -i '$a 8' /home/pi/.local/memoria_solodstar
 sudo sed -i "8c Reflector:     $contenido_reflector" /home/pi/.local/memoria_solodstar
 
 /home/pi/V105/./qt_info_solodstar
