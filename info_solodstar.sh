@@ -53,7 +53,7 @@ contenido_reflector=$(awk "NR==18" /etc/ircddbgateway)
 #contenido_reflector='expr substr $contenido_reflector 12 9'
 
 
-sudo sed -i "8c Reflector: DCS018" /home/pi/.local/memoria_solo_dstar
+sudo sed -i "8c Reflector: DCS018 Y" /home/pi/.local/memoria_solo_dstar
 
 /home/pi/V105/./qt_info_solodstar
 
