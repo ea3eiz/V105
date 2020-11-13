@@ -50,13 +50,12 @@ sudo sed -i "7c Memoria:      $memoria" /home/pi/.local/memoria_solodstar
 
 contenido_reflector=$(awk "NR==18" /etc/ircddbgateway)
 
-contenido_reflector=`expr substr $contenido_reflector 12 35`
-echo "reflector: $contenido_reflector"
-read a
-sudo sed -i '$a 8' /home/pi/.local/memoria_solodstar
-sudo sed -i "8c Reflector:    $contenido_reflector" /home/pi/.local/memoria_solodstar
+#contenido_reflector=`expr substr $contenido_reflector 12 9`
 
-#/home/pi/V105/./qt_info_solodstar
+sudo sed -i '$a 8' /home/pi/.local/memoria_solodstar
+sudo sed -i "8c $contenido_reflector" /home/pi/.local/memoria_solodstar
+
+/home/pi/V105/./qt_info_solodstar
 
 ##Colores
 #ROJO="\033[1;31m"
