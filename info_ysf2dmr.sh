@@ -1,9 +1,4 @@
 #!/bin/bash
-Frecuencia="Frecuencia:"
-Puerto="Puerto:" 
-Servidor="Servidor:"
-Memoria="Memoria:"
-informacion="INFORMACIÓN"
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMFUSION.ini`
 buscar=":"
@@ -18,6 +13,21 @@ frecuencia=$(awk "NR==2" /home/pi/YSF2DMR/YSF2DMR.ini)
 frecuencia=`expr substr $frecuencia 13 17`
 frecuencia=$frecuencia
 
+txfrecuencia=$(awk "NR==3" /home/pi/YSF2DMR/YSF2DMR.ini)
+txfrecuencia=`expr substr $txfrecuencia 13 17`
+txfrecuencia=$txfrecuencia
+
+
+id=$(awk "NR==39" /home/pi/YSF2DMR/YSF2DMR.ini)
+id=`expr substr $id 4 9`
+id=$id
+
+indicativo=$(awk "NR==13" /home/pi/YSF2DMR/YSF2DMR.ini)
+indicativo=`expr substr $indicativo 10 8`
+indicativo=$indicativo
+
+
+
 address=`grep -n -m 1 "^Address=" /home/pi/YSF2DMR/YSF2DMR.ini`
 buscar=":"
 caracteres=`expr index $address $buscar`
@@ -27,7 +37,7 @@ mode=$(awk "NR==$numero_linea_address" /home/pi/YSF2DMR/YSF2DMR.ini)
 address=`expr substr $address 12 35`
 address="  "$address
 
-memoria=$(awk "NR==55" /home/pi/YSF2DMR/YSF2DMR.ini)
+memoria=$(awk "NR==25" /home/pi/.local/memorias)
 
 #Colores
 ROJO="\033[1;31m"
@@ -42,12 +52,14 @@ echo "${BLANCO}"
 echo "  $informacion (YSF2DMR)"
 echo "${VERDE}"
 echo "  ******************************************"
-echo ""
-echo "${CIAN}  $Frecuencia ${AMARILLO}$frecuencia   "
-echo "${CIAN}  $Puerto   ${AMARILLO}$puerto   "
-echo "${CIAN}  $Servidor ${AMARILLO}$address   "
-echo "${CIAN}  Memoria:    ${AMARILLO}$memoria   "
-echo "${VERDE}"
+echo "${CIAN}  Indicativo:   ${AMARILLO}$indicativo   "
+echo "${CIAN}  Id:           ${AMARILLO}$id   "
+echo "${CIAN}  RXFrecuencia: ${AMARILLO}$rxfrecuencia   "
+echo "${CIAN}  TXFrecuencia: ${AMARILLO}$txfrecuencia   "
+echo "${CIAN}  Puerto:     ${AMARILLO}$puerto   "
+echo "${CIAN}  Servidor:   ${AMARILLO}$address   "
+echo "${CIAN}  Memoria:      ${AMARILLO}$memoria   "
+echo -n "${VERDE}"
 echo "  ******************************************"
 
 echo -n "${CIAN}  Pulsa enter para cerrar esta ventana "
