@@ -27,8 +27,16 @@ indicativo=`expr substr $indicativo 10 8`
 indicativo=$indicativo
 
 options=$(awk "NR==54" /home/pi/YSF2DMR/YSF2DMR.ini)
+
+bm=`expr substr $options 1 1`
+
+if [ $bm == "#" ]
+then
+options="#Options="
+else
 options=`expr substr $options 9 30`
 options=$options
+fi
 
 address=`grep -n -m 1 "^Address=" /home/pi/YSF2DMR/YSF2DMR.ini`
 buscar=":"
