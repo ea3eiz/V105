@@ -30,6 +30,10 @@ options=$(awk "NR==54" /home/pi/YSF2DMR/YSF2DMR.ini)
 
 bm=`expr substr $options 1 1`
 
+echo "options:   $bm"
+read a
+
+
 if [ $bm == "#" ]
 then
 options="#Options="
