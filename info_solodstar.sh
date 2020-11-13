@@ -40,25 +40,21 @@ address="  "$address
 memoria=$(awk "NR==21" /home/pi/.local/memorias)
 
 #Modificación 31-10-2020
-sudo sed -i "1c Indicativo:   $indicativo" /home/pi/.local/memoria_solodstar
-sudo sed -i "2c Id:           $id" /home/pi/.local/memoria_solodstar
-sudo sed -i "3c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_solodstar
-sudo sed -i "4c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_solodstar
-sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_solodstar
-sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_solodstar
-sudo sed -i "7c Memoria:      $memoria" /home/pi/.local/memoria_solodstar
+sudo sed -i "1c Indicativo:   $indicativo" /home/pi/.local/memoria_solo_dstar
+sudo sed -i "2c Id:           $id" /home/pi/.local/memoria_solo_dstar
+sudo sed -i "3c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_solo_dstar
+sudo sed -i "4c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_solo_dstar
+sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_solo_dstar
+sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_solo_dstar
+sudo sed -i "7c Memoria:      $memoria" /home/pi/.local/memoria_solo_dstar
 
 contenido_reflector=$(awk "NR==18" /etc/ircddbgateway)
 
 #contenido_reflector=`expr substr $contenido_reflector 12 9`
-estado = sed "8p"  /home/pi/.local/memoria_solodstar
-if [ $estado == " " ]
-then
-sudo sed -i '$a 8' /home/pi/.local/memoria_solodstar
-sudo sed -i "8c $contenido_reflector" /home/pi/.local/memoria_solodstar
-else
-echo ""
-fi
+
+
+sudo sed -i "8c $contenido_reflector" /home/pi/.local/memoria_solo_dstar
+
 /home/pi/V105/./qt_info_solodstar
 
 ##Colores

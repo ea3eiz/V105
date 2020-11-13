@@ -126,11 +126,11 @@ else
 cp /home/pi/V105/memoria_solofusion /home/pi/.local/
 fi
 
-if [ -f /home/pi/.local/memoria_solodstar ]
+if [ -f /home/pi/.local/memoria_solo_dstar ]
 then
 echo ""
 else
-cp /home/pi/V105/memoria_solodstar /home/pi/.local/
+cp /home/pi/V105/memoria_solo_dstar /home/pi/.local/
 fi
 
 if [ -f /home/pi/.local/memorias ] 
