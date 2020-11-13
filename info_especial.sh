@@ -47,7 +47,7 @@ sudo sed -i "4c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_especial
 sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_especial
 sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_especial
 sudo sed -i "7c Memoria:      $memoria" /home/pi/.local/memoria_especial
-sudo sed -i "8c . " /home/pi/.local/memoria_especial
+sudo sed -i "8c   " /home/pi/.local/memoria_especial
 
 /home/pi/V105/./qt_info_especial
 ##Colores
