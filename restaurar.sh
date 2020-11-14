@@ -8,7 +8,7 @@ cd /home/pi/.local/COPIA_SEGURIDAD
 tar -xvzf copia.tar.gz
 
 sudo rm copia.tar.gz
-echo "\33[1;32m" #color verde
+echo "\33[1;32m" #color verde 
 echo "***************************************************"
 echo "* ESTAS RESTAURANDO UNA COPIA DE LA MISMA VERSIÓN *"
 echo "*      DEL MMDVMHOST QUE TIENES ACTUALIZADO       *"
@@ -37,6 +37,28 @@ echo "***************************************************"
             cp -f MMDVMESPECIAL.ini_copia /home/pi/MMDVMHost
             cp -f MMDVMESPECIAL.ini_copia2 /home/pi/MMDVMHost
             cp -f MMDVMESPECIAL.ini_copia3 /home/pi/MMDVMHost
+
+
+
+
+
+
+            sudo cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
+            sudo cp -f MMDVMDMR2YSF.ini /home/pi/MMDVMHost
+            sudo cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
+
+            cp -f DMR2NXDN/DMR2NXDN.ini  /home/pi/DMR2NXDN
+            cp -f NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/NXDNClients/NXDNGateway
+            cp -f DMR2YSF/DMR2YSF.ini  /home/pi/DMR2YSF
+
+
+
+
+
+
+
+
+
 
             #solo Dstar
             cp -f MMDVMDSTAR.ini /home/pi/MMDVMHost
