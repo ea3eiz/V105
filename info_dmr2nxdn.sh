@@ -1,7 +1,7 @@
 #!/bin/bash
 Frecuencia="Frecuencia:"
 Puerto="Puerto:" 
-Servidor="Servidor:"
+Servidor="Address: "
 Memoria="Memoria:"
 informacion="INFORMACIÓN"
 

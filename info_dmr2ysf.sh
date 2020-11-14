@@ -40,8 +40,8 @@ sudo sed -i "2c Id:           $id" /home/pi/.local/memoria_dmr2ysf
 sudo sed -i "3c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_dmr2ysf
 sudo sed -i "4c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_dmr2ysf
 sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_dmr2ysf
-sudo sed -i "6c Servidor:   $address" /home/pi/.local/memoria_dmr2ysf
-
+sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_dmr2ysf
+                
 /home/pi/V105/./qt_info_dmr2ysf
 
 ##Colores
