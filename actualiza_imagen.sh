@@ -147,6 +147,13 @@ else
 cp /home/pi/V105/memoria_dmr2ysf /home/pi/.local/
 fi
 
+if [ -f /home/pi/.local/memoria_dmr2nxdn ]
+then
+echo ""
+else
+cp /home/pi/V105/memoria_dmr2nxdn /home/pi/.local/
+fi
+
 if [ -f /home/pi/.local/memorias ] 
 then
 echo ""
