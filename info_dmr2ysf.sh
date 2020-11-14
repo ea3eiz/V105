@@ -41,7 +41,10 @@ sudo sed -i "3c RXFrecuencia: $rxfrecuencia" /home/pi/.local/memoria_dmr2ysf
 sudo sed -i "4c TXFrecuencia: $txfrecuencia" /home/pi/.local/memoria_dmr2ysf
 sudo sed -i "5c Puerto:     $puerto" /home/pi/.local/memoria_dmr2ysf
 sudo sed -i "6c Address:    $address" /home/pi/.local/memoria_dmr2ysf
-                
+Startup=$(awk "NR==42" /home/pi/YSFClients/YSFGateway/YSFGateway.ini)
+Startup=`expr substr $Startup 9 20`
+sudo sed -i "7c Sala C4FM:    $Startup" /home/pi/.local/memoria_solofusion               
+
 /home/pi/V105/./qt_info_dmr2ysf
 
 ##Colores
