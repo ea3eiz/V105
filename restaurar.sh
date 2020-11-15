@@ -38,28 +38,6 @@ echo "***************************************************"
             cp -f MMDVMESPECIAL.ini_copia2 /home/pi/MMDVMHost
             cp -f MMDVMESPECIAL.ini_copia3 /home/pi/MMDVMHost
 
-
-
-
-
-
-            sudo cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
-            sudo cp -f MMDVMDMR2YSF.ini /home/pi/MMDVMHost
-            sudo cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
-
-            cp -f DMR2NXDN/DMR2NXDN.ini  /home/pi/DMR2NXDN
-            cp -f NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/NXDNClients/NXDNGateway
-            cp -f DMR2YSF/DMR2YSF.ini  /home/pi/DMR2YSF
-
-
-
-
-
-
-
-
-
-
             #solo Dstar
             cp -f MMDVMDSTAR.ini /home/pi/MMDVMHost
             cp -f MMDVMDSTAR.ini_copia /home/pi/MMDVMHost
@@ -79,7 +57,6 @@ echo "***************************************************"
             cp -f YSF2DMR.ini_copia_04 /home/pi/YSF2DMR
             
             cp -f TG-YSFList.txt /home/pi/DMR2YSF
-
 
             cp -f tg_ysf.txt /home/pi/.local
             cp -f nombre_salas_ysf.txt /home/pi/.local
@@ -255,6 +232,8 @@ echo "***************************************************"
                             cd /home/pi/AUTOARRANQUEV105
                             cp /home/pi/Desktop/ABRIR_DMR2M17.desktop /home/pi/.config/autostart
                             fi                            
+
+cd /home/pi/.local/COPIA_SEGURIDAD/Downloads 
 
             cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
