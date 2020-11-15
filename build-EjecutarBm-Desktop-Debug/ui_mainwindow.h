@@ -41,7 +41,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(249, 156);
+        MainWindow->resize(249, 155);
         MainWindow->setStyleSheet(QString::fromUtf8(""));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
@@ -62,7 +62,7 @@ public:
 "color:#fff;"));
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(10, 120, 91, 26));
+        pushButton_3->setGeometry(QRect(150, 120, 91, 26));
         pushButton_3->setCursor(QCursor(Qt::PointingHandCursor));
         pushButton_3->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
 "background:#ffb6c1;\n"
@@ -87,7 +87,7 @@ public:
         IconoBmOn->setScaledContents(true);
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(20, 80, 31, 31));
+        label->setGeometry(QRect(10, 70, 51, 51));
         label->setPixmap(QPixmap(QString::fromUtf8("../../V105/Editar_repeater.png")));
         label->setScaledContents(true);
         EditarBmLineEdit = new QLineEdit(centralWidget);
@@ -96,11 +96,18 @@ public:
         EditarBmPushButton = new QPushButton(centralWidget);
         EditarBmPushButton->setObjectName(QString::fromUtf8("EditarBmPushButton"));
         EditarBmPushButton->setGeometry(QRect(70, 82, 171, 26));
+        EditarBmPushButton->setCursor(QCursor(Qt::PointingHandCursor));
         EditarBmPushButton->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
 "background:#a9a9a9;\n"
 "border:2px solid #fff;\n"
 "color:#fff;"));
         MainWindow->setCentralWidget(centralWidget);
+        QWidget::setTabOrder(CerrarBmPushButton, EjecutarBmLineEdit);
+        QWidget::setTabOrder(EjecutarBmLineEdit, EditarBmPushButton);
+        QWidget::setTabOrder(EditarBmPushButton, pushButton_3);
+        QWidget::setTabOrder(pushButton_3, CerrarBmLineEdit);
+        QWidget::setTabOrder(CerrarBmLineEdit, EditarBmLineEdit);
+        QWidget::setTabOrder(EditarBmLineEdit, ejecutarBmPushButton);
 
         retranslateUi(MainWindow);
 
