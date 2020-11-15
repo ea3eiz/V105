@@ -434,8 +434,10 @@ sleep 3
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             cp /home/pi/Desktop/ABRIR_DMR2M17.desktop /home/pi/.config/autostart
-                            fi       
-            
+                            fi   
+                                
+ cd /home/pi/.local/COPIA_SEGURIDAD/Downloads           
+
             cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMDMR2YSF.ini /home/pi/MMDVMHost
