@@ -17,10 +17,7 @@
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
 #include <QtGui/QMainWindow>
-#include <QtGui/QMenuBar>
 #include <QtGui/QPushButton>
-#include <QtGui/QStatusBar>
-#include <QtGui/QToolBar>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -32,51 +29,78 @@ public:
     QPushButton *ejecutarBmPushButton;
     QPushButton *CerrarBmPushButton;
     QPushButton *pushButton_3;
-    QLabel *label;
     QLineEdit *EjecutarBmLineEdit;
     QLineEdit *CerrarBmLineEdit;
-    QMenuBar *menuBar;
-    QToolBar *mainToolBar;
-    QStatusBar *statusBar;
+    QLabel *IconoBmOff;
+    QLabel *IconoBmOn;
+    QLabel *label;
+    QLineEdit *EditarBmLineEdit;
+    QPushButton *EditarBmPushButton;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(559, 300);
+        MainWindow->resize(249, 156);
+        MainWindow->setStyleSheet(QString::fromUtf8(""));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         ejecutarBmPushButton = new QPushButton(centralWidget);
         ejecutarBmPushButton->setObjectName(QString::fromUtf8("ejecutarBmPushButton"));
-        ejecutarBmPushButton->setGeometry(QRect(90, 90, 107, 26));
+        ejecutarBmPushButton->setGeometry(QRect(70, 10, 171, 26));
+        ejecutarBmPushButton->setCursor(QCursor(Qt::PointingHandCursor));
+        ejecutarBmPushButton->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
+"background:#00CC33;\n"
+"border:2px solid #fff;"));
         CerrarBmPushButton = new QPushButton(centralWidget);
         CerrarBmPushButton->setObjectName(QString::fromUtf8("CerrarBmPushButton"));
-        CerrarBmPushButton->setGeometry(QRect(90, 120, 171, 26));
+        CerrarBmPushButton->setGeometry(QRect(70, 40, 171, 26));
+        CerrarBmPushButton->setCursor(QCursor(Qt::PointingHandCursor));
+        CerrarBmPushButton->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
+"background:#f00;\n"
+"border:2px solid #fff;\n"
+"color:#fff;"));
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(30, 190, 141, 26));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(10, 80, 61, 61));
-        label->setPixmap(QPixmap(QString::fromUtf8("../../V105/C4FM.png")));
-        label->setScaledContents(true);
+        pushButton_3->setGeometry(QRect(10, 120, 91, 26));
+        pushButton_3->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton_3->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
+"background:#ffb6c1;\n"
+"border:2px solid #fff;\n"
+"color:#000;"));
         EjecutarBmLineEdit = new QLineEdit(centralWidget);
         EjecutarBmLineEdit->setObjectName(QString::fromUtf8("EjecutarBmLineEdit"));
-        EjecutarBmLineEdit->setGeometry(QRect(20, 10, 521, 26));
+        EjecutarBmLineEdit->setGeometry(QRect(10, 240, 521, 26));
         CerrarBmLineEdit = new QLineEdit(centralWidget);
         CerrarBmLineEdit->setObjectName(QString::fromUtf8("CerrarBmLineEdit"));
-        CerrarBmLineEdit->setGeometry(QRect(22, 50, 521, 26));
+        CerrarBmLineEdit->setGeometry(QRect(10, 270, 521, 26));
+        IconoBmOff = new QLabel(centralWidget);
+        IconoBmOff->setObjectName(QString::fromUtf8("IconoBmOff"));
+        IconoBmOff->setGeometry(QRect(10, 10, 51, 51));
+        IconoBmOff->setPixmap(QPixmap(QString::fromUtf8("../../V105/ICONO_BM.png")));
+        IconoBmOff->setScaledContents(true);
+        IconoBmOff->setWordWrap(false);
+        IconoBmOn = new QLabel(centralWidget);
+        IconoBmOn->setObjectName(QString::fromUtf8("IconoBmOn"));
+        IconoBmOn->setGeometry(QRect(10, 10, 51, 51));
+        IconoBmOn->setPixmap(QPixmap(QString::fromUtf8("../../V105/ICONO_BM_ON.png")));
+        IconoBmOn->setScaledContents(true);
+        label = new QLabel(centralWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(20, 80, 31, 31));
+        label->setPixmap(QPixmap(QString::fromUtf8("../../V105/Editar_repeater.png")));
+        label->setScaledContents(true);
+        EditarBmLineEdit = new QLineEdit(centralWidget);
+        EditarBmLineEdit->setObjectName(QString::fromUtf8("EditarBmLineEdit"));
+        EditarBmLineEdit->setGeometry(QRect(10, 300, 551, 26));
+        EditarBmPushButton = new QPushButton(centralWidget);
+        EditarBmPushButton->setObjectName(QString::fromUtf8("EditarBmPushButton"));
+        EditarBmPushButton->setGeometry(QRect(70, 82, 171, 26));
+        EditarBmPushButton->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
+"background:#a9a9a9;\n"
+"border:2px solid #fff;\n"
+"color:#fff;"));
         MainWindow->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(MainWindow);
-        menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 559, 23));
-        MainWindow->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        statusBar = new QStatusBar(MainWindow);
-        statusBar->setObjectName(QString::fromUtf8("statusBar"));
-        MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
 
@@ -88,10 +112,14 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
         ejecutarBmPushButton->setText(QApplication::translate("MainWindow", "Abrir BM", 0, QApplication::UnicodeUTF8));
         CerrarBmPushButton->setText(QApplication::translate("MainWindow", "Cerrar BM", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setText(QApplication::translate("MainWindow", "Cerrar ventana", 0, QApplication::UnicodeUTF8));
-        label->setText(QString());
+        pushButton_3->setText(QApplication::translate("MainWindow", "Cerrar", 0, QApplication::UnicodeUTF8));
         EjecutarBmLineEdit->setText(QApplication::translate("MainWindow", "cd /home/pi/V105;lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh", 0, QApplication::UnicodeUTF8));
         CerrarBmLineEdit->setText(QApplication::translate("MainWindow", "cd /home/pi/V105;lxterminal --geometry=80x15 -e sudo sh cerrar_bm.sh", 0, QApplication::UnicodeUTF8));
+        IconoBmOff->setText(QString());
+        IconoBmOn->setText(QString());
+        label->setText(QString());
+        EditarBmLineEdit->setText(QApplication::translate("MainWindow", "cd /home/pi/V105;lxterminal --geometry=93x52 -e sudo sh editar_MMDVMBM.sh", 0, QApplication::UnicodeUTF8));
+        EditarBmPushButton->setText(QApplication::translate("MainWindow", "Editar BM", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
