@@ -582,7 +582,8 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-sh Puertos_MMDVMPLUS.sh
+#sh Puertos_MMDVMPLUS.sh
+/home/pi/V105/./qt_PuertosDmrplus
                           break;;
                           [nN]* ) echo ""
                           break;;
