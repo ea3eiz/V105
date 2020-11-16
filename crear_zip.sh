@@ -77,6 +77,9 @@
             cp -f /home/pi/MMDVMHost/MMDVMDMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f /home/pi/DMRGateway/DMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
+            cp -f /home/pi/MMDVMHost/MMDVMDMR2M17.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f /home/pi/DMR2M17/DMR2M17.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads            
+
 indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
 
