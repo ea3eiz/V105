@@ -1097,7 +1097,8 @@ do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-                          sh Puertos_Nextion_PLUS.sh
+#sh Puertos_Nextion_PLUS.sh
+/home/pi/V105/./qt_PuertosDmrplus_Nextion
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
