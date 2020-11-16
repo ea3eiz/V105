@@ -86,7 +86,7 @@ sleep 3
             cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f /home/pi/DMR2YSF/DMR2YSF.ini  /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            #solo Dstar y solo Fusion
+            #solo Dstar y solo Fusion 
             cp -f MMDVMDSTAR.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f MMDVMFUSION.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             #fin  Dstar y solo Fusion  
@@ -129,6 +129,9 @@ sleep 3
 
             cp -f /home/pi/MMDVMHost/MMDVMDMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f /home/pi/DMRGateway/DMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+
+            cp -f /home/pi/MMDVMHost/MMDVMDMR2M17.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f /home/pi/DMR2M17/DMR2M17.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
 indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
@@ -461,6 +464,9 @@ sleep 3
 
             cp -f MMDVMDMRGateway.ini /home/pi/MMDVMHost/
             cp -f DMRGateway.ini /home/pi/DMRGateway/
+
+            cp -f MMDVMDMR2M17.ini /home/pi/MMDVMHost/
+            cp -f DMR2M17.ini /home/pi/.DMR2M17/
 
 # Restaura todos los datos de Dvswitch
 indicativo=$(awk "NR==1" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)          
