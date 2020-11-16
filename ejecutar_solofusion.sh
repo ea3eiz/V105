@@ -43,8 +43,8 @@ cd /home/pi/YSFClients/YSFGateway
 sudo lxterminal --geometry=80x15 -e ./YSFGateway YSFGateway.ini & 
 cd /home/pi/MMDVMHost
 
-/home/pi/V105/./qt_ejecuta_solofusion & sudo ./MMDVMFUSION MMDVMFUSION.ini
-
+#/home/pi/V105/./qt_ejecuta_solofusion & sudo ./MMDVMFUSION MMDVMFUSION.ini
+sudo ./MMDVMFUSION MMDVMFUSION.ini
 cd /home/pi/Desktop
 sudo cp Abrir_solofusion.desktop /home/pi
 
