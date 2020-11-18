@@ -361,7 +361,7 @@ sleep 3
                             info=$(awk "NR==11" /home/pi/.local/autoarranque.ini)
                             if [ $info = "SOLO_FUSION=OFF" ]
                             then
-                            echo "  "
+                            sudo rm /home/pi/.config/autostart/FUSIONSOLO.desktop
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp FUSIONSOLO.desktop /home/pi/.config/autostart
