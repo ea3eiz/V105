@@ -702,6 +702,7 @@ clear
                         sudo rm DMR2NXDN.desktop
                         sudo rm NXDN.desktop
                         sudo rm DMRGateway.desktop
+                        sudo rm ABRIR_DMR2M17.desktop
 
 sed -i "1c ircDDB=OFF" /home/pi/.local/autoarranque.ini
 sed -i "2c BlueDV=OFF" /home/pi/.local/autoarranque.ini
