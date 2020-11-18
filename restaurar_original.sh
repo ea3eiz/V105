@@ -8,11 +8,7 @@ cd /home/pi/.local/COPIA_SEGURIDAD
 tar -xvzf copia.tar.gz
 
 sudo rm copia.tar.gz
-echo "\33[1;32m" #color verde 
-echo "***************************************************"
-echo "* ESTAS RESTAURANDO UNA COPIA DE LA MISMA VERSIÓN *"
-echo "*      DEL MMDVMHOST QUE TIENES ACTUALIZADO       *"
-echo "***************************************************"
+
             sudo chmod -R 777 /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cd /home/pi/.local/COPIA_SEGURIDAD/Downloads
             
