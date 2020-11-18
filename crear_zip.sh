@@ -35,7 +35,14 @@
 
             #solo Dstar y solo Fusion
             cp -f MMDVMDSTAR.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMDSTAR.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMDSTAR.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMDSTAR.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            
             cp -f MMDVMFUSION.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMFUSION.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMFUSION.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMFUSION.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
             #fin  Dstar y solo Fusion 
 
             cd  /home/pi/YSF2DMR
