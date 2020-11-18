@@ -721,6 +721,7 @@ sed -i "15c DMR2YSF=OFF" /home/pi/.local/autoarranque.ini
 sed -i "16c DMR2NXDN=OFF" /home/pi/.local/autoarranque.ini
 sed -i "17c NXDN=OFF" /home/pi/.local/autoarranque.ini
 sed -i "18c DMRGateway=OFF" /home/pi/.local/autoarranque.ini
+sed -i "19c DMRGateway=OFF" /home/pi/.local/autoarranque.ini
 
                         exit;
                         break;;
