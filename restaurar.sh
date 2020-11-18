@@ -119,7 +119,7 @@ echo "***************************************************"
                             info=$(awk "NR==7" /home/pi/.local/autoarranque.ini)
                             if [ $info = "ESPECIAL=OFF" ]
                             then
-                            echo "no hace nada"
+                            sudo rm /home/pi/.config/autostart/LIBRE.desktop
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp LIBRE.desktop /home/pi/.config/autostart
@@ -155,7 +155,7 @@ echo "***************************************************"
                             info=$(awk "NR==11" /home/pi/.local/autoarranque.ini)
                             if [ $info = "SOLO_FUSION=OFF" ]
                             then
-                            echo "no hace nada"
+                            sudo rm /home/pi/.config/autostart/FUSIONSOLO.desktop
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp FUSIONSOLO.desktop /home/pi/.config/autostart
