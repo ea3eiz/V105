@@ -289,7 +289,7 @@ sleep 3
                             info=$(awk "NR==3" /home/pi/.local/autoarranque.ini)
                             if [ $info = "YSF=OFF" ]
                             then
-                            esudo rm /home/pi/.config/autostart/YSF.desktop
+                            sudo rm /home/pi/.config/autostart/YSF.desktop
                             else
                             cd /home/pi/AUTOARRANQUEV105
                             sudo cp YSF.desktop /home/pi/.config/autostart
