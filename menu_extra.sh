@@ -23,7 +23,7 @@ echo -n "${ROJO}"
 echo "                              $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ************************************************************************"
-
+echo "\33[1;36m   R)${AMARILLO} Restaurar IMAGEN ORIGINAL tal como la grabastes en su día"
 echo "\33[1;32m      APARTADO SKINS"
 echo "\33[1;32m      =============="
 echo "\33[1;36m   a)${BLANCO} Seleccionar Skin Fondo de Imagen A"
@@ -55,6 +55,23 @@ echo -n "\33[1;36m   Elige una opción: "
 read escoger_menu
 echo ""
 case $escoger_menu in
+R) echo ""
+while true
+do
+clear                     
+                        instalarsi=S
+                        case $instalarsi in
+                        [sS]* ) echo ""
+                        clear
+                        cd /home/pi/V105
+                        sudo sh restaurar_original.sh                 
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        exit;
+                        break;;
+esac
+done;;
 a) echo ""
 while true
 do
