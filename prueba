@@ -1225,7 +1225,7 @@ then
 sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
 else
 echo ""
-if
+fi
 
 
                           break;;
