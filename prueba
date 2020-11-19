@@ -1222,7 +1222,7 @@ echo "prueba: $prueba"
 read a
 if [ $prueba = "DstName=M17-EA3 D" ]
 then
-sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
+#sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
 else
 sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
 fi
