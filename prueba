@@ -1217,17 +1217,30 @@ do
 #sudo sh /home/pi/V105/dstname_m17.sh
 #$usuario/$SCRIPTS_version/./qt_reflectores_m17
 $usuario/$SCRIPTS_version/./qt_reflector_m17
-prueba=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
-prueba=`echo "$prueba" | tr -d '[[:space:]]'`
-prueba=`expr substr $prueba 1 15`
-echo "prueba: $prueba"
+
+reflector=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
+reflector=`echo "$reflector" | tr -d '[[:space:]]'`
+reflector=`expr substr $reflector 1 15`
+echo "prueba: $reflector"
 read a
-if [ $prueba = "DstName=M17-EA3" ]
+if [ $reflector = "DstName=M17-EA3" ]
 then
 echo ""
 sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
 else
-#sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
+echo ""
+fi
+
+reflector=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
+reflector=`echo "$reflector" | tr -d '[[:space:]]'`
+reflector=`expr substr $reflector 1 15`
+echo "prueba: $reflector"
+read a
+if [ $reflector = "DstName=M17-ESP" ]
+then
+echo ""
+sed -i "5c DstAddress=5.249.148.156" $usuario/DMR2M17/DMR2M17.ini
+else
 echo ""
 fi
 
