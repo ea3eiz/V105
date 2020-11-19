@@ -1218,6 +1218,7 @@ do
 #$usuario/$SCRIPTS_version/./qt_reflectores_m17
 $usuario/$SCRIPTS_version/./qt_reflector_m17
 prueba=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
+prueba=`echo "$prueba" | tr -d '[[:space:]]'`
 prueba=`expr substr $prueba 1 15`
 echo "prueba: $prueba"
 read a
