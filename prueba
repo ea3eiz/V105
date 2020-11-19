@@ -1224,7 +1224,7 @@ if [ $prueba = "DstName=M17-EA3 D" ]
 then
 sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
 else
-echo ""
+sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
 fi
 
 
