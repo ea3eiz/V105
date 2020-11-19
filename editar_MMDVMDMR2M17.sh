@@ -1215,7 +1215,8 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
 #sudo sh /home/pi/V105/dstname_m17.sh
-$usuario/$SCRIPTS_version/./qt_reflectores_m17
+#$usuario/$SCRIPTS_version/./qt_reflectores_m17
+$usuario/$SCRIPTS_version/./qt_reflector_m17
                           break;;
                           [nN]* ) echo ""
                           break;;
