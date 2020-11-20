@@ -691,7 +691,7 @@ clear
                                 make
                                 make install
                                 sudo chmod +x -R /home/pi/mvoice                       
-                                sudo ./start-mvoice
+                                ./start-mvoice
                                 sed -i "3c $version_a_instalar" /home/pi/info.ini
                                 else
                                 /home/pi/V105/./aviso_mvoice_version
