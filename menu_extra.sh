@@ -690,12 +690,11 @@ clear
                                 cd /home/pi/mvoice
                                 make
                                 make install
-                                sudo chmod +x -R /home/pi/mvoice
-                                sudo su
-                                ./start-mvoice
-                                sudo chmod +x -R /root/etc
+                                sudo chmod +x -R /home/pi/mvoice                       
+                                sudo ./start-mvoice
                                 sed -i "3c $version_a_instalar" /home/pi/info.ini
-                                
+                                sudo su
+                                sudo chmod +x -R /root/etc
                                 else
                                 /home/pi/V105/./aviso_mvoice_version
                                 fi
