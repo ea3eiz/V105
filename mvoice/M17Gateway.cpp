@@ -31,7 +31,10 @@
 #define CFG_DIR "/tmp/"
 #endif
 
-CM17Gateway::CM17Gateway() : CBase() {}
+CM17Gateway::CM17Gateway() : CBase()
+{
+	keep_running = false; // not running initially. this will be set to true in CMainWindow
+}
 
 CM17Gateway::~CM17Gateway()
 {
@@ -40,8 +43,9 @@ CM17Gateway::~CM17Gateway()
 	ipv6.Close();
 }
 
-bool CM17Gateway::Init(const CFGDATA &cfgdata, CM17RouteMap *map)
+bool CM17Gateway::Init(const CFGDATA &cfgdata)
 {
+	mlink.state = ELinkState::unlinked;
 	std::string path(CFG_DIR);
 	path.append("qn.db");
 	if (qnDB.Open(path.c_str()))
@@ -61,7 +65,6 @@ bool CM17Gateway::Init(const CFGDATA &cfgdata, CM17RouteMap *map)
 	CConfigure config;
 	config.CopyFrom(cfgdata);
 	config.CopyTo(cfg);
-	routeMap = map;
 	return false;
 }
 
@@ -281,25 +284,27 @@ void CM17Gateway::Process()
 				Write(disc.magic, 10, mlink.addr);
 				qnDB.DeleteLS(mlink.addr.GetAddress());
 			} else {
-				const auto addr = routeMap->Find(dest.GetCS());
-				if (addr)
-					Write(frame.magic, sizeof(SM17Frame), *addr);
-				else
-					std::cout << "Couldn't find an address for destination '" << dest.GetCS() << "'" << std::endl;
+				Write(frame.magic, sizeof(SM17Frame), destination);
 			}
 			FD_CLR(amfd, &fdset);
 		}
 	}
+	AM2M17.Close();
+	ipv4.Close();
+	ipv6.Close();
+}
+
+void CM17Gateway::SetDestAddress(const std::string &address, uint16_t port)
+{
+	if (std::string::npos == address.find(':'))
+		destination.Initialize(AF_INET, port, address.c_str());
+	else
+		destination.Initialize(AF_INET6, port, address.c_str());
 }
 
 void CM17Gateway::SendLinkRequest(const CCallsign &ref)
 {
-	auto addr = routeMap->FindBase(ref.GetCS());
-	if (nullptr == addr) {
-		std::cerr << "Can't find '" << ref.GetCS() << "' in route map. Aborting link request." << std::endl;
-		return;
-	}
-	mlink.addr = *addr;
+	mlink.addr = destination;
 	mlink.cs = ref;
 	mlink.from_mod = cfg.cModule;
 
@@ -345,7 +350,8 @@ bool CM17Gateway::ProcessFrame(const uint8_t *buf)
 	} else {
 		// here comes a first packet, so init the currentStream
 		auto check = crc.CalcCRC(frame);
-		std::cout << "Header Packet crc=0x" << std::hex << frame.GetCRC() << " calculate=0x" << std::hex << check << std::endl;
+		if (frame.GetCRC() != check)
+			std::cout << "Header Packet crc=0x" << std::hex << frame.GetCRC() << " calculate=0x" << std::hex << check << std::endl;
 		memcpy(currentStream.header.magic, frame.magic, sizeof(SM17Frame));
 		M172AM.Write(frame.magic, sizeof(SM17Frame));
 		const CCallsign call(frame.lich.addr_src);
