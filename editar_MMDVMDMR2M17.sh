@@ -1215,63 +1215,10 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
 #sudo sh /home/pi/V105/dstname_m17.sh
-#$usuario/$SCRIPTS_version/./qt_reflectores_m17
-$usuario/$SCRIPTS_version/./qt_reflector_m17
+$usuario/$SCRIPTS_version/./qt_reflectores_m17
 
-reflector=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
-reflector=`echo "$reflector" | tr -d '[[:space:]]'`
-reflector=`expr substr $reflector 1 15`
-if [ $reflector = "DstName=M17-ESP" ]
-then
-echo ""
-sed -i "5c DstAddress=5.249.148.156" $usuario/DMR2M17/DMR2M17.ini
-else
-echo ""
-fi
 
-reflector=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
-reflector=`echo "$reflector" | tr -d '[[:space:]]'`
-reflector=`expr substr $reflector 1 15`
-if [ $reflector = "DstName=M17-EA1" ]
-then
-echo ""
-sed -i "5c DstAddress=80.211.29.226" $usuario/DMR2M17/DMR2M17.ini
-else
-echo ""
-fi
 
-reflector=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
-reflector=`echo "$reflector" | tr -d '[[:space:]]'`
-reflector=`expr substr $reflector 1 15`
-if [ $reflector = "DstName=M17-EA2" ]
-then
-echo ""
-sed -i "5c DstAddress=104.148.41.57" $usuario/DMR2M17/DMR2M17.ini
-else
-echo ""
-fi
-
-reflector=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
-reflector=`echo "$reflector" | tr -d '[[:space:]]'`
-reflector=`expr substr $reflector 1 15`
-if [ $reflector = "DstName=M17-EA3" ]
-then
-echo ""
-sed -i "5c DstAddress=aderdigital.ddns.net" $usuario/DMR2M17/DMR2M17.ini
-else
-echo ""
-fi
-
-reflector=$(awk "NR==4" $usuario/DMR2M17/DMR2M17.ini)
-reflector=`echo "$reflector" | tr -d '[[:space:]]'`
-reflector=`expr substr $reflector 1 15`
-if [ $reflector = "DstName=M17-EA4" ]
-then
-echo ""
-sed -i "5c DstAddress=212.237.0.67" $usuario/DMR2M17/DMR2M17.ini
-else
-echo ""
-fi
 
                           break;;
                           [nN]* ) echo ""
