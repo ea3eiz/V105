@@ -1229,15 +1229,20 @@ do
                           read -p 'Estas en DMR+ ? S/N ' actualizar                                          
                           case $actualizar in
                           [sS]* ) echo ""
-                          read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
-                          letra1=c
-                          linea4=$linea33port$letra1
-                          if [ $opcion = 21465 ]
-                          then
-                          sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/MMDVMHost/$DIRECTORIO
-                          else
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
-                          fi
+                          
+                          
+                          #read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+                          #letra1=c
+                          #linea4=$linea33port$letra1
+                          #if [ $opcion = 21465 ]
+                          #then
+                          #sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/MMDVMHost/$DIRECTORIO
+                          #else
+                          #sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
+                          #fi
+
+                          /home/pi/V105/./qt_ipsc2_plus
+                          
                           break;;
                           [nN]* ) echo ""
                           letra1=c
