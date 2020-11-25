@@ -64,7 +64,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
-$usuario/$SCRIPTS_version/./qt_reflectores_m171                 
+$usuario/$SCRIPTS_version/./EjecutarBm                 
                         break;;
                         [nN]* ) echo ""
                         clear
