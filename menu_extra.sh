@@ -64,7 +64,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
-$usuario/$SCRIPTS_version/./m17                
+$usuario/$SCRIPTS_version/./wm17                
                         break;;
                         [nN]* ) echo ""
                         clear
