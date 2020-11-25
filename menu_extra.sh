@@ -55,6 +55,25 @@ echo -n "\33[1;36m   Elige una opción: "
 read escoger_menu
 echo ""
 case $escoger_menu in
+
+m17) echo ""
+while true
+do
+clear                     
+                        instalarsi=S
+                        case $instalarsi in
+                        [sS]* ) echo ""
+                        clear
+$usuario/$SCRIPTS_version/./qt_reflectores_m171                 
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        exit;
+                        break;;
+esac
+done;;
+
+
 R) echo ""
 while true
 do
