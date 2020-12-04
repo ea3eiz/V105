@@ -909,6 +909,7 @@ do
                           case $actualizar in                                            
                           [sS]* ) echo ""
                           V=`echo "$V" | tr -d '[[:space:]]'`       
+                          sed -i "4c ScreenLayout=$V" $usuario/.local/nextion_bm
                           sed -i "$linea ScreenLayout=$V" $usuario/MMDVMHost/$DIRECTORIO             
                           break;;
                           [nN]* ) echo ""
