@@ -923,7 +923,8 @@ do
                           actualizar=S 
                           case $actualizar in                                            
                           [sS]* ) echo ""
-                          V=`echo "$V" | tr -d '[[:space:]]'`      
+                          V=`echo "$V" | tr -d '[[:space:]]'` 
+                          sed -i "3c IdleBrightness=$V" $usuario/.local/nextion_bm     
                           sed -i "$linea_sed_IdleBrightness IdleBrightness=$V" $usuario/MMDVMHost/$DIRECTORIO             
                           break;;
                           [nN]* ) echo ""
