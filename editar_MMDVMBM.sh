@@ -876,7 +876,8 @@ do
                           actualizar=S 
                           case $actualizar in                                            
                           [sS]* ) echo ""
-                          V=`echo "$V" | tr -d '[[:space:]]'`       
+                          V=`echo "$V" | tr -d '[[:space:]]'` 
+                          sed -i "1c Display=$V" $usuario/.local/nextion_bm      
                           sed -i "$linea Display=$V" $usuario/MMDVMHost/$DIRECTORIO             
                           break;;
                           [nN]* ) echo ""
