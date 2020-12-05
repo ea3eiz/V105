@@ -182,6 +182,20 @@ else
 cp /home/pi/V105/oled_bm /home/pi/.local/
 fi
 
+if [ -f /home/pi/.local/nextion_plus ]
+then
+echo ""
+else
+cp /home/pi/V105/nextion_plus /home/pi/.local/
+fi
+
+if [ -f /home/pi/.local/oled_plus ]
+then
+echo ""
+else
+cp /home/pi/V105/oled_plus /home/pi/.local/
+fi
+
                         #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
                         frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
                         cd $usuario/Desktop/
