@@ -295,7 +295,7 @@ letra=c
 linea_sed_MN=$numero_linea$letra
 echo " ${CIAN}\t\th) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
 
-echo -n "${CIAN}  22)${GRIS} Version Display       - ${AMARILLO}"
+echo -n "${CIAN}  22)${GRIS} Version Display       - ${CIAN}"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $ScreenLayout = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -327,7 +327,7 @@ IdleBrightness=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 IdleBrightness_CORTO=`expr substr $IdleBrightness 3 22`
 letra=c
 linea_sed_IdleBrightness=$numero_linea$letra
-echo -n "  ${CIAN}23) ${GRIS}Brillo reposo Nextion - ${AMARILLO}$IdleBrightness_CORTO"
+echo -n "  ${CIAN}23) ${GRIS}Brillo reposo Nextion - ${CIAN}$IdleBrightness_CORTO"
 
 # j) POCSAG Enable=
 var=`grep -n -m 1 "\[POCSAG\]" $usuario/MMDVMHost/$DIRECTORIO`
@@ -392,7 +392,7 @@ numero_linea=`expr $numero_linea + 1`
 tipo_oled=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_oled=$numero_linea$letra
-echo "${CIAN}     \t\tm) ${GRIS}Tipo OLED   - ${AMARILLO}$tipo_oled"
+echo "${CIAN}     \t\tm) ${GRIS}Tipo OLED   - ${CIAN}$tipo_oled"
 
 #27)reflector DMR+=
 echo -n "${CIAN}  27)${GRIS} Entra reflector DMR+  - ${AMARILLO}"
@@ -885,7 +885,7 @@ do
                           break;;
 esac
 done;;
-22) echo ""
+22bloqueado) echo ""
 while true
 do
                           ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
@@ -918,7 +918,7 @@ do
                           break;;
 esac
 done;;
-23) echo ""
+23bloqueado) echo ""
 while true
 do
                           read -p 'Introduce el brillo IdleBrightness: ' V
@@ -1096,7 +1096,7 @@ do
                           break;;
 esac
 done;;
-h) echo ""
+hbloqueado) echo ""
 while true
 do
                           actualizar=S 
@@ -1151,7 +1151,7 @@ do
                           break;;
 esac
 done;;
-m) echo ""
+mbloqueado) echo ""
 while true
 do                         
                           echo "   Valor  actual  tipo OLED: ${AMARILLO}$tipo_oled"
