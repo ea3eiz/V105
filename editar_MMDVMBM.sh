@@ -274,7 +274,7 @@ timeo1=`expr substr $timeo 3 30`
 echo "$timeo1"
 fi
 
-echo -n "${CIAN}  21)${GRIS} Tipo Pantalla Display - ${AMARILLO}"
+echo -n "${CIAN}  21)${GRIS} Tipo Pantalla Display - ${CIAN}"
 Display=`grep -n -m 1 -c '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $Display = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
