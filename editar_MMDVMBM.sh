@@ -293,9 +293,9 @@ numero_linea=`expr $numero_linea + 2`
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
-echo " ${CIAN}\t\t ) ${GRIS}Port Nextion- ${CIAN}$MODEMNEXTION"
+echo " ${CIAN}\t\t   ${GRIS}Port Nextion- ${CIAN}$MODEMNEXTION"
 
-echo -n "${CIAN}    )${GRIS} Version Display       - ${CIAN}"
+echo -n "${CIAN}     ${GRIS} Version Display       - ${CIAN}"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $ScreenLayout = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -327,7 +327,7 @@ IdleBrightness=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 IdleBrightness_CORTO=`expr substr $IdleBrightness 3 22`
 letra=c
 linea_sed_IdleBrightness=$numero_linea$letra
-echo -n "  ${CIAN}  ) ${GRIS}Brillo reposo Nextion - ${CIAN}$IdleBrightness_CORTO"
+echo -n "  ${CIAN}    ${GRIS}Brillo reposo Nextion - ${CIAN}$IdleBrightness_CORTO"
 
 # j) POCSAG Enable=
 var=`grep -n -m 1 "\[POCSAG\]" $usuario/MMDVMHost/$DIRECTORIO`
@@ -392,7 +392,7 @@ numero_linea=`expr $numero_linea + 1`
 tipo_oled=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_oled=$numero_linea$letra
-echo "${CIAN}     \t\tm) ${GRIS}Tipo OLED   - ${CIAN}$tipo_oled"
+echo "${CIAN}     \t\t   ${GRIS}Tipo OLED   - ${CIAN}$tipo_oled"
 
 #27)reflector DMR+=
 echo -n "${CIAN}  27)${GRIS} Entra reflector DMR+  - ${AMARILLO}"
