@@ -449,14 +449,14 @@ echo -n "${CIAN}   Elige una opción: "
 read escoger_menu
 
 case $escoger_menu in
-editot) echo ""
+z) echo ""
 while true
 do
 
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-/home/pi/V105/./Editor
+/home/pi/V105/./EDITOR
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
