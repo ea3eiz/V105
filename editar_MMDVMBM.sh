@@ -456,7 +456,8 @@ do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-/home/pi/V105/./EDITOR
+                          cd /home/piV105
+                          ./EDITOR
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
