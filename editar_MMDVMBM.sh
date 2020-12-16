@@ -274,7 +274,7 @@ timeo1=`expr substr $timeo 3 30`
 echo "$timeo1"
 fi
 
-echo -n "${CIAN}  21)${GRIS} Tipo Pantalla Display - ${AMARILLO}"
+echo -n "${CIAN}  21)${GRIS} Tipo Pantalla Display - ${CIAN}"
 Display=`grep -n -m 1 -c '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $Display = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -293,9 +293,9 @@ numero_linea=`expr $numero_linea + 2`
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
-echo " ${CIAN}\t\th) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
+echo " ${CIAN}\t\t   ${GRIS}Port Nextion- ${CIAN}$MODEMNEXTION"
 
-echo -n "${CIAN}  22)${GRIS} Version Display       - ${AMARILLO}"
+echo -n "${CIAN}     ${GRIS} Version Display       - ${CIAN}"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $ScreenLayout = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -327,7 +327,7 @@ IdleBrightness=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 IdleBrightness_CORTO=`expr substr $IdleBrightness 3 22`
 letra=c
 linea_sed_IdleBrightness=$numero_linea$letra
-echo -n "  ${CIAN}23) ${GRIS}Brillo reposo Nextion - ${AMARILLO}$IdleBrightness_CORTO"
+echo -n "  ${CIAN}    ${GRIS}Brillo reposo Nextion - ${CIAN}$IdleBrightness_CORTO"
 
 # j) POCSAG Enable=
 var=`grep -n -m 1 "\[POCSAG\]" $usuario/MMDVMHost/$DIRECTORIO`
@@ -392,7 +392,7 @@ numero_linea=`expr $numero_linea + 1`
 tipo_oled=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_oled=$numero_linea$letra
-echo "${CIAN}     \t\tm) ${GRIS}Tipo OLED   - ${AMARILLO}$tipo_oled"
+echo "${CIAN}     \t\t   ${GRIS}Tipo OLED   - ${CIAN}$tipo_oled"
 
 #27)reflector DMR+=
 echo -n "${CIAN}  27)${GRIS} Entra reflector DMR+  - ${AMARILLO}"
@@ -449,6 +449,19 @@ echo -n "${CIAN}   Elige una opción: "
 read escoger_menu
 
 case $escoger_menu in
+editor) echo ""
+while true
+do
+
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+/home/pi/V105/./EDITOR_BM
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
 1) echo ""
 while true
 do
@@ -854,36 +867,38 @@ done;;
 21) echo ""
 while true
 do
-                          Display=`grep -n -m 1 -c '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
-                          if [ $Display = 0 ]; then
-                          echo "no existe este comando"
-                          else
-                          Display=`grep -n -m 1 '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
-                          Display1=`expr substr $Display 5 30`
-                          fi
-                          buscar=":"
-                          largo=`expr index $Display $buscar`
-                          echo "Valor actual del Display=: ${AMARILLO}${Display1#*=}\33[1;37m"
-                          read -p 'Introduce tipo de Display Ej. Nextion ó OLED: ' V
-                          letra=c
-                          if [ $largo = 2 ]
-                          then
-                          linea=`expr substr $Display 1 1`
-                          else
-                          linea=`expr substr $Display 1 2`
-                          fi
-                          linea=$linea$letra
+                          #Display=`grep -n -m 1 -c '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
+                          #if [ $Display = 0 ]; then
+                          #echo "no existe este comando"
+                          #else
+                          #Display=`grep -n -m 1 '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
+                          #Display1=`expr substr $Display 5 30`
+                          #fi
+                          #buscar=":"
+                          #largo=`expr index $Display $buscar`
+                          #echo "Valor actual del Display=: ${AMARILLO}${Display1#*=}\33[1;37m"
+                          #read -p 'Introduce tipo de Display Ej. Nextion ó OLED: ' V
+                          #letra=c
+                          #if [ $largo = 2 ]
+                          #then
+                          #linea=`expr substr $Display 1 1`
+                          #else
+                          #linea=`expr substr $Display 1 2`
+                          #fi
+                          #linea=$linea$letra
                           actualizar=S 
                           case $actualizar in                                            
                           [sS]* ) echo ""
-                          V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Display=$V" $usuario/MMDVMHost/$DIRECTORIO             
+                          #V=`echo "$V" | tr -d '[[:space:]]'` 
+                          #sed -i "1c Display=$V" $usuario/.local/nextion_bm      
+                          #sed -i "$linea Display=$V" $usuario/MMDVMHost/$DIRECTORIO
+                          /home/pi/V105/./qt_config_display_bm             
                           break;;
                           [nN]* ) echo ""
                           break;;
 esac
 done;;
-22) echo ""
+22bloqueado) echo ""
 while true
 do
                           ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
@@ -909,20 +924,22 @@ do
                           case $actualizar in                                            
                           [sS]* ) echo ""
                           V=`echo "$V" | tr -d '[[:space:]]'`       
+                          sed -i "4c ScreenLayout=$V" $usuario/.local/nextion_bm
                           sed -i "$linea ScreenLayout=$V" $usuario/MMDVMHost/$DIRECTORIO             
                           break;;
                           [nN]* ) echo ""
                           break;;
 esac
 done;;
-23) echo ""
+23bloqueado) echo ""
 while true
 do
                           read -p 'Introduce el brillo IdleBrightness: ' V
                           actualizar=S 
                           case $actualizar in                                            
                           [sS]* ) echo ""
-                          V=`echo "$V" | tr -d '[[:space:]]'`      
+                          V=`echo "$V" | tr -d '[[:space:]]'` 
+                          sed -i "3c IdleBrightness=$V" $usuario/.local/nextion_bm     
                           sed -i "$linea_sed_IdleBrightness IdleBrightness=$V" $usuario/MMDVMHost/$DIRECTORIO             
                           break;;
                           [nN]* ) echo ""
@@ -1092,13 +1109,14 @@ do
                           break;;
 esac
 done;;
-h) echo ""
+hbloqueado) echo ""
 while true
 do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-                          sh Puertos_Nextion_BM.sh
+#sh Puertos_Nextion_BM.sh
+/home/pi/V105/./qt_puertos_nextion_bm
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
@@ -1146,7 +1164,7 @@ do
                           break;;
 esac
 done;;
-m) echo ""
+mbloqueado) echo ""
 while true
 do                         
                           echo "   Valor  actual  tipo OLED: ${AMARILLO}$tipo_oled"
@@ -1229,15 +1247,19 @@ do
                           read -p 'Estas en DMR+ ? S/N ' actualizar                                          
                           case $actualizar in
                           [sS]* ) echo ""
-                          read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
-                          letra1=c
-                          linea4=$linea33port$letra1
-                          if [ $opcion = 21465 ]
-                          then
-                          sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/MMDVMHost/$DIRECTORIO
-                          else
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
-                          fi
+                          
+                          #read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+                          #letra1=c
+                          #linea4=$linea33port$letra1
+                          #if [ $opcion = 21465 ]
+                          #then
+                          #sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/MMDVMHost/$DIRECTORIO
+                          #else
+                          #sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
+                          #fi
+                          
+                          /home/pi/V105/./qt_ipsc2_bm
+                          
                           break;;
                           [nN]* ) echo ""
                           letra1=c
