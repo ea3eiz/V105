@@ -63,6 +63,7 @@ do
                           case $actualizar in
 			                    [sS]* ) echo ""
 /home/pi/V105/./EDITOR_BM
+exit;
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
