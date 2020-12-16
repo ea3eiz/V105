@@ -55,7 +55,19 @@ echo -n "\33[1;36m   Elige una opción: "
 read escoger_menu
 echo ""
 case $escoger_menu in
+dmr) echo ""
+while true
+do
 
+                          actualizar=S 
+                          case $actualizar in
+			                    [sS]* ) echo ""
+/home/pi/V105/./EDITOR_BM
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;
 m17) echo ""
 while true
 do
