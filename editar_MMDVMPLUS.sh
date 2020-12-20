@@ -5,9 +5,9 @@ do
 clear
 
 actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
-if [ $actualizacion = "25-10-2020"]; then
 echo "$actualizacion"
 read a
+if [ $actualizacion = "25-10-2020"]; then
 /home/pi/V105/./qt_editor_dmrplus
 else
 echo""
