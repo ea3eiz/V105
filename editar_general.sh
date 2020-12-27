@@ -273,7 +273,7 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             
             #TX Y RX FRECUENCIA DMR2M17
             sed -i "13c RXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDMR2M17.ini
-            sed -i "13c TXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDMR2M17.ini
+            sed -i "14c TXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMDMR2M17.ini
 
             #DMR+
             sed -i "13c RXFrequency=$rxtxfrecuencia" /home/pi/MMDVMHost/MMDVMPLUS.ini
@@ -653,7 +653,7 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
 
             #ID DMR2M17
             sed -i "12c Id=$tu_id" /home/pi/DMR2M17/DMR2M17.ini
-            sed -i "2c Id=$tu_id" /home/pi/MMDVMHost/MMDVMDMR2M17.ini
+            sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMDMR2M17.ini
 
             #DMR+
             sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMPLUS.ini
