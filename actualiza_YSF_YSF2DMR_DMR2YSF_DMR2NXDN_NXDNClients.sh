@@ -29,7 +29,7 @@ MARRON="\33[38;5;138m"
                         cd YSFGateway
                         sudo sed -i '209c std::string name = m_conf.getName();' YSFGateway.cpp
                         #sudo sed -i '209c std::string name = "IMAGEN ADER V106";' YSFGateway.cpp
-                        sudo sed -i '28c const char* YSF_VERSION = "ADER V105";' YSFNetwork.cpp
+                        sudo sed -i '28c const char* YSF_VERSION = "V105";' YSFNetwork.cpp
                         make
                         clear
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
