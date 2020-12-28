@@ -27,19 +27,15 @@ MARRON="\33[38;5;138m"
                         git clone https://github.com/ea3eiz/YSFClients
                         cd YSFClients
                         cd YSFGateway
-                                                cd YSFGateway
-
-                        #sudo sed -i '209c std::string name = "IMAGEN ADER V105";' YSFGateway.cpp
-                        #sudo sed -i '28c const char* YSF_VERSION = "ADER V105";' YSFNetwork.cpp
-                        sudo sed -i '209c std::string name = m_conf.getName();' YSFGateway.cpp # para que salga en el dashboard en REPEATER EN Name lo que se escriba en editar YSF & FCS en el item 7) Name
-                        #sudo sed -i '209c std::string name = "IMAGEN ADER V106";' YSFGateway.cpp # para que salga en el dashboard en REPEATER EN Name
+                                                
+                        cd YSFGateway
+                        sudo sed -i '209c std::string name = m_conf.getName();' YSFGateway.cpp # Para que se pueda escribir En Name lo que uno quiera             
+                        #sudo sed -i '209c std::string name = "IMAGEN ADER V105";' YSFGateway.cpp # para que salga en el dashboard en REPEATER EN Name lo que se escriba en editar YSF & FCS en el item 7) Name       
                         sudo sed -i '28c const char* YSF_VERSION = "ADER V105";' YSFNetwork.cpp # SALE EN EL DSAHBOARD EN SERVICES Y Device
 
                         make
                         clear
-          
-                        make
-                        clear
+                        
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
                         echo "${ROJO}"
                         echo " ****************************************************************************"
