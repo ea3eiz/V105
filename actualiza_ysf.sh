@@ -38,7 +38,7 @@ MARRON="\33[38;5;138m"
                         #sudo sed -i '209c std::string name = "IMAGEN ADER V105";' YSFGateway.cpp # para que salga en el dashboard en REPEATER EN Name lo que se escriba en editar YSF & FCS en el item 7) Name       
                         #sudo sed -i '28c const char* YSF_VERSION = "ADER V105";' YSFNetwork.cpp # Se ha de crear esta linea nueva SALE EN EL DSAHBOARD EN SERVICES Y Device
 
-                        make
+                        make clean all
                         clear
                         
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
