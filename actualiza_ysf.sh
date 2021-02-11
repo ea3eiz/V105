@@ -22,18 +22,18 @@ MARRON="\33[38;5;138m"
                         echo " ****************************************************************************"
                         echo " ****************************************************************************"
                         sleep 3
-                        cd /home/pi
-                        sudo rm -R YSFClients
+                        cd /home/pi/YSFClients
+                        
                         git clone https://github.com/ea3eiz/YSFClients-EA7EE
-                                                echo "se ha cambiado el YSFClients por YSFClients"
+                        echo "se va a cambiar el YSFClients por YSFGateway"
                         read a
-                        sudo mv YSFClients-EA7EE YSFClients
+                        sudo mv YSFClients-EA7EE YSFGateway
                         echo "se va a cambiar el YSFClients por YSFClients"
                         read a
-                        cd YSFClients
+
                         cd YSFGateway
                                                 
-                        cd YSFGateway
+                        #cd YSFGateway
                         #sudo sed -i '209c std::string name = m_conf.getName();' YSFGateway.cpp # Para que se pueda escribir En Name lo que uno quiera             
                         #sudo sed -i '209c std::string name = "IMAGEN ADER V105";' YSFGateway.cpp # para que salga en el dashboard en REPEATER EN Name lo que se escriba en editar YSF & FCS en el item 7) Name       
                         #sudo sed -i '28c const char* YSF_VERSION = "ADER V105";' YSFNetwork.cpp # Se ha de crear esta linea nueva SALE EN EL DSAHBOARD EN SERVICES Y Device
