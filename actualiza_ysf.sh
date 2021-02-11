@@ -23,6 +23,7 @@ MARRON="\33[38;5;138m"
                         echo " ****************************************************************************"
                         sleep 3
                         cd /home/pi/YSFClients
+                        sudo rm -R YSFGateway
                         
                         git clone https://github.com/ea3eiz/YSFClients-EA7EE
                         echo "se va a cambiar el YSFClients por YSFGateway"
