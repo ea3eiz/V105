@@ -25,8 +25,10 @@ MARRON="\33[38;5;138m"
                         cd /home/pi
                         sudo rm -R YSFClients
                         git clone https://github.com/ea3eiz/YSFClients-EA7EE
+                                                echo "se ha cambiado el YSFClients por YSFClients"
+                        read a
                         sudo mv YSFClients-EA7EE YSFClients
-                        echo "se ha cambiado el YSFClients por YSFClients"
+                        echo "se va a cambiar el YSFClients por YSFClients"
                         read a
                         cd YSFClients
                         cd YSFGateway
